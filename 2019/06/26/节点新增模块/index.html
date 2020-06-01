@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/westbrook.jpg?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.1',
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":true,"dimmer":true},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1整体介绍节点新增模块按照功能设计主要分为三个模块，对应的三个功能如下">
+<meta name="keywords" content="节点管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="节点新增模块">
+<meta property="og:url" content="http://hlc.jiuxiaxixi.com/2019/06/26/节点新增模块/index.html">
+<meta property="og:site_name" content="雅室兰香">
+<meta property="og:description" content="1整体介绍节点新增模块按照功能设计主要分为三个模块，对应的三个功能如下">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.plantuml.com/plantuml/img/SoWkIImgAStDuShBJqbLK7hHrVIyQUUpQHkUBfhtRCN2ftEdAq5bdYrkUBvbqTEk-I-Qzq9b5A1IBrjxd-zTXo85bNcoVzspAJjHPRWmxL3GrLN0D1zaV4cgGb9-IKb-ha9-6XObLY2nPrkxdyrP1N74yrajKEEdRdZPte_3Bam7erk5gS9AuVdkcH23e8Pkt_sqQm548GvxCBsFRW-c2YkOsFPDp-PqFkrl0le4OZhGRr3R75BpKe1n1W00">
+<meta property="og:image" content="https://www.plantuml.com/plantuml/img/SoWkIImgAStDuR9wqTNql6ddisaRdYwQzsp5mgTpfrjpMJtTq_1qURSrLt51JcQ90XUdrTDzhIzRUv_lNGTH_hHdrzFvyws14i_cBtq-fnjD6gOnCJqnCm-aU_iclBfHfT5rFvlS-sJl7BWci2GN9r1ySSFpBOimhEP4qSrf1P65UF1frm9SofxiN_TioawuKvxFQe6hJCrBKO3OYc1PFTyz-TbSe7iSW6B0W0G0">
+<meta property="og:image" content="https://www.plantuml.com/plantuml/img/TPFFIiD04CRFpbCidlHG7w28UF0WWeeMl8Y7JRBQg4rAiaL11As88YqgZVLFYwLWGKHh5L5QhNcPxdPxyXNSc4OBDdlRdMzcVlFjxhXDiKLJYNN0AZKjbBA91SiMJX2qa29JiIrOvCMxpdwstQoAetGxNMU7vw9ykuHWaRqzzmsePY9f6iIWQD2Fy5osrIooJ8ELIeDRCA0Rb5ZBM2M8Q3hjtMDDwztQ15jg7BOHz9nHJ0biWuOfLh1DqCGgDbPCKDVDb8RciQBeT7eEm9i4ZKOYO_uW4ChhIVmQADhPkHBk0TxKJNjaXT2XONPysjdPdQGqAHxV-5CQkaelwOS4HLakoneEgx_wsgdOx0m_g_5iDT2ET15G5F6ZIiUv34MHk45LyVZEZlEoAh_uRDyqG2xVZP_MmPW1iKsbvy8jY79cWoWnKrqZL4PQRXdyUbxbloHMk1QrFNRGbA1V7ndXElAa2-thlIOXDmyWRodKjQHfzxCjIEbErtAhtAdpuZqhrlxtxUzEb9ra-4E55rvulWRWFPrm2apLU1-CtwHm3XWdXYO_n3S0">
+<meta property="og:image" content="http://www.plantuml.com/plantuml/png/pLNFRn916BtFNx7fIGyqUj339f0kB2GzDF67qOEd0QPbRTd5tK4RJvHOwGyGgxNKjhPIszZ42gsnnL8hVupCi9py5npuZCn24nEZYITsPhxtlVVcVHD678fjcavE8MVIC5FOnad58VVJn8mHpRQjXxSIHcpI98wZN1w-8XKbyNHIxE89uXYFY7Br4i9fQfdfP9JO2Fdz2d-RuKUBxEiiMtZ3PdVTXMmhUyBtoknrIV7xaUX2ZPYHmYPLXcwdoP227KNpRklti3bXTK-2A8ufZcA7Y6tu0aZ82m5M86klRh6vade3HwC67RlUBTVxobSEsFOcb3SRPJvJTHlBR7tpF6ZO2mLGzoI2q5rVG5DbSfwVRp-l81oZnWDCYR2c-GAwAXFohLstkitpkURf3eeJgTIqn8zjJ2IeOeqhcggqCsjk8-TGAvbYXQ9RgR3JUklzedjKQwqzlaEYDwtO9A6YIfX0FL8TwRv0H6sjBx5d-_nuJlW3Pz-_v5dk2Tl9DJyljEeDcLsNy14KwU3TfpLMNE4R-w1RK8vfeM-PcT5hS6So84waXO3x0k6UQG2pmqsUUGTGJxt474PX0TL-IWVHW13IGS-0cC6EOVd-EqFPdYsqpYgI7caYaTOXPDKJ-TXjhBlbFC06Oe6IKLsmy_cCiCKswlnLLInXvddfk5tw99QYXT3FYZL93umCSCaZuvs4ZgYWAWyeg9WYurqHGHL60qyRbZESiXnwuI8hBhKpCmbAKswrnW-ptew_FeC81Ns1aCe-h0gjOB6NKJ7BNnuCtcYmXmyX5F9rrC6J4UMyu54VwkFgNc_jeym416vvhz-LJPoKPJg4lIYm-l9Wxs1_ij0FUZSR5RvyNh9zx10kM0NCluWOEl-rY36D9VumOr3otsGCsRBScMWhNZLG_2Rg4MB6nR_L3m00">
+<meta property="og:image" content="http://hlc.jiuxiaxixi.com/2019/06/26/节点新增模块/">
+<meta property="og:image" content="https://www.plantuml.com/plantuml/img/SoWkIImgAStDuIh9BCb9LNZHrVIyQUUpnGtFjonwsZN_HVFUPoiMFfqxdQj6EIKrrIJLeYQiDDKhk8OB992OPf2MMXEKc9IKMU8R21A3IdA2JRNcuhHwiN_sqzQbpwVsl9oxo9fB0GYi88PRSo5fvDIrUzamwyN-zkAI_Do2fxtzBzQj0-akJqqApa_EJYrHS0pmj4OOhsltTFQy5nkQdxRlVJPrWpKM0IkW2qfIGOndSrQzRErzldSTn6jFEwQ_MBZ26kJ4_09hBeVKl1IWxm40">
+<meta property="og:image" content="https://www.plantuml.com/plantuml/img/SoWkIImgAStDuIh9BCb9LNZHrVIyQUVBrjxdUzSzxPh_eddlinKBdywTpbMZd9AQQf9gKHDMckeLN0Fa9viaMoQdrBXa9UQbvmC5e19W0wsv51IidirP1J48OkZJZkal5gw0o4pRy7JHF6ikk6O51LqxXSIApFnYlOByuX8DpMVJTZxRF1Mi-Ec-wKyxDdY4X0IyMB_zsSOcQx3g5_jdlrZOytpsZgUxfZoRtFjaxnomOiS0psTzIv_sBqQoxMd_n9SDZKydzmALMiFT2JQaRplGz6TJDpphNGTM2dHyIIf4q_PDs1nVN99VOCtba9gN0Wmp0000">
+<meta property="og:image" content="https://www.plantuml.com/plantuml/img/SoWkIImgAStDuIh9BCb9LNZHrVIyQUUJ_UkUJTdvj6l-Y-QzprOiV3ftEbUDSafggacgHKrOQQfNS0sGdsoIR9cSKkEIbPYNdWyKW4g03RJcuhHwshNWnTwzpwVsl9oxo9eBhav1GTTE8R4YCxzOBpsrH4FpsRITppPFjGQAMptTD_rfnmQFa9205-ktFzlOP0rM_6B_x1SBUvxFtl5qrvHdatkVx9q3LkmOuFciR-dJ_iLFEwQ_MBW2Oa3_n9SDZKydzmALMiDT13QaRplGz6TJDpphNGTM2dHcIIf4q_PDBrjxd-zT1_4xad6GOC3kzeB4akICmUlwufBy0cikXzIy563S0W00">
+<meta property="og:updated_time" content="2019-07-30T06:51:02.092Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="节点新增模块">
+<meta name="twitter:description" content="1整体介绍节点新增模块按照功能设计主要分为三个模块，对应的三个功能如下">
+<meta name="twitter:image" content="https://www.plantuml.com/plantuml/img/SoWkIImgAStDuShBJqbLK7hHrVIyQUUpQHkUBfhtRCN2ftEdAq5bdYrkUBvbqTEk-I-Qzq9b5A1IBrjxd-zTXo85bNcoVzspAJjHPRWmxL3GrLN0D1zaV4cgGb9-IKb-ha9-6XObLY2nPrkxdyrP1N74yrajKEEdRdZPte_3Bam7erk5gS9AuVdkcH23e8Pkt_sqQm548GvxCBsFRW-c2YkOsFPDp-PqFkrl0le4OZhGRr3R75BpKe1n1W00">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="雅室兰香" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="http://hlc.jiuxiaxixi.com/2019/06/26/节点新增模块/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>节点新增模块 | 雅室兰香</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">雅室兰香</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">web前端学习日志</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">10</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">2</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">9</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://hlc.jiuxiaxixi.com/2019/06/26/节点新增模块/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄流川">
+      <meta itemprop="description" content="从零到一，跨过就是成功">
+      <meta itemprop="image" content="/images/westbrook.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雅室兰香">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">节点新增模块
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-26 16:35:21" itemprop="dateCreated datePublished" datetime="2019-06-26T16:35:21+08:00">2019-06-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-30 14:51:02" itemprop="dateModified" datetime="2019-07-30T14:51:02+08:00">2019-07-30</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web前端/" itemprop="url" rel="index"><span itemprop="name">web前端</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/06/26/节点新增模块/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/26/节点新增模块/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">2.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1整体介绍"><a href="#1整体介绍" class="headerlink" title="1整体介绍"></a>1整体介绍</h2><p>节点新增模块按照功能设计主要分为三个模块，对应的三个功能如下</p>
+<p><img src="https://www.plantuml.com/plantuml/img/SoWkIImgAStDuShBJqbLK7hHrVIyQUUpQHkUBfhtRCN2ftEdAq5bdYrkUBvbqTEk-I-Qzq9b5A1IBrjxd-zTXo85bNcoVzspAJjHPRWmxL3GrLN0D1zaV4cgGb9-IKb-ha9-6XObLY2nPrkxdyrP1N74yrajKEEdRdZPte_3Bam7erk5gS9AuVdkcH23e8Pkt_sqQm548GvxCBsFRW-c2YkOsFPDp-PqFkrl0le4OZhGRr3R75BpKe1n1W00" alt></p>
+<a id="more"></a>
+<h3 id="1-1操作流程图"><a href="#1-1操作流程图" class="headerlink" title="1.1操作流程图"></a>1.1操作流程图</h3><p>节点新增模块在web前端分为三个区域，每个区域的作用如下</p>
+<ul>
+<li>待配置节点区域<ul>
+<li>检索待配置节点</li>
+<li>查看待配置节点</li>
+</ul>
+</li>
+<li>已配置节点区域<ul>
+<li>查看已配置节点</li>
+</ul>
+</li>
+<li>操作区域<ul>
+<li>配置新增加的节点</li>
+<li>修改已配置的节点</li>
+</ul>
+</li>
+</ul>
+<p>由此得到的操作流程图如下</p>
+<p><img src="https://www.plantuml.com/plantuml/img/SoWkIImgAStDuR9wqTNql6ddisaRdYwQzsp5mgTpfrjpMJtTq_1qURSrLt51JcQ90XUdrTDzhIzRUv_lNGTH_hHdrzFvyws14i_cBtq-fnjD6gOnCJqnCm-aU_iclBfHfT5rFvlS-sJl7BWci2GN9r1ySSFpBOimhEP4qSrf1P65UF1frm9SofxiN_TioawuKvxFQe6hJCrBKO3OYc1PFTyz-TbSe7iSW6B0W0G0" alt></p>
+<h3 id="1-2详细部署图"><a href="#1-2详细部署图" class="headerlink" title="1.2详细部署图"></a>1.2详细部署图</h3><p><img src="https://www.plantuml.com/plantuml/img/TPFFIiD04CRFpbCidlHG7w28UF0WWeeMl8Y7JRBQg4rAiaL11As88YqgZVLFYwLWGKHh5L5QhNcPxdPxyXNSc4OBDdlRdMzcVlFjxhXDiKLJYNN0AZKjbBA91SiMJX2qa29JiIrOvCMxpdwstQoAetGxNMU7vw9ykuHWaRqzzmsePY9f6iIWQD2Fy5osrIooJ8ELIeDRCA0Rb5ZBM2M8Q3hjtMDDwztQ15jg7BOHz9nHJ0biWuOfLh1DqCGgDbPCKDVDb8RciQBeT7eEm9i4ZKOYO_uW4ChhIVmQADhPkHBk0TxKJNjaXT2XONPysjdPdQGqAHxV-5CQkaelwOS4HLakoneEgx_wsgdOx0m_g_5iDT2ET15G5F6ZIiUv34MHk45LyVZEZlEoAh_uRDyqG2xVZP_MmPW1iKsbvy8jY79cWoWnKrqZL4PQRXdyUbxbloHMk1QrFNRGbA1V7ndXElAa2-thlIOXDmyWRodKjQHfzxCjIEbErtAhtAdpuZqhrlxtxUzEb9ra-4E55rvulWRWFPrm2apLU1-CtwHm3XWdXYO_n3S0" alt></p>
+<h3 id="1-3时序图"><a href="#1-3时序图" class="headerlink" title="1.3时序图"></a>1.3时序图</h3><p><img src="http://www.plantuml.com/plantuml/png/pLNFRn916BtFNx7fIGyqUj339f0kB2GzDF67qOEd0QPbRTd5tK4RJvHOwGyGgxNKjhPIszZ42gsnnL8hVupCi9py5npuZCn24nEZYITsPhxtlVVcVHD678fjcavE8MVIC5FOnad58VVJn8mHpRQjXxSIHcpI98wZN1w-8XKbyNHIxE89uXYFY7Br4i9fQfdfP9JO2Fdz2d-RuKUBxEiiMtZ3PdVTXMmhUyBtoknrIV7xaUX2ZPYHmYPLXcwdoP227KNpRklti3bXTK-2A8ufZcA7Y6tu0aZ82m5M86klRh6vade3HwC67RlUBTVxobSEsFOcb3SRPJvJTHlBR7tpF6ZO2mLGzoI2q5rVG5DbSfwVRp-l81oZnWDCYR2c-GAwAXFohLstkitpkURf3eeJgTIqn8zjJ2IeOeqhcggqCsjk8-TGAvbYXQ9RgR3JUklzedjKQwqzlaEYDwtO9A6YIfX0FL8TwRv0H6sjBx5d-_nuJlW3Pz-_v5dk2Tl9DJyljEeDcLsNy14KwU3TfpLMNE4R-w1RK8vfeM-PcT5hS6So84waXO3x0k6UQG2pmqsUUGTGJxt474PX0TL-IWVHW13IGS-0cC6EOVd-EqFPdYsqpYgI7caYaTOXPDKJ-TXjhBlbFC06Oe6IKLsmy_cCiCKswlnLLInXvddfk5tw99QYXT3FYZL93umCSCaZuvs4ZgYWAWyeg9WYurqHGHL60qyRbZESiXnwuI8hBhKpCmbAKswrnW-ptew_FeC81Ns1aCe-h0gjOB6NKJ7BNnuCtcYmXmyX5F9rrC6J4UMyu54VwkFgNc_jeym416vvhz-LJPoKPJg4lIYm-l9Wxs1_ij0FUZSR5RvyNh9zx10kM0NCluWOEl-rY36D9VumOr3otsGCsRBScMWhNZLG_2Rg4MB6nR_L3m00" alt></p>
+<h3 id="1-4设计原型"><a href="#1-4设计原型" class="headerlink" title="1.4设计原型"></a>1.4设计原型</h3><p><img src="/2019/06/26/节点新增模块/" alt></p>
+<h2 id="2检索功能模块"><a href="#2检索功能模块" class="headerlink" title="2检索功能模块"></a>2检索功能模块</h2><p>对于检索功能模块的泳道流程图如下，前端页面设计请参考上方的原型设计，数据交互是通过STOMP协议与RabbitMQ建立webSocket双向连接来实现的</p>
+<p><strong>泳道流程图</strong></p>
+<p><img src="https://www.plantuml.com/plantuml/img/SoWkIImgAStDuIh9BCb9LNZHrVIyQUUpnGtFjonwsZN_HVFUPoiMFfqxdQj6EIKrrIJLeYQiDDKhk8OB992OPf2MMXEKc9IKMU8R21A3IdA2JRNcuhHwiN_sqzQbpwVsl9oxo9fB0GYi88PRSo5fvDIrUzamwyN-zkAI_Do2fxtzBzQj0-akJqqApa_EJYrHS0pmj4OOhsltTFQy5nkQdxRlVJPrWpKM0IkW2qfIGOndSrQzRErzldSTn6jFEwQ_MBZ26kJ4_09hBeVKl1IWxm40" alt></p>
+<p><strong>相关JS代码</strong></p>
+<p>建立连接对象（还未发起连接）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.socket = <span class="keyword">new</span> SockJS(<span class="string">'http://cn.cquzxy.top:15674/stomp'</span>)</span><br></pre></td></tr></table></figure>
+<p> 获取 STOMP 子协议的客户端对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.stompClient = Stomp.over(<span class="keyword">this</span>.socket)</span><br></pre></td></tr></table></figure>
+<p>向服务器发起websocket连接并发送CONNECT帧</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.stompClient.connect(&#123;<span class="string">'login'</span>: <span class="string">'cqu'</span>, <span class="string">'passcode'</span>: <span class="string">'2201'</span>&#125;, frame =&gt; &#123;</span><br><span class="line">        <span class="keyword">this</span>.connected = <span class="literal">true</span></span><br><span class="line">        <span class="keyword">this</span>.stompClient.subscribe(<span class="string">'/exchange/addnode/response'</span>, tick =&gt; &#123;</span><br><span class="line">          <span class="keyword">var</span> message = <span class="built_in">JSON</span>.parse(tick.body)</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;,</span><br><span class="line">      error =&gt; &#123;</span><br><span class="line">        <span class="keyword">this</span>.connected = <span class="literal">false</span></span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure>
+<p>以上代码中的message即为web前端所需要的Json格式代码<code>{MAC: &#39;XXX&#39;, IP: &#39;XXX&#39;}</code>,另外STOMP 客户端要想接收来自服务器推送的消息，必须先订阅相应的URL，即发送一个 SUBSCRIBE 帧，然后才能不断接收来自服务器的推送消息</p>
+<p>连接成功后，客户端可使用 send() 方法向服务器发送信息<code>addnode</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> quote = &#123;<span class="attr">type</span>: <span class="string">'addnode'</span>&#125;</span><br><span class="line"><span class="keyword">this</span>.stompClient.subscribe(<span class="string">'/exchange/addnode/request'</span>, tick =&gt; &#123;&#125;)</span><br><span class="line"><span class="keyword">this</span>.stompClient.send(<span class="string">'/exchange/addnode/request'</span>, &#123;&#125;, <span class="built_in">JSON</span>.stringify(quote))</span><br></pre></td></tr></table></figure>
+<p>要停止接收消息，客户机可以对返回的对象使用unsubscribe()方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.stompClient.unsubscribe()</span><br></pre></td></tr></table></figure>
+<h2 id="3配置功能模块"><a href="#3配置功能模块" class="headerlink" title="3配置功能模块"></a>3配置功能模块</h2><p>配置功能模块的主要功能是对新加入的节点进行参数配置，该部分只涉及VueJS和Django之间的交互</p>
+<p><strong>泳道流程图</strong></p>
+<p><img src="https://www.plantuml.com/plantuml/img/SoWkIImgAStDuIh9BCb9LNZHrVIyQUVBrjxdUzSzxPh_eddlinKBdywTpbMZd9AQQf9gKHDMckeLN0Fa9viaMoQdrBXa9UQbvmC5e19W0wsv51IidirP1J48OkZJZkal5gw0o4pRy7JHF6ikk6O51LqxXSIApFnYlOByuX8DpMVJTZxRF1Mi-Ec-wKyxDdY4X0IyMB_zsSOcQx3g5_jdlrZOytpsZgUxfZoRtFjaxnomOiS0psTzIv_sBqQoxMd_n9SDZKydzmALMiFT2JQaRplGz6TJDpphNGTM2dHyIIf4q_PDs1nVN99VOCtba9gN0Wmp0000" alt></p>
+<p><strong>相关JS代码</strong></p>
+<p>定义默认的URL</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axios.defaults.baseURL = <span class="string">'http://192.168.1.10:8000'</span></span><br></pre></td></tr></table></figure>
+<p>创建方法名为POST的http请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios.post(<span class="string">'/nodes/'</span>)</span><br><span class="line">        .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">          context.commit(<span class="string">'nodesConf'</span>, response.data)</span><br><span class="line">          <span class="built_in">console</span>.log(response)</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(error)</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
+<p>得到的<code>response.data</code>即为后端返回的JSON格式的已配置节点</p>
+<h2 id="4修改功能模块"><a href="#4修改功能模块" class="headerlink" title="4修改功能模块"></a>4修改功能模块</h2><p>配置功能模块的主要功能是对已有参数的节点进行参数修改，该部分只涉及VueJS和Django之间的交互</p>
+<p>在节点显示到修改共有两两次与Django的交互：</p>
+<ul>
+<li>加载已配置节点列表——通过axios.get()方法获取JSON数据</li>
+<li>修改节点的配置参数——通过axio.patch()方法提交http请求</li>
+</ul>
+<p><strong>泳道流程图</strong></p>
+<p><img src="https://www.plantuml.com/plantuml/img/SoWkIImgAStDuIh9BCb9LNZHrVIyQUUJ_UkUJTdvj6l-Y-QzprOiV3ftEbUDSafggacgHKrOQQfNS0sGdsoIR9cSKkEIbPYNdWyKW4g03RJcuhHwshNWnTwzpwVsl9oxo9eBhav1GTTE8R4YCxzOBpsrH4FpsRITppPFjGQAMptTD_rfnmQFa9205-ktFzlOP0rM_6B_x1SBUvxFtl5qrvHdatkVx9q3LkmOuFciR-dJ_iLFEwQ_MBW2Oa3_n9SDZKydzmALMiDT13QaRplGz6TJDpphNGTM2dHcIIf4q_PDBrjxd-zT1_4xad6GOC3kzeB4akICmUlwufBy0cikXzIy563S0W00" alt></p>
+<p><strong>相关JS代码</strong></p>
+<p><strong>1.</strong>通过<code>axios.get()</code>发送http请求以获取储存在后端的已配置节点列表信息</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'/nodes/'</span>)</span><br><span class="line">        .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">          context.commit(<span class="string">'retrieveNodesConf'</span>, response.data)</span><br><span class="line">          <span class="built_in">console</span>.log(response)</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(error)</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
+<p>得到的<code>response.data</code>即为所需要的JSON格式数据</p>
+<p><strong>2.</strong>通过<code>axios.patch()</code>发送http请求以修改单个节点的配置信息，例如</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">axios.patch(<span class="string">'/nodes/'</span>, &#123;</span><br><span class="line">    positionx: <span class="number">5</span>,</span><br><span class="line">    positiony: <span class="number">5</span>, </span><br><span class="line">&#125;)</span><br><span class="line">        .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">          context.commit(<span class="string">'nodesConf'</span>, response.data)</span><br><span class="line">          <span class="built_in">console</span>.log(response)</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(error)</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
+<p>以上代码中<code>{positionx: 5, positiony: 5}</code>为修改信息，得到的<code>response.data</code>为修改后的节点的配置信息</p>
+
+      
+    </div>
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="黄流川 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.jpg" alt="黄流川 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>黄流川</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="http://hlc.jiuxiaxixi.com/2019/06/26/节点新增模块/" title="节点新增模块">http://hlc.jiuxiaxixi.com/2019/06/26/节点新增模块/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/节点管理/" rel="tag"># 节点管理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/26/web前端设计/" rel="next" title="web前端设计">
+                <i class="fa fa-chevron-left"></i> web前端设计
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/27/for循环中的变量保存/" rel="prev" title="for循环中的变量保存">
+                for循环中的变量保存 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/westbrook.jpg" alt="黄流川">
+            
+              <p class="site-author-name" itemprop="name">黄流川</p>
+              <div class="site-description motion-element" itemprop="description">从零到一，跨过就是成功</div>
+          </div>
+
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=416385506&auto=1&height=66"></iframe>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/yourname" title="GitHub &rarr; https://github.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="http://815505781@qq.com" title="E-Mail &rarr; http://815505781@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/p/1005055243915899/home?from=page_100505&mod=TAB&is_all=1#place" title="Weibo &rarr; https://weibo.com/p/1005055243915899/home?from=page_100505&mod=TAB&is_all=1#place" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-handshake-o"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://jiuxiaxixi.com/" title="http://jiuxiaxixi.com/" rel="noopener" target="_blank">jiuxiaxixi</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://ciel.jiuxiaxixi.com/" title="http://ciel.jiuxiaxixi.com/" rel="noopener" target="_blank">yxh</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://xql.cquzxy.top/" title="http://xql.cquzxy.top/" rel="noopener" target="_blank">xql</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://wy.cquzxy.top/" title="https://wy.cquzxy.top/" rel="noopener" target="_blank">wy</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://toto.cquzxy.top/" title="http://toto.cquzxy.top/" rel="noopener" target="_blank">cyq</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://sss.cquzxy.top/" title="http://sss.cquzxy.top/" rel="noopener" target="_blank">hsj</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1整体介绍"><span class="nav-number">1.</span> <span class="nav-text">1整体介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1操作流程图"><span class="nav-number">1.1.</span> <span class="nav-text">1.1操作流程图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2详细部署图"><span class="nav-number">1.2.</span> <span class="nav-text">1.2详细部署图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3时序图"><span class="nav-number">1.3.</span> <span class="nav-text">1.3时序图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4设计原型"><span class="nav-number">1.4.</span> <span class="nav-text">1.4设计原型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2检索功能模块"><span class="nav-number">2.</span> <span class="nav-text">2检索功能模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3配置功能模块"><span class="nav-number">3.</span> <span class="nav-text">3配置功能模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4修改功能模块"><span class="nav-number">4.</span> <span class="nav-text">4修改功能模块</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+    <div id="sidebar-dimmer"></div>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">黄流川</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">19k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">31 分钟</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://hlc.jiuxiaxixi.com/2019/06/26/节点新增模块/";
+    this.page.identifier = "2019/06/26/节点新增模块/";
+    this.page.title = '节点新增模块';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
