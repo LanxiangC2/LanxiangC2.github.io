@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[快速判断空数组和空对象]]></title>
     <url>%2F2020%2F06%2F03%2F%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%AD%E7%A9%BA%E6%95%B0%E7%BB%84%E5%92%8C%E7%A9%BA%E5%AF%B9%E8%B1%A1%2F</url>
-    <content type="text"><![CDATA[判断空数组1JSON.stringify(data) == "[]" 1arr != false 1arr == false 判断对象1JSON.stringify(data) == "&#123;&#125;" 1Object.prototype.isPrototypeOf(obj) &amp;&amp; Object.keys(obj).length === 0]]></content>
+    <content type="text"><![CDATA[判断空数组1JSON.stringify(data) == "[]" 1arr != false 1arr == false 判断对象1JSON.stringify(data) == "&#123;&#125;" 12Object.prototype.isPrototypeOf(obj) Object.keys(obj).length === 0 1234// 将json对象转化为json字符串，再判断该字符串是否为"&#123;&#125;"var data = &#123;&#125;;var b = (JSON.stringify(data) == "&#123;&#125;");alert(b);//true 123456789// for in 循环判断var obj = &#123;&#125;;var b = function() &#123; for(var key in obj) &#123; return false; &#125; return true;&#125;alert(b());//true 12345// jquery的isEmptyObject方法// 此方法是jquery将(for in)进行封装，使用时需要依赖jqueryvar data = &#123;&#125;;var b = $.isEmptyObject(data);alert(b);//true 1234//Object.getOwnPropertyNames()方法 此方法是使用Object对象的getOwnPropertyNames方法，获取到对象中的属性名，存到一个数组中，返回数组对象，我们可以通过判断数组的length来判断此对象是否为空var data = &#123;&#125;;var arr = Object.getOwnPropertyNames(data);alert(arr.length == 0);//true 1234//使用ES6的Object.keys()方法 与前方法类似，是ES6的新方法, 返回值也是对象中属性名组成的数组var data = &#123;&#125;;var arr = Object.keys(data);alert(arr.length == 0);//true]]></content>
       <categories>
         <category>web前端</category>
       </categories>

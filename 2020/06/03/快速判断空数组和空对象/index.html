@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="判断空数组1JSON.stringify(data) == &quot;[]&quot; 1arr != false 1arr == false 判断对象1JSON.stringify(data) == &quot;&amp;#123;&amp;#125;&quot; 1Object.prototype.isPrototypeOf(obj) &amp;amp;&amp;amp; Object.keys(obj).length === 0">
+  <meta name="description" content="判断空数组1JSON.stringify(data) == &quot;[]&quot; 1arr != false 1arr == false 判断对象1JSON.stringify(data) == &quot;&amp;#123;&amp;#125;&quot; 12Object.prototype.isPrototypeOf(obj) Object.keys(obj).length === 0 1234// 将json对象转化为json字符串，">
 <meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="快速判断空数组和空对象">
 <meta property="og:url" content="http://hlc.jiuxiaxixi.com/2020/06/03/快速判断空数组和空对象/index.html">
 <meta property="og:site_name" content="雅室兰香">
-<meta property="og:description" content="判断空数组1JSON.stringify(data) == &quot;[]&quot; 1arr != false 1arr == false 判断对象1JSON.stringify(data) == &quot;&amp;#123;&amp;#125;&quot; 1Object.prototype.isPrototypeOf(obj) &amp;amp;&amp;amp; Object.keys(obj).length === 0">
+<meta property="og:description" content="判断空数组1JSON.stringify(data) == &quot;[]&quot; 1arr != false 1arr == false 判断对象1JSON.stringify(data) == &quot;&amp;#123;&amp;#125;&quot; 12Object.prototype.isPrototypeOf(obj) Object.keys(obj).length === 0 1234// 将json对象转化为json字符串，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-03T02:42:39.313Z">
+<meta property="og:updated_time" content="2020-06-03T09:03:35.799Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速判断空数组和空对象">
-<meta name="twitter:description" content="判断空数组1JSON.stringify(data) == &quot;[]&quot; 1arr != false 1arr == false 判断对象1JSON.stringify(data) == &quot;&amp;#123;&amp;#125;&quot; 1Object.prototype.isPrototypeOf(obj) &amp;amp;&amp;amp; Object.keys(obj).length === 0">
+<meta name="twitter:description" content="判断空数组1JSON.stringify(data) == &quot;[]&quot; 1arr != false 1arr == false 判断对象1JSON.stringify(data) == &quot;&amp;#123;&amp;#125;&quot; 12Object.prototype.isPrototypeOf(obj) Object.keys(obj).length === 0 1234// 将json对象转化为json字符串，">
 
 
 
@@ -410,7 +410,7 @@
                 
               
 
-              <time title="创建时间：2020-06-03 10:34:24 / 修改时间：10:42:39" itemprop="dateCreated datePublished" datetime="2020-06-03T10:34:24+08:00">2020-06-03</time>
+              <time title="创建时间：2020-06-03 10:34:24 / 修改时间：17:03:35" itemprop="dateCreated datePublished" datetime="2020-06-03T10:34:24+08:00">2020-06-03</time>
             
 
             
@@ -481,7 +481,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">180</span>
+                <span title="本文字数">957</span>
               
 
               
@@ -495,7 +495,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -519,7 +519,12 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr != <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr == <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 <h2 id="判断对象"><a href="#判断对象" class="headerlink" title="判断对象"></a>判断对象</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">JSON</span>.stringify(data) == <span class="string">"&#123;&#125;"</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.isPrototypeOf(obj) &amp;&amp; <span class="built_in">Object</span>.keys(obj).length === <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.isPrototypeOf(obj) </span><br><span class="line"><span class="built_in">Object</span>.keys(obj).length === <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将json对象转化为json字符串，再判断该字符串是否为"&#123;&#125;"</span></span><br><span class="line"><span class="keyword">var</span> data = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> b = (<span class="built_in">JSON</span>.stringify(data) == <span class="string">"&#123;&#125;"</span>);</span><br><span class="line">alert(b);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// for in 循环判断</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">alert(b());<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jquery的isEmptyObject方法</span></span><br><span class="line"><span class="comment">// 此方法是jquery将(for in)进行封装，使用时需要依赖jquery</span></span><br><span class="line"><span class="keyword">var</span> data = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> b = $.isEmptyObject(data);</span><br><span class="line">alert(b);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Object.getOwnPropertyNames()方法 此方法是使用Object对象的getOwnPropertyNames方法，获取到对象中的属性名，存到一个数组中，返回数组对象，我们可以通过判断数组的length来判断此对象是否为空</span></span><br><span class="line"><span class="keyword">var</span> data = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> arr = <span class="built_in">Object</span>.getOwnPropertyNames(data);</span><br><span class="line">alert(arr.length == <span class="number">0</span>);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用ES6的Object.keys()方法 与前方法类似，是ES6的新方法, 返回值也是对象中属性名组成的数组</span></span><br><span class="line"><span class="keyword">var</span> data = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> arr = <span class="built_in">Object</span>.keys(data);</span><br><span class="line">alert(arr.length == <span class="number">0</span>);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -934,7 +939,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">19k</span>
+    <span title="站点总字数">20k</span>
   
 
   
@@ -945,7 +950,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">32 分钟</span>
+    <span title="站点阅读时长">33 分钟</span>
   
 </div>
 
