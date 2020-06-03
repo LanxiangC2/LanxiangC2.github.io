@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[快速判断空数组和空对象]]></title>
+    <url>%2F2020%2F06%2F03%2F%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%AD%E7%A9%BA%E6%95%B0%E7%BB%84%E5%92%8C%E7%A9%BA%E5%AF%B9%E8%B1%A1%2F</url>
+    <content type="text"><![CDATA[判断空数组1JSON.stringify(data) == "[]" 1arr != false 1arr == false 判断对象1JSON.stringify(data) == "&#123;&#125;" 1Object.prototype.isPrototypeOf(obj) &amp;&amp; Object.keys(obj).length === 0]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[for循环中的变量保存]]></title>
     <url>%2F2019%2F12%2F27%2Ffor%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%BF%9D%E5%AD%98%2F</url>
     <content type="text"><![CDATA[今天的web前端学习打算用for循环给ul下的li标签绑定DOM0级事件，如下 12345&lt;ul&gt; &lt;li&gt;标题1&lt;/li&gt; &lt;li&gt;标题2&lt;/li&gt; &lt;li&gt;标题3&lt;/li&gt;&lt;/ul&gt; 12345678// 获取元素var items = document.getElementsByTagName('li')// for循环绑定事件for(var i = 0, len = items.length; i &lt; len; i++) &#123; items[i].onclick = function () &#123; alert('这是标题' + i) &#125;&#125; 以上的代码不用我解释了把，想实现的效果是点击哪个标题就弹出我点击了标题几。 可是问题出现了,我点击标题1，这时弹出“这是标题3”，我当时就不乐意了啊这明明就是标题1啊！！！ 本着实事求是的精神，我和这短短的几行程序进行了思想上的博弈，真理上的探究，直到我蓝牙鼠标彻底没电。（开个玩笑，凑个字数，23333） 那就查资料看看为啥把，原来这是因为for循环这段程序啊在脚本生成的时候就会执行，导致的结果虽然给每个li标签都绑定了事件，但是i的值却一直保存为循环的最大值也就是3，所以无论你点击标题几它都会弹出“这是标题3”。 我试了下，果然如此呀，既然这样那就想办法保存下来i的值不就好啦。（所以说现在的程序还是不够智能啊，黑人问号脸(lll￢ω￢)）。 1234567891011// 获取元素var items = document.getElementsByTagName('li')// for循环绑定事件for(var i = 0, len = items.length; i &lt; len; i++) &#123; // 函数自执行的方法 (function (i) &#123; items[i].onclick = function () &#123; alert('这是标题' + i) &#125; &#125;)(i)&#125; 这里我是用的匿名函数自执行的办法，使i变量得到保存，原理的话大家自行查阅了。 试一下效果，点击标题1，居然弹出”这时标题0”。emmm，小白就是小白啊，i是从0开始累加的呀，粗心粗心！！！Whatever问题总算是解决了嘛，还是很开心的呀。 在网上查阅了下另外的办法也是可以解决的哦，比如你自定义属性保存嘛，这时最容易想到的啦；还有通过闭包的方法返回并保存i的值；以及用ES6语法中的let代替var关键字等等。 我就不一一试了，宿舍11点半门禁了，我也不写了，哈哈，溜了溜了~~]]></content>
