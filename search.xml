@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[二叉搜索树转化为双向链表]]></title>
+    <url>%2F2020%2F06%2F04%2F%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E5%8C%96%E4%B8%BA%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%2F</url>
+    <content type="text"><![CDATA[昨天遇到一道这样的题，‘输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。’，想了很久才弄明白。 思路就是利用中序遍历，然后根据二叉搜索树的特性去递归。代码如下。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152/* function TreeNode(x) &#123; this.val = x; this.left = null; this.right = null;&#125; */function Convert(pRootOfTree)&#123; // write code here//1.将左子树构造成双链表，并返回链表头节点。///2.定位至左子树双链表最后一个节点。//3.如果左子树链表不为空的话，将当前root追加到左子树链表。//4.将右子树构造成双链表，并返回链表头节点。//5.如果右子树链表不为空的话，将该链表追加到root节点之后。//6.根据左子树链表是否为空确定返回的节点。 if(pRootOfTree == null)&#123;return null;&#125; if(pRootOfTree.right == null &amp;&amp; pRootOfTree.left == null) &#123;return pRootOfTree;&#125; // 1.将左子树构造成双链表，并返回链表头节点 var left = Convert(pRootOfTree.left); var p =left; // 2.定位至左子树双链表最后一个节点 while(p!=null &amp;&amp; p.right!=null)&#123;p = p.right;&#125; // 3.如果左子树链表不为空的话，将当前pRootOfTree追加到左子树链表 if(left!=null)&#123; p.right = pRootOfTree; pRootOfTree.left = p; &#125; // 4.将右子树构造成双链表，并返回链表头节点 // 5.如果右子树链表不为空的话，将该链表追加到pRootOfTree节点之后 var right = Convert(pRootOfTree.right); if(right)&#123; right.left = pRootOfTree; pRootOfTree.right = right; &#125; //递归函数的返回值 return left!==null?left:pRootOfTree; &#125; module.exports = &#123; Convert : Convert&#125;;]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[快速判断空数组和空对象]]></title>
     <url>%2F2020%2F06%2F03%2F%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%AD%E7%A9%BA%E6%95%B0%E7%BB%84%E5%92%8C%E7%A9%BA%E5%AF%B9%E8%B1%A1%2F</url>
     <content type="text"><![CDATA[判断空数组1JSON.stringify(data) == "[]" 1arr != false 1arr == false 判断对象1JSON.stringify(data) == "&#123;&#125;" 12Object.prototype.isPrototypeOf(obj) Object.keys(obj).length === 0 1234// 将json对象转化为json字符串，再判断该字符串是否为"&#123;&#125;"var data = &#123;&#125;;var b = (JSON.stringify(data) == "&#123;&#125;");alert(b);//true 123456789// for in 循环判断var obj = &#123;&#125;;var b = function() &#123; for(var key in obj) &#123; return false; &#125; return true;&#125;alert(b());//true 12345// jquery的isEmptyObject方法// 此方法是jquery将(for in)进行封装，使用时需要依赖jqueryvar data = &#123;&#125;;var b = $.isEmptyObject(data);alert(b);//true 1234//Object.getOwnPropertyNames()方法 此方法是使用Object对象的getOwnPropertyNames方法，获取到对象中的属性名，存到一个数组中，返回数组对象，我们可以通过判断数组的length来判断此对象是否为空var data = &#123;&#125;;var arr = Object.getOwnPropertyNames(data);alert(arr.length == 0);//true 1234//使用ES6的Object.keys()方法 与前方法类似，是ES6的新方法, 返回值也是对象中属性名组成的数组var data = &#123;&#125;;var arr = Object.keys(data);alert(arr.length == 0);//true]]></content>

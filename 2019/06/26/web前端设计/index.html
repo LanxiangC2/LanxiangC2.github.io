@@ -100,8 +100,8 @@
 <meta name="keywords" content="整体设计,主要框架和工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web前端设计">
-<meta property="og:url" content="http://hlc.jiuxiaxixi.com/2019/06/26/web前端设计/index.html">
-<meta property="og:site_name" content="雅室兰香">
+<meta property="og:url" content="http://lanxiangc2.github.io/2019/06/26/web前端设计/index.html">
+<meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="1 项目设计的整体设计框架如下">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.gravizo.com/svg?%40startuml%3B%0Acloud%20RabbitMQ%20%7B%20%3B%0Ainterface%20stomp%3B%0Ainterface%20mq%3B%0Amq%20%3C--%3E%20stomp%3B%0A%7D%3B%0Acloud%20FileSever%3B%0Adatabase%20Mysql%20as%20sql%3B%0Acloud%20Django%20%7B%3B%0Ainterface%20%20REST%20%3B%0AREST%20%3C--%3E%20sql%3A%20Django%20ORM%3B%0AREST%20--%3E%20mq%20%3A%20new%20jobs%3B%0A%7D%3B%0ACloud%20VueJs%20%7B%3B%0Ainterface%20Webosocket%20%20as%20wb%3B%0Ainterface%20http%20%3B%0Awb%20--%3E%20http%20%3A%20update%20view%3B%0Awb%20%3C--%3E%20stomp%20%3A%20%20notifiy%20or%20realtime%20data%3B%0Ahttp%20%3C--%3E%20REST%20%3A%20request%20%26%20response%3B%0Ahttp%20--%3E%20FileSever%20%3A%20request%20pics%20and%20files%3B%0A%7D%3B%0ANode%20Node%20%7B%3B%0Ainterface%20radio1%3B%0Ainterface%20mq_clinet1%3B%0Amq_clinet1%20--%3E%20radio1%20%3A%20configure%3B%0Amq%20--%3E%20mq_clinet1%20%3A%20working%20jobs%3B%0Amq_clinet1%20--%3E%20mq%20%3A%20result%3B%0A%7D%3B%0ANode%20Node2%20%7B%3B%0Ainterface%20radio2%3B%0Ainterface%20mq_clinet2%3B%0Amq_clinet2%20--%3E%20radio2%20%3A%20configure%3B%0Amq%20--%3E%20mq_clinet2%20%3A%20working%20jobs%3B%0Amq_clinet2%20--%3E%20mq%20%3A%20result%3B%0A%7D%3B%0ANode%20Node3%20%7B%3B%0Ainterface%20radio_n%3B%0Ainterface%20mq_clinet_n%3B%0Amq_clinet_n%20--%3E%20radio_n%20%3A%20configure%3B%0Amq%20--%3E%20mq_clinet_n%20%3A%20working%20jobs%3B%0Amq_clinet_n%20--%3E%20mq%20%3A%20result%3B%0A%7D%3B%0A%0ANode%20BackGroudTaskS%20%7B%3B%0Ainterface%20url_orm%3B%0Ainterface%20mq_consumers%20as%20mc%3B%0Amc%20--%3E%20url_orm%20%3A%20pollig%20or%20writing%3B%0A%7D%3B%0Aurl_orm%20%3C--%3E%20REST%20%3A%20http%20CURD%3B%0Amc%20--%3E%20mq%20%3A%20changes%20info%3B%0Amc%20--%3E%20FileSever%3A%20%22put%20files%22%3B%0AFileSever%20--%3E%20url_orm%3A%20%22return%20static%20urls%22%3B%0A%40enduml">
@@ -115,13 +115,13 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="雅室兰香" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="黄同学的笔记小屋" type="application/atom+xml">
 
 
 
   
   
-  <link rel="canonical" href="http://hlc.jiuxiaxixi.com/2019/06/26/web前端设计/">
+  <link rel="canonical" href="http://lanxiangc2.github.io/2019/06/26/web前端设计/">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title>web前端设计 | 雅室兰香</title>
+  <title>web前端设计 | 黄同学的笔记小屋</title>
   
 
 
@@ -190,7 +190,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">雅室兰香</span>
+        <span class="site-title">黄同学的笔记小屋</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -252,7 +252,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">11</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">12</span></a>
 
   </li>
         
@@ -271,7 +271,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
 
   </li>
         
@@ -290,7 +290,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">10</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">11</span></a>
 
   </li>
 
@@ -371,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hlc.jiuxiaxixi.com/2019/06/26/web前端设计/">
+    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2019/06/26/web前端设计/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="黄流川">
@@ -380,7 +380,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="雅室兰香">
+      <meta itemprop="name" content="黄同学的笔记小屋">
     </span>
 
     
@@ -731,7 +731,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://hlc.jiuxiaxixi.com/2019/06/26/web前端设计/" title="web前端设计">http://hlc.jiuxiaxixi.com/2019/06/26/web前端设计/</a>
+    <a href="http://lanxiangc2.github.io/2019/06/26/web前端设计/" title="web前端设计">http://lanxiangc2.github.io/2019/06/26/web前端设计/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -851,7 +851,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -872,7 +872,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -911,7 +913,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1073,7 +1077,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">20k</span>
+    <span title="站点总字数">21k</span>
   
 
   
@@ -1084,7 +1088,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">33 分钟</span>
+    <span title="站点阅读时长">35 分钟</span>
   
 </div>
 
@@ -1239,7 +1243,7 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "http://hlc.jiuxiaxixi.com/2019/06/26/web前端设计/";
+    this.page.url = "http://lanxiangc2.github.io/2019/06/26/web前端设计/";
     this.page.identifier = "2019/06/26/web前端设计/";
     this.page.title = 'web前端设计';
     };

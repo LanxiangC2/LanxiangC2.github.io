@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>雅室兰香</title>
+  <title>黄同学的笔记小屋</title>
   
   <subtitle>web前端学习日志</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://hlc.jiuxiaxixi.com/"/>
-  <updated>2020-06-03T09:03:35.799Z</updated>
-  <id>http://hlc.jiuxiaxixi.com/</id>
+  <link href="http://lanxiangc2.github.io/"/>
+  <updated>2020-06-04T01:58:49.621Z</updated>
+  <id>http://lanxiangc2.github.io/</id>
   
   <author>
     <name>黄流川</name>
@@ -17,9 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>二叉搜索树转化为双向链表</title>
+    <link href="http://lanxiangc2.github.io/2020/06/04/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E5%8C%96%E4%B8%BA%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/"/>
+    <id>http://lanxiangc2.github.io/2020/06/04/二叉搜索树转化为双向链表/</id>
+    <published>2020-06-04T01:54:02.000Z</published>
+    <updated>2020-06-04T01:58:49.621Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;昨天遇到一道这样的题，‘&lt;code&gt;输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。&lt;/code&gt;’，想了很久才弄明白。&lt;/p&gt;
+&lt;p&gt;思路就是利用中序遍历，然后根据二叉搜索树的特性去递归。代码如下。&lt;/p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="http://lanxiangc2.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://lanxiangc2.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>快速判断空数组和空对象</title>
-    <link href="http://hlc.jiuxiaxixi.com/2020/06/03/%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%AD%E7%A9%BA%E6%95%B0%E7%BB%84%E5%92%8C%E7%A9%BA%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://hlc.jiuxiaxixi.com/2020/06/03/快速判断空数组和空对象/</id>
+    <link href="http://lanxiangc2.github.io/2020/06/03/%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%AD%E7%A9%BA%E6%95%B0%E7%BB%84%E5%92%8C%E7%A9%BA%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://lanxiangc2.github.io/2020/06/03/快速判断空数组和空对象/</id>
     <published>2020-06-03T02:34:24.000Z</published>
     <updated>2020-06-03T09:03:35.799Z</updated>
     
@@ -35,17 +62,17 @@
     
     </summary>
     
-      <category term="web前端" scheme="http://hlc.jiuxiaxixi.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="学习笔记" scheme="http://hlc.jiuxiaxixi.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="学习笔记" scheme="http://lanxiangc2.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>for循环中的变量保存</title>
-    <link href="http://hlc.jiuxiaxixi.com/2019/12/27/for%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%BF%9D%E5%AD%98/"/>
-    <id>http://hlc.jiuxiaxixi.com/2019/12/27/for循环中的变量保存/</id>
+    <link href="http://lanxiangc2.github.io/2019/12/27/for%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%BF%9D%E5%AD%98/"/>
+    <id>http://lanxiangc2.github.io/2019/12/27/for循环中的变量保存/</id>
     <published>2019-12-27T14:18:13.000Z</published>
     <updated>2019-12-27T15:17:48.517Z</updated>
     
@@ -60,16 +87,16 @@
     </summary>
     
     
-      <category term="前端学习" scheme="http://hlc.jiuxiaxixi.com/tags/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="前端学习" scheme="http://lanxiangc2.github.io/tags/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="问题记录" scheme="http://hlc.jiuxiaxixi.com/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+      <category term="问题记录" scheme="http://lanxiangc2.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
     
   </entry>
   
   <entry>
     <title>节点新增模块</title>
-    <link href="http://hlc.jiuxiaxixi.com/2019/06/26/%E8%8A%82%E7%82%B9%E6%96%B0%E5%A2%9E%E6%A8%A1%E5%9D%97/"/>
-    <id>http://hlc.jiuxiaxixi.com/2019/06/26/节点新增模块/</id>
+    <link href="http://lanxiangc2.github.io/2019/06/26/%E8%8A%82%E7%82%B9%E6%96%B0%E5%A2%9E%E6%A8%A1%E5%9D%97/"/>
+    <id>http://lanxiangc2.github.io/2019/06/26/节点新增模块/</id>
     <published>2019-06-26T08:35:21.000Z</published>
     <updated>2019-07-30T06:51:02.092Z</updated>
     
@@ -80,17 +107,17 @@
     
     </summary>
     
-      <category term="web前端" scheme="http://hlc.jiuxiaxixi.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="节点管理" scheme="http://hlc.jiuxiaxixi.com/tags/%E8%8A%82%E7%82%B9%E7%AE%A1%E7%90%86/"/>
+      <category term="节点管理" scheme="http://lanxiangc2.github.io/tags/%E8%8A%82%E7%82%B9%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>web前端设计</title>
-    <link href="http://hlc.jiuxiaxixi.com/2019/06/26/web%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/"/>
-    <id>http://hlc.jiuxiaxixi.com/2019/06/26/web前端设计/</id>
+    <link href="http://lanxiangc2.github.io/2019/06/26/web%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/"/>
+    <id>http://lanxiangc2.github.io/2019/06/26/web前端设计/</id>
     <published>2019-06-26T08:24:48.000Z</published>
     <updated>2019-07-30T06:49:29.499Z</updated>
     
@@ -100,19 +127,19 @@
     
     </summary>
     
-      <category term="web前端" scheme="http://hlc.jiuxiaxixi.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="整体设计" scheme="http://hlc.jiuxiaxixi.com/tags/%E6%95%B4%E4%BD%93%E8%AE%BE%E8%AE%A1/"/>
+      <category term="整体设计" scheme="http://lanxiangc2.github.io/tags/%E6%95%B4%E4%BD%93%E8%AE%BE%E8%AE%A1/"/>
     
-      <category term="主要框架和工具" scheme="http://hlc.jiuxiaxixi.com/tags/%E4%B8%BB%E8%A6%81%E6%A1%86%E6%9E%B6%E5%92%8C%E5%B7%A5%E5%85%B7/"/>
+      <category term="主要框架和工具" scheme="http://lanxiangc2.github.io/tags/%E4%B8%BB%E8%A6%81%E6%A1%86%E6%9E%B6%E5%92%8C%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>节点管理模块</title>
-    <link href="http://hlc.jiuxiaxixi.com/2019/06/14/%E8%8A%82%E7%82%B9%E7%AE%A1%E7%90%86%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82%E8%AE%BE%E8%AE%A1/"/>
-    <id>http://hlc.jiuxiaxixi.com/2019/06/14/节点管理用户需求设计/</id>
+    <link href="http://lanxiangc2.github.io/2019/06/14/%E8%8A%82%E7%82%B9%E7%AE%A1%E7%90%86%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82%E8%AE%BE%E8%AE%A1/"/>
+    <id>http://lanxiangc2.github.io/2019/06/14/节点管理用户需求设计/</id>
     <published>2019-06-14T07:08:31.000Z</published>
     <updated>2019-06-26T09:03:12.157Z</updated>
     
@@ -124,21 +151,21 @@
     
     </summary>
     
-      <category term="web前端" scheme="http://hlc.jiuxiaxixi.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="节点管理" scheme="http://hlc.jiuxiaxixi.com/tags/%E8%8A%82%E7%82%B9%E7%AE%A1%E7%90%86/"/>
+      <category term="节点管理" scheme="http://lanxiangc2.github.io/tags/%E8%8A%82%E7%82%B9%E7%AE%A1%E7%90%86/"/>
     
-      <category term="UI设计" scheme="http://hlc.jiuxiaxixi.com/tags/UI%E8%AE%BE%E8%AE%A1/"/>
+      <category term="UI设计" scheme="http://lanxiangc2.github.io/tags/UI%E8%AE%BE%E8%AE%A1/"/>
     
-      <category term="需求分析" scheme="http://hlc.jiuxiaxixi.com/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/"/>
+      <category term="需求分析" scheme="http://lanxiangc2.github.io/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
     <title>Vue和Django之间的数据交互</title>
-    <link href="http://hlc.jiuxiaxixi.com/2019/06/04/Django%E5%92%8CVue/"/>
-    <id>http://hlc.jiuxiaxixi.com/2019/06/04/Django和Vue/</id>
+    <link href="http://lanxiangc2.github.io/2019/06/04/Django%E5%92%8CVue/"/>
+    <id>http://lanxiangc2.github.io/2019/06/04/Django和Vue/</id>
     <published>2019-06-04T12:19:49.000Z</published>
     <updated>2019-06-04T14:31:42.081Z</updated>
     
@@ -148,19 +175,19 @@
     
     </summary>
     
-      <category term="web前端" scheme="http://hlc.jiuxiaxixi.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="项目设计" scheme="http://hlc.jiuxiaxixi.com/tags/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1/"/>
+      <category term="项目设计" scheme="http://lanxiangc2.github.io/tags/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1/"/>
     
-      <category term="节点管理" scheme="http://hlc.jiuxiaxixi.com/tags/%E8%8A%82%E7%82%B9%E7%AE%A1%E7%90%86/"/>
+      <category term="节点管理" scheme="http://lanxiangc2.github.io/tags/%E8%8A%82%E7%82%B9%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>网页前端基本功能的设计</title>
-    <link href="http://hlc.jiuxiaxixi.com/2019/05/28/%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E7%9A%84%E8%AE%BE%E8%AE%A1/"/>
-    <id>http://hlc.jiuxiaxixi.com/2019/05/28/基本功能的设计/</id>
+    <link href="http://lanxiangc2.github.io/2019/05/28/%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD%E7%9A%84%E8%AE%BE%E8%AE%A1/"/>
+    <id>http://lanxiangc2.github.io/2019/05/28/基本功能的设计/</id>
     <published>2019-05-28T15:00:27.000Z</published>
     <updated>2019-06-17T06:30:09.412Z</updated>
     
@@ -172,19 +199,19 @@
     
     </summary>
     
-      <category term="web前端" scheme="http://hlc.jiuxiaxixi.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="项目设计" scheme="http://hlc.jiuxiaxixi.com/tags/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1/"/>
+      <category term="项目设计" scheme="http://lanxiangc2.github.io/tags/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1/"/>
     
-      <category term="流程安排" scheme="http://hlc.jiuxiaxixi.com/tags/%E6%B5%81%E7%A8%8B%E5%AE%89%E6%8E%92/"/>
+      <category term="流程安排" scheme="http://lanxiangc2.github.io/tags/%E6%B5%81%E7%A8%8B%E5%AE%89%E6%8E%92/"/>
     
   </entry>
   
   <entry>
     <title>VueJs框架</title>
-    <link href="http://hlc.jiuxiaxixi.com/2019/05/28/front-end-UI/"/>
-    <id>http://hlc.jiuxiaxixi.com/2019/05/28/front-end-UI/</id>
+    <link href="http://lanxiangc2.github.io/2019/05/28/front-end-UI/"/>
+    <id>http://lanxiangc2.github.io/2019/05/28/front-end-UI/</id>
     <published>2019-05-28T13:19:18.000Z</published>
     <updated>2019-06-25T02:47:39.081Z</updated>
     
@@ -195,17 +222,17 @@
     
     </summary>
     
-      <category term="web前端技术学习" scheme="http://hlc.jiuxiaxixi.com/categories/web%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="web前端技术学习" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="web前端工具" scheme="http://hlc.jiuxiaxixi.com/tags/web%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
+      <category term="web前端工具" scheme="http://lanxiangc2.github.io/tags/web%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>前端设计方案</title>
-    <link href="http://hlc.jiuxiaxixi.com/2019/05/27/front-to-end/"/>
-    <id>http://hlc.jiuxiaxixi.com/2019/05/27/front-to-end/</id>
+    <link href="http://lanxiangc2.github.io/2019/05/27/front-to-end/"/>
+    <id>http://lanxiangc2.github.io/2019/05/27/front-to-end/</id>
     <published>2019-05-27T14:40:29.000Z</published>
     <updated>2019-06-14T09:58:20.143Z</updated>
     
@@ -216,17 +243,17 @@
     
     </summary>
     
-      <category term="web前端" scheme="http://hlc.jiuxiaxixi.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="项目设计" scheme="http://hlc.jiuxiaxixi.com/tags/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1/"/>
+      <category term="项目设计" scheme="http://lanxiangc2.github.io/tags/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://hlc.jiuxiaxixi.com/2019/05/26/hello-world/"/>
-    <id>http://hlc.jiuxiaxixi.com/2019/05/26/hello-world/</id>
+    <link href="http://lanxiangc2.github.io/2019/05/26/hello-world/"/>
+    <id>http://lanxiangc2.github.io/2019/05/26/hello-world/</id>
     <published>2019-05-26T14:40:29.000Z</published>
     <updated>2019-06-04T09:43:26.825Z</updated>
     
