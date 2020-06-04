@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="昨天遇到一道这样的题，‘输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。’，想了很久才弄明白。 思路就是利用中序遍历，然后根据二叉搜索树的特性去递归。代码如下。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-04T01:58:49.621Z">
+<meta property="og:updated_time" content="2020-06-04T06:53:17.594Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉搜索树转化为双向链表">
 <meta name="twitter:description" content="昨天遇到一道这样的题，‘输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。’，想了很久才弄明白。 思路就是利用中序遍历，然后根据二叉搜索树的特性去递归。代码如下。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474">
@@ -410,7 +410,7 @@
                 
               
 
-              <time title="创建时间：2020-06-04 09:54:02 / 修改时间：09:58:49" itemprop="dateCreated datePublished" datetime="2020-06-04T09:54:02+08:00">2020-06-04</time>
+              <time title="创建时间：2020-06-04 09:54:02 / 修改时间：14:53:17" itemprop="dateCreated datePublished" datetime="2020-06-04T09:54:02+08:00">2020-06-04</time>
             
 
             
@@ -432,7 +432,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法与数据结构/" itemprop="url" rel="index"><span itemprop="name">算法与数据结构</span></a></span>
 
                 
                 
@@ -452,7 +452,7 @@
             
                 <span class="post-meta-item-text">评论数：</span>
                 <a href="/2020/06/04/二叉搜索树转化为双向链表/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/06/04/二叉搜索树转化为双向链表/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/04/二叉搜索树转化为双向链表/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -654,9 +654,6 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-      </div>
     </div>
 
   
@@ -1071,26 +1068,35 @@
 
   
   
-  <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
 
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
 
 <script>
-  var disqus_config = function() {
-    this.page.url = "http://lanxiangc2.github.io/2020/06/04/二叉搜索树转化为双向链表/";
-    this.page.identifier = "2020/06/04/二叉搜索树转化为双向链表/";
-    this.page.title = '二叉搜索树转化为双向链表';
-    };
-  function loadComments() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', '' + +new Date());
-    (d.head || d.body).appendChild(s);
-  }
-  
-    loadComments();
-  
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'KtyfG26I0uFY1lxz9dNNyppi-gzGzoHsz',
+    appKey: 'nyyct0oTp3SMkw68IwbAaN80',
+    placeholder: '留下您的精彩评论吧',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
 </script>
-
 
 
 

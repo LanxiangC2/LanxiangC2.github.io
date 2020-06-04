@@ -466,7 +466,7 @@
             
                 <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/06/14/节点管理用户需求设计/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/14/节点管理用户需求设计/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/14/节点管理用户需求设计/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -680,7 +680,7 @@
             
                 <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/06/04/Django和Vue/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/04/Django和Vue/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/04/Django和Vue/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -904,7 +904,7 @@
             
                 <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/05/28/基本功能的设计/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/28/基本功能的设计/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/28/基本功能的设计/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1130,7 +1130,7 @@
             
                 <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/05/28/front-end-UI/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/28/front-end-UI/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/28/front-end-UI/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1355,7 +1355,7 @@
             
                 <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/05/27/front-to-end/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/27/front-to-end/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/27/front-to-end/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1882,9 +1882,35 @@
 
   
   
-  <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
 
 
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'KtyfG26I0uFY1lxz9dNNyppi-gzGzoHsz',
+    appKey: 'nyyct0oTp3SMkw68IwbAaN80',
+    placeholder: '留下您的精彩评论吧',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
 
 
 

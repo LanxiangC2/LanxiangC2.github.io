@@ -100,7 +100,7 @@
 <meta name="keywords" content="web前端">
 <meta property="og:type" content="website">
 <meta property="og:title" content="黄同学的笔记小屋">
-<meta property="og:url" content="http://lanxiangc2.github.io/categories/算法/index.html">
+<meta property="og:url" content="http://lanxiangc2.github.io/categories/算法与数据结构/index.html">
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="从零到一，跨过就是成功">
 <meta property="og:locale" content="zh-CN">
@@ -116,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="http://lanxiangc2.github.io/categories/算法/">
+  <link rel="canonical" href="http://lanxiangc2.github.io/categories/算法与数据结构/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>分类: 算法 | 黄同学的笔记小屋</title>
+  <title>分类: 算法与数据结构 | 黄同学的笔记小屋</title>
   
 
 
@@ -376,7 +376,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>算法<small>分类</small>
+        <h1>算法与数据结构<small>分类</small>
         </h1>
       </div>
 
@@ -825,9 +825,35 @@
 
   
   
-  <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
 
 
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'KtyfG26I0uFY1lxz9dNNyppi-gzGzoHsz',
+    appKey: 'nyyct0oTp3SMkw68IwbAaN80',
+    placeholder: '留下您的精彩评论吧',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
 
 
 

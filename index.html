@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2020-06-04 09:54:02 / 修改时间：09:58:49" itemprop="dateCreated datePublished" datetime="2020-06-04T09:54:02+08:00">2020-06-04</time>
+              <time title="创建时间：2020-06-04 09:54:02 / 修改时间：14:53:17" itemprop="dateCreated datePublished" datetime="2020-06-04T09:54:02+08:00">2020-06-04</time>
             
 
             
@@ -434,7 +434,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法/" itemprop="url" rel="index"><span itemprop="name">算法</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法与数据结构/" itemprop="url" rel="index"><span itemprop="name">算法与数据结构</span></a></span>
 
                 
                 
@@ -454,7 +454,7 @@
             
                 <span class="post-meta-item-text">评论数：</span>
                 <a href="/2020/06/04/二叉搜索树转化为双向链表/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/06/04/二叉搜索树转化为双向链表/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/04/二叉搜索树转化为双向链表/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -662,7 +662,7 @@
             
                 <span class="post-meta-item-text">评论数：</span>
                 <a href="/2020/06/03/快速判断空数组和空对象/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/06/03/快速判断空数组和空对象/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/03/快速判断空数组和空对象/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -859,7 +859,7 @@
             
                 <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/12/27/for循环中的变量保存/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/12/27/for循环中的变量保存/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/27/for循环中的变量保存/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1087,7 +1087,7 @@
             
                 <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/06/26/节点新增模块/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/26/节点新增模块/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/26/节点新增模块/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1312,7 +1312,7 @@
             
                 <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/06/26/web前端设计/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/06/26/web前端设计/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/26/web前端设计/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1838,9 +1838,35 @@
 
   
   
-  <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
 
 
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'KtyfG26I0uFY1lxz9dNNyppi-gzGzoHsz',
+    appKey: 'nyyct0oTp3SMkw68IwbAaN80',
+    placeholder: '留下您的精彩评论吧',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
 
 
 

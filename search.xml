@@ -5,7 +5,7 @@
     <url>%2F2020%2F06%2F04%2F%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E5%8C%96%E4%B8%BA%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%2F</url>
     <content type="text"><![CDATA[昨天遇到一道这样的题，‘输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。’，想了很久才弄明白。 思路就是利用中序遍历，然后根据二叉搜索树的特性去递归。代码如下。 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152/* function TreeNode(x) &#123; this.val = x; this.left = null; this.right = null;&#125; */function Convert(pRootOfTree)&#123; // write code here//1.将左子树构造成双链表，并返回链表头节点。///2.定位至左子树双链表最后一个节点。//3.如果左子树链表不为空的话，将当前root追加到左子树链表。//4.将右子树构造成双链表，并返回链表头节点。//5.如果右子树链表不为空的话，将该链表追加到root节点之后。//6.根据左子树链表是否为空确定返回的节点。 if(pRootOfTree == null)&#123;return null;&#125; if(pRootOfTree.right == null &amp;&amp; pRootOfTree.left == null) &#123;return pRootOfTree;&#125; // 1.将左子树构造成双链表，并返回链表头节点 var left = Convert(pRootOfTree.left); var p =left; // 2.定位至左子树双链表最后一个节点 while(p!=null &amp;&amp; p.right!=null)&#123;p = p.right;&#125; // 3.如果左子树链表不为空的话，将当前pRootOfTree追加到左子树链表 if(left!=null)&#123; p.right = pRootOfTree; pRootOfTree.left = p; &#125; // 4.将右子树构造成双链表，并返回链表头节点 // 5.如果右子树链表不为空的话，将该链表追加到pRootOfTree节点之后 var right = Convert(pRootOfTree.right); if(right)&#123; right.left = pRootOfTree; pRootOfTree.right = right; &#125; //递归函数的返回值 return left!==null?left:pRootOfTree; &#125; module.exports = &#123; Convert : Convert&#125;;]]></content>
       <categories>
-        <category>算法</category>
+        <category>算法与数据结构</category>
       </categories>
       <tags>
         <tag>算法</tag>
