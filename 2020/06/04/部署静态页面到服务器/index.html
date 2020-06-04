@@ -96,21 +96,22 @@
 
 
 
-  <meta name="description" content="秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出 想说一句非科班出身的太难了，我搞了好半天才把静态页面部署到服务器上，说个题外话，买服务器的时候我还在纠结买哪个公司的，担心到时候面试官问到会很尴尬呀（哈哈，梦回高考之前在想去北大还是清华啦）。 123456789flowst=&amp;gt;startob=&amp;gt;operation: 有属于自己的服务器op=&amp;gt;operation">
+  <meta name="description" content="秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出 想说一句非科班出身的太难了，我搞了好半天才把静态页面部署到服务器上，说个题外话，买服务器的时候我还在纠结买哪个公司的，担心到时候面试官问到会很尴尬呀（哈哈，梦回高考之前在想去北大还是清华啦）。先给自己拟定一个流程图吧（emmmm，不知道能不能行呀）。  WinScp和Xchell WinSCP是一个Windows环境下使用SSH">
 <meta name="keywords" content="运维,部署">
 <meta property="og:type" content="article">
 <meta property="og:title" content="部署静态页面到服务器">
 <meta property="og:url" content="http://lanxiangc2.github.io/2020/06/04/部署静态页面到服务器/index.html">
 <meta property="og:site_name" content="黄同学的笔记小屋">
-<meta property="og:description" content="秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出 想说一句非科班出身的太难了，我搞了好半天才把静态页面部署到服务器上，说个题外话，买服务器的时候我还在纠结买哪个公司的，担心到时候面试官问到会很尴尬呀（哈哈，梦回高考之前在想去北大还是清华啦）。 123456789flowst=&amp;gt;startob=&amp;gt;operation: 有属于自己的服务器op=&amp;gt;operation">
+<meta property="og:description" content="秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出 想说一句非科班出身的太难了，我搞了好半天才把静态页面部署到服务器上，说个题外话，买服务器的时候我还在纠结买哪个公司的，担心到时候面试官问到会很尴尬呀（哈哈，梦回高考之前在想去北大还是清华啦）。先给自己拟定一个流程图吧（emmmm，不知道能不能行呀）。  WinScp和Xchell WinSCP是一个Windows环境下使用SSH">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/04/部署静态页面到服务器/flow.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/04/部署静态页面到服务器/homepage.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/04/部署静态页面到服务器/homeworkdemo.png">
-<meta property="og:updated_time" content="2020-06-04T12:35:41.614Z">
+<meta property="og:updated_time" content="2020-06-04T12:41:31.072Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="部署静态页面到服务器">
-<meta name="twitter:description" content="秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出 想说一句非科班出身的太难了，我搞了好半天才把静态页面部署到服务器上，说个题外话，买服务器的时候我还在纠结买哪个公司的，担心到时候面试官问到会很尴尬呀（哈哈，梦回高考之前在想去北大还是清华啦）。 123456789flowst=&amp;gt;startob=&amp;gt;operation: 有属于自己的服务器op=&amp;gt;operation">
-<meta name="twitter:image" content="http://lanxiangc2.github.io/2020/06/04/部署静态页面到服务器/homepage.png">
+<meta name="twitter:description" content="秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出 想说一句非科班出身的太难了，我搞了好半天才把静态页面部署到服务器上，说个题外话，买服务器的时候我还在纠结买哪个公司的，担心到时候面试官问到会很尴尬呀（哈哈，梦回高考之前在想去北大还是清华啦）。先给自己拟定一个流程图吧（emmmm，不知道能不能行呀）。  WinScp和Xchell WinSCP是一个Windows环境下使用SSH">
+<meta name="twitter:image" content="http://lanxiangc2.github.io/2020/06/04/部署静态页面到服务器/flow.png">
 
 
 
@@ -413,7 +414,7 @@
                 
               
 
-              <time title="创建时间：2020-06-04 19:19:47 / 修改时间：20:35:41" itemprop="dateCreated datePublished" datetime="2020-06-04T19:19:47+08:00">2020-06-04</time>
+              <time title="创建时间：2020-06-04 19:19:47 / 修改时间：20:41:31" itemprop="dateCreated datePublished" datetime="2020-06-04T19:19:47+08:00">2020-06-04</time>
             
 
             
@@ -484,7 +485,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.1k</span>
+                <span title="本文字数">1.9k</span>
               
 
               
@@ -520,8 +521,8 @@
       
         <blockquote>
 <h4 id="秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出"><a href="#秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出" class="headerlink" title="秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出"></a>秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出</h4></blockquote>
-<p>想说一句非科班出身的太难了，我搞了好半天才把静态页面部署到服务器上，说个题外话，买服务器的时候我还在纠结买哪个公司的，担心到时候面试官问到会很尴尬呀（哈哈，梦回高考之前在想去北大还是清华啦）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">flow</span><br><span class="line">st=&gt;start</span><br><span class="line">ob=&gt;operation: 有属于自己的服务器</span><br><span class="line">op=&gt;operation: 配置自己的服务器</span><br><span class="line">cond1=&gt;operation: 打造自己的个人站</span><br><span class="line">cond2=&gt;operation: 将自己的作品demo部署上线</span><br><span class="line">cond3=&gt;operation: 准备投简历</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;ob-&gt;op-&gt;cond1-&gt;cond2-&gt;cond3-&gt;e</span><br></pre></td></tr></table></figure>
+<p>想说一句非科班出身的太难了，我搞了好半天才把静态页面部署到服务器上，说个题外话，买服务器的时候我还在纠结买哪个公司的，担心到时候面试官问到会很尴尬呀（哈哈，梦回高考之前在想去北大还是清华啦）。先给自己拟定一个流程图吧（emmmm，不知道能不能行呀）。</p>
+<p><img src="/2020/06/04/部署静态页面到服务器/flow.png" alt="flow"></p>
 <h3 id="WinScp和Xchell"><a href="#WinScp和Xchell" class="headerlink" title="WinScp和Xchell"></a>WinScp和Xchell</h3><blockquote>
 <p>WinSCP是一个Windows环境下使用<a href="https://baike.baidu.com/item/SSH/5400403" target="_blank" rel="noopener">SSH</a>的开源图形化SFTP客户端。同时支持SCP协议。它的主要功能就是在本地与远程计算机间安全的复制文件。winscp也可以链接其他系统,比如linux系统。</p>
 </blockquote>
@@ -565,9 +566,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s stop</span><br></pre></td></tr></table></figure>
 <p>另外，想查看下进程</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#查看非root启动的程序</span><br><span class="line">ps -U root -u root -N</span><br><span class="line">#系统中的每个进程</span><br><span class="line">ps -A </span><br><span class="line">ps -e</span><br><span class="line">#top命令提供了运行中系统的动</span><br></pre></td></tr></table></figure>
-<h3 id="部署静态页面"><a href="#部署静态页面" class="headerlink" title="部署静态页面"></a>部署静态页面</h3><p>nginx配置完成后就可以放置我的静态网页到服务器上啦，想想还有点小激动呢，先输入我的域名试下吧，地址栏输入<a href="http://www.lanxiangc2.cn/" target="_blank" rel="noopener">www.lanxiangc2.cn</a>，点击确定，bingo</p>
+<h3 id="部署静态页面"><a href="#部署静态页面" class="headerlink" title="部署静态页面"></a>部署静态页面</h3><p>nginx配置完成后就可以放置我的静态网页到服务器上啦，想想还有点小激动呢，先输入我的域名试下吧，地址栏输入<a href="http://www.lanxiangc2.cn/" target="_blank" rel="noopener">www.lanxiangc2.cn</a>，点击确定，bingo！</p>
 <p><img src="/2020/06/04/部署静态页面到服务器/homepage.png" alt="    homepage"></p>
-<p>启动成功啦！接下来按照对nginx的设置放置一个静态网页到指定的目录下，输入<a href="http://www.lanxiangc2.cn/homeworkdemo" target="_blank" rel="noopener">www.lanxiangc2.cn/homeworkdemo</a>，点击回车，bingo</p>
+<p>启动成功啦！接下来按照对nginx的设置放置一个静态网页到指定的目录下，输入<a href="http://www.lanxiangc2.cn/homeworkdemo" target="_blank" rel="noopener">www.lanxiangc2.cn/homeworkdemo</a>，点击回车，bingo！</p>
 <p><img src="/2020/06/04/部署静态页面到服务器/homeworkdemo.png" alt="homeworkdemo"></p>
 <p>忙活了半天总算是没有瞎忙活啊，接下来就着手好好准备作品和demo吧，加油！！！</p>
 
@@ -1004,7 +1005,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">39 分钟</span>
+    <span title="站点阅读时长">38 分钟</span>
   
 </div>
 
