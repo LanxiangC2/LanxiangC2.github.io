@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-06-04T12:41:31.072Z</updated>
+  <updated>2020-06-05T05:41:48.958Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>找第N个丑数</title>
+    <link href="http://lanxiangc2.github.io/2020/06/05/%E6%89%BE%E7%AC%ACN%E4%B8%AA%E4%B8%91%E6%95%B0/"/>
+    <id>http://lanxiangc2.github.io/2020/06/05/找第N个丑数/</id>
+    <published>2020-06-05T05:35:32.000Z</published>
+    <updated>2020-06-05T05:41:48.958Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;题目：把只包含质因子2、3和5的数称作丑数（Ugly Number）。例如6、8都是丑数，但14不是，因为它包含质因子7。
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://lanxiangc2.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>部署静态页面到服务器</title>
