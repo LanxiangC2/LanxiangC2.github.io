@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/westbrook.jpg?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.1',
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":true,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="对ES6有什么了解 从以下几个方面去聊   let和const 解构赋值 ES6拓展 Promise Class  Promise介绍一下 解决异步执行。另外回调函数和事件也可以解决异步执行的问题  1、回调与Promise12345678910111213141516function f() &amp;#123;    return new Promise(resolve =&amp;gt; &amp;#123;">
+<meta name="keywords" content="ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端知识点总结——ES6">
+<meta property="og:url" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/index.html">
+<meta property="og:site_name" content="黄同学的笔记小屋">
+<meta property="og:description" content="对ES6有什么了解 从以下几个方面去聊   let和const 解构赋值 ES6拓展 Promise Class  Promise介绍一下 解决异步执行。另外回调函数和事件也可以解决异步执行的问题  1、回调与Promise12345678910111213141516function f() &amp;#123;    return new Promise(resolve =&amp;gt; &amp;#123;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-06-09T08:03:45.202Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端知识点总结——ES6">
+<meta name="twitter:description" content="对ES6有什么了解 从以下几个方面去聊   let和const 解构赋值 ES6拓展 Promise Class  Promise介绍一下 解决异步执行。另外回调函数和事件也可以解决异步执行的问题  1、回调与Promise12345678910111213141516function f() &amp;#123;    return new Promise(resolve =&amp;gt; &amp;#123;">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="黄同学的笔记小屋" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>前端知识点总结——ES6 | 黄同学的笔记小屋</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">黄同学的笔记小屋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">web前端学习日志</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">23</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">23</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄流川">
+      <meta itemprop="description" content="从零到一，跨过就是成功">
+      <meta itemprop="image" content="/images/westbrook.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黄同学的笔记小屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端知识点总结——ES6
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-09 12:56:34 / 修改时间：16:03:45" itemprop="dateCreated datePublished" datetime="2020-06-09T12:56:34+08:00">2020-06-09</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端知识点总结/" itemprop="url" rel="index"><span itemprop="name">前端知识点总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2020/06/09/前端知识点总结——ES6/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/09/前端知识点总结——ES6/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">16k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">27 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="对ES6有什么了解"><a href="#对ES6有什么了解" class="headerlink" title="对ES6有什么了解"></a>对ES6有什么了解</h3><blockquote>
+<p>从以下几个方面去聊</p>
+</blockquote>
+<ol>
+<li>let和const</li>
+<li>解构赋值</li>
+<li>ES6拓展</li>
+<li>Promise</li>
+<li>Class</li>
+</ol>
+<h3 id="Promise介绍一下"><a href="#Promise介绍一下" class="headerlink" title="Promise介绍一下"></a>Promise介绍一下</h3><blockquote>
+<p>解决异步执行。另外回调函数和事件也可以解决异步执行的问题</p>
+</blockquote>
+<h4 id="1、回调与Promise"><a href="#1、回调与Promise" class="headerlink" title="1、回调与Promise"></a>1、回调与Promise</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            resolve();</span><br><span class="line">        &#125;, <span class="number">1000</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">f()</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);<span class="keyword">return</span> f();</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">&#125;)</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>promise新建后立即执行，所以首先输出的是promise，然后then方法指定的回调函数，将在当前脚本所有同步任务执行完才会执行。</p>
+<h4 id="2、对比回调和Promise的流程控制"><a href="#2、对比回调和Promise的流程控制" class="headerlink" title="2、对比回调和Promise的流程控制"></a>2、对比回调和Promise的流程控制</h4><p>回调函数不会重复地执行；调用的resolve全为自己所书写的流程，很大程度改善了反转控制的问题</p>
+<h4 id="3、错误处理"><a href="#3、错误处理" class="headerlink" title="3、错误处理"></a>3、错误处理</h4><ul>
+<li><p>then方法中的第二个参数，即为失败时做的事情</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// then(resolve, reject)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (val) &#123;</span><br><span class="line">            resolve()</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            reject()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="literal">false</span>)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);<span class="keyword">return</span> f(); <span class="comment">//对应resolve（）</span></span><br><span class="line">&#125;,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>); <span class="comment">//对应reject（）</span></span><br><span class="line">&#125;)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>catch</p>
+<p>then()方法中无reject()的失败处理则往下走，直至被catch捕获</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f(<span class="literal">false</span>)</span><br><span class="line">.then()&#123;&#125;</span><br><span class="line">.then()&#123;&#125;</span><br><span class="line">...</span><br><span class="line">.catch(<span class="function"><span class="params">e</span> =&gt;</span> &#123;...&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>finally</p>
+<p>不论成功或者失败，finally中的内容一定执行</p>
+</li>
+</ul>
+<h4 id="4、Promise中的三种状态"><a href="#4、Promise中的三种状态" class="headerlink" title="4、Promise中的三种状态"></a>4、Promise中的三种状态</h4><p>状态的改变不可逆，一旦决议就不能再修改，总的来说呢，就是Promise对于错误处理机制的理解。如果错误已经捕获了，那么错误不会继续传递下去。如果错误没有被捕获，那么错误会隐式传递下去，直到有错误处理函数来捕获这个错误。</p>
+<p>pending（进行中）——&gt; fulfilled（已成功）</p>
+<p>pending（进行中）——&gt; rejected（已失败）</p>
+<h4 id="5、Promise-all"><a href="#5、Promise-all" class="headerlink" title="5、Promise.all()"></a>5、Promise.all()</h4><ul>
+<li><p>可以把多个Promise实例包装成一个新的Promise实例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([Promise1, Promise2, Promise3, Promise4, Promise5])</span><br></pre></td></tr></table></figure>
+<p>所有成功则决议成功</p>
+</li>
+<li><p><code>Promise.all([])</code> 直接决议为成功</p>
+</li>
+</ul>
+<h4 id="6、Promise-race-…-…-…"><a href="#6、Promise-race-…-…-…" class="headerlink" title="6、Promise.race([…, …, …,])"></a>6、Promise.race([…, …, …,])</h4><p>只要有一个决议了（成功或者失败），j就返回；传入数组无反应 </p>
+<h4 id="7、Promise-resolve-和Promise-reject"><a href="#7、Promise-resolve-和Promise-reject" class="headerlink" title="7、Promise.resolve()和Promise.reject()"></a>7、Promise.resolve()和Promise.reject()</h4><ul>
+<li>传入一个普通的值</li>
+<li>传递一个Promise实例</li>
+<li>传递一个thenable</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    then (cb) &#123;&#125;</span><br><span class="line">    oth () &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Promise</span>.resolve(obj).then(<span class="function"><span class="params">data</span> =&gt;</span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="8、小案例"><a href="#8、小案例" class="headerlink" title="8、小案例"></a>8、小案例</h4><blockquote>
+<p>页面中有个板块需要多张图片加载完后才能进行展示</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> loadImg = <span class="function"><span class="params">src</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> img = <span class="keyword">new</span> Image();</span><br><span class="line">        img.src = src;</span><br><span class="line">        img.onload = <span class="function"><span class="params">()</span> =&gt;</span> &#123;resolve(img)&#125;</span><br><span class="line">        img.onerror = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;reject(e)&#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> imgs =[<span class="string">'url'</span>, <span class="string">'url'</span>, <span class="string">'url'</span>]</span><br><span class="line"><span class="built_in">Promise</span>.all(imgs.map(<span class="function"><span class="params">src</span> =&gt;</span> loadImg(src))).then(<span class="function"><span class="params">arr</span> =&gt;</span> &#123;</span><br><span class="line">    arr.forEach(<span class="function"><span class="params">img</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">document</span>.body.appendChild(img)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="async和await源码-手写async-await的最简实现"><a href="#async和await源码-手写async-await的最简实现" class="headerlink" title="async和await源码(手写async await的最简实现)"></a>async和await源码(手写async await的最简实现)</h3><h4 id="1、介绍"><a href="#1、介绍" class="headerlink" title="1、介绍"></a>1、介绍</h4><blockquote>
+<p>优缺点</p>
+</blockquote>
+<ol>
+<li>优点。相对于promise，async/await处理 then 的调用链，代码要清晰很多，几乎和同步代码一样</li>
+<li>缺点。滥用 await 可能会导致性能问题，因为 await 会阻塞代码</li>
+</ol>
+<p><strong>async</strong> 顾名思义，就是异步的意思， 看上去是一个异步标识，就是告诉我们这个函数中有异步执行的代码。</p>
+<p><strong>await</strong> 等待右侧表达式的结果，这个结果是promise对象或者其他值。<br>如果它等到的不是一个 promise 对象，那 await 表达式的运算结果就是它等到的东西。<br>如果它等到的是一个 promise 对象，await 就忙起来了，它会阻塞后面的代码，等着 promise 对象 resolve，然后得到 resolve 的值，作为 await 表达式的运算结果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getData_1</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'100'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getData_2</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            resolve(<span class="string">'200'</span>)</span><br><span class="line">        &#125;, <span class="number">2000</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span>  <span class="function"><span class="keyword">function</span> <span class="title">run</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> data_1 = <span class="keyword">await</span> getData_1();</span><br><span class="line">    <span class="built_in">console</span>.log(data_1);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> data_2 = <span class="keyword">await</span> getData_2();</span><br><span class="line">    <span class="built_in">console</span>.log(data_2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">run ();</span><br></pre></td></tr></table></figure>
+<p>==getData_1 前面即使不声明async，使用await也是可以的， 因为await 啥都能等！==</p>
+<p>==1.如果等到的是promise， 它就把promise的resolve的参数返回，==</p>
+<p>==2.如果等到的是普通东西，就直接返回这个东西。==</p>
+<p>就像上面的data_1 , 就算 getData_1 没有async 它的结果也一样的。在run函数中， data_1  后的代码需要getData_1 执行完毕才会执行， data_1 得出以后， data_2其实会2秒之后才会得出， 但是此时，它会等2秒，直到data_2得出以后，才会执行后面的console</p>
+<h4 id="2、解题"><a href="#2、解题" class="headerlink" title="2、解题"></a>2、解题</h4><blockquote>
+<p>async函数是generator函数的语法糖，那么到底是怎么样一个糖呢？让我们来一层层的剥开它的糖衣。</p>
+</blockquote>
+<blockquote>
+<p>前言</p>
+</blockquote>
+<p>如果让你手写async函数的实现，你是不是会觉得很复杂？这篇文章带你用20行搞定它的核心。</p>
+<p>经常有人说async函数是generator函数的语法糖，那么到底是怎么样一个糖呢？让我们来一层层的剥开它的糖衣。</p>
+<p>有的同学想说，既然用了generator函数何必还要实现async呢？</p>
+<p>这篇文章的目的就是带大家理解清楚async和generator之间到底是如何相互协作，管理异步的。</p>
+<blockquote>
+<p>示例</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getData = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> resolve(<span class="string">"data"</span>), <span class="number">1000</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">await</span> getData()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'data: '</span>, data);</span><br><span class="line">  <span class="keyword">const</span> data2 = <span class="keyword">await</span> getData()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'data2: '</span>, data2);</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'success'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这样的一个函数 应该再1秒后打印data 再过一秒打印data2 最后打印success</span></span><br><span class="line">test().then(<span class="function"><span class="params">res</span> =&gt;</span> <span class="built_in">console</span>.log(res))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>思路</p>
+</blockquote>
+<p>对于这个简单的案例来说，如果我们把它用generator函数表达，会是怎么样的呢？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">testG</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// await被编译成了yield</span></span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">yield</span> getData()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'data: '</span>, data);</span><br><span class="line">  <span class="keyword">const</span> data2 = <span class="keyword">yield</span> getData()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'data2: '</span>, data2);</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'success'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们知道，generator函数是不会自动执行的，每一次调用它的next方法，会停留在下一个yield的位置。</p>
+<p>利用这个特性，我们只要编写一个自动执行的函数，就可以让这个generator函数完全实现async函数的功能。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getData = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> resolve(<span class="string">"data"</span>), <span class="number">1000</span>))</span><br><span class="line">  </span><br><span class="line"><span class="keyword">var</span> test = asyncToGenerator(</span><br><span class="line">    <span class="function"><span class="keyword">function</span>* <span class="title">testG</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="comment">// await被编译成了yield</span></span><br><span class="line">      <span class="keyword">const</span> data = <span class="keyword">yield</span> getData()</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'data: '</span>, data);</span><br><span class="line">      <span class="keyword">const</span> data2 = <span class="keyword">yield</span> getData()</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'data2: '</span>, data2);</span><br><span class="line">      <span class="keyword">return</span> <span class="string">'success'</span></span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">test().then(<span class="function"><span class="params">res</span> =&gt;</span> <span class="built_in">console</span>.log(res))</span><br></pre></td></tr></table></figure>
+<p>那么大体上的思路已经确定了，</p>
+<p><code>asyncToGenerator</code>接受一个<code>generator</code>函数，返回一个<code>promise</code>，</p>
+<p>关键就在于，里面用<code>yield</code>来划分的异步流程，应该如何自动执行。</p>
+<blockquote>
+<p>如果是手动执行</p>
+</blockquote>
+<p>在编写这个函数之前，我们先模拟手动去调用这个<code>generator</code>函数去一步步的把流程走完，有助于后面的思考。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">testG</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// await被编译成了yield</span></span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">yield</span> getData()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'data: '</span>, data);</span><br><span class="line">  <span class="keyword">const</span> data2 = <span class="keyword">yield</span> getData()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'data2: '</span>, data2);</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'success'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们先调用<code>testG</code>生成一个迭代器</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 返回了一个迭代器</span></span><br><span class="line"><span class="keyword">var</span> gen = testG()</span><br></pre></td></tr></table></figure>
+<p>然后开始执行第一次<code>next</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一次调用next 停留在第一个yield的位置</span></span><br><span class="line"><span class="comment">// 返回的promise里 包含了data需要的数据</span></span><br><span class="line"><span class="keyword">var</span> dataPromise = gen.next()</span><br></pre></td></tr></table></figure>
+<p>这里返回了一个<code>promise</code>，就是第一次<code>getData()</code>所返回的<code>promise</code>，注意</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data = <span class="keyword">yield</span> getData()</span><br></pre></td></tr></table></figure>
+<p>这段代码要切割成左右两部分来看，第一次调用<code>next</code>，其实只是停留在了<code>yield getData()</code>这里，</p>
+<p><code>data</code>的值并没有被确定。</p>
+<p>那么什么时候data的值会被确定呢？</p>
+<p><strong>下一次调用next的时候，传的参数会被作为上一个yield前面接受的值</strong></p>
+<p>也就是说，我们再次调用<code>gen.next(&#39;这个参数才会被赋给data变量&#39;)</code>的时候</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//data`的值才会被确定为`'这个参数才会被赋给data变量'</span></span><br><span class="line">gen.next(<span class="string">'这个参数才会被赋给data变量'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 然后这里的data才有值</span></span><br><span class="line"><span class="keyword">const</span> data = <span class="keyword">yield</span> getData()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 然后打印出data</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'data: '</span>, data);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 然后继续走到下一个yield</span></span><br><span class="line"><span class="keyword">const</span> data2 = <span class="keyword">yield</span> getData()</span><br></pre></td></tr></table></figure>
+<p>然后往下执行，直到遇到下一个<code>yield</code>，继续这样的流程…</p>
+<p>这是generator函数设计的一个比较难理解的点，但是为了实现我们的目标，还是得去学习它~</p>
+<p>借助这个特性，如果我们这样去控制yield的流程，是不是就能实现异步串行了？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getData = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> resolve(<span class="string">"data"</span>), <span class="number">1000</span>))</span><br><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">testG</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// await被编译成了yield</span></span><br><span class="line">  <span class="keyword">const</span> data = <span class="keyword">yield</span> getData()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'data: '</span>, data);</span><br><span class="line">  <span class="keyword">const</span> data2 = <span class="keyword">yield</span> getData()</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'data2: '</span>, data2);</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'success'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> gen = testG()</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> dataPromise = gen.next()</span><br><span class="line"></span><br><span class="line">dataPromise.then(<span class="function">(<span class="params">value1</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// data1的value被拿到了 继续调用next并且传递给data</span></span><br><span class="line">    <span class="keyword">var</span> data2Promise = gen.next(value1)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// console.log('data: ', data);</span></span><br><span class="line">    <span class="comment">// 此时就会打印出data</span></span><br><span class="line">    </span><br><span class="line">    data2Promise.value.then(<span class="function">(<span class="params">value2</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// data2的value拿到了 继续调用next并且传递value2</span></span><br><span class="line">         gen.next(value2)</span><br><span class="line">         </span><br><span class="line">        <span class="comment">// console.log('data2: ', data2);</span></span><br><span class="line">        <span class="comment">// 此时就会打印出data2</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>这样的一个看着像<code>callback hell</code>的调用，就可以让我们的generator函数把异步安排的明明白白。</p>
+<blockquote>
+<p>实现</p>
+</blockquote>
+<p>有了这样的思路，实现这个高阶函数就变得很简单了。</p>
+<p>先整体看一下结构，有个印象，然后我们逐行注释讲解。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">asyncToGenerator</span>(<span class="params">generatorFunc</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">const</span> gen = generatorFunc.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>)</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">step</span>(<span class="params">key, arg</span>) </span>&#123;</span><br><span class="line">          <span class="keyword">let</span> generatorResult</span><br><span class="line">          <span class="keyword">try</span> &#123;</span><br><span class="line">            generatorResult = gen[key](arg)</span><br><span class="line">          &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">            <span class="keyword">return</span> reject(error)</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">const</span> &#123; value, done &#125; = generatorResult</span><br><span class="line">          <span class="keyword">if</span> (done) &#123;</span><br><span class="line">            <span class="keyword">return</span> resolve(value)</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(value).then(<span class="function"><span class="params">val</span> =&gt;</span> step(<span class="string">'next'</span>, val), err =&gt; step(<span class="string">'throw'</span>, err))</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        step(<span class="string">"next"</span>)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+<p>不多不少，22行。</p>
+<p>接下来逐行讲解。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">asyncToGenerator</span>(<span class="params">generatorFunc</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 返回的是一个新的函数</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 先调用generator函数 生成迭代器</span></span><br><span class="line">      </span><br><span class="line">    <span class="comment">// 对应 var gen = testG()</span></span><br><span class="line">    <span class="keyword">const</span> gen = generatorFunc.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 返回一个promise 因为外部是用.then的方式 或者await的方式去使用这个函数的返回值的</span></span><br><span class="line">    <span class="comment">// var test = asyncToGenerator(testG)</span></span><br><span class="line">    <span class="comment">// test().then(res =&gt; console.log(res))</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    </span><br><span class="line">      <span class="comment">// 内部定义一个step函数 用来一步一步的跨过yield的阻碍</span></span><br><span class="line">      <span class="comment">// key有next和throw两种取值，分别对应了gen的next和throw方法</span></span><br><span class="line">      <span class="comment">// arg参数则是用来把promise resolve出来的值交给下一个yield</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">step</span>(<span class="params">key, arg</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> generatorResult</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 这个方法需要包裹在try catch中</span></span><br><span class="line">        <span class="comment">// 如果报错了 就把promise给reject掉 外部通过.catch可以获取到错误</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">          generatorResult = gen[key](arg)</span><br><span class="line">        &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">          <span class="keyword">return</span> reject(error)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// gen.next() 得到的结果是一个 &#123; value, done &#125; 的结构</span></span><br><span class="line">        <span class="keyword">const</span> &#123; value, done &#125; = generatorResult</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (done) &#123;</span><br><span class="line">          <span class="comment">// 如果已经完成了 就直接resolve这个promise</span></span><br><span class="line">          <span class="comment">// 这个done是在最后一次调用next后才会为true</span></span><br><span class="line">          <span class="comment">// 以本文的例子来说 此时的结果是 &#123; done: true, value: 'success' &#125;</span></span><br><span class="line">          <span class="comment">// 这个value也就是generator函数最后的返回值</span></span><br><span class="line">          <span class="keyword">return</span> resolve(value)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="comment">// 除了最后结束的时候外，每次调用gen.next()</span></span><br><span class="line">          <span class="comment">// 其实是返回 &#123; value: Promise, done: false &#125; 的结构，</span></span><br><span class="line">          <span class="comment">// 这里要注意的是Promise.resolve可以接受一个promise为参数</span></span><br><span class="line">          <span class="comment">// 并且这个promise参数被resolve的时候，这个then才会被调用</span></span><br><span class="line">          <span class="keyword">return</span> <span class="built_in">Promise</span>.resolve(</span><br><span class="line">            <span class="comment">// 这个value对应的是yield后面的promise</span></span><br><span class="line">            value</span><br><span class="line">          ).then(</span><br><span class="line">            <span class="comment">// value这个promise被resove的时候，就会执行next</span></span><br><span class="line">            <span class="comment">// 并且只要done不是true的时候 就会递归的往下解开promise</span></span><br><span class="line">            <span class="comment">// 对应gen.next().value.then(value =&gt; &#123;</span></span><br><span class="line">            <span class="comment">//    gen.next(value).value.then(value2 =&gt; &#123;</span></span><br><span class="line">            <span class="comment">//       gen.next() </span></span><br><span class="line">            <span class="comment">//</span></span><br><span class="line">            <span class="comment">//      // 此时done为true了 整个promise被resolve了 </span></span><br><span class="line">            <span class="comment">//      // 最外部的test().then(res =&gt; console.log(res))的then就开始执行了</span></span><br><span class="line">            <span class="comment">//    &#125;)</span></span><br><span class="line">            <span class="comment">// &#125;)</span></span><br><span class="line">            <span class="function"><span class="keyword">function</span> <span class="title">onResolve</span>(<span class="params">val</span>) </span>&#123;</span><br><span class="line">              step(<span class="string">"next"</span>, val)</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="comment">// 如果promise被reject了 就再次进入step函数</span></span><br><span class="line">            <span class="comment">// 不同的是，这次的try catch中调用的是gen.throw(err)</span></span><br><span class="line">            <span class="comment">// 那么自然就被catch到 然后把promise给reject掉啦</span></span><br><span class="line">            <span class="function"><span class="keyword">function</span> <span class="title">onReject</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">              step(<span class="string">"throw"</span>, err)</span><br><span class="line">            &#125;,</span><br><span class="line">          )</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      step(<span class="string">"next"</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>参考作者：晨曦时梦见兮，链接：<a href="https://juejin.im/post/5e79e841f265da5726612b6e" target="_blank" rel="noopener">https://juejin.im/post/5e79e841f265da5726612b6e</a></p>
+<h3 id="迭代器-生成器了解吗"><a href="#迭代器-生成器了解吗" class="headerlink" title="迭代器 生成器了解吗"></a>迭代器 生成器了解吗</h3><p>ES6 新引入了 Generator 函数，可以通过 yield 关键字，把函数的执行流挂起，为改变执行流程提供了可能，从而为异步编程提供解决方案。 基本用法</p>
+<h4 id="Generator-函数组成"><a href="#Generator-函数组成" class="headerlink" title="Generator 函数组成"></a>Generator 函数组成</h4><p>Generator 有两个区分于普通函数的部分：</p>
+<ul>
+<li>一是在 function 后面，函数名之前有个 * ；</li>
+<li>函数内部有 yield 表达式。</li>
+</ul>
+<p>其中 * 用来表示函数为 Generator 函数，yield 用来定义函数内部的状态。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">func</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"one"</span>);  </span><br><span class="line">    <span class="keyword">yield</span> <span class="string">'1'</span>;  </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"two"</span>);  </span><br><span class="line">    <span class="keyword">yield</span> <span class="string">'2'</span>;  </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"three"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'3'</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用 Generator 函数和调用普通函数一样，在函数名后面加上()即可，但是 Generator 函数不会像普通函数一样立即执行，而是返回一个指向内部状态对象的指针，所以要调用遍历器对象Iterator 的 next 方法，指针就会从函数头部或者上一次停下来的地方开始执行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f.next(); <span class="comment">// one // &#123;value: "1", done: false&#125;   </span></span><br><span class="line">f.next(); <span class="comment">// two // &#123;value: "2", done: false&#125;   </span></span><br><span class="line">f.next(); <span class="comment">// three // &#123;value: "3", done: true&#125;   </span></span><br><span class="line">f.next(); <span class="comment">// &#123;value: undefined, done: true&#125;</span></span><br></pre></td></tr></table></figure>
+<p>第一次调用 next 方法时，从 Generator 函数的头部开始执行，先是打印了 one ,执行到 yield 就停下来，并将yield 后边表达式的值 ‘1’，作为返回对象的 value 属性值，此时函数还没有执行完， 返回对象的 done 属性值是 false。</p>
+<p>第二次调用 next 方法时，同上步 。</p>
+<p>第三次调用 next 方法时，先是打印了 three ，然后执行了函数的返回操作，并将 return 后面的表达式的值，作为返回对象的 value 属性值，此时函数已经结束，多以 done 属性值为true 。</p>
+<p>第四次调用 next 方法时， 此时函数已经执行完了，所以返回 value 属性值是 undefined ，done 属性值是 true 。如果执行第三步时，没有 return 语句的话，就直接返回 {value: undefined, done: true}。</p>
+<h4 id="函数返回的遍历器对象的方法"><a href="#函数返回的遍历器对象的方法" class="headerlink" title="函数返回的遍历器对象的方法"></a>函数返回的遍历器对象的方法</h4><p><strong>next 方法</strong></p>
+<p>一般情况下，next 方法不传入参数的时候，yield 表达式的返回值是 undefined 。当 next 传入参数的时候，该参数会作为上一步yield的返回值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">sendParameter</span>(<span class="params"></span>)</span>&#123;     </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"strat"</span>);     </span><br><span class="line">    <span class="keyword">var</span> x = <span class="keyword">yield</span> <span class="string">'2'</span>;     </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"one:"</span> + x);     </span><br><span class="line">    <span class="keyword">var</span> y = <span class="keyword">yield</span> <span class="string">'3'</span>;     </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"two:"</span> + y);     </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"total:"</span> + (x + y)); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//next不传参</span></span><br><span class="line"><span class="keyword">var</span> sendp1 = sendParameter(); sendp1.next(); <span class="comment">// strat // &#123;value: "2", done: false&#125;</span></span><br><span class="line">sendp1.next(); <span class="comment">// one:undefined // &#123;value: "3", done: false&#125; </span></span><br><span class="line">sendp1.next(); <span class="comment">// two:undefined // total:NaN // &#123;value: undefined, done: true&#125; </span></span><br><span class="line"><span class="comment">//next传参 </span></span><br><span class="line"><span class="keyword">var</span> sendp2 = sendParameter(); sendp2.next(<span class="number">10</span>); <span class="comment">// strat // &#123;value: "2", done: false&#125; </span></span><br><span class="line">sendp2.next(<span class="number">20</span>); <span class="comment">// one:20 // &#123;value: "3", done: false&#125; </span></span><br><span class="line">sendp2.next(<span class="number">30</span>); <span class="comment">// two:30 // total:50 // &#123;value: undefined, done: true&#125;</span></span><br></pre></td></tr></table></figure>
+<p>除了使用 next ，还可以使用 for… of 循环遍历 Generator 函数生产的 Iterator 对象。</p>
+<p><strong>return 方法</strong></p>
+<p>return 方法返回给定值，并结束遍历 Generator 函数。</p>
+<p>return 方法提供参数时，返回该参数；不提供参数时，返回 undefined 。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">foo</span>(<span class="params"></span>)</span>&#123;     <span class="keyword">yield</span> <span class="number">1</span>;     <span class="keyword">yield</span> <span class="number">2</span>;     <span class="keyword">yield</span> <span class="number">3</span>; &#125; </span><br><span class="line"><span class="keyword">var</span> f = foo(); f.next(); <span class="comment">// &#123;value: 1, done: false&#125; f.return("foo"); // &#123;value: "foo", done: true&#125; f.next(); // &#123;value: undefined, done: true&#125; </span></span><br><span class="line"><span class="comment">//throw 方法 throw 方法可以再 Generator 函数体外面抛出异常，再函数体内部捕获。 </span></span><br><span class="line"><span class="keyword">var</span> g = <span class="function"><span class="keyword">function</span>* (<span class="params"></span>) </span>&#123;   </span><br><span class="line">   <span class="keyword">try</span> &#123;     <span class="keyword">yield</span>;   </span><br><span class="line">   &#125; <span class="keyword">catch</span> (e) &#123;     </span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">'catch inner'</span>, e);   </span><br><span class="line">   &#125; </span><br><span class="line">&#125;;   </span><br><span class="line"><span class="keyword">var</span> i = g(); </span><br><span class="line">i.next();   </span><br><span class="line"><span class="keyword">try</span> &#123;  </span><br><span class="line">    i.throw(<span class="string">'a'</span>);   </span><br><span class="line">    i.throw(<span class="string">'b'</span>); </span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123; </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'catch outside'</span>, e); </span><br><span class="line">&#125; <span class="comment">// catch inner a // catch outside b</span></span><br></pre></td></tr></table></figure>
+<p>遍历器对象抛出了两个错误，第一个被 Generator 函数内部捕获，第二个因为函数体内部的catch 函数已经执行过了，不会再捕获这个错误，所以这个错误就抛出 Generator 函数体，被函数体外的 catch 捕获。</p>
+<p><strong>yield* 表达式</strong></p>
+<p>yield* 表达式表示 yield 返回一个遍历器对象，用于在 Generator 函数内部，调用另一个 Generator 函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">callee</span>(<span class="params"></span>) </span>&#123;     </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'callee: '</span> + (<span class="keyword">yield</span>)); </span><br><span class="line">&#125; </span><br><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">caller</span>(<span class="params"></span>) </span>&#123;    </span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;         </span><br><span class="line">        <span class="keyword">yield</span>* callee();     </span><br><span class="line">    &#125; </span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">const</span> callerObj = caller(); </span><br><span class="line">callerObj.next(); <span class="comment">// &#123;value: undefined, done: false&#125;</span></span><br><span class="line">callerObj.next(<span class="string">"a"</span>); <span class="comment">// callee: a // &#123;value: undefined, done: false&#125; </span></span><br><span class="line">callerObj.next(<span class="string">"b"</span>); <span class="comment">// callee: b // &#123;value: undefined, done: false&#125;   </span></span><br><span class="line"><span class="comment">// 等同于 </span></span><br><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">caller</span>(<span class="params"></span>) </span>&#123;     </span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;         </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> value <span class="keyword">of</span> callee) &#123;          </span><br><span class="line">            <span class="keyword">yield</span> value;        </span><br><span class="line">        &#125;     </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p><strong>实现 Iterator</strong></p>
+<p>为不具备 Iterator 接口的对象提供遍历方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">objectEntries</span>(<span class="params">obj</span>) </span>&#123;     </span><br><span class="line">    <span class="keyword">const</span> propKeys = <span class="built_in">Reflect</span>.ownKeys(obj);     </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> propKey <span class="keyword">of</span> propKeys) &#123; </span><br><span class="line">        <span class="keyword">yield</span> [propKey, obj[propKey]];     </span><br><span class="line">    &#125; </span><br><span class="line">&#125;   </span><br><span class="line"><span class="keyword">const</span> jane = &#123; <span class="attr">first</span>: <span class="string">'Jane'</span>, <span class="attr">last</span>: <span class="string">'Doe'</span> &#125;; </span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> [key,value] <span class="keyword">of</span> objectEntries(jane)) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;key&#125;</span>: <span class="subst">$&#123;value&#125;</span>`</span>); </span><br><span class="line">&#125; <span class="comment">// first: Jane // last: Doe</span></span><br></pre></td></tr></table></figure>
+<p>Reflect.ownKeys() 返回对象所有的属性，不管属性是否可枚举，包括 Symbol。</p>
+<p>jane 原生是不具备 Iterator 接口无法通过 for… of遍历。这边用了 Generator 函数加上了 Iterator 接口，所以就可以遍历 jane 对象了。</p>
+<h3 id="for-in-for-of-区别"><a href="#for-in-for-of-区别" class="headerlink" title="for in /for of 区别"></a>for in /for of 区别</h3><h4 id="1-、遍历数组通常用for循环"><a href="#1-、遍历数组通常用for循环" class="headerlink" title="1 、遍历数组通常用for循环"></a>1 、遍历数组通常用for循环</h4><p>ES5的话也可以使用forEach，ES5具有遍历数组功能的还有map、filter、some、every、reduce、reduceRight等，只不过他们的返回结果不一样。但是==使用foreach遍历数组的话，使用break不能中断循环，使用return也不能返回到外层函数==</p>
+<h4 id="2、-for-in遍历数组的毛病"><a href="#2、-for-in遍历数组的毛病" class="headerlink" title="2、 for in遍历数组的毛病"></a>2、 for in遍历数组的毛病</h4><ol>
+<li>index索引为字符串型数字，不能直接进行几何运算</li>
+<li>遍历顺序有可能不是按照实际数组的内部顺序</li>
+<li>使用for in会遍历数组所有的可枚举属性，包括原型。例如上栗的原型方法method和name属性</li>
+</ol>
+<p>==所以for in更适合遍历对象，不要使用for in遍历数组==</p>
+<p>那么除了使用for循环，如何更简单的正确的遍历数组达到我们的期望呢（即不遍历method和name），ES6中的for of更胜一筹</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myArray=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]</span><br><span class="line">myArray.name=<span class="string">"数组"</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> value <span class="keyword">of</span> myArray) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>==记住，for in遍历的是数组的索引（即键名），而for of遍历的是数组元素值==</strong></p>
+<p>for of遍历的只是数组内的元素，而不包括数组的原型属性method和索引name</p>
+<blockquote>
+<p>for-of是ES6新增的功能</p>
+<ul>
+<li>for-of这个方法避开了for-in循环的所有缺陷</li>
+<li>与forEach()不同的是，它可以正确响应break、continue和return语句 </li>
+</ul>
+<p>for-of循环不仅支持数组，还支持大多数类数组对象，例如DOM NodeList对象。for-of循环也支持字符串遍历</p>
+</blockquote>
+<h4 id="3、遍历对象"><a href="#3、遍历对象" class="headerlink" title="3、遍历对象"></a>3、遍历对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.method=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">　　<span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> myObject=&#123;</span><br><span class="line">　　a:<span class="number">1</span>,</span><br><span class="line">　　b:<span class="number">2</span>,</span><br><span class="line">　　c:<span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> myObject) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>for in 可以遍历到myObject的原型方法method,如果不想遍历原型方法和属性的话，可以在循环内部判断一下,==hasOwnPropery方法可以判断某属性是否是该对象的实例属性==，或者==通过ES5的Object.keys(myObject)获取对象的实例属性组成的数组，不包括原型方法和属性==</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> myObject) &#123;</span><br><span class="line">　　<span class="keyword">if</span>（myObject.hasOwnProperty(key))&#123;</span><br><span class="line">　　　　<span class="built_in">console</span>.log(key);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">of</span> <span class="built_in">Object</span>.keys(someObject)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key + <span class="string">": "</span> + someObject[key]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4></blockquote>
+<ul>
+<li>==for…of适用遍历数/数组对象/字符串/map/set等拥有迭代器对象的集合。但是不能遍历对象，因为没有迭代器对象。与forEach()不同的是，它可以正确响应break、continue和return语句==</li>
+<li>==for…of循环不支持普通对象，但如果你想迭代一个对象的属性，你可以用for…in循环（这也是它的本职工作）或内建的Object.keys()方法==</li>
+</ul>
+<blockquote>
+<p>补充js的对象遍历</p>
+</blockquote>
+<h3 id="JS对象遍历"><a href="#JS对象遍历" class="headerlink" title="JS对象遍历"></a>JS对象遍历</h3><p><strong>1.for-in遍历</strong></p>
+<p>for-in是为遍历对象而设计的，不适用于遍历数组。(遍历数组的缺点：数组的下标index值是数字，for-in遍历的index值”0”,”1”,”2”等是字符串)</p>
+<p>for-in循环存在缺陷：循环会遍历对象自身的和继承的可枚举属性(不含Symbol属性)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (var index in arr)&#123;</span><br><span class="line">    console.log(arr[index]);</span><br><span class="line">    console.log(index);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>2.使用Object.keys()遍历</strong></p>
+<p>返回一个数组,包括对象自身的(不含继承的)所有可枚举属性(不含Symbol属性).</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">'0'</span>:<span class="string">'a'</span>,<span class="string">'1'</span>:<span class="string">'b'</span>,<span class="string">'2'</span>:<span class="string">'c'</span>&#125;;</span><br><span class="line"><span class="built_in">Object</span>.keys(obj).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(key,obj[key]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>3.使用Object.getOwnPropertyNames(obj)遍历</strong></p>
+<p>返回一个数组,包含对象自身的所有属性(不含Symbol属性,但是包括不可枚举属性). </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">'0'</span>:<span class="string">'a'</span>,<span class="string">'1'</span>:<span class="string">'b'</span>,<span class="string">'2'</span>:<span class="string">'c'</span>&#125;;</span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyNames(obj).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(key,obj[key]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><strong>4.使用Reflect.ownKeys(obj)遍历</strong></p>
+<p>返回一个数组,包含对象自身的所有属性,不管属性名是Symbol或字符串,也不管是否可枚举.  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">'0'</span>:<span class="string">'a'</span>,<span class="string">'1'</span>:<span class="string">'b'</span>,<span class="string">'2'</span>:<span class="string">'c'</span>&#125;;</span><br><span class="line"><span class="built_in">Reflect</span>.ownKeys(obj).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</span><br><span class="line">　　<span class="built_in">console</span>.log(key,obj[key]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="黄流川 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.jpg" alt="黄流川 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>黄流川</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/" title="前端知识点总结——ES6">http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ES6/" rel="tag"># ES6</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/09/前端知识点总结——网络/" rel="next" title="前端知识点总结——网络">
+                <i class="fa fa-chevron-left"></i> 前端知识点总结——网络
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/06/09/前端知识点总结——JavaScript/" rel="prev" title="前端知识点总结——JavaScript">
+                前端知识点总结——JavaScript <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/westbrook.jpg" alt="黄流川">
+            
+              <p class="site-author-name" itemprop="name">黄流川</p>
+              <div class="site-description motion-element" itemprop="description">从零到一，跨过就是成功</div>
+          </div>
+
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=416385506&auto=1&height=66"></iframe>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/yourname" title="GitHub &rarr; https://github.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="http://815505781@qq.com" title="E-Mail &rarr; http://815505781@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/p/1005055243915899/home?from=page_100505&mod=TAB&is_all=1#place" title="Weibo &rarr; https://weibo.com/p/1005055243915899/home?from=page_100505&mod=TAB&is_all=1#place" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-handshake-o"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://jiuxiaxixi.com/" title="http://jiuxiaxixi.com/" rel="noopener" target="_blank">jiuxiaxixi</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://ciel.jiuxiaxixi.com/" title="http://ciel.jiuxiaxixi.com/" rel="noopener" target="_blank">yxh</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://xql.cquzxy.top/" title="http://xql.cquzxy.top/" rel="noopener" target="_blank">xql</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://wy.cquzxy.top/" title="https://wy.cquzxy.top/" rel="noopener" target="_blank">wy</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://toto.cquzxy.top/" title="http://toto.cquzxy.top/" rel="noopener" target="_blank">cyq</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://sss.cquzxy.top/" title="http://sss.cquzxy.top/" rel="noopener" target="_blank">hsj</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对ES6有什么了解"><span class="nav-number">1.</span> <span class="nav-text">对ES6有什么了解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promise介绍一下"><span class="nav-number">2.</span> <span class="nav-text">Promise介绍一下</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、回调与Promise"><span class="nav-number">2.1.</span> <span class="nav-text">1、回调与Promise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、对比回调和Promise的流程控制"><span class="nav-number">2.2.</span> <span class="nav-text">2、对比回调和Promise的流程控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、错误处理"><span class="nav-number">2.3.</span> <span class="nav-text">3、错误处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、Promise中的三种状态"><span class="nav-number">2.4.</span> <span class="nav-text">4、Promise中的三种状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、Promise-all"><span class="nav-number">2.5.</span> <span class="nav-text">5、Promise.all()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、Promise-race-…-…-…"><span class="nav-number">2.6.</span> <span class="nav-text">6、Promise.race([…, …, …,])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7、Promise-resolve-和Promise-reject"><span class="nav-number">2.7.</span> <span class="nav-text">7、Promise.resolve()和Promise.reject()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8、小案例"><span class="nav-number">2.8.</span> <span class="nav-text">8、小案例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#async和await源码-手写async-await的最简实现"><span class="nav-number">3.</span> <span class="nav-text">async和await源码(手写async await的最简实现)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、介绍"><span class="nav-number">3.1.</span> <span class="nav-text">1、介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、解题"><span class="nav-number">3.2.</span> <span class="nav-text">2、解题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代器-生成器了解吗"><span class="nav-number">4.</span> <span class="nav-text">迭代器 生成器了解吗</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Generator-函数组成"><span class="nav-number">4.1.</span> <span class="nav-text">Generator 函数组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数返回的遍历器对象的方法"><span class="nav-number">4.2.</span> <span class="nav-text">函数返回的遍历器对象的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">5.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-in-for-of-区别"><span class="nav-number">6.</span> <span class="nav-text">for in /for of 区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-、遍历数组通常用for循环"><span class="nav-number">6.1.</span> <span class="nav-text">1 、遍历数组通常用for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、-for-in遍历数组的毛病"><span class="nav-number">6.2.</span> <span class="nav-text">2、 for in遍历数组的毛病</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、遍历对象"><span class="nav-number">6.3.</span> <span class="nav-text">3、遍历对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">6.4.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS对象遍历"><span class="nav-number">7.</span> <span class="nav-text">JS对象遍历</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">黄流川</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">71k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">1:58</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'KtyfG26I0uFY1lxz9dNNyppi-gzGzoHsz',
+    appKey: 'nyyct0oTp3SMkw68IwbAaN80',
+    placeholder: '留下您的精彩评论吧',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>

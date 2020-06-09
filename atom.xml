@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-06-07T02:43:09.403Z</updated>
+  <updated>2020-06-09T12:56:17.804Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -15,6 +15,221 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端知识点总结——算法与数据结构</title>
+    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——算法与数据结构/</id>
+    <published>2020-06-09T12:21:23.000Z</published>
+    <updated>2020-06-09T12:56:17.804Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;排序算法了解哪些&quot;&gt;&lt;a href=&quot;#排序算法了解哪些&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="算法" scheme="http://lanxiangc2.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——JavaScript</title>
+    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript/"/>
+    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——JavaScript/</id>
+    <published>2020-06-09T08:04:14.000Z</published>
+    <updated>2020-06-09T12:14:20.641Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;apply-bind-call的区别&quot;&gt;&lt;a href=&quot;#apply-bind-call的区别&quot; class=&quot;headerlink&quot; title=&quot;apply bind call的区别&quot;&gt;&lt;/a&gt;apply bind
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+      <category term="JavaScript" scheme="http://lanxiangc2.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——ES6</title>
+    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6/"/>
+    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/</id>
+    <published>2020-06-09T04:56:34.000Z</published>
+    <updated>2020-06-09T08:03:45.202Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;对ES6有什么了解&quot;&gt;&lt;a href=&quot;#对ES6有什么了解&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="ES6" scheme="http://lanxiangc2.github.io/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——网络</title>
+    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%BD%91%E7%BB%9C/"/>
+    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/</id>
+    <published>2020-06-09T04:40:27.000Z</published>
+    <updated>2020-06-09T04:56:09.829Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;对称加密和非对称加密&quot;&gt;&lt;a href=&quot;#对称加密和非对称加密&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+      <category term="计算机网络" scheme="http://lanxiangc2.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——Vue</title>
+    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94Vue/"/>
+    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/</id>
+    <published>2020-06-09T02:53:53.000Z</published>
+    <updated>2020-06-09T04:41:34.235Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;vue和react&quot;&gt;&lt;a href=&quot;#vue和react&quot; class=&quot;headerlink&quot; title=&quot;vue和react&quot;&gt;&lt;/a&gt;vue和react&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;相似之处&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="前端框架" scheme="http://lanxiangc2.github.io/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——nodes.js</title>
+    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94nodes-js/"/>
+    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodes-js/</id>
+    <published>2020-06-09T01:36:57.000Z</published>
+    <updated>2020-06-09T04:41:01.822Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;koa洋葱圈运行机制&quot;&gt;&lt;a href=&quot;#koa洋葱圈运行机制&quot; class=&quot;headerlink&quot; title=&quot;koa洋葱圈运行机制&quot;&gt;&lt;/a&gt;koa洋葱圈运行机制&lt;/h3&gt;&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+      <category term="node.js框架" scheme="http://lanxiangc2.github.io/tags/node-js%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="后端" scheme="http://lanxiangc2.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——React</title>
+    <link href="http://lanxiangc2.github.io/2020/06/08/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94React/"/>
+    <id>http://lanxiangc2.github.io/2020/06/08/前端知识点总结——React/</id>
+    <published>2020-06-08T12:41:59.000Z</published>
+    <updated>2020-06-09T04:41:27.156Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="前端框架" scheme="http://lanxiangc2.github.io/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>位运算</title>
+    <link href="http://lanxiangc2.github.io/2020/06/08/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+    <id>http://lanxiangc2.github.io/2020/06/08/位运算/</id>
+    <published>2020-06-08T08:26:30.000Z</published>
+    <updated>2020-06-08T10:08:35.195Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;按位与运算符（-amp-）&quot;&gt;&lt;a href=&quot;#按位与运算符（-amp-）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法与数据结构" scheme="http://lanxiangc2.github.io/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="算法" scheme="http://lanxiangc2.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>使用openpyxl处理excel表格</title>
@@ -165,7 +380,7 @@
     <link href="http://lanxiangc2.github.io/2019/12/27/for%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%BF%9D%E5%AD%98/"/>
     <id>http://lanxiangc2.github.io/2019/12/27/for循环中的变量保存/</id>
     <published>2019-12-27T14:18:13.000Z</published>
-    <updated>2019-12-27T15:17:48.517Z</updated>
+    <updated>2020-06-09T04:57:39.577Z</updated>
     
     <summary type="html">
     
@@ -296,70 +511,6 @@
       <category term="项目设计" scheme="http://lanxiangc2.github.io/tags/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1/"/>
     
       <category term="流程安排" scheme="http://lanxiangc2.github.io/tags/%E6%B5%81%E7%A8%8B%E5%AE%89%E6%8E%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VueJs框架</title>
-    <link href="http://lanxiangc2.github.io/2019/05/28/front-end-UI/"/>
-    <id>http://lanxiangc2.github.io/2019/05/28/front-end-UI/</id>
-    <published>2019-05-28T13:19:18.000Z</published>
-    <updated>2019-06-25T02:47:39.081Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://cn.vuejs.org/images/logo.png&quot; alt=&quot;VUE图片&quot;&gt;&lt;/p&gt;
-&lt;p&gt;本部分主要利用了HTML、CSS和Javascript等知识，借助Vue2.0热门框架进行Web前后端分离的前端的开发工作。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="web前端技术学习" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="web前端工具" scheme="http://lanxiangc2.github.io/tags/web%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端设计方案</title>
-    <link href="http://lanxiangc2.github.io/2019/05/27/front-to-end/"/>
-    <id>http://lanxiangc2.github.io/2019/05/27/front-to-end/</id>
-    <published>2019-05-27T14:40:29.000Z</published>
-    <updated>2019-06-14T09:58:20.143Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;VueJs+WebSocket+HTTP REST API&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://www.gravizo.com/svg?@startuml;left%20to%20right%20direction;rectangle%20VueJs%20{;WebSocket%20..%3E%20http%20:%20update%20view;};rectangle%20%20Django{;http%20---%3E%20REST;REST%20--%3E%20%20http%20:%20request&amp;response;};rectangle%20RabbitMQ{;WebSocket%20--%3E%20stomp;stomp%20---%3E%20WebSocket%20:%20notify%20or%20realtime%20data;};http%20-%3E%20FileServer;@enduml&quot; alt=&quot;前端整体设计&quot;&gt;​&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="项目设计" scheme="http://lanxiangc2.github.io/tags/%E9%A1%B9%E7%9B%AE%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://lanxiangc2.github.io/2019/05/26/hello-world/"/>
-    <id>http://lanxiangc2.github.io/2019/05/26/hello-world/</id>
-    <published>2019-05-26T14:40:29.000Z</published>
-    <updated>2019-06-04T09:43:26.825Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
     
   </entry>
   
