@@ -45,17 +45,19 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——JavaScript/</id>
     <published>2020-06-09T08:04:14.000Z</published>
-    <updated>2020-06-09T12:14:20.641Z</updated>
+    <updated>2020-06-09T13:20:28.434Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;apply-bind-call的区别&quot;&gt;&lt;a href=&quot;#apply-bind-call的区别&quot; class=&quot;headerlink&quot; title=&quot;apply bind call的区别&quot;&gt;&lt;/a&gt;apply bind
-        
-      
+      &lt;h3 id=&quot;apply-bind-call的区别&quot;&gt;&lt;a href=&quot;#apply-bind-call的区别&quot; class=&quot;headerlink&quot; title=&quot;apply bind call的区别&quot;&gt;&lt;/a&gt;apply bind call的区别&lt;/h3&gt;&lt;p&gt;&lt;code&gt;call 、bind 、 apply&lt;/code&gt; 这三个函数的==第一个参数都是 this 的指向对象==&lt;/p&gt;
+&lt;p&gt;==第二个参数==差别来了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;call的参数是直接放进去的，第二第三第n个参数全都用逗号分隔，直接放到后面  &lt;code&gt;obj.myFun.call(db,&amp;#39;成都&amp;#39;, ... ,&amp;#39;string&amp;#39; )；&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;apply的所有参数都必须放在一个数组里面传进去  &lt;code&gt;obj.myFun.apply(db,[&amp;#39;成都&amp;#39;, ..., &amp;#39;string&amp;#39; ]);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;bind除了返回是函数以外，它 的参数和call 一样。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/06/09/前端知识点总结——JavaScript/./前端知识点总结——JavaScript/pic1.png&quot; alt&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;obj.myFun.call(db,&lt;span class=&quot;string&quot;&gt;&#39;成都&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;上海&#39;&lt;/span&gt;)；　　　　 &lt;span class=&quot;comment&quot;&gt;// 德玛 年龄 99  来自 成都去往上海&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;obj.myFun.apply(db,[&lt;span class=&quot;string&quot;&gt;&#39;成都&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;上海&#39;&lt;/span&gt;]);      &lt;span class=&quot;comment&quot;&gt;// 德玛 年龄 99  来自 成都去往上海  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;obj.myFun.bind(db,&lt;span class=&quot;string&quot;&gt;&#39;成都&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;上海&#39;&lt;/span&gt;)();       &lt;span class=&quot;comment&quot;&gt;// 德玛 年龄 99  来自 成都去往上海&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -73,17 +75,20 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/</id>
     <published>2020-06-09T04:56:34.000Z</published>
-    <updated>2020-06-09T13:09:02.377Z</updated>
+    <updated>2020-06-09T13:21:03.353Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;对ES6有什么了解&quot;&gt;&lt;a href=&quot;#对ES6有什么了解&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;对ES6有什么了解&quot;&gt;&lt;a href=&quot;#对ES6有什么了解&quot; class=&quot;headerlink&quot; title=&quot;对ES6有什么了解&quot;&gt;&lt;/a&gt;对ES6有什么了解&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;从以下几个方面去聊&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;let和const&lt;/li&gt;
+&lt;li&gt;解构赋值&lt;/li&gt;
+&lt;li&gt;ES6拓展&lt;/li&gt;
+&lt;li&gt;Promise&lt;/li&gt;
+&lt;li&gt;Class&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -132,20 +137,15 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94Vue/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/</id>
     <published>2020-06-09T02:53:53.000Z</published>
-    <updated>2020-06-09T13:09:29.776Z</updated>
+    <updated>2020-06-09T13:21:29.115Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;vue和react&quot;&gt;&lt;a href=&quot;#vue和react&quot; class=&quot;headerlink&quot; title=&quot;vue和react&quot;&gt;&lt;/a&gt;vue和react&lt;/h3&gt;&lt;blockquote&gt;
+      &lt;h3 id=&quot;vue和react&quot;&gt;&lt;a href=&quot;#vue和react&quot; class=&quot;headerlink&quot; title=&quot;vue和react&quot;&gt;&lt;/a&gt;vue和react&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;相似之处&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4
-        
-      
+&lt;h4 id=&quot;Virtual-DOM&quot;&gt;&lt;a href=&quot;#Virtual-DOM&quot; class=&quot;headerlink&quot; title=&quot;Virtual DOM&quot;&gt;&lt;/a&gt;Virtual DOM&lt;/h4&gt;&lt;p&gt;Vue.js(2.0版本)与React的其中最大一个相似之处，就是他们都使用了一种叫’Virtual DOM’的东西。所谓的Virtual DOM基本上说就是它名字的意思：虚拟DOM，DOM树的虚拟表现。它的诞生是基于这么一个概念：改变真实的DOM状态远比改变一个JavaScript对象的花销要大得多。&lt;/p&gt;
+&lt;p&gt;Virtual DOM是一个映射真实DOM的JavaScript对象，如果需要改变任何元素的状态，那么是先在Virtual DOM上进行改变，而不是直接改变真实的DOM。当有变化产生时，一个新的Virtual DOM对象会被创建并计算新旧Virtual DOM之间的差别。之后这些差别会应用在真实的DOM上。&lt;/p&gt;
     
     </summary>
     
@@ -163,17 +163,12 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94nodes-js/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodes-js/</id>
     <published>2020-06-09T01:36:57.000Z</published>
-    <updated>2020-06-09T04:41:01.822Z</updated>
+    <updated>2020-06-09T13:22:23.456Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;koa洋葱圈运行机制&quot;&gt;&lt;a href=&quot;#koa洋葱圈运行机制&quot; class=&quot;headerlink&quot; title=&quot;koa洋葱圈运行机制&quot;&gt;&lt;/a&gt;koa洋葱圈运行机制&lt;/h3&gt;&lt;figure class=&quot;highlight
-        
-      
+      &lt;h3 id=&quot;koa洋葱圈运行机制&quot;&gt;&lt;a href=&quot;#koa洋葱圈运行机制&quot; class=&quot;headerlink&quot; title=&quot;koa洋葱圈运行机制&quot;&gt;&lt;/a&gt;koa洋葱圈运行机制&lt;/h3&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; Koa = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;koa&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; app = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Koa();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;app.use(&lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; (ctx, next) =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; next();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;app.use(&lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; (ctx, next) =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; next();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;app.use(&lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; (ctx, next) =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ctx.body = &lt;span class=&quot;string&quot;&gt;&quot;hello world&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;app.listen(&lt;span class=&quot;number&quot;&gt;3000&lt;/span&gt;, () =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;listenning on 3000&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上面的代码执行后会输出&lt;code&gt;123456&lt;/code&gt;，就像一个洋葱一样，从外层进去，然后碰到&lt;code&gt;next()&lt;/code&gt;就执行下一个中间件，执行完成后再返回回来。先假设我们已经实现了&lt;code&gt;next&lt;/code&gt;为下个中间件这段代码，上面的执行逻辑就很清楚了，先输出&lt;code&gt;1&lt;/code&gt;，然后进入下一个中间件，去处理&lt;code&gt;2&lt;/code&gt;，同理最后后面都处理完成后处理&lt;code&gt;5&lt;/code&gt;，&lt;code&gt;5&lt;/code&gt;处理完成后第二个中间件结束，然后第一个中间件再处理&lt;code&gt;6&lt;/code&gt;。&lt;/p&gt;
     
     </summary>
     
