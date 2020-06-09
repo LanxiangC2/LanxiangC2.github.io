@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-06-09T12:56:17.804Z</updated>
+  <updated>2020-06-09T13:07:55.310Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -21,17 +21,15 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——算法与数据结构/</id>
     <published>2020-06-09T12:21:23.000Z</published>
-    <updated>2020-06-09T12:56:17.804Z</updated>
+    <updated>2020-06-09T13:07:55.310Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;排序算法了解哪些&quot;&gt;&lt;a href=&quot;#排序算法了解哪些&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;排序算法了解哪些&quot;&gt;&lt;a href=&quot;#排序算法了解哪些&quot; class=&quot;headerlink&quot; title=&quot;排序算法了解哪些&quot;&gt;&lt;/a&gt;排序算法了解哪些&lt;/h3&gt;&lt;p&gt;冒泡排序&lt;/p&gt;
+&lt;p&gt;插入排序&lt;/p&gt;
+&lt;p&gt;选择排序&lt;/p&gt;
+&lt;p&gt;快速排序&lt;/p&gt;
+&lt;p&gt;归并排序&lt;/p&gt;
     
     </summary>
     
@@ -75,7 +73,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/</id>
     <published>2020-06-09T04:56:34.000Z</published>
-    <updated>2020-06-09T08:03:45.202Z</updated>
+    <updated>2020-06-09T13:09:02.377Z</updated>
     
     <summary type="html">
     
@@ -101,17 +99,22 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%BD%91%E7%BB%9C/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/</id>
     <published>2020-06-09T04:40:27.000Z</published>
-    <updated>2020-06-09T04:56:09.829Z</updated>
+    <updated>2020-06-09T13:08:07.677Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;对称加密和非对称加密&quot;&gt;&lt;a href=&quot;#对称加密和非对称加密&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;对称加密和非对称加密&quot;&gt;&lt;a href=&quot;#对称加密和非对称加密&quot; class=&quot;headerlink&quot; title=&quot;对称加密和非对称加密&quot;&gt;&lt;/a&gt;对称加密和非对称加密&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;对称加密&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;非对称加密&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;区别&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对称加密算法相比非对称加密算法来说，加解密的效率要高得多。但是缺陷在于对于秘钥的管理上，以及在非安全信道中通讯时，密钥交换的安全性不能保障。所以在实际的网络环境中，会将两者混合使用。&lt;/p&gt;
     
     </summary>
     
@@ -129,7 +132,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94Vue/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/</id>
     <published>2020-06-09T02:53:53.000Z</published>
-    <updated>2020-06-09T04:41:34.235Z</updated>
+    <updated>2020-06-09T13:09:29.776Z</updated>
     
     <summary type="html">
     

@@ -412,7 +412,7 @@
                 
               
 
-              <time title="创建时间：2020-06-09 20:21:23 / 修改时间：20:56:17" itemprop="dateCreated datePublished" datetime="2020-06-09T20:21:23+08:00">2020-06-09</time>
+              <time title="创建时间：2020-06-09 20:21:23 / 修改时间：21:07:55" itemprop="dateCreated datePublished" datetime="2020-06-09T20:21:23+08:00">2020-06-09</time>
             
 
             
@@ -511,22 +511,20 @@
 
       
         
-          
-            <h3 id="排序算法了解哪些"><a href="#排序算法了解哪些" class="headerlink" title="排序算法了解哪些"></a>排序算法了解哪些</h3><p>冒泡排序</p>
+          <h3 id="排序算法了解哪些"><a href="#排序算法了解哪些" class="headerlink" title="排序算法了解哪些"></a>排序算法了解哪些</h3><p>冒泡排序</p>
 <p>插入排序</p>
 <p>选择排序</p>
 <p>快速排序</p>
 <p>归并排序</p>
-<h3 id="手写桶排序"><a href="#手写桶排序" class="headerlink" title="手写桶排序"></a>手写桶排序</h3><h2 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h2><p>桶排序是计数排序的升级版。它利用了函数的映射关系，高效与否的关键就在于这个映射函数的确定。为了使桶排序更加高效，我们需要做到这两点：</p>
-<ol>
-<li>在额外空间充足的情况下，尽量增大桶的数量</li>
-<li>使用的映射函数能够将输入的 N 个数据均匀的分配到 K 个桶中</li>
-</ol>
-<p>同时，对于桶中元素的排序，选择何种比较排序算法对于性能的影响至关重要。</p>
-<h4 id="1、什么时候最快"><a href="#1、什么时候最快" class="headerlink" title="1、什么时候最快"></a>1、什么时候最快</h4><p>当输入的数据可以均匀的分配到每一个桶中。</p>
-<h4 id="2、什么时候最慢"><a href="#2、什么时候最慢" class="headerlink" title="2、什么时候最慢"></a>2、什么时候最慢</h4><p>当输入的数据被分配到了同一个桶中。</p>
-<h4 id="3、JavaScript-代码实现"><a href="#3、JavaScript-代码实现" class="headerlink" title="3、JavaScript 代码实现"></a>3、JavaScript 代码实现</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bucketSort</span>(<span class="params">arr, bucketSize</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (arr.length === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> i;</span><br><span class="line">    <span class="keyword">var</span> minValue = arr[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> maxValue = arr[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] &gt; maxValue) &#123;</span><br><span class="line">          <span class="comment">// 输入数据的最大值</span></span><br><span class="line">          maxValue = arr[i];                </span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] &lt; minValue) &#123;</span><br><span class="line">          <span class="comment">// 输入数据的最小值</span></span><br><span class="line">          minValue = arr[i]                 </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//桶的初始化</span></span><br><span class="line">    <span class="keyword">var</span> DEFAULT_BUCKET_SIZE = <span class="number">5</span>; <span class="comment">// 设置桶的默认数量为5</span></span><br><span class="line">    bucketSize = bucketSize || DEFAULT_BUCKET_SIZE;</span><br><span class="line">    <span class="keyword">var</span> bucketCount = <span class="built_in">Math</span>.floor((maxValue - minValue) / bucketSize) + <span class="number">1</span>;   </span><br><span class="line">    <span class="keyword">var</span> buckets = <span class="keyword">new</span> <span class="built_in">Array</span>(bucketCount);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buckets.length; i++) &#123;</span><br><span class="line">        buckets[i] = []; <span class="comment">// 二维数组</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//利用映射函数将数据分配到各个桶中</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        buckets[<span class="built_in">Math</span>.floor((arr[i] - minValue) / bucketSize)].push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    arr.length = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buckets.length; i++) &#123;</span><br><span class="line">         <span class="comment">// 对每个桶进行排序，这里的排序方法自己选择哦铁汁</span></span><br><span class="line">        insertionSort(buckets[i]);                     </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; buckets[i].length; j++) &#123;</span><br><span class="line">            arr.push(buckets[i][j]);                      </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sortArr</span> (<span class="params"></span>) </span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/06/09/前端知识点总结——算法与数据结构/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -923,7 +921,7 @@
                 
               
 
-              <time title="创建时间：2020-06-09 12:56:34 / 修改时间：16:03:45" itemprop="dateCreated datePublished" datetime="2020-06-09T12:56:34+08:00">2020-06-09</time>
+              <time title="创建时间：2020-06-09 12:56:34 / 修改时间：21:09:02" itemprop="dateCreated datePublished" datetime="2020-06-09T12:56:34+08:00">2020-06-09</time>
             
 
             
@@ -1036,10 +1034,10 @@
 <h3 id="Promise介绍一下"><a href="#Promise介绍一下" class="headerlink" title="Promise介绍一下"></a>Promise介绍一下</h3><blockquote>
 <p>解决异步执行。另外回调函数和事件也可以解决异步执行的问题</p>
 </blockquote>
-<h4 id="1、回调与Promise"><a href="#1、回调与Promise" class="headerlink" title="1、回调与Promise"></a>1、回调与Promise</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            resolve();</span><br><span class="line">        &#125;, <span class="number">1000</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">f()</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);<span class="keyword">return</span> f();</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">&#125;)</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h4 id="回调与Promise"><a href="#回调与Promise" class="headerlink" title="回调与Promise"></a>回调与Promise</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            resolve();</span><br><span class="line">        &#125;, <span class="number">1000</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">f()</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);<span class="keyword">return</span> f();</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">&#125;)</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p>promise新建后立即执行，所以首先输出的是promise，然后then方法指定的回调函数，将在当前脚本所有同步任务执行完才会执行。</p>
-<h4 id="2、对比回调和Promise的流程控制"><a href="#2、对比回调和Promise的流程控制" class="headerlink" title="2、对比回调和Promise的流程控制"></a>2、对比回调和Promise的流程控制</h4><p>回调函数不会重复地执行；调用的resolve全为自己所书写的流程，很大程度改善了反转控制的问题</p>
-<h4 id="3、错误处理"><a href="#3、错误处理" class="headerlink" title="3、错误处理"></a>3、错误处理</h4><ul>
+<h4 id="对比回调和Promise的流程控制"><a href="#对比回调和Promise的流程控制" class="headerlink" title="对比回调和Promise的流程控制"></a>对比回调和Promise的流程控制</h4><p>回调函数不会重复地执行；调用的resolve全为自己所书写的流程，很大程度改善了反转控制的问题</p>
+<h4 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h4><ul>
 <li><p>then方法中的第二个参数，即为失败时做的事情</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// then(resolve, reject)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (val) &#123;</span><br><span class="line">            resolve()</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            reject()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">f(<span class="literal">false</span>)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);<span class="keyword">return</span> f(); <span class="comment">//对应resolve（）</span></span><br><span class="line">&#125;,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>); <span class="comment">//对应reject（）</span></span><br><span class="line">&#125;)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 </li>
@@ -1053,10 +1051,10 @@
 <p>不论成功或者失败，finally中的内容一定执行</p>
 </li>
 </ul>
-<h4 id="4、Promise中的三种状态"><a href="#4、Promise中的三种状态" class="headerlink" title="4、Promise中的三种状态"></a>4、Promise中的三种状态</h4><p>状态的改变不可逆，一旦决议就不能再修改，总的来说呢，就是Promise对于错误处理机制的理解。如果错误已经捕获了，那么错误不会继续传递下去。如果错误没有被捕获，那么错误会隐式传递下去，直到有错误处理函数来捕获这个错误。</p>
+<h4 id="Promise中的三种状态"><a href="#Promise中的三种状态" class="headerlink" title="Promise中的三种状态"></a>Promise中的三种状态</h4><p>状态的改变不可逆，一旦决议就不能再修改，总的来说呢，就是Promise对于错误处理机制的理解。如果错误已经捕获了，那么错误不会继续传递下去。如果错误没有被捕获，那么错误会隐式传递下去，直到有错误处理函数来捕获这个错误。</p>
 <p>pending（进行中）——&gt; fulfilled（已成功）</p>
 <p>pending（进行中）——&gt; rejected（已失败）</p>
-<h4 id="5、Promise-all"><a href="#5、Promise-all" class="headerlink" title="5、Promise.all()"></a>5、Promise.all()</h4><ul>
+<h4 id="Promise-all"><a href="#Promise-all" class="headerlink" title="Promise.all()"></a>Promise.all()</h4><ul>
 <li><p>可以把多个Promise实例包装成一个新的Promise实例</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([Promise1, Promise2, Promise3, Promise4, Promise5])</span><br></pre></td></tr></table></figure>
 <p>所有成功则决议成功</p>
@@ -1064,18 +1062,18 @@
 <li><p><code>Promise.all([])</code> 直接决议为成功</p>
 </li>
 </ul>
-<h4 id="6、Promise-race-…-…-…"><a href="#6、Promise-race-…-…-…" class="headerlink" title="6、Promise.race([…, …, …,])"></a>6、Promise.race([…, …, …,])</h4><p>只要有一个决议了（成功或者失败），j就返回；传入数组无反应 </p>
-<h4 id="7、Promise-resolve-和Promise-reject"><a href="#7、Promise-resolve-和Promise-reject" class="headerlink" title="7、Promise.resolve()和Promise.reject()"></a>7、Promise.resolve()和Promise.reject()</h4><ul>
+<h4 id="Promise-race-…-…-…"><a href="#Promise-race-…-…-…" class="headerlink" title="Promise.race([…, …, …,])"></a>Promise.race([…, …, …,])</h4><p>只要有一个决议了（成功或者失败），j就返回；传入数组无反应 </p>
+<h4 id="Promise-resolve-和Promise-reject"><a href="#Promise-resolve-和Promise-reject" class="headerlink" title="Promise.resolve()和Promise.reject()"></a>Promise.resolve()和Promise.reject()</h4><ul>
 <li>传入一个普通的值</li>
 <li>传递一个Promise实例</li>
 <li>传递一个thenable</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    then (cb) &#123;&#125;</span><br><span class="line">    oth () &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Promise</span>.resolve(obj).then(<span class="function"><span class="params">data</span> =&gt;</span>&#123;&#125;)</span><br></pre></td></tr></table></figure>
-<h4 id="8、小案例"><a href="#8、小案例" class="headerlink" title="8、小案例"></a>8、小案例</h4><blockquote>
+<h4 id="小案例"><a href="#小案例" class="headerlink" title="小案例"></a>小案例</h4><blockquote>
 <p>页面中有个板块需要多张图片加载完后才能进行展示</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> loadImg = <span class="function"><span class="params">src</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> img = <span class="keyword">new</span> Image();</span><br><span class="line">        img.src = src;</span><br><span class="line">        img.onload = <span class="function"><span class="params">()</span> =&gt;</span> &#123;resolve(img)&#125;</span><br><span class="line">        img.onerror = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;reject(e)&#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> imgs =[<span class="string">'url'</span>, <span class="string">'url'</span>, <span class="string">'url'</span>]</span><br><span class="line"><span class="built_in">Promise</span>.all(imgs.map(<span class="function"><span class="params">src</span> =&gt;</span> loadImg(src))).then(<span class="function"><span class="params">arr</span> =&gt;</span> &#123;</span><br><span class="line">    arr.forEach(<span class="function"><span class="params">img</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">document</span>.body.appendChild(img)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="async和await源码-手写async-await的最简实现"><a href="#async和await源码-手写async-await的最简实现" class="headerlink" title="async和await源码(手写async await的最简实现)"></a>async和await源码(手写async await的最简实现)</h3><h4 id="1、介绍"><a href="#1、介绍" class="headerlink" title="1、介绍"></a>1、介绍</h4><blockquote>
+<h3 id="async和await源码-手写async-await的最简实现"><a href="#async和await源码-手写async-await的最简实现" class="headerlink" title="async和await源码(手写async await的最简实现)"></a>async和await源码(手写async await的最简实现)</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><blockquote>
 <p>优缺点</p>
 </blockquote>
 <ol>
@@ -1089,7 +1087,7 @@
 <p>==1.如果等到的是promise， 它就把promise的resolve的参数返回，==</p>
 <p>==2.如果等到的是普通东西，就直接返回这个东西。==</p>
 <p>就像上面的data_1 , 就算 getData_1 没有async 它的结果也一样的。在run函数中， data_1  后的代码需要getData_1 执行完毕才会执行， data_1 得出以后， data_2其实会2秒之后才会得出， 但是此时，它会等2秒，直到data_2得出以后，才会执行后面的console</p>
-<h4 id="2、解题"><a href="#2、解题" class="headerlink" title="2、解题"></a>2、解题</h4><blockquote>
+<h4 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h4><blockquote>
 <p>async函数是generator函数的语法糖，那么到底是怎么样一个糖呢？让我们来一层层的剥开它的糖衣。</p>
 </blockquote>
 <blockquote>
@@ -1178,8 +1176,8 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">objectEntries</span>(<span class="params">obj</span>) </span>&#123;     </span><br><span class="line">    <span class="keyword">const</span> propKeys = <span class="built_in">Reflect</span>.ownKeys(obj);     </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> propKey <span class="keyword">of</span> propKeys) &#123; </span><br><span class="line">        <span class="keyword">yield</span> [propKey, obj[propKey]];     </span><br><span class="line">    &#125; </span><br><span class="line">&#125;   </span><br><span class="line"><span class="keyword">const</span> jane = &#123; <span class="attr">first</span>: <span class="string">'Jane'</span>, <span class="attr">last</span>: <span class="string">'Doe'</span> &#125;; </span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> [key,value] <span class="keyword">of</span> objectEntries(jane)) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;key&#125;</span>: <span class="subst">$&#123;value&#125;</span>`</span>); </span><br><span class="line">&#125; <span class="comment">// first: Jane // last: Doe</span></span><br></pre></td></tr></table></figure>
 <p>Reflect.ownKeys() 返回对象所有的属性，不管属性是否可枚举，包括 Symbol。</p>
 <p>jane 原生是不具备 Iterator 接口无法通过 for… of遍历。这边用了 Generator 函数加上了 Iterator 接口，所以就可以遍历 jane 对象了。</p>
-<h3 id="for-in-for-of-区别"><a href="#for-in-for-of-区别" class="headerlink" title="for in /for of 区别"></a>for in /for of 区别</h3><h4 id="1-、遍历数组通常用for循环"><a href="#1-、遍历数组通常用for循环" class="headerlink" title="1 、遍历数组通常用for循环"></a>1 、遍历数组通常用for循环</h4><p>ES5的话也可以使用forEach，ES5具有遍历数组功能的还有map、filter、some、every、reduce、reduceRight等，只不过他们的返回结果不一样。但是==使用foreach遍历数组的话，使用break不能中断循环，使用return也不能返回到外层函数==</p>
-<h4 id="2、-for-in遍历数组的毛病"><a href="#2、-for-in遍历数组的毛病" class="headerlink" title="2、 for in遍历数组的毛病"></a>2、 for in遍历数组的毛病</h4><ol>
+<h3 id="for-in-for-of-区别"><a href="#for-in-for-of-区别" class="headerlink" title="for in /for of 区别"></a>for in /for of 区别</h3><h4 id="遍历数组通常用for循环"><a href="#遍历数组通常用for循环" class="headerlink" title="遍历数组通常用for循环"></a>遍历数组通常用for循环</h4><p>ES5的话也可以使用forEach，ES5具有遍历数组功能的还有map、filter、some、every、reduce、reduceRight等，只不过他们的返回结果不一样。但是==使用foreach遍历数组的话，使用break不能中断循环，使用return也不能返回到外层函数==</p>
+<h4 id="for-in遍历数组的毛病"><a href="#for-in遍历数组的毛病" class="headerlink" title="for in遍历数组的毛病"></a>for in遍历数组的毛病</h4><ol>
 <li>index索引为字符串型数字，不能直接进行几何运算</li>
 <li>遍历顺序有可能不是按照实际数组的内部顺序</li>
 <li>使用for in会遍历数组所有的可枚举属性，包括原型。例如上栗的原型方法method和name属性</li>
@@ -1197,7 +1195,7 @@
 </ul>
 <p>for-of循环不仅支持数组，还支持大多数类数组对象，例如DOM NodeList对象。for-of循环也支持字符串遍历</p>
 </blockquote>
-<h4 id="3、遍历对象"><a href="#3、遍历对象" class="headerlink" title="3、遍历对象"></a>3、遍历对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.method=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">　　<span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> myObject=&#123;</span><br><span class="line">　　a:<span class="number">1</span>,</span><br><span class="line">　　b:<span class="number">2</span>,</span><br><span class="line">　　c:<span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> myObject) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="遍历对象"><a href="#遍历对象" class="headerlink" title="遍历对象"></a>遍历对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.method=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">　　<span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> myObject=&#123;</span><br><span class="line">　　a:<span class="number">1</span>,</span><br><span class="line">　　b:<span class="number">2</span>,</span><br><span class="line">　　c:<span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> myObject) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>for in 可以遍历到myObject的原型方法method,如果不想遍历原型方法和属性的话，可以在循环内部判断一下,==hasOwnPropery方法可以判断某属性是否是该对象的实例属性==，或者==通过ES5的Object.keys(myObject)获取对象的实例属性组成的数组，不包括原型方法和属性==</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> myObject) &#123;</span><br><span class="line">　　<span class="keyword">if</span>（myObject.hasOwnProperty(key))&#123;</span><br><span class="line">　　　　<span class="built_in">console</span>.log(key);</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">of</span> <span class="built_in">Object</span>.keys(someObject)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key + <span class="string">": "</span> + someObject[key]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -1209,17 +1207,17 @@
 <blockquote>
 <p>补充js的对象遍历</p>
 </blockquote>
-<h3 id="JS对象遍历"><a href="#JS对象遍历" class="headerlink" title="JS对象遍历"></a>JS对象遍历</h3><p><strong>1.for-in遍历</strong></p>
+<h3 id="JS对象遍历"><a href="#JS对象遍历" class="headerlink" title="JS对象遍历"></a>JS对象遍历</h3><p><strong>for-in遍历</strong></p>
 <p>for-in是为遍历对象而设计的，不适用于遍历数组。(遍历数组的缺点：数组的下标index值是数字，for-in遍历的index值”0”,”1”,”2”等是字符串)</p>
 <p>for-in循环存在缺陷：循环会遍历对象自身的和继承的可枚举属性(不含Symbol属性)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (var index in arr)&#123;</span><br><span class="line">    console.log(arr[index]);</span><br><span class="line">    console.log(index);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>2.使用Object.keys()遍历</strong></p>
+<p><strong>使用Object.keys()遍历</strong></p>
 <p>返回一个数组,包括对象自身的(不含继承的)所有可枚举属性(不含Symbol属性).</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">'0'</span>:<span class="string">'a'</span>,<span class="string">'1'</span>:<span class="string">'b'</span>,<span class="string">'2'</span>:<span class="string">'c'</span>&#125;;</span><br><span class="line"><span class="built_in">Object</span>.keys(obj).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(key,obj[key]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><strong>3.使用Object.getOwnPropertyNames(obj)遍历</strong></p>
+<p><strong>使用Object.getOwnPropertyNames(obj)遍历</strong></p>
 <p>返回一个数组,包含对象自身的所有属性(不含Symbol属性,但是包括不可枚举属性). </p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">'0'</span>:<span class="string">'a'</span>,<span class="string">'1'</span>:<span class="string">'b'</span>,<span class="string">'2'</span>:<span class="string">'c'</span>&#125;;</span><br><span class="line"><span class="built_in">Object</span>.getOwnPropertyNames(obj).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(key,obj[key]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><strong>4.使用Reflect.ownKeys(obj)遍历</strong></p>
+<p><strong>使用Reflect.ownKeys(obj)遍历</strong></p>
 <p>返回一个数组,包含对象自身的所有属性,不管属性名是Symbol或字符串,也不管是否可枚举.  </p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="string">'0'</span>:<span class="string">'a'</span>,<span class="string">'1'</span>:<span class="string">'b'</span>,<span class="string">'2'</span>:<span class="string">'c'</span>&#125;;</span><br><span class="line"><span class="built_in">Reflect</span>.ownKeys(obj).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>)</span>&#123;</span><br><span class="line">　　<span class="built_in">console</span>.log(key,obj[key]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
           
@@ -1326,7 +1324,7 @@
                 
               
 
-              <time title="创建时间：2020-06-09 12:40:27 / 修改时间：12:56:09" itemprop="dateCreated datePublished" datetime="2020-06-09T12:40:27+08:00">2020-06-09</time>
+              <time title="创建时间：2020-06-09 12:40:27 / 修改时间：21:08:07" itemprop="dateCreated datePublished" datetime="2020-06-09T12:40:27+08:00">2020-06-09</time>
             
 
             
@@ -1425,8 +1423,7 @@
 
       
         
-          
-            <h3 id="对称加密和非对称加密"><a href="#对称加密和非对称加密" class="headerlink" title="对称加密和非对称加密"></a>对称加密和非对称加密</h3><blockquote>
+          <h3 id="对称加密和非对称加密"><a href="#对称加密和非对称加密" class="headerlink" title="对称加密和非对称加密"></a>对称加密和非对称加密</h3><blockquote>
 <p>对称加密</p>
 </blockquote>
 <p>对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。</p>
@@ -1438,35 +1435,15 @@
 <p>区别</p>
 </blockquote>
 <p>对称加密算法相比非对称加密算法来说，加解密的效率要高得多。但是缺陷在于对于秘钥的管理上，以及在非安全信道中通讯时，密钥交换的安全性不能保障。所以在实际的网络环境中，会将两者混合使用。</p>
-<h3 id="HTTP和HTTPS的区别"><a href="#HTTP和HTTPS的区别" class="headerlink" title="HTTP和HTTPS的区别"></a>HTTP和HTTPS的区别</h3><blockquote>
-<p>超文本传输协议HTTP协议</p>
-</blockquote>
-<p>被用于在Web浏览器和网站服务器之间传递信息，==HTTP协议以明文方式发送内容==，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，==因此，HTTP协议不适合传输一些敏感信 息==，比如：信用卡号、密码、账户金额、交易信息等。</p>
-<blockquote>
-<p>安全套接字层超文本传输协议HTTPS</p>
-</blockquote>
-<p>为了解决HTTP协议的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议HTTPS，为了数据传输的安全，==HTTPS在HTTP的基 础上加入了SSL/TLS协议==，SSL/TLS依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
-<blockquote>
-<p>客户端在使用HTTPS方式与Web服务器通信时的步骤</p>
-</blockquote>
-<p><img src="/2020/06/09/前端知识点总结——网络/./前端知识点总结——网络/pic1.png" alt></p>
-<ul>
-<li>客户使用https的URL访问Web服务器，要求与Web服务器建立SSL连接。</li>
-<li>Web服务器收到客户端请求后，会将网站的证书信息（证书中包含公钥）传送一份给客户端。</li>
-<li>客户端的浏览器与Web服务器开始协商SSL/TLS连接的安全等级，也就是信息加密的等级。</li>
-<li>客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站。</li>
-<li>Web服务器利用自己的私钥解密出会话密钥。</li>
-<li>Web服务器利用会话密钥加密与客户端之间的通信。</li>
-</ul>
-<blockquote>
-<p>主要区别</p>
-</blockquote>
-<p>==https协议需要到CA申请证书，一般免费证书较少，因而需要一定费用。==</p>
-<p>==http是超文本传输协议，信息是明文传输，https则是具有安全性的ssl/tls加密传输协议。==</p>
-<p>==http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。==</p>
-<p>==http的连接很简单，是无状态的；HTTPS协议是由SSL/TLS+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。==</p>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/06/09/前端知识点总结——网络/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1570,7 +1547,7 @@
                 
               
 
-              <time title="创建时间：2020-06-09 10:53:53 / 修改时间：12:41:34" itemprop="dateCreated datePublished" datetime="2020-06-09T10:53:53+08:00">2020-06-09</time>
+              <time title="创建时间：2020-06-09 10:53:53 / 修改时间：21:09:29" itemprop="dateCreated datePublished" datetime="2020-06-09T10:53:53+08:00">2020-06-09</time>
             
 
             
