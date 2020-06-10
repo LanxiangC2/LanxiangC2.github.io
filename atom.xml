@@ -49,17 +49,15 @@
     <link href="http://lanxiangc2.github.io/2020/06/10/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     <id>http://lanxiangc2.github.io/2020/06/10/前端知识点总结——性能优化/</id>
     <published>2020-06-10T13:48:26.000Z</published>
-    <updated>2020-06-10T14:11:45.268Z</updated>
+    <updated>2020-06-10T14:15:02.852Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;谈谈性能优化的问题&quot;&gt;&lt;a href=&quot;#谈谈性能优化的问题&quot; class=&quot;headerlink&quot; title=&quot;谈谈性能优化的问题&quot;&gt;&lt;/a&gt;谈谈性能优化的问题&lt;/h3&gt;&lt;h4 id=&quot;缓存利用&quot;&gt;&lt;a href=&quot;#缓存利用&quot;
-        
-      
+      &lt;h3 id=&quot;谈谈性能优化的问题&quot;&gt;&lt;a href=&quot;#谈谈性能优化的问题&quot; class=&quot;headerlink&quot; title=&quot;谈谈性能优化的问题&quot;&gt;&lt;/a&gt;谈谈性能优化的问题&lt;/h3&gt;&lt;h4 id=&quot;缓存利用&quot;&gt;&lt;a href=&quot;#缓存利用&quot; class=&quot;headerlink&quot; title=&quot;缓存利用&quot;&gt;&lt;/a&gt;缓存利用&lt;/h4&gt;&lt;p&gt;缓存Ajax，使用CDN、外部JavaScript和CSS文件缓存，添加Expires头，在服务器端配置Etag，减少DNS查找等&lt;/p&gt;
+&lt;h4 id=&quot;请求数量&quot;&gt;&lt;a href=&quot;#请求数量&quot; class=&quot;headerlink&quot; title=&quot;请求数量&quot;&gt;&lt;/a&gt;请求数量&lt;/h4&gt;&lt;p&gt;合并样式和脚本，使用CSS图片精灵，初始首屏之外的图片资源按需加载，静态资源延迟加载&lt;/p&gt;
+&lt;h4 id=&quot;请求带宽&quot;&gt;&lt;a href=&quot;#请求带宽&quot; class=&quot;headerlink&quot; title=&quot;请求带宽&quot;&gt;&lt;/a&gt;请求带宽&lt;/h4&gt;&lt;p&gt;压缩文件，开启GZIP&lt;/p&gt;
+&lt;h4 id=&quot;JavaScript代码&quot;&gt;&lt;a href=&quot;#JavaScript代码&quot; class=&quot;headerlink&quot; title=&quot;JavaScript代码&quot;&gt;&lt;/a&gt;JavaScript代码&lt;/h4&gt;&lt;p&gt; 用散列表来代替优化查找，少用全局变量，用innerHTML代替DOM操作，减少DOM操作次数，优化JavaScript性能， 用setTimeout避免页面失去响应，缓存DOM节点查找结果，避免使用with（with会创建自己的作用域，增加作用域链的长度），多个变量声明合并&lt;/p&gt;
+&lt;h4 id=&quot;HTML代码&quot;&gt;&lt;a href=&quot;#HTML代码&quot; class=&quot;headerlink&quot; title=&quot;HTML代码&quot;&gt;&lt;/a&gt;HTML代码&lt;/h4&gt;&lt;p&gt;避免图片和iFrame等src属性为空。src属性为空，会重新加载当前页面，影响速度和效率，尽量避免在HTML标签中写Style属性&lt;/p&gt;
     
     </summary>
     
@@ -75,18 +73,19 @@
     <link href="http://lanxiangc2.github.io/2020/06/10/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     <id>http://lanxiangc2.github.io/2020/06/10/前端知识点总结——操作系统/</id>
     <published>2020-06-10T12:46:22.000Z</published>
-    <updated>2020-06-10T12:51:37.493Z</updated>
+    <updated>2020-06-10T14:15:14.009Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;进程和线程的区别&quot;&gt;&lt;a href=&quot;#进程和线程的区别&quot; class=&quot;headerlink&quot; title=&quot;进程和线程的区别&quot;&gt;&lt;/a&gt;进程和线程的区别&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;参考作者：&lt;a
-        
-      
+      &lt;h3 id=&quot;进程和线程的区别&quot;&gt;&lt;a href=&quot;#进程和线程的区别&quot; class=&quot;headerlink&quot; title=&quot;进程和线程的区别&quot;&gt;&lt;/a&gt;进程和线程的区别&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;参考作者：&lt;a href=&quot;http://www.ruanyifeng.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;阮一峰&lt;/a&gt;，链接地址：&lt;a href=&quot;http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;计算机的核心是CPU&lt;/strong&gt;，它承担了所有的计算任务。它就&lt;strong&gt;像一座工厂&lt;/strong&gt;，时刻在运行。&lt;/p&gt;
+&lt;p&gt;假定工厂的电力有限，一次只能供给一个车间使用。也就是说，一个车间开工的时候，其他车间都必须停工。背后的含义就是，&lt;u&gt;单个CPU一次只能运行一个任务&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;进程就好比工厂的车间&lt;/strong&gt;，它代表CPU所能处理的单个任务。任一时刻，CPU总是运行一个进程，其他进程处于非运行状态。&lt;/p&gt;
+&lt;p&gt;一个车间里，可以有很多工人。他们协同完成一个任务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;线程就好比车间里的工人&lt;/strong&gt;。一个进程可以包括多个线程。&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;车间的空间是工人们共享的，比如许多房间是每个工人都可以进出的。这象征一个进程的内存空间是共享的，每个线程都可以使用这些共享内存。&lt;/u&gt;&lt;/p&gt;
     
     </summary>
     

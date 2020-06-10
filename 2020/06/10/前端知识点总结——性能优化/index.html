@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="谈谈性能优化的问题缓存利用缓存Ajax，使用CDN、外部JavaScript和CSS文件缓存，添加Expires头，在服务器端配置Etag，减少DNS查找等 请求数量合并样式和脚本，使用CSS图片精灵，初始首屏之外的图片资源按需加载，静态资源延迟加载 请求带宽压缩文件，开启GZIP JavaScript代码 用散列表来代替优化查找，少用全局变量，用innerHTML代替DOM操作，减少DOM操作次">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-10T14:11:45.268Z">
+<meta property="og:updated_time" content="2020-06-10T14:15:02.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——性能优化">
 <meta name="twitter:description" content="谈谈性能优化的问题缓存利用缓存Ajax，使用CDN、外部JavaScript和CSS文件缓存，添加Expires头，在服务器端配置Etag，减少DNS查找等 请求数量合并样式和脚本，使用CSS图片精灵，初始首屏之外的图片资源按需加载，静态资源延迟加载 请求带宽压缩文件，开启GZIP JavaScript代码 用散列表来代替优化查找，少用全局变量，用innerHTML代替DOM操作，减少DOM操作次">
@@ -410,7 +410,7 @@
                 
               
 
-              <time title="创建时间：2020-06-10 21:48:26 / 修改时间：22:11:45" itemprop="dateCreated datePublished" datetime="2020-06-10T21:48:26+08:00">2020-06-10</time>
+              <time title="创建时间：2020-06-10 21:48:26 / 修改时间：22:15:02" itemprop="dateCreated datePublished" datetime="2020-06-10T21:48:26+08:00">2020-06-10</time>
             
 
             
@@ -481,7 +481,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">809</span>
+                <span title="本文字数">810</span>
               
 
               
@@ -520,6 +520,7 @@
 <h4 id="请求带宽"><a href="#请求带宽" class="headerlink" title="请求带宽"></a>请求带宽</h4><p>压缩文件，开启GZIP</p>
 <h4 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h4><p> 用散列表来代替优化查找，少用全局变量，用innerHTML代替DOM操作，减少DOM操作次数，优化JavaScript性能， 用setTimeout避免页面失去响应，缓存DOM节点查找结果，避免使用with（with会创建自己的作用域，增加作用域链的长度），多个变量声明合并</p>
 <h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h4><p>避免图片和iFrame等src属性为空。src属性为空，会重新加载当前页面，影响速度和效率，尽量避免在HTML标签中写Style属性</p>
+<a id="more"></a>
 <h3 id="img标签的src为什么不能为空-应该用什么"><a href="#img标签的src为什么不能为空-应该用什么" class="headerlink" title="img标签的src为什么不能为空 应该用什么"></a>img标签的src为什么不能为空 应该用什么</h3><p><u>出现一次这样的标签会导致向你的服务器多做一次请求</u></p>
 <p>在一个访问量不高的网站中，多一个这样的请求也无所谓（甚至可以让你的网站浏览看上去翻番），但在一个千万级访问量甚至更高的WEB站点里，这样会导致你的服务器和带宽的成本显著增加。 另外一个隐患是，重新请求某个页面可能会导致用户的一些信息被无意中修改，例如cookies，或者ajax操作。</p>
 <p>你计划是从服务器端读取这个src地址，但是由于某个原因，这个地址还未设置，或者代码的BUG导致读取失败，就会出现空的src标签。</p>
