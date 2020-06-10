@@ -109,7 +109,7 @@
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——JavaScript/前端知识点总结JavaScript/pic3.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——JavaScript/前端知识点总结JavaScript/pic4.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——JavaScript/前端知识点总结JavaScript/pic5.png">
-<meta property="og:updated_time" content="2020-06-10T02:01:38.955Z">
+<meta property="og:updated_time" content="2020-06-10T02:19:38.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——JavaScript">
 <meta name="twitter:description" content="apply bind call的区别call 、bind 、 apply 这三个函数的==第一个参数都是 this 的指向对象== ==第二个参数==差别来了  call的参数是直接放进去的，第二第三第n个参数全都用逗号分隔，直接放到后面  obj.myFun.call(db,&amp;#39;成都&amp;#39;, ... ,&amp;#39;string&amp;#39; )； apply的所有参数都必须放在一个数组里面传">
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-10 10:01:38" itemprop="dateModified" datetime="2020-06-10T10:01:38+08:00">2020-06-10</time>
+                <time title="修改时间：2020-06-10 10:19:38" itemprop="dateModified" datetime="2020-06-10T10:19:38+08:00">2020-06-10</time>
               
             
           </span>
@@ -540,12 +540,12 @@
 <li>apply的所有参数都必须放在一个数组里面传进去  <code>obj.myFun.apply(db,[&#39;成都&#39;, ..., &#39;string&#39; ]);</code></li>
 <li>bind除了返回是函数以外，它 的参数和call 一样。</li>
 </ul>
-<p><img src="/2020/06/09/前端知识点总结——JavaScript/./前端知识点总结JavaScript/pic1.png" alt></p>
+<p><img src="/2020/06/09/前端知识点总结——JavaScript/前端知识点总结JavaScript/pic1.png" alt="pic1"></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj.myFun.call(db,<span class="string">'成都'</span>,<span class="string">'上海'</span>)；　　　　 <span class="comment">// 德玛 年龄 99  来自 成都去往上海</span></span><br><span class="line">obj.myFun.apply(db,[<span class="string">'成都'</span>,<span class="string">'上海'</span>]);      <span class="comment">// 德玛 年龄 99  来自 成都去往上海  </span></span><br><span class="line">obj.myFun.bind(db,<span class="string">'成都'</span>,<span class="string">'上海'</span>)();       <span class="comment">// 德玛 年龄 99  来自 成都去往上海</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a>Event Loop</h3><p>Event Loop 是一个很重要的概念，指的是计算机系统的一种运行机制。</p>
 <p>JavaScript语言就采用这种机制，来解决单线程运行带来的一些问题。</p>
-<p><img src="/2020/06/09/前端知识点总结——JavaScript/./前端知识点总结JavaScript/pic2.png" alt="pic2.png"></p>
+<p><img src="/2020/06/09/前端知识点总结——JavaScript/前端知识点总结JavaScript/pic2.png" alt="pic2"></p>
 <p>想要理解Event Loop，就要从程序的运行模式讲起。运行以后的程序叫做<a href="http://zh.wikipedia.org/wiki/进程" target="_blank" rel="noopener">“进程”</a>（process），一般情况下，一个进程一次只能执行一个任务。</p>
 <p>如果有很多任务需要执行，不外乎三种解决方法。</p>
 <blockquote>
@@ -566,16 +566,16 @@
 </blockquote>
 <p>后来就约定俗成，JavaScript为一种单线程语言。（Worker API可以实现多线程，但是JavaScript本身始终是单线程的。）</p>
 <p>如果某个任务很耗时，比如涉及很多I/O（输入/输出）操作，那么线程的运行大概是下面的样子。</p>
-<p><img src="/2020/06/09/前端知识点总结——JavaScript/./前端知识点总结JavaScript/pic3.png" alt></p>
+<p><img src="/2020/06/09/前端知识点总结——JavaScript/前端知识点总结JavaScript/pic3.png" alt="pic3"></p>
 <p>上图的绿色部分是程序的运行时间，红色部分是等待时间。可以看到，由于I/O操作很慢，所以这个线程的大部分运行时间都在空等I/O操作的返回结果。这种运行方式称为”同步模式”（synchronous I/O）或”堵塞模式”（blocking I/O）。</p>
 <p>如果采用多线程，同时运行多个任务，那很可能就是下面这样。</p>
-<p><img src="/2020/06/09/前端知识点总结——JavaScript/./前端知识点总结JavaScript/pic4.png" alt></p>
+<p><img src="/2020/06/09/前端知识点总结——JavaScript/前端知识点总结JavaScript/pic4.png" alt="pic4"></p>
 <p>上图表明，多线程不仅占用多倍的系统资源，也闲置多倍的资源，这显然不合理。Event Loop就是为了解决这个问题而提出的。</p>
 <blockquote>
 <p>“<strong>Event Loop是一个程序结构，用于等待和发送消息和事件。</strong>（a programming construct that waits for and dispatches events or messages in a program.）”</p>
 </blockquote>
 <p>==简单说，就是在程序中设置两个线程：一个负责程序本身的运行，称为”主线程”；另一个负责主线程与其他进程（主要是各种I/O操作）的通信，被称为”Event Loop线程”（可以译为”消息线程”）。==</p>
-<p><img src="/2020/06/09/前端知识点总结——JavaScript/./前端知识点总结JavaScript/pic5.png" alt></p>
+<p><img src="/2020/06/09/前端知识点总结——JavaScript/前端知识点总结JavaScript/pic5.png" alt="pic5"></p>
 <p>==上图主线程的绿色部分，还是表示运行时间，而橙色部分表示空闲时间。每当遇到I/O的时候，主线程就让Event Loop线程去通知相应的I/O程序，然后接着往后运行，所以不存在红色的等待时间。等到I/O程序完成操作，Event Loop线程再把结果返回主线程。主线程就调用事先设定的回调函数，完成整个任务。==</p>
 <blockquote>
 <p>js 引擎执行异步代码而不用等待，是因有为有 消息队列和事件循环。</p>
@@ -609,7 +609,7 @@
 <li>JSONP主要被老的浏览器支持，它们往往不支持CORS，而绝大多数现代浏览器都已经支持了CORS</li>
 </ol>
 <p>CORS的整个过程都由浏览器自动完成，前端无需做任何设置，跟平时发送ajax请求并无差异。所以，实现CORS的关键在于服务器，只要服务器实现CORS接口，就可以实现跨域通信。</p>
-<p>对于简单请求，浏览器会直接发送CORS请求，具体说来就是在header中加入origin请求头字段。同样，在响应头中，返回服务器设置的相关CORS头部字段，Access-Control-Allow-Origin字段为允许跨域请求的源。请求时浏览器在请求头的Origin中说明请求的源，服务器收到后发现允许该源跨域请求，则会成功返回。<u>这里需要注意的是，尽管请求失败，但返回的状态码依然可能为200。</u><br><img src="./前端知识点总结JavaScript/pic6.png" alt=""></p>
+<p>对于简单请求，浏览器会直接发送CORS请求，具体说来就是在header中加入origin请求头字段。同样，在响应头中，返回服务器设置的相关CORS头部字段，Access-Control-Allow-Origin字段为允许跨域请求的源。请求时浏览器在请求头的Origin中说明请求的源，服务器收到后发现允许该源跨域请求，则会成功返回。<u>这里需要注意的是，尽管请求失败，但返回的状态码依然可能为200。</u><br><img src="前端知识点总结JavaScript/pic6.png" alt="pic6"></p>
 <p>CORS字段介绍：<br><code>Access-Control-Allow-Methods</code>、<code>Access-Control-Allow-Headers</code>、<code>Access-Control-Allow-Credentials</code>、<code>Access-Control-Max-Age</code></p>
 <blockquote>
 <p>代码实例</p>
