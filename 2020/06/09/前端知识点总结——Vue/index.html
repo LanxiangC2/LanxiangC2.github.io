@@ -104,12 +104,12 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="vue和react 相似之处  Virtual DOMVue.js(2.0版本)与React的其中最大一个相似之处，就是他们都使用了一种叫’Virtual DOM’的东西。所谓的Virtual DOM基本上说就是它名字的意思：虚拟DOM，DOM树的虚拟表现。它的诞生是基于这么一个概念：改变真实的DOM状态远比改变一个JavaScript对象的花销要大得多。 Virtual DOM是一个映射真实DO">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/前端知识点总结Vue/pic1.png">
-<meta property="og:updated_time" content="2020-06-10T02:19:59.504Z">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/pic1.png">
+<meta property="og:updated_time" content="2020-06-10T04:27:02.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——Vue">
 <meta name="twitter:description" content="vue和react 相似之处  Virtual DOMVue.js(2.0版本)与React的其中最大一个相似之处，就是他们都使用了一种叫’Virtual DOM’的东西。所谓的Virtual DOM基本上说就是它名字的意思：虚拟DOM，DOM树的虚拟表现。它的诞生是基于这么一个概念：改变真实的DOM状态远比改变一个JavaScript对象的花销要大得多。 Virtual DOM是一个映射真实DO">
-<meta name="twitter:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/前端知识点总结Vue/pic1.png">
+<meta name="twitter:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/pic1.png">
 
 
 
@@ -429,7 +429,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-10 10:19:59" itemprop="dateModified" datetime="2020-06-10T10:19:59+08:00">2020-06-10</time>
+                <time title="修改时间：2020-06-10 12:27:02" itemprop="dateModified" datetime="2020-06-10T12:27:02+08:00">2020-06-10</time>
               
             
           </span>
@@ -558,7 +558,7 @@
 </blockquote>
 <p>MVVM是Model-View-ViewModel，是把一个系统分为了模型（model）、视图（view）和view-model三个部分。</p>
 <p>vue在MVVM架构下，view和model之间没有直接的联系，但是view和view-model、model和view-model之间时交互的，当view数据发生变化时，可以通过view-model同步到model中，model数据变化也会同步到view中。这样一来，vue的代码量就会少很多，操作也会更加简便。</p>
-<p><img src="/2020/06/09/前端知识点总结——Vue/前端知识点总结Vue/pic1.png" alt="pic1"></p>
+<p><img src="/2020/06/09/前端知识点总结——Vue/pic1.png" alt="pic1"></p>
 <h4 id="两者区别"><a href="#两者区别" class="headerlink" title="两者区别"></a>两者区别</h4><p>React组件是函数，所以写React组件其实就是在写函数，写一个什么样的函数呢？一个接收 <code>props</code> 作为参数的函数，至于 <code>props</code> 这个参数中包含什么那就您随意了，所以js这门语言所拥有的都可以看做是React拥有的，比如高阶组件不就是高阶函数嘛~</p>
 <p>Vue的组件也是函数，只不过写Vue组件却不是在写函数，而是在写函数的参数，比如：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">'FuckComp'</span>,</span><br><span class="line">  created () &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'fuck fuck fuck'</span>)</span><br><span class="line">  &#125;,</span><br><span class="line">  props: [<span class="string">'a'</span>, <span class="string">'b'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

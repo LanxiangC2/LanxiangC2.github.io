@@ -104,12 +104,12 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="对称加密和非对称加密 对称加密  对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。  非对称加密  非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）  区别  对称加密算法相比非对称加密算法来说，加解密的效率要">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/前端知识点总结网络/pic1.png">
-<meta property="og:updated_time" content="2020-06-10T02:18:25.643Z">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic1.png">
+<meta property="og:updated_time" content="2020-06-10T04:24:27.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——网络">
 <meta name="twitter:description" content="对称加密和非对称加密 对称加密  对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。  非对称加密  非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）  区别  对称加密算法相比非对称加密算法来说，加解密的效率要">
-<meta name="twitter:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/前端知识点总结网络/pic1.png">
+<meta name="twitter:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic1.png">
 
 
 
@@ -429,7 +429,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-10 10:18:25" itemprop="dateModified" datetime="2020-06-10T10:18:25+08:00">2020-06-10</time>
+                <time title="修改时间：2020-06-10 12:24:27" itemprop="dateModified" datetime="2020-06-10T12:24:27+08:00">2020-06-10</time>
               
             
           </span>
@@ -495,7 +495,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.1k</span>
+                <span title="本文字数">1k</span>
               
 
               
@@ -545,15 +545,15 @@
 <h3 id="HTTP和HTTPS的区别"><a href="#HTTP和HTTPS的区别" class="headerlink" title="HTTP和HTTPS的区别"></a>HTTP和HTTPS的区别</h3><blockquote>
 <p>超文本传输协议HTTP协议</p>
 </blockquote>
-<p>被用于在Web浏览器和网站服务器之间传递信息，==HTTP协议以明文方式发送内容==，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，==因此，HTTP协议不适合传输一些敏感信 息==，比如：信用卡号、密码、账户金额、交易信息等。</p>
+<p>被用于在Web浏览器和网站服务器之间传递信息，<strong>HTTP协议以明文方式发送内容</strong>，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，<strong>HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码、账户金额、交易信息等</strong>。</p>
 <blockquote>
 <p>安全套接字层超文本传输协议HTTPS</p>
 </blockquote>
-<p>为了解决HTTP协议的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议HTTPS，为了数据传输的安全，==HTTPS在HTTP的基 础上加入了SSL/TLS协议==，SSL/TLS依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
+<p>为了解决HTTP协议的这一缺陷，需要使用另一种协议：安全套接字层超文本传输协议HTTPS，为了数据传输的安全，<strong>HTTPS在HTTP的基 础上加入了SSL/TLS协议</strong>，SSL/TLS依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
 <blockquote>
 <p>客户端在使用HTTPS方式与Web服务器通信时的步骤</p>
 </blockquote>
-<p><img src="/2020/06/09/前端知识点总结——网络/前端知识点总结网络/pic1.png" alt="pic1"></p>
+<p><img src="/2020/06/09/前端知识点总结——网络/pic1.png" alt="pic1"></p>
 <ul>
 <li>客户使用https的URL访问Web服务器，要求与Web服务器建立SSL连接。</li>
 <li>Web服务器收到客户端请求后，会将网站的证书信息（证书中包含公钥）传送一份给客户端。</li>
@@ -565,10 +565,10 @@
 <blockquote>
 <p>主要区别</p>
 </blockquote>
-<p>==https协议需要到CA申请证书，一般免费证书较少，因而需要一定费用。==</p>
-<p>==http是超文本传输协议，信息是明文传输，https则是具有安全性的ssl/tls加密传输协议。==</p>
-<p>==http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。==</p>
-<p>==http的连接很简单，是无状态的；HTTPS协议是由SSL/TLS+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。==</p>
+<p><strong>https协议需要到CA申请证书，一般免费证书较少，因而需要一定费用。</strong></p>
+<p><strong>http是超文本传输协议，信息是明文传输，https则是具有安全性的ssl/tls加密传输协议。</strong></p>
+<p><strong>http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。</strong></p>
+<p><strong>http的连接很简单，是无状态的；HTTPS协议是由SSL/TLS+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。</strong></p>
 
       
     </div>

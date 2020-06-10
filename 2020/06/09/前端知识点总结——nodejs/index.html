@@ -104,14 +104,14 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="koa洋葱圈运行机制1234567891011121314151617181920const Koa = require(&apos;koa&apos;);const app = new Koa();app.use(async (ctx, next) =&amp;gt; &amp;#123;    console.log(1);    await next();    console.log(6);&amp;#125;);app.use(a">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodejs/前端知识点总结nodejs/pic.png">
-<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodejs/前端知识点总结nodejs/pic1.webp">
-<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodejs/前端知识点总结nodejs/pic2.webp">
-<meta property="og:updated_time" content="2020-06-10T02:19:46.982Z">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodejs/pic.png">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodejs/前端知识点总结——nodejs/pic1.webp">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodejs/前端知识点总结——nodejs/pic2.webp">
+<meta property="og:updated_time" content="2020-06-10T04:26:59.229Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——nodes.js">
 <meta name="twitter:description" content="koa洋葱圈运行机制1234567891011121314151617181920const Koa = require(&apos;koa&apos;);const app = new Koa();app.use(async (ctx, next) =&amp;gt; &amp;#123;    console.log(1);    await next();    console.log(6);&amp;#125;);app.use(a">
-<meta name="twitter:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodejs/前端知识点总结nodejs/pic.png">
+<meta name="twitter:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodejs/pic.png">
 
 
 
@@ -431,7 +431,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-10 10:19:46" itemprop="dateModified" datetime="2020-06-10T10:19:46+08:00">2020-06-10</time>
+                <time title="修改时间：2020-06-10 12:26:59" itemprop="dateModified" datetime="2020-06-10T12:26:59+08:00">2020-06-10</time>
               
             
           </span>
@@ -497,7 +497,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.9k</span>
+                <span title="本文字数">4.8k</span>
               
 
               
@@ -559,16 +559,16 @@
 <blockquote>
 <p>中间件 Middleware</p>
 </blockquote>
-<p>对比了主要的几个框架功能方面的使用，其实区别最大，使用方式最不同的地方是在中间件的处理上。==Express由于是在ES6特性之前的，====中间件的基础原理还是callback方式的==；==而koa得益于generator特性和co框架（co会把所有generator的返回封装成为Promise对象），使得中间件的编写更加优雅==。</p>
-<h3 id="Nginx原理"><a href="#Nginx原理" class="headerlink" title="Nginx原理"></a>Nginx原理</h3><p><img src="/2020/06/09/前端知识点总结——nodejs/前端知识点总结nodejs/pic.png" alt="pic"></p>
+<p>对比了主要的几个框架功能方面的使用，其实区别最大，使用方式最不同的地方是在中间件的处理上。<strong>Express由于是在ES6特性之前的，中间件的基础原理还是callback方式的；而koa得益于generator特性和co框架（co会把所有generator的返回封装成为Promise对象），使得中间件的编写更加优雅。</strong></p>
+<h3 id="Nginx原理"><a href="#Nginx原理" class="headerlink" title="Nginx原理"></a>Nginx原理</h3><p><img src="/2020/06/09/前端知识点总结——nodejs/pic.png" alt="pic"></p>
 <blockquote>
 <p>反向代理</p>
 </blockquote>
 <p>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端</p>
 <p><strong>反向代理服务器对于客户端而言它就像是原始服务器，并且客户端不需要进行任何特别的设置，代理的是“服务端”</strong></p>
 <p><strong>正向代理是一个位于客户端和原始服务器(origin server)之间的服务器，代理的是”客户端“</strong></p>
-<p><img src="/2020/06/09/前端知识点总结——nodejs/./前端知识点总结nodejs/pic1.webp" alt></p>
-<p><img src="/2020/06/09/前端知识点总结——nodejs/./前端知识点总结nodejs/pic2.webp" alt></p>
+<p><img src="/2020/06/09/前端知识点总结——nodejs/./前端知识点总结——nodejs/pic1.webp" alt></p>
+<p><img src="/2020/06/09/前端知识点总结——nodejs/./前端知识点总结——nodejs/pic2.webp" alt></p>
 <blockquote>
 <p>负载均衡</p>
 </blockquote>
