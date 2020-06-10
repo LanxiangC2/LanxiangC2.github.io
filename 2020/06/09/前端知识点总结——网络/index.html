@@ -105,7 +105,10 @@
 <meta property="og:description" content="对称加密和非对称加密 对称加密  对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。  非对称加密  非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）  区别  对称加密算法相比非对称加密算法来说，加解密的效率要">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic1.png">
-<meta property="og:updated_time" content="2020-06-10T04:24:27.424Z">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic2.png">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic3.png">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic4.png">
+<meta property="og:updated_time" content="2020-06-10T13:23:20.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——网络">
 <meta name="twitter:description" content="对称加密和非对称加密 对称加密  对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。  非对称加密  非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）  区别  对称加密算法相比非对称加密算法来说，加解密的效率要">
@@ -250,7 +253,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">23</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">25</span></a>
 
   </li>
         
@@ -288,7 +291,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">23</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">26</span></a>
 
   </li>
 
@@ -429,7 +432,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-10 12:24:27" itemprop="dateModified" datetime="2020-06-10T12:24:27+08:00">2020-06-10</time>
+                <time title="修改时间：2020-06-10 21:23:20" itemprop="dateModified" datetime="2020-06-10T21:23:20+08:00">2020-06-10</time>
               
             
           </span>
@@ -495,7 +498,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1k</span>
+                <span title="本文字数">6.3k</span>
               
 
               
@@ -509,7 +512,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">10 分钟</span>
               
             </div>
           
@@ -569,6 +572,80 @@
 <p><strong>http是超文本传输协议，信息是明文传输，https则是具有安全性的ssl/tls加密传输协议。</strong></p>
 <p><strong>http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。</strong></p>
 <p><strong>http的连接很简单，是无状态的；HTTPS协议是由SSL/TLS+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。</strong></p>
+<h3 id="浏览器页面渲染的流程"><a href="#浏览器页面渲染的流程" class="headerlink" title="浏览器页面渲染的流程"></a>浏览器页面渲染的流程</h3><h4 id="1）解析文档构建DOM树"><a href="#1）解析文档构建DOM树" class="headerlink" title="1）解析文档构建DOM树"></a>1）解析文档构建DOM树</h4><p>HTML/XHTML/SVG：解析这三种文件后，会生成DOM树（DOM Tree）<br>CSS：解析样式表，生成CSS规则树（CSS Rule Tree）<br>JavaScript：解析脚本，通过DOM API和CSSOM API操作DOM Tree和CSS Rule Tree，与用户进行交互。</p>
+<h4 id="2）构建渲染树"><a href="#2）构建渲染树" class="headerlink" title="2）构建渲染树"></a>2）构建渲染树</h4><p>解析文档完成后，浏览器引擎会将 CSS Rule Tree 附着到DOM Tree 上，并根据DOM Tree 和 CSS Rule Tree构造 Rendering Tree（渲染树）</p>
+<h4 id="3）布局与绘制渲染树"><a href="#3）布局与绘制渲染树" class="headerlink" title="3）布局与绘制渲染树"></a>3）布局与绘制渲染树</h4><p>解析position, overflow, z-index等等属性，计算每一个渲染树节点的位置和大小，此过程被称为reflow。最后调用操作系统的Native GUI API完成绘制（repain）</p>
+<p>解析html文档，遇到HTML标签时，构建DOM树。在构建DOM的过程中，如果遇到外联的样式声明或脚本声明，则暂停文档解析，创建新的网络连接，开始下载样式文件和脚本文件。样式文件下载完成后，构建CSS Rule DOM，脚本文件下载完成后，解释并立即执行。构建DOM的同时，结合CSS规则树完成页面渲染。如果DOM树先于CSS规则树构建完成，则在CSS规则树构建完成后，页面会发生一次重绘，将新构建的CSS规则应用于渲染树。</p>
+<p>脚本文件对文档解析的影响在这个过程中，脚本文件的下载和执行是与文档解析同步进行的，脚本文件的下载和执行都会阻塞文档的解析，如果控制得不好，在用户体验上就会造成一定程度的影响。</p>
+<h3 id="css会阻塞页面渲染吗？会的话该怎么解决呢？"><a href="#css会阻塞页面渲染吗？会的话该怎么解决呢？" class="headerlink" title="css会阻塞页面渲染吗？会的话该怎么解决呢？"></a>css会阻塞页面渲染吗？会的话该怎么解决呢？</h3><p>1).css加载不会阻塞DOM树的解析<br>2).css加载会阻塞DOM树的渲染<br>3).css加载会阻塞后面js语句的执行</p>
+<p>根据上一点浏览器渲染流程，可以知道，当css树还没构建完成时，页面是不会渲染到浏览器界面的，这也是为什么当css下载过慢时，会出现白屏的现象。因此，为了避免让用户看到长时间的白屏时间，我们应该尽可能的提高css加载速度</p>
+<ol>
+<li>使用CDN(因为CDN会根据你的网络状况，替你挑选最近的一个具有缓存内容的节点为你提供资源，因此可以减少加载时间</li>
+<li>对css进行压缩(可以用很多打包工具，比如webpack,gulp等，也可以通过开启gzip压缩</li>
+<li>合理的使用缓存(设置cache-control,expires,以及E-tag都是不错的，不过要注意一个问题，就是文件更新后，你要避免缓存而带来的影响。其中一个解决防范是在文件名字后面加一个版本号</li>
+<li>减少http请求数，将多个css文件合并，或者是干脆直接写成内联样式(内联样式的一个缺点就是不能缓存</li>
+<li>利用媒体类型和查询来解除对渲染的阻塞。</li>
+</ol>
+<h3 id="浏览器缓存机制"><a href="#浏览器缓存机制" class="headerlink" title="浏览器缓存机制"></a>浏览器缓存机制</h3><p>缓存位置分为：Service Worker；Memory Cache；Disk Cache；Push Cache（推送缓存）是HTTP/2中的内容，当前面三种缓存都没有命中时，它才会被使用</p>
+<p><strong>Service Worker</strong> 是运行在浏览器背后的独立线程，一般可以用来实现缓存功能。使用 Service Worker的话，传输协议必须为 HTTPS。因为 Service Worker 中涉及到请求拦截，所以必须使用 HTTPS 协议来保障安全。Service Worker 的缓存与浏览器其他内建的缓存机制不同，它可以让我们自由控制缓存哪些文件、如何匹配缓存、如何读取缓存，并且缓存是持续性的</p>
+<p><strong>缓存策略</strong>分两种：强缓存、协商缓存。强缓存不会向服务器发送请求，直接从缓存中读取资源，如果命中并有效就使用缓存，否则就发请求，强缓存可以通过设置两种 HTTP Header 实现：Expires 和 Cache-Control；协商缓存就是强制缓存失效后，浏览器携带缓存标识向服务器发起请求，由服务器根据缓存标识（Etag,If-Modified-Since等）决定是否使用缓存的过程。如果未变会返回304告知浏览器直接使用缓存资源，否则返回最新资源。</p>
+<p>缓存方法即其对比：</p>
+<p>1）响应头Last-Modified和请求头加If-Modified-Since</p>
+<p>弊端：如果本地打开缓存文件，即使没有对文件进行修改，但还是会造成 Last-Modified 被修改，服务端不能命中缓存导致发送相同的资源。因为 Last-Modified 只能以秒计时，如果在不可感知的时间内修改完成文件，那么服务端会认为资源还是命中了，不会返回正确的资源。</p>
+<p>2）ETag和If-None-Match</p>
+<p><strong>两种方法对比：</strong></p>
+<p>Last-Modified的时间单位是秒，如果某个文件在1秒内改变了多次，那么他们的Last-Modified其实并没有体现出来修改，但是Etag每次都会改变确保了精度；如果是负载均衡的服务器，各个服务器生成的Last-Modified也有可能不一致。</p>
+<p>第二在性能上，Etag要逊于Last-Modified，毕竟Last-Modified只需要记录时间，而Etag需要服务器通过算法来计算出一个hash值。</p>
+<p>第三在优先级上，服务器校验优先考虑Etag</p>
+<h3 id="常见http状态码"><a href="#常见http状态码" class="headerlink" title="常见http状态码"></a>常见http状态码</h3><p>2xx表示成功的请求</p>
+<p>200表示OK，正常返回信息<br>204 成功处理，没有内容。<br>206 范围请求响应</p>
+<p>3xx表示重定向</p>
+<p>301表示永久重定向，请求的网页已经永久移动到新位置<br>302表示临时重定向<br>304表示自从上一次请求以来，页面的内容没有改变过</p>
+<p>4xx表示客户端错误</p>
+<p>400请求报文存在语法错误<br>401表示认证失败（发送的请求需要通过HTTP认证）<br>403表示没有权限，服务器拒绝访问<br>404表示请求的资源不存在，一般是路径写错了<br>405表示请求方法不允许，一般是请求方法用错了</p>
+<p>5xx表示服务器错误</p>
+<p>500表示服务器执行请求时发生错误<br>503表示服务器暂时无法处理请求（超负载或正在停机维护）</p>
+<h3 id="浏览器地址栏键入URL后会发生什么"><a href="#浏览器地址栏键入URL后会发生什么" class="headerlink" title="浏览器地址栏键入URL后会发生什么"></a>浏览器地址栏键入URL后会发生什么</h3><p>1）查找 disk cache 中是否有匹配，如有直接显示缓存内容<br>2）DNS域名解析<br>3）三次握手,建立连接，发送请求<br>4）服务器收到请求，处理请求，返回响应<br>5）4次挥手，断开TCP连接<br>6）浏览器根据返回数据进行页面渲染</p>
+<h3 id="TCP连接、断开为什么三次握手和4次挥手"><a href="#TCP连接、断开为什么三次握手和4次挥手" class="headerlink" title="TCP连接、断开为什么三次握手和4次挥手"></a>TCP连接、断开为什么三次握手和4次挥手</h3><p><strong>三次握手：</strong></p>
+<p>目的：为了准确无误地将数据送达目标处，TCP协议采用了三次握手策略。</p>
+<p>发送端首先发送一个带SYN标志的数据包给对方。接收端收到后，回传一个带SYN/ACK标志的数据包以示传达确认信息。最后，发送端再回传一个带ACK标志的数据包，代表握手结束，建立连接。</p>
+<p><strong>四次挥手：</strong></p>
+<p>为了持久连接，其特点是只要任意一端没有明确提出断开连接，则保持TCP连接状态；其好处是在于减少了TCP连接的重复建立和断开所造成的额外开销，减轻了服务器端的负载。另外，减少开销的时间，使HTTP请求和响应能更早结束，从而提高web页面的显示速度。</p>
+<p>服务器端发送一个带FIN标记的数据包给客户端；客服端分两次发送带ACK、FIN标志数据包给服务端；服务端发送带ACK标志的数据包给客户端并断开连接</p>
+<h3 id="http协议不安全的原因，https是如何解决的"><a href="#http协议不安全的原因，https是如何解决的" class="headerlink" title="http协议不安全的原因，https是如何解决的"></a>http协议不安全的原因，https是如何解决的</h3><h4 id="http不足之处："><a href="#http不足之处：" class="headerlink" title="http不足之处："></a><strong>http不足之处</strong>：</h4><p>1）通信使用明文，不加密，内容可能被窃听。<br>2）不验证通信方的身份，因此可能会遭遇伪装。<br>3）无法证明报文的完整性，所以有可能已遭篡改。</p>
+<h4 id="https"><a href="#https" class="headerlink" title="https:"></a><strong>https:</strong></h4><p>1)用SSL（安全套接层）对通信线路进行加密<br>2）SSL有一种称为证书的手段，用于确定通信双方。通过使用证书，以证明通信方就是意料中的服务器，客户端持有证书即可完成个人身份的确认。<br>3）通过校验数字签名，将一段文本先用Hash函数生成消息摘要，然后用发送者的私钥加密生成数字签名，与原文文一起传送给接收者。接收者通过校验数字签名来确定完成性。</p>
+<p><strong>https的缺点</strong>：<br>1）https与http相比通信速度会更慢，SSL必须进行加密处理，服务器和客户端在加密解密的过程中会消耗更多的硬件资源导致处理速度变慢。<br>2）https通信，证书是必不可少的，而证书是需要花钱的。</p>
+<h3 id="前端中比较常见的攻击手段"><a href="#前端中比较常见的攻击手段" class="headerlink" title="前端中比较常见的攻击手段"></a>前端中比较常见的攻击手段</h3><h4 id="XSS攻击"><a href="#XSS攻击" class="headerlink" title="XSS攻击"></a><strong>XSS攻击</strong></h4><p>xss：全称跨站脚本攻击（Cross-Site Scripting），简单的说就是攻击者通过在目标网站上注入恶意脚本并运行，获取用户的敏感信息如 Cookie、SessionID 等，影响网站与用户数据安全。<strong>通过存在安全漏洞的web网站，注册到用户的浏览器内，渲染非法的HTML标签或者运行非法的JavaScript进行攻击的一种行为。</strong></p>
+<p><strong>原因</strong>：当攻击者通过某种方式向浏览器页面注入了恶意代码，并且浏览器执行了这些代码。</p>
+<p><strong>解决措施：</strong>渲染页面前都要先做 HTML 过滤，然后再渲染，对输入数据中的html标签&lt; &gt;进行转义 &lt; &gt; httpOnly</p>
+<h4 id="CSRF-攻击"><a href="#CSRF-攻击" class="headerlink" title="CSRF 攻击"></a><strong>CSRF 攻击</strong></h4><p>CSRF 攻击全称跨站请求伪造（Cross-site Request Forgery），简单的说就是攻击者盗用了你的身份，以你的名义发送恶意请求。CSRF的另一个特征是，攻击者无法直接窃取到用户的信息（Cookie，Header，网站内容等），仅仅是冒用Cookie中的信息。<strong>攻击者通过设置陷阱，强制对已经完成的认证用户进行非预期的个人信息或者设定信息等状态的更新。</strong></p>
+<p><strong>策略：</strong></p>
+<p>CSRF自动防御策略：同源检测（Origin 和 Referer 验证）。<br>CSRF主动防御措施：Token验证 或者 双重Cookie验证 以及配合Samesite Cookie。<br>保证页面的幂等性，后端接口不要在GET页面中做用户操作。</p>
+<h4 id="SQL注入攻击"><a href="#SQL注入攻击" class="headerlink" title="SQL注入攻击"></a>SQL注入攻击</h4><p><strong>通过把SQL命令插入Web表单、输入域名或页面请求的查询字符串中，最终达到欺骗服务器执行恶意的SQL命令</strong></p>
+<p><strong>策略：</strong></p>
+<p>从安全技术手段上来说，可以通过<a href="https://baike.baidu.com/item/数据库防火墙" target="_blank" rel="noopener">数据库防火墙</a>实现对SQL注入攻击的防范，因为SQL注入攻击往往是通过应用程序来进攻，可以使用<a href="https://baike.baidu.com/item/虚拟补丁" target="_blank" rel="noopener">虚拟补丁</a>技术实现对注入攻击的SQL特征识别，实现实时攻击阻断。</p>
+<h3 id="TCP-协议如何保证可靠传输"><a href="#TCP-协议如何保证可靠传输" class="headerlink" title="TCP 协议如何保证可靠传输"></a>TCP 协议如何保证可靠传输</h3><blockquote>
+<p>保证可靠性的重点就是滑动窗口机制，ACK &amp; 超时重传等机制都在滑动窗口的工作过程中体现。</p>
+<p>TCP主要提供了检验和、序列号/确认应答、超时重传、最大消息长度、滑动窗口控制等方法实现了可靠性传输。</p>
+</blockquote>
+<p><strong>1. 停止等待协议</strong><br>每发送完一个分组，就停止发送，等待对方确认，收到确认后再发送下一个分组。</p>
+<p>出现差错的情况：<br>（1）A在发送之后设置一个定时器，若超过定时器时间还没有收到确认，就重新发送次分组（A发送的分组必须要留一个副本，为超时重传所用）。如果B检测收到的分组有错，就丢弃分组，什么也不做（TCP将保持它首部和数据的检验和CRC。这个检验和目的是检测数据在传输过程中的任何变化）。当发现在<strong>超过计时器</strong>时间还未收到确认信号，则采用<strong><u>超时重传</u></strong>功能重新发送。</p>
+<p><img src="/2020/06/09/前端知识点总结——网络/pic2.png" alt="pic1"></p>
+<p>（2）确认丢失：如果B发送的确认信号丢失后，A定时器超出时间，则重新发送这个分组，B丢弃这个分组，不向上层交付，同时向A重新发送确认。</p>
+<p><img src="/2020/06/09/前端知识点总结——网络/pic3.png" alt="pic1"></p>
+<p>（3）确认迟到：</p>
+<p><img src="/2020/06/09/前端知识点总结——网络/pic4.png" alt="pic1"></p>
+<p>流程图如上所示，A收到这个迟到的确认后会丢弃这个确认，什么都不做。</p>
+<p>至此，就是停止等待协议中会出现的问题。而解决这些问题的重传机制，就是<strong>ARQ</strong>（<strong>Auto Repeat Request</strong>自动重传请求）协议，也就是重传的请求是自动的，不需要B请求A发送某一个丢失或者出错的数据。<br>很显然，这种方式信道利用率很低，这个时候我们就采用连续ARQ协议。</p>
+<p><strong>2. 连续ARQ协议</strong><br>利用<strong>滑动窗口（以字节为单位）</strong>，位于滑动窗口内的所有分组都可以连续的发送出去，而不需要逐个等待对方的确认。A每收到一个确认，就把发送窗口向前滑动一个分组的位置。B采用累积确认的方式，对按序到达的最后一个分组发送确认（就是最后这个分组的编号），就表示这个分组之前的所有分组都收到了。<br>（1）优点：信道利用率高，容易实现，即使确认丢失，也不必重传。<br>（2）缺点：不能向发送方反映出接收方已经正确收到的所有分组的信息，<strong>效率低</strong>。<br>比如：发送方发送了5条消息，中间第三条丢失（3号），这时接收方只能对前两个发送确认。发送方无法知道后三个分组的下落，而只好把后三个全部重传一次。这也叫<br>Go-Back-N（回退N），表示需要退回来重传已经发送过的N个消息。</p>
+<p><strong>3.保证数据的顺序性：</strong><br>TCP报文段作为IP数据来进行传输，而IP数据报的到达可能会失序，因此TCP到达也可能会失序，所以如果有必要，TCP将对收到的数据进行重新排序，将收到的数据以正确的顺序交给应用层。</p>
+<p><strong>4.TCP流量控制</strong></p>
+<p>让发送方的发送速率不要太快，通过滑动窗口来控制</p>
+<p><strong><u>坚持定时器</u></strong> ：当接收到窗口为0的状态，则启动坚持定时器，每隔一段时间发送一个窗口探测报文（为解决死锁的局面而产生）</p>
+<p>与拥塞控制的区别是点对点的通信量控制</p>
+<p><strong>5.TCP拥塞控制</strong></p>
+<p>是全局性的考虑，考虑的是整个网络</p>
+<p>报文超时这被认为是拥塞</p>
 
       
     </div>
@@ -764,7 +841,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">23</span>
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -856,7 +933,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">25</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -976,7 +1057,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密和非对称加密"><span class="nav-number">1.</span> <span class="nav-text">对称加密和非对称加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP和HTTPS的区别"><span class="nav-number">2.</span> <span class="nav-text">HTTP和HTTPS的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密和非对称加密"><span class="nav-number">1.</span> <span class="nav-text">对称加密和非对称加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP和HTTPS的区别"><span class="nav-number">2.</span> <span class="nav-text">HTTP和HTTPS的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器页面渲染的流程"><span class="nav-number">3.</span> <span class="nav-text">浏览器页面渲染的流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）解析文档构建DOM树"><span class="nav-number">3.1.</span> <span class="nav-text">1）解析文档构建DOM树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2）构建渲染树"><span class="nav-number">3.2.</span> <span class="nav-text">2）构建渲染树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3）布局与绘制渲染树"><span class="nav-number">3.3.</span> <span class="nav-text">3）布局与绘制渲染树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css会阻塞页面渲染吗？会的话该怎么解决呢？"><span class="nav-number">4.</span> <span class="nav-text">css会阻塞页面渲染吗？会的话该怎么解决呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器缓存机制"><span class="nav-number">5.</span> <span class="nav-text">浏览器缓存机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见http状态码"><span class="nav-number">6.</span> <span class="nav-text">常见http状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器地址栏键入URL后会发生什么"><span class="nav-number">7.</span> <span class="nav-text">浏览器地址栏键入URL后会发生什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP连接、断开为什么三次握手和4次挥手"><span class="nav-number">8.</span> <span class="nav-text">TCP连接、断开为什么三次握手和4次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http协议不安全的原因，https是如何解决的"><span class="nav-number">9.</span> <span class="nav-text">http协议不安全的原因，https是如何解决的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#http不足之处："><span class="nav-number">9.1.</span> <span class="nav-text">http不足之处：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#https"><span class="nav-number">9.2.</span> <span class="nav-text">https:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端中比较常见的攻击手段"><span class="nav-number">10.</span> <span class="nav-text">前端中比较常见的攻击手段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XSS攻击"><span class="nav-number">10.1.</span> <span class="nav-text">XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSRF-攻击"><span class="nav-number">10.2.</span> <span class="nav-text">CSRF 攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL注入攻击"><span class="nav-number">10.3.</span> <span class="nav-text">SQL注入攻击</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-协议如何保证可靠传输"><span class="nav-number">11.</span> <span class="nav-text">TCP 协议如何保证可靠传输</span></a></li></ol></div>
             
 
           </div>
@@ -1018,7 +1099,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">71k</span>
+    <span title="站点总字数">90k</span>
   
 
   
@@ -1029,7 +1110,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:58</span>
+    <span title="站点阅读时长">2:30</span>
   
 </div>
 
