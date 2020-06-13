@@ -108,7 +108,7 @@
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic2.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic3.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic4.png">
-<meta property="og:updated_time" content="2020-06-10T13:23:20.005Z">
+<meta property="og:updated_time" content="2020-06-13T13:03:37.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——网络">
 <meta name="twitter:description" content="对称加密和非对称加密 对称加密  对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。  非对称加密  非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）  区别  对称加密算法相比非对称加密算法来说，加解密的效率要">
@@ -253,7 +253,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">25</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
 
   </li>
         
@@ -291,7 +291,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">26</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
 
   </li>
 
@@ -432,7 +432,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-10 21:23:20" itemprop="dateModified" datetime="2020-06-10T21:23:20+08:00">2020-06-10</time>
+                <time title="修改时间：2020-06-13 21:03:37" itemprop="dateModified" datetime="2020-06-13T21:03:37+08:00">2020-06-13</time>
               
             
           </span>
@@ -498,7 +498,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">6.3k</span>
+                <span title="本文字数">7.5k</span>
               
 
               
@@ -512,7 +512,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">10 分钟</span>
+                <span title="阅读时长">13 分钟</span>
               
             </div>
           
@@ -646,6 +646,7 @@
 <p><strong>5.TCP拥塞控制</strong></p>
 <p>是全局性的考虑，考虑的是整个网络</p>
 <p>报文超时这被认为是拥塞</p>
+<h3 id="你知道哪些请求头字段"><a href="#你知道哪些请求头字段" class="headerlink" title="你知道哪些请求头字段"></a>你知道哪些请求头字段</h3><p><strong>Accept</strong>    这个头信息指定浏览器或其他客户端可以处理的 MIME 类型。有text/html,image/，/等几种常用类型。/*可以简单的概括为告诉服务器，客户端什么数据类型都支持<br><strong>Accept-Charset</strong>    这个头信息指定浏览器可以用来显示信息的字符集。例如 ISO-8859-1<br><strong>Accept-Encoding</strong>    这个头信息指定浏览器知道如何处理的编码类型。值 gzip 或 compress 是最常见的两种可能值<br><strong>Accept-Language</strong>    这个头信息指定客户端的首选语言，在这种情况下，Servlet 会产生多种语言的结果。例如，en、en-us、ru 等。<br><strong>Authorization</strong>    这个头信息用于客户端在访问受密码保护的网页时识别自己的身份。<br><strong>Connection</strong>    这个头信息指示客户端是否可以处理持久 HTTP 连接。持久连接允许客户端或其他浏览器通过单个请求来检索多个文件。值 Keep-Alive 意味着使用了持续连接。<br><strong>Content-Length</strong>    这个头信息只适用于 POST 请求，并给出 POST 数据的大小（以字节为单位）。<br><strong>Cookie</strong>    这个头信息把之前发送到浏览器的 cookies 返回到服务器。<br><strong>Host</strong>    这个头信息指定原始的 URL 中的主机和端口。<br><strong>If-Modified-Since</strong>    这个头信息表示只有当页面在指定的日期后已更改时，客户端想要的页面。如果没有新的结果可以使用，服务器会发送一个 304 代码，表示 Not Modified 头信息。 Last-Modified 与If-Modified-Since都是用来记录页面的最后修改时间。当客户端访问页面时，服务器会将页面最后修改时间通过 Last-Modified 标识由服务器发往客户端，客户端记录修改时间，再次请求本地存在的cache页面时，客户端会通过 If-Modified-Since 头将先前服务器端发过来的最后修改时间戳发送回去，服务器端通过这个时间戳判断客户端的页面是否是最新的，如果不是最新的，则返回新的内容，如果是最新的，则 返回 304 告诉客户端其本地 cache 的页面是最新的，于是客户端就可以直接从本地加载页面了，这样在网络上传输的数据就会大大减少，同时也减轻了服务器的负担<br><strong>If-Unmodified-Since</strong>    这个头信息是 If-Modified-Since 的对立面，它指定只有当文档早于指定日期时，操作才会成功。<br><strong>Referer</strong>    这个头信息指示所指向的 Web 页的 URL。例如，如果您在网页 1，点击一个链接到网页 2，当浏览器请求网页 2 时，网页 1 的 URL 就会包含在 Referer 头信息中。<br><strong>User-Agent</strong>    这个头信息识别发出请求的浏览器或其他客户端，并可以向不同类型的浏览器返回不同的内容。</p>
 
       
     </div>
@@ -841,7 +842,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -937,7 +938,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">25</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1057,7 +1074,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密和非对称加密"><span class="nav-number">1.</span> <span class="nav-text">对称加密和非对称加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP和HTTPS的区别"><span class="nav-number">2.</span> <span class="nav-text">HTTP和HTTPS的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器页面渲染的流程"><span class="nav-number">3.</span> <span class="nav-text">浏览器页面渲染的流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）解析文档构建DOM树"><span class="nav-number">3.1.</span> <span class="nav-text">1）解析文档构建DOM树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2）构建渲染树"><span class="nav-number">3.2.</span> <span class="nav-text">2）构建渲染树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3）布局与绘制渲染树"><span class="nav-number">3.3.</span> <span class="nav-text">3）布局与绘制渲染树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css会阻塞页面渲染吗？会的话该怎么解决呢？"><span class="nav-number">4.</span> <span class="nav-text">css会阻塞页面渲染吗？会的话该怎么解决呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器缓存机制"><span class="nav-number">5.</span> <span class="nav-text">浏览器缓存机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见http状态码"><span class="nav-number">6.</span> <span class="nav-text">常见http状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器地址栏键入URL后会发生什么"><span class="nav-number">7.</span> <span class="nav-text">浏览器地址栏键入URL后会发生什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP连接、断开为什么三次握手和4次挥手"><span class="nav-number">8.</span> <span class="nav-text">TCP连接、断开为什么三次握手和4次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http协议不安全的原因，https是如何解决的"><span class="nav-number">9.</span> <span class="nav-text">http协议不安全的原因，https是如何解决的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#http不足之处："><span class="nav-number">9.1.</span> <span class="nav-text">http不足之处：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#https"><span class="nav-number">9.2.</span> <span class="nav-text">https:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端中比较常见的攻击手段"><span class="nav-number">10.</span> <span class="nav-text">前端中比较常见的攻击手段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XSS攻击"><span class="nav-number">10.1.</span> <span class="nav-text">XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSRF-攻击"><span class="nav-number">10.2.</span> <span class="nav-text">CSRF 攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL注入攻击"><span class="nav-number">10.3.</span> <span class="nav-text">SQL注入攻击</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-协议如何保证可靠传输"><span class="nav-number">11.</span> <span class="nav-text">TCP 协议如何保证可靠传输</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密和非对称加密"><span class="nav-number">1.</span> <span class="nav-text">对称加密和非对称加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP和HTTPS的区别"><span class="nav-number">2.</span> <span class="nav-text">HTTP和HTTPS的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器页面渲染的流程"><span class="nav-number">3.</span> <span class="nav-text">浏览器页面渲染的流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）解析文档构建DOM树"><span class="nav-number">3.1.</span> <span class="nav-text">1）解析文档构建DOM树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2）构建渲染树"><span class="nav-number">3.2.</span> <span class="nav-text">2）构建渲染树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3）布局与绘制渲染树"><span class="nav-number">3.3.</span> <span class="nav-text">3）布局与绘制渲染树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css会阻塞页面渲染吗？会的话该怎么解决呢？"><span class="nav-number">4.</span> <span class="nav-text">css会阻塞页面渲染吗？会的话该怎么解决呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器缓存机制"><span class="nav-number">5.</span> <span class="nav-text">浏览器缓存机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见http状态码"><span class="nav-number">6.</span> <span class="nav-text">常见http状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器地址栏键入URL后会发生什么"><span class="nav-number">7.</span> <span class="nav-text">浏览器地址栏键入URL后会发生什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP连接、断开为什么三次握手和4次挥手"><span class="nav-number">8.</span> <span class="nav-text">TCP连接、断开为什么三次握手和4次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http协议不安全的原因，https是如何解决的"><span class="nav-number">9.</span> <span class="nav-text">http协议不安全的原因，https是如何解决的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#http不足之处："><span class="nav-number">9.1.</span> <span class="nav-text">http不足之处：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#https"><span class="nav-number">9.2.</span> <span class="nav-text">https:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端中比较常见的攻击手段"><span class="nav-number">10.</span> <span class="nav-text">前端中比较常见的攻击手段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XSS攻击"><span class="nav-number">10.1.</span> <span class="nav-text">XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSRF-攻击"><span class="nav-number">10.2.</span> <span class="nav-text">CSRF 攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL注入攻击"><span class="nav-number">10.3.</span> <span class="nav-text">SQL注入攻击</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-协议如何保证可靠传输"><span class="nav-number">11.</span> <span class="nav-text">TCP 协议如何保证可靠传输</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你知道哪些请求头字段"><span class="nav-number">12.</span> <span class="nav-text">你知道哪些请求头字段</span></a></li></ol></div>
             
 
           </div>
@@ -1099,7 +1116,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">90k</span>
+    <span title="站点总字数">116k</span>
   
 
   
@@ -1110,7 +1127,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">2:30</span>
+    <span title="站点阅读时长">3:13</span>
   
 </div>
 

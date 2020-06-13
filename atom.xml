@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-06-10T14:11:03.729Z</updated>
+  <updated>2020-06-13T14:26:03.977Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -15,6 +15,196 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端知识点总结——webapp和小程序</title>
+    <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94webapp%E5%92%8C%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——webapp和小程序/</id>
+    <published>2020-06-13T13:22:40.000Z</published>
+    <updated>2020-06-13T14:26:03.977Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;移动端布局&quot;&gt;&lt;a href=&quot;#移动端布局&quot; class=&quot;headerlink&quot; title=&quot;移动端布局&quot;&gt;&lt;/a&gt;移动端布局&lt;/h3&gt;&lt;h4 id=&quot;固定布局&quot;&gt;&lt;a href=&quot;#固定布局&quot; class=&quot;headerlink&quot; title=&quot;固定布局&quot;&gt;&lt;/a&gt;固定布局&lt;/h4&gt;&lt;p&gt;固定布局是第一次做移动端时最好的选择方式,思路沿用PC端,上手比较快。在标签里把 viewport 加好,然后设想整个网页的宽度为 320px 即可。 其他地方根据 PC 端来布局。 &lt;/p&gt;
+&lt;p&gt;缺点:大屏手机显示网页比较宽,固定布局宽度参照永远是 320px,导致左右两 边会有空白。&lt;/p&gt;
+&lt;h4 id=&quot;流动布局&quot;&gt;&lt;a href=&quot;#流动布局&quot; class=&quot;headerlink&quot; title=&quot;流动布局&quot;&gt;&lt;/a&gt;流动布局&lt;/h4&gt;&lt;p&gt;流动布局与固定宽度布局基本不同点就在于对网站尺寸的测量单位不同，流动布局就是使用&lt;strong&gt;百分比&lt;/strong&gt;来代替px作为单位。 优点是流动布局可以很好解决自适应需求。缺点是不够灵活，添加元素时，需要更改其他元素的值。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="响应式布局" scheme="http://lanxiangc2.github.io/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/"/>
+    
+      <category term="小程序" scheme="http://lanxiangc2.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="webapp" scheme="http://lanxiangc2.github.io/tags/webapp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——AJAX和JSON</title>
+    <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94AJAX%E5%92%8CJSON/"/>
+    <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——AJAX和JSON/</id>
+    <published>2020-06-13T12:32:57.000Z</published>
+    <updated>2020-06-13T14:26:56.021Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Ajax的流程&quot;&gt;&lt;a href=&quot;#Ajax的流程&quot; class=&quot;headerlink&quot; title=&quot;Ajax的流程&quot;&gt;&lt;/a&gt;Ajax的流程&lt;/h3&gt;&lt;p&gt;Ajax通过XMLHttpRequest对象实现异步方式在后台发送发送请求。&lt;/p&gt;
+&lt;p&gt;主要有以下四个步骤：&lt;/p&gt;
+&lt;p&gt;（1）初始化XMLHttpRequest对象。不同浏览器的差异，需要我们创建一个跨浏览器的对象，并判断XMLHttpRequest对象创建是否成功，如果不成功，则给予提示。&lt;/p&gt;
+&lt;p&gt;（2）为XMLHttpRequest对象指定一个回调函数，用于对后台返回结果进行处理。&lt;/p&gt;
+&lt;p&gt;（3）创建一个与服务器的连接，在创建时，需要指定发送请求的方式（GET/POST），以及设置是否采用异步方式发送请求。&lt;/p&gt;
+&lt;p&gt;（4）向服务器发送请求。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="AJAX" scheme="http://lanxiangc2.github.io/tags/AJAX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——正则表达式</title>
+    <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——正则表达式/</id>
+    <published>2020-06-13T11:34:31.000Z</published>
+    <updated>2020-06-13T14:27:00.386Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;正则表达式中-和-和-的理解&quot;&gt;&lt;a href=&quot;#正则表达式中-和-和-的理解&quot; class=&quot;headerlink&quot; title=&quot;正则表达式中?=和?:和?!的理解&quot;&gt;&lt;/a&gt;正则表达式中?=和?:和?!的理解&lt;/h3&gt;&lt;p&gt;要理解?=和?!，首先需要理解前瞻，后顾，负前瞻，负后顾四个概念：&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 前瞻：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;exp1(?=exp2) 查找exp2前面的exp1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 后顾：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(?&lt;span class=&quot;xml&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;=exp2)exp1&lt;/span&gt; 查找&lt;span class=&quot;attr&quot;&gt;exp2&lt;/span&gt;后面的&lt;span class=&quot;attr&quot;&gt;exp1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;// 负前瞻：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;exp1(?!exp2) 查找后面不是exp2的exp1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;// 负后顾：&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;xml&quot;&gt;(?&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;!exp2)exp1&lt;/span&gt; 查找前面不是&lt;span class=&quot;attr&quot;&gt;exp2&lt;/span&gt;的&lt;span class=&quot;attr&quot;&gt;exp1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;要理解?:则需要理解捕获分组和非捕获分组的概念：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;()表示捕获分组，()会把每个分组里的匹配的值保存起来，使用$n(n是一个数字，表示第n个捕获组的内容)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(?:)表示非捕获分组，和捕获分组唯一的区别在于，非捕获分组匹配的值不会保存起来&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="正则表达式" scheme="http://lanxiangc2.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——CSS</title>
+    <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94CSS/"/>
+    <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——CSS/</id>
+    <published>2020-06-13T08:33:00.000Z</published>
+    <updated>2020-06-13T14:26:43.272Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;CSS的盒模型-怎么切换&quot;&gt;&lt;a href=&quot;#CSS的盒模型-怎么切换&quot; class=&quot;headerlink&quot; title=&quot;CSS的盒模型 怎么切换&quot;&gt;&lt;/a&gt;CSS的盒模型 怎么切换&lt;/h3&gt;&lt;p&gt;&lt;code&gt;box-sizing:content-box&lt;/code&gt;这是W3C盒模型， width = content&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;box-sizing:border-box&lt;/code&gt;这是width = border + padding + content&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="CSS" scheme="http://lanxiangc2.github.io/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——HTML</title>
+    <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94HTML/"/>
+    <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——HTML/</id>
+    <published>2020-06-13T07:27:55.000Z</published>
+    <updated>2020-06-13T14:26:27.317Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;canvas的一些方法&quot;&gt;&lt;a href=&quot;#canvas的一些方法&quot; class=&quot;headerlink&quot; title=&quot;canvas的一些方法&quot;&gt;&lt;/a&gt;canvas的一些方法&lt;/h3&gt;&lt;h3 id=&quot;requestAnimationFrame有用过吗？知道是干什么的吗？&quot;&gt;&lt;a href=&quot;#requestAnimationFrame有用过吗？知道是干什么的吗？&quot; class=&quot;headerlink&quot; title=&quot;requestAnimationFrame有用过吗？知道是干什么的吗？&quot;&gt;&lt;/a&gt;requestAnimationFrame有用过吗？知道是干什么的吗？&lt;/h3&gt;&lt;p&gt;&lt;u&gt;实现动画效果的方法比较多&lt;/u&gt;，Javascript 中可以通过定时器 setTimeout 来实现，css3 可以使用 transition 和 animation 来实现，html5 中的 canvas 也可以实现。除此之外，html5 还提供一个专门用于请求动画的API，那就是 requestAnimationFrame，顾名思义就是&lt;strong&gt;请求动画帧。&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="HTML" scheme="http://lanxiangc2.github.io/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——前端工程化</title>
+    <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——前端工程化/</id>
+    <published>2020-06-13T05:36:24.000Z</published>
+    <updated>2020-06-13T14:27:15.088Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;loader的运行原理和作用&quot;&gt;&lt;a href=&quot;#loader的运行原理和作用&quot; class=&quot;headerlink&quot; title=&quot;loader的运行原理和作用&quot;&gt;&lt;/a&gt;loader的运行原理和作用&lt;/h3&gt;&lt;h4 id=&quot;具体作用如下：&quot;&gt;&lt;a href=&quot;#具体作用如下：&quot; class=&quot;headerlink&quot; title=&quot;具体作用如下：&quot;&gt;&lt;/a&gt;具体作用如下：&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;实现对不同格式文件的处理，比如将Scss转化为CSS，或将TypeScript转化为JavaScript。&lt;/li&gt;
+&lt;li&gt;可以编译文件，从而使其能够添加到依赖关系中。loader是WebPack最重要的部分之一。通过使用不同的loader,我们能够调用外部的脚本或者工具，实现对不同格式文件的处理。loader需要在webpack.config.js文件里单独用module进行设置。&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="前端工程化" scheme="http://lanxiangc2.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于slice和concat深浅拷贝的问题</title>
+    <link href="http://lanxiangc2.github.io/2020/06/12/%E5%85%B3%E4%BA%8Eslice%E5%92%8Cconcat%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://lanxiangc2.github.io/2020/06/12/关于slice和concat深浅拷贝的问题/</id>
+    <published>2020-06-12T05:50:44.000Z</published>
+    <updated>2020-06-12T05:58:46.152Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;使用slice-进行深拷贝&quot;&gt;&lt;a href=&quot;#使用slice-进行深拷贝&quot; class=&quot;headerlink&quot; title=&quot;使用slice()进行深拷贝&quot;&gt;&lt;/a&gt;使用slice()进行深拷贝&lt;/h3&gt;&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="JavaScript" scheme="http://lanxiangc2.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——ES6(2)</title>
+    <link href="http://lanxiangc2.github.io/2020/06/11/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6-2/"/>
+    <id>http://lanxiangc2.github.io/2020/06/11/前端知识点总结——ES6-2/</id>
+    <published>2020-06-11T01:53:59.000Z</published>
+    <updated>2020-06-11T02:24:32.731Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;普通函数和箭头函数的区别&quot;&gt;&lt;a href=&quot;#普通函数和箭头函数的区别&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="ES6" scheme="http://lanxiangc2.github.io/tags/ES6/"/>
+    
+  </entry>
   
   <entry>
     <title>什么是CI/CD</title>
@@ -49,7 +239,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/10/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     <id>http://lanxiangc2.github.io/2020/06/10/前端知识点总结——性能优化/</id>
     <published>2020-06-10T13:48:26.000Z</published>
-    <updated>2020-06-10T14:15:02.852Z</updated>
+    <updated>2020-06-13T07:51:54.954Z</updated>
     
     <summary type="html">
     
@@ -125,7 +315,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——JavaScript/</id>
     <published>2020-06-09T08:04:14.000Z</published>
-    <updated>2020-06-10T12:17:53.380Z</updated>
+    <updated>2020-06-13T12:48:47.567Z</updated>
     
     <summary type="html">
     
@@ -144,9 +334,9 @@
       <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
-    
       <category term="JavaScript" scheme="http://lanxiangc2.github.io/tags/JavaScript/"/>
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
     
   </entry>
   
@@ -155,7 +345,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/</id>
     <published>2020-06-09T04:56:34.000Z</published>
-    <updated>2020-06-10T11:50:34.725Z</updated>
+    <updated>2020-06-13T08:30:28.542Z</updated>
     
     <summary type="html">
     
@@ -184,7 +374,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%BD%91%E7%BB%9C/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/</id>
     <published>2020-06-09T04:40:27.000Z</published>
-    <updated>2020-06-10T13:23:20.005Z</updated>
+    <updated>2020-06-13T13:03:37.190Z</updated>
     
     <summary type="html">
     
@@ -217,7 +407,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94Vue/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/</id>
     <published>2020-06-09T02:53:53.000Z</published>
-    <updated>2020-06-10T13:47:34.719Z</updated>
+    <updated>2020-06-11T01:49:44.424Z</updated>
     
     <summary type="html">
     
@@ -334,189 +524,6 @@
       <category term="python" scheme="http://lanxiangc2.github.io/tags/python/"/>
     
       <category term="数据处理" scheme="http://lanxiangc2.github.io/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数组中的逆序对</title>
-    <link href="http://lanxiangc2.github.io/2020/06/05/%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/"/>
-    <id>http://lanxiangc2.github.io/2020/06/05/数组中的逆序对/</id>
-    <published>2020-06-05T07:14:35.000Z</published>
-    <updated>2020-06-05T11:14:20.350Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;题目描述：&lt;/strong&gt;在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组,求出这个数组中的逆序对的总数P。并将P对1000000007取模的结果输出。
-        
-      
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://lanxiangc2.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>找第N个丑数</title>
-    <link href="http://lanxiangc2.github.io/2020/06/05/%E6%89%BE%E7%AC%ACN%E4%B8%AA%E4%B8%91%E6%95%B0/"/>
-    <id>http://lanxiangc2.github.io/2020/06/05/找第N个丑数/</id>
-    <published>2020-06-05T05:35:32.000Z</published>
-    <updated>2020-06-05T05:54:47.789Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;题目：把只包含质因子2、3和5的数称作丑数（Ugly Number）。例如6、8都是丑数，但14不是，因为它包含质因子7。 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://lanxiangc2.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>部署静态页面到服务器</title>
-    <link href="http://lanxiangc2.github.io/2020/06/04/%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    <id>http://lanxiangc2.github.io/2020/06/04/部署静态页面到服务器/</id>
-    <published>2020-06-04T11:19:47.000Z</published>
-    <updated>2020-06-10T02:46:01.774Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;h4 id=&quot;秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出&quot;&gt;&lt;a href=&quot;#秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出&quot; class=&quot;headerlink&quot; title=&quot;秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出&quot;&gt;&lt;/a&gt;秋招将至，一名前端小白无时不刻不在幻想如何才能在众多简历中脱颖而出&lt;/h4&gt;&lt;/blockquote&gt;
-&lt;p&gt;想说一句非科班出身的太难了，我搞了好半天才把静态页面部署到服务器上，说个题外话，买服务器的时候我还在纠结买哪个公司的，担心到时候面试官问到会很尴尬呀（哈哈，梦回高考之前在想去北大还是清华啦）。先给自己拟定一个流程图吧（emmmm，不知道能不能行呀）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/06/04/部署静态页面到服务器/flow.png&quot; alt=&quot;flow&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="运维" scheme="http://lanxiangc2.github.io/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-      <category term="部署" scheme="http://lanxiangc2.github.io/tags/%E9%83%A8%E7%BD%B2/"/>
-    
-      <category term="运维" scheme="http://lanxiangc2.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二叉搜索树转化为双向链表</title>
-    <link href="http://lanxiangc2.github.io/2020/06/04/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E8%BD%AC%E5%8C%96%E4%B8%BA%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/"/>
-    <id>http://lanxiangc2.github.io/2020/06/04/二叉搜索树转化为双向链表/</id>
-    <published>2020-06-04T01:54:02.000Z</published>
-    <updated>2020-06-05T05:54:39.663Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;昨天遇到一道这样的题，‘&lt;code&gt;输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。&lt;/code&gt;’，想了很久才弄明白。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="算法与数据结构" scheme="http://lanxiangc2.github.io/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-      <category term="算法" scheme="http://lanxiangc2.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>快速判断空数组和空对象</title>
-    <link href="http://lanxiangc2.github.io/2020/06/03/%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%AD%E7%A9%BA%E6%95%B0%E7%BB%84%E5%92%8C%E7%A9%BA%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://lanxiangc2.github.io/2020/06/03/快速判断空数组和空对象/</id>
-    <published>2020-06-03T02:34:24.000Z</published>
-    <updated>2020-06-03T09:03:35.799Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;判断空数组&quot;&gt;&lt;a href=&quot;#判断空数组&quot; class=&quot;headerlink&quot; title=&quot;判断空数组&quot;&gt;&lt;/a&gt;判断空数组&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
-    
-    </summary>
-    
-      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="学习笔记" scheme="http://lanxiangc2.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>for循环中的变量保存</title>
-    <link href="http://lanxiangc2.github.io/2019/12/27/for%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%E4%BF%9D%E5%AD%98/"/>
-    <id>http://lanxiangc2.github.io/2019/12/27/for循环中的变量保存/</id>
-    <published>2019-12-27T14:18:13.000Z</published>
-    <updated>2020-06-09T04:57:39.577Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天的web前端学习打算用for循环给ul下的li标签绑定DOM0级事件，如下&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;标题1&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;标题2&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;标题3&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;li&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ul&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 获取元素&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; items = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.getElementsByTagName(&lt;span class=&quot;string&quot;&gt;&#39;li&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// for循环绑定事件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, len = items.length; i &amp;lt; len; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	items[i].onclick = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        alert(&lt;span class=&quot;string&quot;&gt;&#39;这是标题&#39;&lt;/span&gt; + i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;以上的代码不用我解释了把，想实现的效果是点击哪个标题就弹出我点击了标题几。&lt;/p&gt;
-&lt;p&gt;可是问题出现了,我点击标题1，这时弹出“这是标题3”，我当时就不乐意了啊这明明就是标题1啊！！！&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="前端学习" scheme="http://lanxiangc2.github.io/tags/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="问题记录" scheme="http://lanxiangc2.github.io/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>节点新增模块</title>
-    <link href="http://lanxiangc2.github.io/2019/06/26/%E8%8A%82%E7%82%B9%E6%96%B0%E5%A2%9E%E6%A8%A1%E5%9D%97/"/>
-    <id>http://lanxiangc2.github.io/2019/06/26/节点新增模块/</id>
-    <published>2019-06-26T08:35:21.000Z</published>
-    <updated>2019-07-30T06:51:02.092Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1整体介绍&quot;&gt;&lt;a href=&quot;#1整体介绍&quot; class=&quot;headerlink&quot; title=&quot;1整体介绍&quot;&gt;&lt;/a&gt;1整体介绍&lt;/h2&gt;&lt;p&gt;节点新增模块按照功能设计主要分为三个模块，对应的三个功能如下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://www.plantuml.com/plantuml/img/SoWkIImgAStDuShBJqbLK7hHrVIyQUUpQHkUBfhtRCN2ftEdAq5bdYrkUBvbqTEk-I-Qzq9b5A1IBrjxd-zTXo85bNcoVzspAJjHPRWmxL3GrLN0D1zaV4cgGb9-IKb-ha9-6XObLY2nPrkxdyrP1N74yrajKEEdRdZPte_3Bam7erk5gS9AuVdkcH23e8Pkt_sqQm548GvxCBsFRW-c2YkOsFPDp-PqFkrl0le4OZhGRr3R75BpKe1n1W00&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="节点管理" scheme="http://lanxiangc2.github.io/tags/%E8%8A%82%E7%82%B9%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>web前端设计</title>
-    <link href="http://lanxiangc2.github.io/2019/06/26/web%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1/"/>
-    <id>http://lanxiangc2.github.io/2019/06/26/web前端设计/</id>
-    <published>2019-06-26T08:24:48.000Z</published>
-    <updated>2019-07-30T06:49:29.499Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1-项目设计的整体设计框架如下&quot;&gt;&lt;a href=&quot;#1-项目设计的整体设计框架如下&quot; class=&quot;headerlink&quot; title=&quot;1 项目设计的整体设计框架如下&quot;&gt;&lt;/a&gt;1 项目设计的整体设计框架如下&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://www.gravizo.com/svg?%40startuml%3B%0Acloud%20RabbitMQ%20%7B%20%3B%0Ainterface%20stomp%3B%0Ainterface%20mq%3B%0Amq%20%3C--%3E%20stomp%3B%0A%7D%3B%0Acloud%20FileSever%3B%0Adatabase%20Mysql%20as%20sql%3B%0Acloud%20Django%20%7B%3B%0Ainterface%20%20REST%20%3B%0AREST%20%3C--%3E%20sql%3A%20Django%20ORM%3B%0AREST%20--%3E%20mq%20%3A%20new%20jobs%3B%0A%7D%3B%0ACloud%20VueJs%20%7B%3B%0Ainterface%20Webosocket%20%20as%20wb%3B%0Ainterface%20http%20%3B%0Awb%20--%3E%20http%20%3A%20update%20view%3B%0Awb%20%3C--%3E%20stomp%20%3A%20%20notifiy%20or%20realtime%20data%3B%0Ahttp%20%3C--%3E%20REST%20%3A%20request%20%26%20response%3B%0Ahttp%20--%3E%20FileSever%20%3A%20request%20pics%20and%20files%3B%0A%7D%3B%0ANode%20Node%20%7B%3B%0Ainterface%20radio1%3B%0Ainterface%20mq_clinet1%3B%0Amq_clinet1%20--%3E%20radio1%20%3A%20configure%3B%0Amq%20--%3E%20mq_clinet1%20%3A%20working%20jobs%3B%0Amq_clinet1%20--%3E%20mq%20%3A%20result%3B%0A%7D%3B%0ANode%20Node2%20%7B%3B%0Ainterface%20radio2%3B%0Ainterface%20mq_clinet2%3B%0Amq_clinet2%20--%3E%20radio2%20%3A%20configure%3B%0Amq%20--%3E%20mq_clinet2%20%3A%20working%20jobs%3B%0Amq_clinet2%20--%3E%20mq%20%3A%20result%3B%0A%7D%3B%0ANode%20Node3%20%7B%3B%0Ainterface%20radio_n%3B%0Ainterface%20mq_clinet_n%3B%0Amq_clinet_n%20--%3E%20radio_n%20%3A%20configure%3B%0Amq%20--%3E%20mq_clinet_n%20%3A%20working%20jobs%3B%0Amq_clinet_n%20--%3E%20mq%20%3A%20result%3B%0A%7D%3B%0A%0ANode%20BackGroudTaskS%20%7B%3B%0Ainterface%20url_orm%3B%0Ainterface%20mq_consumers%20as%20mc%3B%0Amc%20--%3E%20url_orm%20%3A%20pollig%20or%20writing%3B%0A%7D%3B%0Aurl_orm%20%3C--%3E%20REST%20%3A%20http%20CURD%3B%0Amc%20--%3E%20mq%20%3A%20changes%20info%3B%0Amc%20--%3E%20FileSever%3A%20%22put%20files%22%3B%0AFileSever%20--%3E%20url_orm%3A%20%22return%20static%20urls%22%3B%0A%40enduml&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="整体设计" scheme="http://lanxiangc2.github.io/tags/%E6%95%B4%E4%BD%93%E8%AE%BE%E8%AE%A1/"/>
-    
-      <category term="主要框架和工具" scheme="http://lanxiangc2.github.io/tags/%E4%B8%BB%E8%A6%81%E6%A1%86%E6%9E%B6%E5%92%8C%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   

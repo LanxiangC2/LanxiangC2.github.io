@@ -106,7 +106,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/pic1.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/pic2.png">
-<meta property="og:updated_time" content="2020-06-10T11:50:34.725Z">
+<meta property="og:updated_time" content="2020-06-13T08:30:28.542Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——ES6">
 <meta name="twitter:description" content="对ES6有什么了解 从以下几个方面去聊   let和const 解构赋值 ES6拓展 Promise Class">
@@ -251,7 +251,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">25</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
 
   </li>
         
@@ -289,7 +289,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">26</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
 
   </li>
 
@@ -430,7 +430,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-10 19:50:34" itemprop="dateModified" datetime="2020-06-10T19:50:34+08:00">2020-06-10</time>
+                <time title="修改时间：2020-06-13 16:30:28" itemprop="dateModified" datetime="2020-06-13T16:30:28+08:00">2020-06-13</time>
               
             
           </span>
@@ -496,7 +496,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">20k</span>
+                <span title="本文字数">22k</span>
               
 
               
@@ -510,7 +510,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">34 分钟</span>
+                <span title="阅读时长">36 分钟</span>
               
             </div>
           
@@ -564,7 +564,7 @@
 <h4 id="Promise中的三种状态"><a href="#Promise中的三种状态" class="headerlink" title="Promise中的三种状态"></a>Promise中的三种状态</h4><p>状态的改变不可逆，一旦决议就不能再修改，总的来说呢，就是Promise对于错误处理机制的理解。如果错误已经捕获了，那么错误不会继续传递下去。如果错误没有被捕获，那么错误会隐式传递下去，直到有错误处理函数来捕获这个错误。</p>
 <p>pending（进行中）——&gt; fulfilled（已成功）</p>
 <p>pending（进行中）——&gt; rejected（已失败）</p>
-<h4 id="Promise-all"><a href="#Promise-all" class="headerlink" title="Promise.all()"></a>Promise.all()</h4><ul>
+<h4 id="Promise-all-spades"><a href="#Promise-all-spades" class="headerlink" title="Promise.all()                             &spades;"></a>Promise.all()                             &spades;</h4><ul>
 <li><p>可以把多个Promise实例包装成一个新的Promise实例</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([Promise1, Promise2, Promise3, Promise4, Promise5])</span><br></pre></td></tr></table></figure>
 <p>所有成功则决议成功</p>
@@ -583,6 +583,16 @@
 <p>页面中有个板块需要多张图片加载完后才能进行展示</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> loadImg = <span class="function"><span class="params">src</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> img = <span class="keyword">new</span> Image();</span><br><span class="line">        img.src = src;</span><br><span class="line">        img.onload = <span class="function"><span class="params">()</span> =&gt;</span> &#123;resolve(img)&#125;</span><br><span class="line">        img.onerror = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;reject(e)&#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> imgs =[<span class="string">'url'</span>, <span class="string">'url'</span>, <span class="string">'url'</span>]</span><br><span class="line"><span class="built_in">Promise</span>.all(imgs.map(<span class="function"><span class="params">src</span> =&gt;</span> loadImg(src))).then(<span class="function"><span class="params">arr</span> =&gt;</span> &#123;</span><br><span class="line">    arr.forEach(<span class="function"><span class="params">img</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">document</span>.body.appendChild(img)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="Promise和async的区别"><a href="#Promise和async的区别" class="headerlink" title="Promise和async的区别"></a>Promise和async的区别</h3><p>async/await是基于promise实现的，他不能用于普通的回调函数<br>async/await使得异步代码看起来像同步代码<br>async/await与Promise一样，是非阻塞的。</p>
+<h3 id="setTimeout-和-Promise哪一个先执行"><a href="#setTimeout-和-Promise哪一个先执行" class="headerlink" title="setTimeout 和 Promise哪一个先执行"></a>setTimeout 和 Promise哪一个先执行</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">async1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"async1 start"</span>); <span class="comment">// 2</span></span><br><span class="line">    <span class="keyword">await</span>  async2();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"async1 end"</span>); <span class="comment">// 6</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">async</span>  <span class="function"><span class="keyword">function</span> <span class="title">async2</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log( <span class="string">'async2'</span>); <span class="comment">//  3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"script start"</span>); <span class="comment">//1</span></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"settimeout"</span>);<span class="comment">// 8</span></span><br><span class="line">&#125;,<span class="number">0</span>);</span><br><span class="line">async1();</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"promise1"</span>); <span class="comment">// 4</span></span><br><span class="line">    resolve();</span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"promise2"</span>); <span class="comment">// 7</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'script end'</span>);  <span class="comment">//  5</span></span><br></pre></td></tr></table></figure>
+<p>输出结果</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// script start</span></span><br><span class="line"><span class="comment">// async1 start</span></span><br><span class="line"><span class="comment">// async2</span></span><br><span class="line"><span class="comment">// promise1</span></span><br><span class="line"><span class="comment">// script end</span></span><br><span class="line"><span class="comment">// async1 end</span></span><br><span class="line"><span class="comment">// promise2</span></span><br><span class="line"><span class="comment">// settimeout</span></span><br></pre></td></tr></table></figure>
+<p><strong>await  async2();</strong>//执行这一句后，输出async2后，await会让出当前线程，将后面的代码加到任务队列中，然后继续执行test()函数后面的同步代码<br>执行到setTimeout函数时，将其回调函数加入队列(此队列与promise队列不是同一个队列，执行的优先级低于promise)。继续执行</p>
+<p><strong>创建promise对象里面的代码属于同步代码，promise的异步性体现在then与catch处，所以promise1被输出，然后将then函数的代码加入队列，继续执行同步代码，输出script end。</strong></p>
+<p>至此同步代码执行完毕，开始从队列中调取任务执行，由于刚刚提到过，setTimeout的任务队列优先级低于promise队列，所以首先执行promise队列的第一个任务，即执行async1中await后面的代码，输出async1 end。</p>
+<p>然后执行then方法的部分，输出promise2。最后promise队列中任务执行完毕，再执行setTimeout的任务队列，输出settimeout。</p>
+<p>至此，该题的输出结果分析完毕了，这类的执行结果可以用一句话总结，先执行同步代码，遇到异步代码就先加入队列，然后按入队的顺序执行异步代码，最后执行setTimeout队列的代码。</p>
+<p>补充一下队列任务优先级：promise.Trick()&gt;promise的回调&gt;setTimeout&gt;setImmediate</p>
 <h3 id="async和await源码-手写async-await的最简实现"><a href="#async和await源码-手写async-await的最简实现" class="headerlink" title="async和await源码(手写async await的最简实现)"></a>async和await源码(手写async await的最简实现)</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><blockquote>
 <p>优缺点</p>
 </blockquote>
@@ -987,7 +997,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1083,7 +1093,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">25</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1203,7 +1229,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对ES6有什么了解"><span class="nav-number">1.</span> <span class="nav-text">对ES6有什么了解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promise介绍一下"><span class="nav-number">2.</span> <span class="nav-text">Promise介绍一下</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#回调与Promise"><span class="nav-number">2.1.</span> <span class="nav-text">回调与Promise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对比回调和Promise的流程控制"><span class="nav-number">2.2.</span> <span class="nav-text">对比回调和Promise的流程控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#错误处理"><span class="nav-number">2.3.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise中的三种状态"><span class="nav-number">2.4.</span> <span class="nav-text">Promise中的三种状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-all"><span class="nav-number">2.5.</span> <span class="nav-text">Promise.all()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-race-…-…-…"><span class="nav-number">2.6.</span> <span class="nav-text">Promise.race([…, …, …,])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-resolve-和Promise-reject"><span class="nav-number">2.7.</span> <span class="nav-text">Promise.resolve()和Promise.reject()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小案例"><span class="nav-number">2.8.</span> <span class="nav-text">小案例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#async和await源码-手写async-await的最简实现"><span class="nav-number">3.</span> <span class="nav-text">async和await源码(手写async await的最简实现)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍"><span class="nav-number">3.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解题"><span class="nav-number">3.2.</span> <span class="nav-text">解题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代器-生成器了解吗"><span class="nav-number">4.</span> <span class="nav-text">迭代器 生成器了解吗</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Generator-函数组成"><span class="nav-number">4.1.</span> <span class="nav-text">Generator 函数组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数返回的遍历器对象的方法"><span class="nav-number">4.2.</span> <span class="nav-text">函数返回的遍历器对象的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用场景"><span class="nav-number">4.3.</span> <span class="nav-text">使用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-in-for-of-区别"><span class="nav-number">5.</span> <span class="nav-text">for in /for of 区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历数组通常用for循环"><span class="nav-number">5.1.</span> <span class="nav-text">遍历数组通常用for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for-in遍历数组的毛病"><span class="nav-number">5.2.</span> <span class="nav-text">for in遍历数组的毛病</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历对象"><span class="nav-number">5.3.</span> <span class="nav-text">遍历对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">5.4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS对象遍历"><span class="nav-number">5.5.</span> <span class="nav-text">JS对象遍历</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES5和ES6继承"><span class="nav-number">6.</span> <span class="nav-text">ES5和ES6继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ES5继承"><span class="nav-number">6.1.</span> <span class="nav-text">ES5继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ES6中的继承"><span class="nav-number">6.2.</span> <span class="nav-text">ES6中的继承</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对ES6有什么了解"><span class="nav-number">1.</span> <span class="nav-text">对ES6有什么了解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promise介绍一下"><span class="nav-number">2.</span> <span class="nav-text">Promise介绍一下</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#回调与Promise"><span class="nav-number">2.1.</span> <span class="nav-text">回调与Promise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对比回调和Promise的流程控制"><span class="nav-number">2.2.</span> <span class="nav-text">对比回调和Promise的流程控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#错误处理"><span class="nav-number">2.3.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise中的三种状态"><span class="nav-number">2.4.</span> <span class="nav-text">Promise中的三种状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-all-spades"><span class="nav-number">2.5.</span> <span class="nav-text">Promise.all()                             ♠</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-race-…-…-…"><span class="nav-number">2.6.</span> <span class="nav-text">Promise.race([…, …, …,])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise-resolve-和Promise-reject"><span class="nav-number">2.7.</span> <span class="nav-text">Promise.resolve()和Promise.reject()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小案例"><span class="nav-number">2.8.</span> <span class="nav-text">小案例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promise和async的区别"><span class="nav-number">3.</span> <span class="nav-text">Promise和async的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setTimeout-和-Promise哪一个先执行"><span class="nav-number">4.</span> <span class="nav-text">setTimeout 和 Promise哪一个先执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#async和await源码-手写async-await的最简实现"><span class="nav-number">5.</span> <span class="nav-text">async和await源码(手写async await的最简实现)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍"><span class="nav-number">5.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解题"><span class="nav-number">5.2.</span> <span class="nav-text">解题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代器-生成器了解吗"><span class="nav-number">6.</span> <span class="nav-text">迭代器 生成器了解吗</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Generator-函数组成"><span class="nav-number">6.1.</span> <span class="nav-text">Generator 函数组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数返回的遍历器对象的方法"><span class="nav-number">6.2.</span> <span class="nav-text">函数返回的遍历器对象的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用场景"><span class="nav-number">6.3.</span> <span class="nav-text">使用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-in-for-of-区别"><span class="nav-number">7.</span> <span class="nav-text">for in /for of 区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历数组通常用for循环"><span class="nav-number">7.1.</span> <span class="nav-text">遍历数组通常用for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for-in遍历数组的毛病"><span class="nav-number">7.2.</span> <span class="nav-text">for in遍历数组的毛病</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历对象"><span class="nav-number">7.3.</span> <span class="nav-text">遍历对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">7.4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS对象遍历"><span class="nav-number">7.5.</span> <span class="nav-text">JS对象遍历</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES5和ES6继承"><span class="nav-number">8.</span> <span class="nav-text">ES5和ES6继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ES5继承"><span class="nav-number">8.1.</span> <span class="nav-text">ES5继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ES6中的继承"><span class="nav-number">8.2.</span> <span class="nav-text">ES6中的继承</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1245,7 +1271,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">90k</span>
+    <span title="站点总字数">116k</span>
   
 
   
@@ -1256,7 +1282,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">2:30</span>
+    <span title="站点阅读时长">3:13</span>
   
 </div>
 
