@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-06-13T14:26:03.977Z</updated>
+  <updated>2020-06-18T12:04:12.310Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -17,11 +17,66 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>前端知识点总结——JavaScript(2)</title>
+    <link href="http://lanxiangc2.github.io/2020/06/18/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-2/"/>
+    <id>http://lanxiangc2.github.io/2020/06/18/前端知识点总结——JavaScript-2/</id>
+    <published>2020-06-18T06:16:41.000Z</published>
+    <updated>2020-06-18T12:04:12.310Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;原型链-spades-spades-spades&quot;&gt;&lt;a href=&quot;#原型链-spades-spades-spades&quot; class=&quot;headerlink&quot; title=&quot;原型链    &amp;spades;&amp;spades;&amp;spades;&quot;&gt;&lt;/a&gt;原型链   
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="JavaScript" scheme="http://lanxiangc2.github.io/tags/JavaScript/"/>
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序开发</title>
+    <link href="http://lanxiangc2.github.io/2020/06/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/"/>
+    <id>http://lanxiangc2.github.io/2020/06/14/小程序开发/</id>
+    <published>2020-06-14T01:47:56.000Z</published>
+    <updated>2020-06-14T02:39:25.162Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;开发文档&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/framework/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="web前端技术学习" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="前端" scheme="http://lanxiangc2.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端知识点总结——webapp和小程序</title>
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94webapp%E5%92%8C%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——webapp和小程序/</id>
     <published>2020-06-13T13:22:40.000Z</published>
-    <updated>2020-06-13T14:26:03.977Z</updated>
+    <updated>2020-06-14T02:41:24.666Z</updated>
     
     <summary type="html">
     
@@ -47,7 +102,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94AJAX%E5%92%8CJSON/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——AJAX和JSON/</id>
     <published>2020-06-13T12:32:57.000Z</published>
-    <updated>2020-06-13T14:26:56.021Z</updated>
+    <updated>2020-06-18T06:36:01.140Z</updated>
     
     <summary type="html">
     
@@ -95,7 +150,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94CSS/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——CSS/</id>
     <published>2020-06-13T08:33:00.000Z</published>
-    <updated>2020-06-13T14:26:43.272Z</updated>
+    <updated>2020-06-18T08:33:32.843Z</updated>
     
     <summary type="html">
     
@@ -136,7 +191,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——前端工程化/</id>
     <published>2020-06-13T05:36:24.000Z</published>
-    <updated>2020-06-13T14:27:15.088Z</updated>
+    <updated>2020-06-15T08:43:02.770Z</updated>
     
     <summary type="html">
     
@@ -185,7 +240,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/11/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6-2/"/>
     <id>http://lanxiangc2.github.io/2020/06/11/前端知识点总结——ES6-2/</id>
     <published>2020-06-11T01:53:59.000Z</published>
-    <updated>2020-06-11T02:24:32.731Z</updated>
+    <updated>2020-06-18T07:36:30.355Z</updated>
     
     <summary type="html">
     
@@ -193,7 +248,7 @@
       
         
         
-          &lt;h3 id=&quot;普通函数和箭头函数的区别&quot;&gt;&lt;a href=&quot;#普通函数和箭头函数的区别&quot; class=&quot;headerlink&quot;
+          &lt;h3 id=&quot;普通函数和箭头函数的区别-spades&quot;&gt;&lt;a href=&quot;#普通函数和箭头函数的区别-spades&quot; class=&quot;headerlink&quot; title=&quot;普通函数和箭头函数的区别    &amp;spades;&quot;&gt;&lt;/a&gt;普通函数和箭头函数的区别   
         
       
     
@@ -263,7 +318,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/10/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     <id>http://lanxiangc2.github.io/2020/06/10/前端知识点总结——操作系统/</id>
     <published>2020-06-10T12:46:22.000Z</published>
-    <updated>2020-06-10T14:15:14.009Z</updated>
+    <updated>2020-06-22T08:11:03.294Z</updated>
     
     <summary type="html">
     
@@ -291,11 +346,11 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——算法与数据结构/</id>
     <published>2020-06-09T12:21:23.000Z</published>
-    <updated>2020-06-09T13:07:55.310Z</updated>
+    <updated>2020-06-18T08:21:32.859Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;排序算法了解哪些&quot;&gt;&lt;a href=&quot;#排序算法了解哪些&quot; class=&quot;headerlink&quot; title=&quot;排序算法了解哪些&quot;&gt;&lt;/a&gt;排序算法了解哪些&lt;/h3&gt;&lt;p&gt;冒泡排序&lt;/p&gt;
+      &lt;h3 id=&quot;排序算法了解哪些-spades&quot;&gt;&lt;a href=&quot;#排序算法了解哪些-spades&quot; class=&quot;headerlink&quot; title=&quot;排序算法了解哪些   &amp;spades;&quot;&gt;&lt;/a&gt;排序算法了解哪些   &amp;spades;&lt;/h3&gt;&lt;p&gt;冒泡排序&lt;/p&gt;
 &lt;p&gt;插入排序&lt;/p&gt;
 &lt;p&gt;选择排序&lt;/p&gt;
 &lt;p&gt;快速排序&lt;/p&gt;
@@ -315,7 +370,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——JavaScript/</id>
     <published>2020-06-09T08:04:14.000Z</published>
-    <updated>2020-06-13T12:48:47.567Z</updated>
+    <updated>2020-06-18T12:06:32.886Z</updated>
     
     <summary type="html">
     
@@ -345,20 +400,26 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/</id>
     <published>2020-06-09T04:56:34.000Z</published>
-    <updated>2020-06-13T08:30:28.542Z</updated>
+    <updated>2020-06-18T07:29:56.417Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;对ES6有什么了解&quot;&gt;&lt;a href=&quot;#对ES6有什么了解&quot; class=&quot;headerlink&quot; title=&quot;对ES6有什么了解&quot;&gt;&lt;/a&gt;对ES6有什么了解&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;从以下几个方面去聊&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;let和const&lt;/li&gt;
-&lt;li&gt;解构赋值&lt;/li&gt;
-&lt;li&gt;ES6拓展&lt;/li&gt;
-&lt;li&gt;Promise&lt;/li&gt;
-&lt;li&gt;Class&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h4 id=&quot;let和const&quot;&gt;&lt;a href=&quot;#let和const&quot; class=&quot;headerlink&quot; title=&quot;let和const&quot;&gt;&lt;/a&gt;let和const&lt;/h4&gt;&lt;p&gt;var声明的变量会挂载在window上，而let和const声明的变量不会；&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a,&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.a);    &lt;span class=&quot;comment&quot;&gt;// 100 100&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; b = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(b,&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.b);    &lt;span class=&quot;comment&quot;&gt;// 10 undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; c = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(c,&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.c);    &lt;span class=&quot;comment&quot;&gt;// 1 undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;var声明变量存在变量提升，let和const不存在变量提升；&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a); &lt;span class=&quot;comment&quot;&gt;// undefined  ===&amp;gt;  a已声明还没赋值，默认得到undefined值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(b); &lt;span class=&quot;comment&quot;&gt;// 报错：b is not defined  ===&amp;gt; 找不到b这个变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; b = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(c); &lt;span class=&quot;comment&quot;&gt;// 报错：c is not defined  ===&amp;gt; 找不到c这个变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; c = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;let和const声明形成块作用域；    &lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; b = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a); &lt;span class=&quot;comment&quot;&gt;// 100&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(b)  &lt;span class=&quot;comment&quot;&gt;// 报错：b is not defined  ===&amp;gt; 找不到b这个变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;同一作用域下let和const不能声明同名变量，而var可以；&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a); &lt;span class=&quot;comment&quot;&gt;// 100&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a); &lt;span class=&quot;comment&quot;&gt;// 10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//  控制台报错：Identifier &#39;a&#39; has already been declared  ===&amp;gt; 标识符a已经被声明了。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;暂存死区&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&amp;#123;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//在当前块作用域中存在a使用let/const声明的情况下，给a赋值10时，只会在当前作用域找变量a， &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    a = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 而这时，还未到声明时候，所以控制台Error:a is not defined    &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;const&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1、一旦声明必须赋值,不能使用null占位。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2、声明后不能再修改&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3、如果声明的是复合类型数据，可以修改其属性&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;解构赋值&quot;&gt;&lt;a href=&quot;#解构赋值&quot; class=&quot;headerlink&quot; title=&quot;解构赋值&quot;&gt;&lt;/a&gt;解构赋值&lt;/h4&gt;&lt;h4 id=&quot;ES6拓展&quot;&gt;&lt;a href=&quot;#ES6拓展&quot; class=&quot;headerlink&quot; title=&quot;ES6拓展&quot;&gt;&lt;/a&gt;ES6拓展&lt;/h4&gt;&lt;h4 id=&quot;Promise&quot;&gt;&lt;a href=&quot;#Promise&quot; class=&quot;headerlink&quot; title=&quot;Promise&quot;&gt;&lt;/a&gt;Promise&lt;/h4&gt;&lt;h4 id=&quot;Class&quot;&gt;&lt;a href=&quot;#Class&quot; class=&quot;headerlink&quot; title=&quot;Class&quot;&gt;&lt;/a&gt;Class&lt;/h4&gt;
     
     </summary>
     
@@ -374,7 +435,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%BD%91%E7%BB%9C/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/</id>
     <published>2020-06-09T04:40:27.000Z</published>
-    <updated>2020-06-13T13:03:37.190Z</updated>
+    <updated>2020-06-18T12:25:10.420Z</updated>
     
     <summary type="html">
     
@@ -407,11 +468,11 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94Vue/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/</id>
     <published>2020-06-09T02:53:53.000Z</published>
-    <updated>2020-06-11T01:49:44.424Z</updated>
+    <updated>2020-06-18T11:21:38.566Z</updated>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;vue和react&quot;&gt;&lt;a href=&quot;#vue和react&quot; class=&quot;headerlink&quot; title=&quot;vue和react&quot;&gt;&lt;/a&gt;vue和react&lt;/h3&gt;&lt;blockquote&gt;
+      &lt;h3 id=&quot;vue和react-spades&quot;&gt;&lt;a href=&quot;#vue和react-spades&quot; class=&quot;headerlink&quot; title=&quot;vue和react   &amp;spades;&quot;&gt;&lt;/a&gt;vue和react   &amp;spades;&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;相似之处&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h4 id=&quot;Virtual-DOM&quot;&gt;&lt;a href=&quot;#Virtual-DOM&quot; class=&quot;headerlink&quot; title=&quot;Virtual DOM&quot;&gt;&lt;/a&gt;Virtual DOM&lt;/h4&gt;&lt;p&gt;Vue.js(2.0版本)与React的其中最大一个相似之处，就是他们都使用了一种叫’Virtual DOM’的东西。所谓的Virtual DOM基本上说就是它名字的意思：虚拟DOM，DOM树的虚拟表现。它的诞生是基于这么一个概念：改变真实的DOM状态远比改变一个JavaScript对象的花销要大得多。&lt;/p&gt;
@@ -458,9 +519,17 @@
     <link href="http://lanxiangc2.github.io/2020/06/08/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94React/"/>
     <id>http://lanxiangc2.github.io/2020/06/08/前端知识点总结——React/</id>
     <published>2020-06-08T12:41:59.000Z</published>
-    <updated>2020-06-09T04:41:27.156Z</updated>
+    <updated>2020-06-15T11:47:54.026Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;虚拟DOM-amp-amp-Diff算法&quot;&gt;&lt;a href=&quot;#虚拟DOM-amp-amp-Diff算法&quot; class=&quot;headerlink&quot; title=&quot;虚拟DOM &amp;amp;&amp;amp; Diff算法&quot;&gt;&lt;/a&gt;虚拟DOM &amp;amp;&amp;amp;
+        
+      
     
     </summary>
     
@@ -470,60 +539,6 @@
       <category term="前端框架" scheme="http://lanxiangc2.github.io/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
     
       <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>位运算</title>
-    <link href="http://lanxiangc2.github.io/2020/06/08/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
-    <id>http://lanxiangc2.github.io/2020/06/08/位运算/</id>
-    <published>2020-06-08T08:26:30.000Z</published>
-    <updated>2020-06-08T10:08:35.195Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;按位与运算符（-amp-）&quot;&gt;&lt;a href=&quot;#按位与运算符（-amp-）&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="算法与数据结构" scheme="http://lanxiangc2.github.io/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-      <category term="算法" scheme="http://lanxiangc2.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用openpyxl处理excel表格</title>
-    <link href="http://lanxiangc2.github.io/2020/06/07/%E4%BD%BF%E7%94%A8openpyxl%E5%A4%84%E7%90%86excel%E8%A1%A8%E6%A0%BC/"/>
-    <id>http://lanxiangc2.github.io/2020/06/07/使用openpyxl处理excel表格/</id>
-    <published>2020-06-07T01:26:27.000Z</published>
-    <updated>2020-06-07T02:43:09.403Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;邹同学是国贸专业的，听她说其他同学处理数据都是手动，真实骇人听闻啊，遂昨晚花了点时间研究了下，跑了个小demo，这里分享给大家，也随便记录下自己的python学习之旅&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;首先申明笔者并不了解python，代码不规范的地方还请多多理解&lt;/p&gt;
-&lt;h3 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;给定一个文件夹finance_export，下边的有很多个excel表格，现在需要将excel表格不重要的信息过滤出去，然后合并到一张新表中&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="python学习之旅" scheme="http://lanxiangc2.github.io/categories/python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/"/>
-    
-    
-      <category term="python" scheme="http://lanxiangc2.github.io/tags/python/"/>
-    
-      <category term="数据处理" scheme="http://lanxiangc2.github.io/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
     
   </entry>
   

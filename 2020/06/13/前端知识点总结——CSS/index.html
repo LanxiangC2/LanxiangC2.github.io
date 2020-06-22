@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="CSS的盒模型 怎么切换box-sizing:content-box这是W3C盒模型， width = content box-sizing:border-box这是width = border + padding + content">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-13T14:26:43.272Z">
+<meta property="og:updated_time" content="2020-06-18T08:33:32.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——CSS">
 <meta name="twitter:description" content="CSS的盒模型 怎么切换box-sizing:content-box这是W3C盒模型， width = content box-sizing:border-box这是width = border + padding + content">
@@ -248,7 +248,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">34</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">36</span></a>
 
   </li>
 
@@ -410,12 +410,24 @@
                 
               
 
-              <time title="创建时间：2020-06-13 16:33:00 / 修改时间：22:26:43" itemprop="dateCreated datePublished" datetime="2020-06-13T16:33:00+08:00">2020-06-13</time>
+              <time title="创建时间：2020-06-13 16:33:00" itemprop="dateCreated datePublished" datetime="2020-06-13T16:33:00+08:00">2020-06-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-18 16:33:32" itemprop="dateModified" datetime="2020-06-18T16:33:32+08:00">2020-06-18</time>
               
             
           </span>
@@ -481,7 +493,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">3.7k</span>
               
 
               
@@ -495,7 +507,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">6 分钟</span>
               
             </div>
           
@@ -556,7 +568,38 @@
 <h3 id="font-face-规则"><a href="#font-face-规则" class="headerlink" title="@font-face 规则"></a>@font-face 规则</h3><p>指定名为”myFirstFont”的字体，并指定在哪里可以找到它的URL：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">font-face</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="attribute">font-family</span>: myFirstFont;</span><br><span class="line"><span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'Sansation_Light.ttf'</span>),</span><br><span class="line">     <span class="built_in">url</span>(<span class="string">'Sansation_Light.eot'</span>); <span class="comment">/* IE9 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>font-spider可以帮助压缩字体，只有内容使用字体才生效</p>
-<h3 id="transform有哪些值"><a href="#transform有哪些值" class="headerlink" title="transform有哪些值"></a>transform有哪些值</h3><h3 id="css动画，有没有做过动画"><a href="#css动画，有没有做过动画" class="headerlink" title="css动画，有没有做过动画"></a>css动画，有没有做过动画</h3>
+<h3 id="transform有哪些值"><a href="#transform有哪些值" class="headerlink" title="transform有哪些值"></a>transform有哪些值</h3><h3 id="css动画，有没有做过动画"><a href="#css动画，有没有做过动画" class="headerlink" title="css动画，有没有做过动画"></a>css动画，有没有做过动画</h3><h3 id="垂直水平居中的实现"><a href="#垂直水平居中的实现" class="headerlink" title="垂直水平居中的实现"></a>垂直水平居中的实现</h3><h4 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h4><p><code>margin： 0 auto</code>  (无绝对定位)</p>
+<p><code>上下左右均为 0 ; position: absolute; margin: auto;</code>（有决定定位属性）</p>
+<h4 id="CSS3-0弹性布局"><a href="#CSS3-0弹性布局" class="headerlink" title="CSS3.0弹性布局"></a>CSS3.0弹性布局</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">align-items</span>: center;<span class="comment">/*定义body的元素垂直居中*/</span></span><br><span class="line">    <span class="attribute">justify-content</span>: center;<span class="comment">/*定义body的元素水平居中*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="vertical-align-middle"><a href="#vertical-align-middle" class="headerlink" title="vertical-align:middle"></a>vertical-align:middle</h4><p>垂直方向居中。<code>verical-align</code> 定义<strong>行内元素的基线</strong>相对于<strong>该元素所在行的基线</strong>的垂直对齐。</p>
+<h4 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h4><p><code>text-align: center</code></p>
+<h4 id="position（定位元素）"><a href="#position（定位元素）" class="headerlink" title="position（定位元素）"></a>position（定位元素）</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line"><span class="selector-tag">top</span>: 50%;</span><br><span class="line"><span class="selector-tag">left</span>: 50%;</span><br><span class="line"><span class="selector-tag">margin-top</span>: <span class="selector-tag">-50px</span>; <span class="comment">/*高度的一半*/</span></span><br><span class="line">margin-left: -50px; /宽度的一半*/</span><br></pre></td></tr></table></figure>
+<p>缺点：需要提前知道元素的尺寸。如果不知道元素尺寸，这个时候就需要JS获取了。</p>
+<p>CSS3.0的兴起，使这个问题有了更好的解决方法，就是使用 transform 代替 margin 。</p>
+<p>transform 中 translate 偏移的百分比是相对于自身大小而说的。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line"><span class="selector-tag">top</span>: 50%;</span><br><span class="line"><span class="selector-tag">left</span>: 50%;</span><br><span class="line"><span class="selector-tag">transform</span>: <span class="selector-tag">translate</span>( <span class="selector-tag">-50</span>%, <span class="selector-tag">-50</span>%);</span><br></pre></td></tr></table></figure>
+<p>优点：无论绝对定位元素的尺寸是多少，它都是水平垂直居中显示的。</p>
+<p>缺点：就是兼容性问题。</p>
+<h4 id="display-table实现"><a href="#display-table实现" class="headerlink" title="display:table实现"></a>display:table实现</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">display</span>: table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: table-cell;</span><br><span class="line">    <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="相对定位"><a href="#相对定位" class="headerlink" title="相对定位"></a>相对定位</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">background</span>: orange;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;<span class="comment">/*水平居中*/</span></span><br><span class="line">    <span class="attribute">position</span>: relative;<span class="comment">/*设置position*/</span></span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>; <span class="comment">/*偏移*/</span></span><br><span class="line">    <span class="comment">/*margin-top: -150px;*/</span>    <span class="comment">/*第一种：margin-top*/</span></span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%);<span class="comment">/*第二种：transform：转换*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CSS渲染过程"><a href="#CSS渲染过程" class="headerlink" title="CSS渲染过程"></a>CSS渲染过程</h3><p>1、浏览器在接收到服务器返回的html页面后，</p>
+<p>2、浏览器开始构建DOM树 DOM TREE,遇到CSS样式会构建CSS规则树 CSS RULE TREE,</p>
+<p>3、遇到 javascript会通过 DOM API和CSSDOM API来操作DOM TREE和 CSS RuLe Tree，</p>
+<p>4、浏览器引擎会通过DOM Tree和CSS Rule Tree，解析完成后，</p>
+<p>5、最后，渲染树构建完成后就是“布局”处理，也就是确实每个节点在屏幕上的确切显示位置</p>
+<p>6、下个步骤(渲染之后)，开始“绘制”，便利渲染树，并用UI后端层，将每一个节点绘制出来！</p>
+<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><p>css的渲染规则，是从上到下从左到右渲染的。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">h4</span>  <span class="selector-tag">a</span> &#123; <span class="attribute">font-size</span>: <span class="number">14px</span>; &#125;</span><br></pre></td></tr></table></figure>
+<p>渲染过程是这样的：首先先找到所有的a，沿着a的父元素查找h4，然后在沿着h4，查找.main。中途找到了符合匹配规则的节点就加入结果集。如果找到根元素的html都没有匹配，则这条路径不在遍历。下一个a开始重复这个查找匹配，直至没有a继续查找。</p>
+<p>浏览器的这种规则是为了尽早过滤掉一些无关的样式规则和元素。</p>
+<h3 id="浏览器渲染页面的过程"><a href="#浏览器渲染页面的过程" class="headerlink" title="浏览器渲染页面的过程"></a>浏览器渲染页面的过程</h3><p>从耗时的角度浏览器请求，加载，渲染一个页面，时间花在下面五件事情上：</p>
+<p><strong>1.DNS查询    2.TCP连接    3.HTTP请求即响应    4.服务器响应    5.客户端渲染</strong><br>这里讨论第五部分即浏览器对内容的渲染，这一部分(渲染树构建，布局及绘制)，又可以分为下面5个步骤</p>
+<p>1.处理HTML标记并构建DOM树<br>2.处理CSS标记并创建CSSOM树<br>3.将DOM与CSSOM合并成一个渲染树<br>4.根据渲染树来布局，以计算每个节点的几何信息<br>5.将各个节点渲染到屏幕上<br>需要明白，这五个步骤并不一定一次性顺序完成。如果 DOM 或 CSSOM 被修改，以上过程需要重复执行，这样才能计算出哪些像素需要在屏幕上进行重新渲染。实际页面中，CSS 与 JavaScript 往往会多次修改 DOM 和 CSSOM，下面就来看看它们的影响方式。</p>
+<h3 id="CSS和JavaScript阻塞"><a href="#CSS和JavaScript阻塞" class="headerlink" title="CSS和JavaScript阻塞"></a>CSS和JavaScript阻塞</h3><p>谈论资源的阻塞时，我们要清楚，现在浏览器总是并行加载资源。例如当HTML解析器(HTML Parser)被脚本阻塞时，解析器虽然会停止构建DOM，但是仍会执行该脚本后面的资源，并进行预加载。</p>
+<p>默认情况下，CSS 被视为阻塞渲染的资源，这意味着浏览器将不会渲染任何已处理的内容，直至 CSSOM 构建完毕。JavaScript 不仅可以读取和修改 DOM 属性，还可以读取和修改 CSSOM 属性。</p>
+<p>存在阻塞的 CSS 资源时，浏览器会延迟 JavaScript 的执行和 DOM 构建。当浏览器遇到一个 script 标记时，DOM 构建将暂停，直至脚本完成执行。JavaScript 可以查询和修改 DOM 与 CSSOM。CSSOM 构建时，JavaScript 执行将暂停，直至 CSSOM 就绪。</p>
+<p>所以，script 标签的位置很重要。实际使用时，可以<strong>遵循下面两个原则：CSS 优先：引入顺序上，CSS 资源先于 JavaScript 资源。JavaScript 应尽量少影响 DOM 的构建。</strong></p>
+
       
     </div>
 
@@ -749,7 +792,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -861,7 +904,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">33</span>
+                      
+                    
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -981,7 +1026,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS的盒模型-怎么切换"><span class="nav-number">1.</span> <span class="nav-text">CSS的盒模型 怎么切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除浮动"><span class="nav-number">2.</span> <span class="nav-text">清除浮动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#导致的问题"><span class="nav-number">2.1.</span> <span class="nav-text">导致的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法"><span class="nav-number">2.2.</span> <span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原理：触发了BFC"><span class="nav-number">2.3.</span> <span class="nav-text">原理：触发了BFC</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#font-face-规则"><span class="nav-number">3.</span> <span class="nav-text">@font-face 规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transform有哪些值"><span class="nav-number">4.</span> <span class="nav-text">transform有哪些值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css动画，有没有做过动画"><span class="nav-number">5.</span> <span class="nav-text">css动画，有没有做过动画</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS的盒模型-怎么切换"><span class="nav-number">1.</span> <span class="nav-text">CSS的盒模型 怎么切换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除浮动"><span class="nav-number">2.</span> <span class="nav-text">清除浮动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#导致的问题"><span class="nav-number">2.1.</span> <span class="nav-text">导致的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法"><span class="nav-number">2.2.</span> <span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原理：触发了BFC"><span class="nav-number">2.3.</span> <span class="nav-text">原理：触发了BFC</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#font-face-规则"><span class="nav-number">3.</span> <span class="nav-text">@font-face 规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transform有哪些值"><span class="nav-number">4.</span> <span class="nav-text">transform有哪些值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css动画，有没有做过动画"><span class="nav-number">5.</span> <span class="nav-text">css动画，有没有做过动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垂直水平居中的实现"><span class="nav-number">6.</span> <span class="nav-text">垂直水平居中的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#块级元素"><span class="nav-number">6.1.</span> <span class="nav-text">块级元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS3-0弹性布局"><span class="nav-number">6.2.</span> <span class="nav-text">CSS3.0弹性布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vertical-align-middle"><span class="nav-number">6.3.</span> <span class="nav-text">vertical-align:middle</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#行内元素"><span class="nav-number">6.4.</span> <span class="nav-text">行内元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#position（定位元素）"><span class="nav-number">6.5.</span> <span class="nav-text">position（定位元素）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#display-table实现"><span class="nav-number">6.6.</span> <span class="nav-text">display:table实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相对定位"><span class="nav-number">6.7.</span> <span class="nav-text">相对定位</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS渲染过程"><span class="nav-number">7.</span> <span class="nav-text">CSS渲染过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#规则"><span class="nav-number">7.1.</span> <span class="nav-text">规则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器渲染页面的过程"><span class="nav-number">8.</span> <span class="nav-text">浏览器渲染页面的过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS和JavaScript阻塞"><span class="nav-number">9.</span> <span class="nav-text">CSS和JavaScript阻塞</span></a></li></ol></div>
             
 
           </div>
@@ -1023,7 +1068,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">116k</span>
+    <span title="站点总字数">159k</span>
   
 
   
@@ -1034,7 +1079,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:13</span>
+    <span title="站点阅读时长">4:26</span>
   
 </div>
 

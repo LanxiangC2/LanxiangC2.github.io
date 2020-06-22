@@ -248,7 +248,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">34</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">36</span></a>
 
   </li>
 
@@ -367,6 +367,480 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄流川">
+      <meta itemprop="description" content="从零到一，跨过就是成功">
+      <meta itemprop="image" content="/images/westbrook.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黄同学的笔记小屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/06/09/前端知识点总结——ES6/" class="post-title-link" itemprop="url">前端知识点总结——ES6</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-09 12:56:34" itemprop="dateCreated datePublished" datetime="2020-06-09T12:56:34+08:00">2020-06-09</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-18 15:29:56" itemprop="dateModified" datetime="2020-06-18T15:29:56+08:00">2020-06-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端知识点总结/" itemprop="url" rel="index"><span itemprop="name">前端知识点总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2020/06/09/前端知识点总结——ES6/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/09/前端知识点总结——ES6/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">24k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">40 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="对ES6有什么了解"><a href="#对ES6有什么了解" class="headerlink" title="对ES6有什么了解"></a>对ES6有什么了解</h3><blockquote>
+<p>从以下几个方面去聊</p>
+</blockquote>
+<h4 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h4><p>var声明的变量会挂载在window上，而let和const声明的变量不会；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a,<span class="built_in">window</span>.a);    <span class="comment">// 100 100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(b,<span class="built_in">window</span>.b);    <span class="comment">// 10 undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> c = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(c,<span class="built_in">window</span>.c);    <span class="comment">// 1 undefined</span></span><br></pre></td></tr></table></figure>
+<p>var声明变量存在变量提升，let和const不存在变量提升；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// undefined  ===&gt;  a已声明还没赋值，默认得到undefined值</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// 报错：b is not defined  ===&gt; 找不到b这个变量</span></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(c); <span class="comment">// 报错：c is not defined  ===&gt; 找不到c这个变量</span></span><br><span class="line"><span class="keyword">const</span> c = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<p>let和const声明形成块作用域；    </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">let</span> b = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 100</span></span><br><span class="line"><span class="built_in">console</span>.log(b)  <span class="comment">// 报错：b is not defined  ===&gt; 找不到b这个变量</span></span><br></pre></td></tr></table></figure>
+<p>同一作用域下let和const不能声明同名变量，而var可以；</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 10</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">let</span> a = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//  控制台报错：Identifier 'a' has already been declared  ===&gt; 标识符a已经被声明了。</span></span><br></pre></td></tr></table></figure>
+<p>暂存死区</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="number">1</span>)&#123;    </span><br><span class="line">    <span class="comment">//在当前块作用域中存在a使用let/const声明的情况下，给a赋值10时，只会在当前作用域找变量a， </span></span><br><span class="line">    a = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">// 而这时，还未到声明时候，所以控制台Error:a is not defined    </span></span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>const</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、一旦声明必须赋值,不能使用null占位。</span><br><span class="line">2、声明后不能再修改</span><br><span class="line">3、如果声明的是复合类型数据，可以修改其属性</span><br></pre></td></tr></table></figure>
+<h4 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h4><h4 id="ES6拓展"><a href="#ES6拓展" class="headerlink" title="ES6拓展"></a>ES6拓展</h4><h4 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h4><h4 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h4>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/06/09/前端知识点总结——ES6/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄流川">
+      <meta itemprop="description" content="从零到一，跨过就是成功">
+      <meta itemprop="image" content="/images/westbrook.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黄同学的笔记小屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/06/09/前端知识点总结——网络/" class="post-title-link" itemprop="url">前端知识点总结——网络</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-09 12:40:27" itemprop="dateCreated datePublished" datetime="2020-06-09T12:40:27+08:00">2020-06-09</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-18 20:25:10" itemprop="dateModified" datetime="2020-06-18T20:25:10+08:00">2020-06-18</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端知识点总结/" itemprop="url" rel="index"><span itemprop="name">前端知识点总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2020/06/09/前端知识点总结——网络/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/09/前端知识点总结——网络/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">13k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">21 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="对称加密和非对称加密"><a href="#对称加密和非对称加密" class="headerlink" title="对称加密和非对称加密"></a>对称加密和非对称加密</h3><blockquote>
+<p>对称加密</p>
+</blockquote>
+<p>对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。</p>
+<blockquote>
+<p>非对称加密</p>
+</blockquote>
+<p>非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）</p>
+<blockquote>
+<p>区别</p>
+</blockquote>
+<p>对称加密算法相比非对称加密算法来说，加解密的效率要高得多。但是缺陷在于对于秘钥的管理上，以及在非安全信道中通讯时，密钥交换的安全性不能保障。所以在实际的网络环境中，会将两者混合使用。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/06/09/前端知识点总结——网络/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -429,7 +903,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-11 09:49:44" itemprop="dateModified" datetime="2020-06-11T09:49:44+08:00">2020-06-11</time>
+                <time title="修改时间：2020-06-18 19:21:38" itemprop="dateModified" datetime="2020-06-18T19:21:38+08:00">2020-06-18</time>
               
             
           </span>
@@ -488,7 +962,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">8.8k</span>
+                <span title="本文字数">16k</span>
               
 
               
@@ -502,7 +976,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">15 分钟</span>
+                <span title="阅读时长">26 分钟</span>
               
             </div>
           
@@ -523,7 +997,7 @@
 
       
         
-          <h3 id="vue和react"><a href="#vue和react" class="headerlink" title="vue和react"></a>vue和react</h3><blockquote>
+          <h3 id="vue和react-spades"><a href="#vue和react-spades" class="headerlink" title="vue和react   &spades;"></a>vue和react   &spades;</h3><blockquote>
 <p>相似之处</p>
 </blockquote>
 <h4 id="Virtual-DOM"><a href="#Virtual-DOM" class="headerlink" title="Virtual DOM"></a>Virtual DOM</h4><p>Vue.js(2.0版本)与React的其中最大一个相似之处，就是他们都使用了一种叫’Virtual DOM’的东西。所谓的Virtual DOM基本上说就是它名字的意思：虚拟DOM，DOM树的虚拟表现。它的诞生是基于这么一个概念：改变真实的DOM状态远比改变一个JavaScript对象的花销要大得多。</p>
@@ -882,7 +1356,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-09 12:41:27" itemprop="dateModified" datetime="2020-06-09T12:41:27+08:00">2020-06-09</time>
+                <time title="修改时间：2020-06-15 19:47:54" itemprop="dateModified" datetime="2020-06-15T19:47:54+08:00">2020-06-15</time>
               
             
           </span>
@@ -941,7 +1415,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0</span>
+                <span title="本文字数">1.5k</span>
               
 
               
@@ -955,7 +1429,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -977,443 +1451,36 @@
       
         
           
-            
-          
-        
-      
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/08/位运算/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="黄流川">
-      <meta itemprop="description" content="从零到一，跨过就是成功">
-      <meta itemprop="image" content="/images/westbrook.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黄同学的笔记小屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/06/08/位运算/" class="post-title-link" itemprop="url">位运算</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-08 16:26:30 / 修改时间：18:08:35" itemprop="dateCreated datePublished" datetime="2020-06-08T16:26:30+08:00">2020-06-08</time>
-            
-
-            
-              
-
-              
-            
-          </span>
+            <h3 id="虚拟DOM-amp-amp-Diff算法"><a href="#虚拟DOM-amp-amp-Diff算法" class="headerlink" title="虚拟DOM &amp;&amp; Diff算法"></a>虚拟DOM &amp;&amp; Diff算法</h3><h4 id="虚拟dom是什么"><a href="#虚拟dom是什么" class="headerlink" title="虚拟dom是什么"></a>虚拟dom是什么</h4><p> 它是一个Object对象模型，用来模拟真实dom节点的结构</p>
+<h4 id="虚拟dom的使用基本流程（前四步骤）"><a href="#虚拟dom的使用基本流程（前四步骤）" class="headerlink" title="虚拟dom的使用基本流程（前四步骤）"></a>虚拟dom的使用基本流程（前四步骤）</h4><p> 1.获取数据</p>
+<p> 2.创建vdom</p>
+<ol start="3">
+<li><p>通过render函数解析jsx，将其转换成 vdom结构</p>
+<p>4.将vdom渲染成真实dom</p>
+<p>5.数据更改了</p>
+<p>6.使用diff算法比对两次vdom,生成patch对象</p>
+<p>7.根据key将patch对象渲染到页面中改变的结构上，而其他没有改变的地方是不做任何修改的（ 虚拟dom的惰性原则 ）</p>
+</li>
+</ol>
+<h4 id="diff算法是什么"><a href="#diff算法是什么" class="headerlink" title="diff算法是什么"></a>diff算法是什么</h4><p>Virtual DOM 的加速器</p>
+<p>React 中醉值得称道的莫过于Virtual DOM与diff的完美结合，尤其是其高效的diff算法，可以帮助我们在页面蔌渲染的时候，<strong>计算出Virtual DOM真正变化的部分，并只针对该部分进行的原生DOM操作，而不是渲染整个页面，从而保证了每次操作后，页面的高效渲染</strong>。</p>
+<h4 id="virtual-dom为何用diff算法？"><a href="#virtual-dom为何用diff算法？" class="headerlink" title="virtual dom为何用diff算法？"></a>virtual dom为何用diff算法？</h4><ul>
+<li>DOM操作是昂贵的，应该尽可能减少DOM操作</li>
+<li>找出本次必须更新的节点，其他的不用更新</li>
+<li>这个“找出”的过程，就需要diff算法</li>
+</ul>
+<p>一句话，<strong>virtual dom中应用diff算法是为了找出需要更新的节点</strong></p>
+<h4 id="diff-策略"><a href="#diff-策略" class="headerlink" title="diff 策略"></a>diff 策略</h4><p>下面是 React diff 算法的 3 个策略：</p>
+<p>策略一：Web UI 中 DOM 节点跨层级的移动操作特别少。可以忽略不计。<br>策略二：拥有相同类的两个组件将会生成相似的树形结构，拥有不同类的两个组件将会生成不同的树形结构。<br>策略三：对于同一层级的一组子节点，它们可以通过唯一 id 进行区分。</p>
+<p>基于以上三个策略，React 分别对 tree diff、component diff 以及 element diff 进行算法优化。</p>
+<h4 id="diff算法运行结束后，返回是什么"><a href="#diff算法运行结束后，返回是什么" class="headerlink" title="diff算法运行结束后，返回是什么"></a>diff算法运行结束后，返回是什么</h4><p> 返回一个key</p>
+<p>注意：vue是一个mvvm框架，Vue高性能的原因之一就是vdom</p>
+<p>需求：有一个变量count的初始值为0，经过一系列的运算,得到10001，然后将结果写入box中<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'box'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> box = <span class="built_in">document</span>.querySelect(<span class="string">'.box'</span>)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> count = <span class="number">0</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">//console.time('a')</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">//for(var i=0;i&lt;10001;i++)&#123;</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">//	count++</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">//	box.innerHTML = count      //这里操作了10000次dom</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">//&#125;</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">//console.timeEnd('a')</span></span></span><br><span class="line"><span class="javascript">    <span class="comment">///////////////////////////////////////////////////////	</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.time(<span class="string">'b'</span>)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10001</span>;i++)&#123;</span></span><br><span class="line"><span class="undefined">    count++</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="javascript">    box.innerHTML = count         <span class="comment">//正常写法操作一次dom</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.timeEnd(<span class="string">'b'</span>)			</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h4><p>1.更少的dom操作会更加减少时间花费，减少性能损耗</p>
+<p>2.所以我们应该 先操作数据 再去操作dom</p>
+<p>3.由以上结论慢慢的前端将一个新的概念引入在框架中 （这个概念就是虚拟dom）</p>
 
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/算法与数据结构/" itemprop="url" rel="index"><span itemprop="name">算法与数据结构</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2020/06/08/位运算/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/08/位运算/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">567</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="按位与运算符（-amp-）"><a href="#按位与运算符（-amp-）" class="headerlink" title="按位与运算符（&amp;）"></a>按位与运算符（&amp;）</h3><p>参加运算的两个数，按二进制位进行“与”运算。运算规则：只有两个数的二进制同时为1，结果才为1，否则为0。（负数按补码形式参加按位与运算）即 0 &amp; 0= 0 ，0 &amp; 1= 0，1 &amp; 0= 0， 1 &amp; 1= 1。</p>
-<blockquote>
-<p>例：3 &amp;5  即 00000011 &amp; 00000101 = 00000001 ，所以 3 &amp; 5的值为1。  </p>
-</blockquote>
-<h3 id="按位或运算符（-）"><a href="#按位或运算符（-）" class="headerlink" title="按位或运算符（|）"></a>按位或运算符（|）</h3><p>参加运算的两个数，按二进制位进行“或”运算。运算规则：参加运算的两个数只要两个数中的一个为1，结果就为1。即  0 | 0= 0 ,  1 | 0= 1  ， 0 | 1= 1  ,  1 | 1= 1 。</p>
-<blockquote>
-<p>例：2 | 4 即 00000010 | 00000100 = 00000110 ，所以2 | 4的值为 6 。</p>
-</blockquote>
-<h3 id="异或运算符（-）"><a href="#异或运算符（-）" class="headerlink" title="异或运算符（^）"></a>异或运算符（^）</h3><p>参加运算的两个数，按二进制位进行“异或”运算。运算规则：参加运算的两个数，如果两个相应位为“异”（值不同），则该位结果为1，否则为0。即 0 ^ 0=0  ， 0 ^ 1= 1  ， 1 ^ 0= 1  ， 1 ^ 1= 0 。</p>
-<blockquote>
-<p>例： 2 ^ 4 即 00000010 ^ 00000100 =00000110 ，所以 2 ^ 4 的值为6 。  </p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/07/使用openpyxl处理excel表格/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="黄流川">
-      <meta itemprop="description" content="从零到一，跨过就是成功">
-      <meta itemprop="image" content="/images/westbrook.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黄同学的笔记小屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/06/07/使用openpyxl处理excel表格/" class="post-title-link" itemprop="url">使用openpyxl处理excel表格</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-07 09:26:27 / 修改时间：10:43:09" itemprop="dateCreated datePublished" datetime="2020-06-07T09:26:27+08:00">2020-06-07</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python学习之旅/" itemprop="url" rel="index"><span itemprop="name">python学习之旅</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2020/06/07/使用openpyxl处理excel表格/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/07/使用openpyxl处理excel表格/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">9.6k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">16 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>邹同学是国贸专业的，听她说其他同学处理数据都是手动，真实骇人听闻啊，遂昨晚花了点时间研究了下，跑了个小demo，这里分享给大家，也随便记录下自己的python学习之旅</p>
-</blockquote>
-<p>首先申明笔者并不了解python，代码不规范的地方还请多多理解</p>
-<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><blockquote>
-<p>给定一个文件夹finance_export，下边的有很多个excel表格，现在需要将excel表格不重要的信息过滤出去，然后合并到一张新表中</p>
-</blockquote>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2020/06/07/使用openpyxl处理excel表格/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -1461,7 +1528,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1507,7 +1574,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1619,7 +1686,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">33</span>
+                      
+                    
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1764,7 +1833,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">116k</span>
+    <span title="站点总字数">159k</span>
   
 
   
@@ -1775,7 +1844,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:13</span>
+    <span title="站点阅读时长">4:26</span>
   
 </div>
 

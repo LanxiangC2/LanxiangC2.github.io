@@ -105,10 +105,12 @@
 <meta property="og:description" content="对称加密和非对称加密 对称加密  对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。  非对称加密  非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）  区别  对称加密算法相比非对称加密算法来说，加解密的效率要">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic1.png">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/token.jpg">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic2.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic3.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic4.png">
-<meta property="og:updated_time" content="2020-06-13T13:03:37.190Z">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/session和cookie.png">
+<meta property="og:updated_time" content="2020-06-18T12:25:10.420Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——网络">
 <meta name="twitter:description" content="对称加密和非对称加密 对称加密  对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。  非对称加密  非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）  区别  对称加密算法相比非对称加密算法来说，加解密的效率要">
@@ -253,7 +255,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">34</span></a>
 
   </li>
         
@@ -291,7 +293,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">36</span></a>
 
   </li>
 
@@ -432,7 +434,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-13 21:03:37" itemprop="dateModified" datetime="2020-06-13T21:03:37+08:00">2020-06-13</time>
+                <time title="修改时间：2020-06-18 20:25:10" itemprop="dateModified" datetime="2020-06-18T20:25:10+08:00">2020-06-18</time>
               
             
           </span>
@@ -498,7 +500,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">7.5k</span>
+                <span title="本文字数">13k</span>
               
 
               
@@ -512,7 +514,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">13 分钟</span>
+                <span title="阅读时长">21 分钟</span>
               
             </div>
           
@@ -545,6 +547,19 @@
 </blockquote>
 <p>对称加密算法相比非对称加密算法来说，加解密的效率要高得多。但是缺陷在于对于秘钥的管理上，以及在非安全信道中通讯时，密钥交换的安全性不能保障。所以在实际的网络环境中，会将两者混合使用。</p>
 <a id="more"></a>
+<h3 id="TCP和UDP的区别"><a href="#TCP和UDP的区别" class="headerlink" title="TCP和UDP的区别"></a>TCP和UDP的区别</h3><h4 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h4><p>UDP是无连接的协议</p>
+<p>UDP不能保证可靠得交付数据</p>
+<p>UDP是面向报文传输的</p>
+<p>UDP没有拥塞控制</p>
+<p>UDP的首部开销很小</p>
+<blockquote>
+<p>不需要提前建立连接，“想发就发”，“无法保证数据在网络中是否丢失”</p>
+</blockquote>
+<h4 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h4><p>TCP是面向连接的协议</p>
+<p>TCP的一个连接有两端（点对点的通信）</p>
+<p>TCP提供可靠的传输服务</p>
+<p>TCP提供全双工的通信</p>
+<p>TCP是面向字节流的协议</p>
 <h3 id="HTTP和HTTPS的区别"><a href="#HTTP和HTTPS的区别" class="headerlink" title="HTTP和HTTPS的区别"></a>HTTP和HTTPS的区别</h3><blockquote>
 <p>超文本传输协议HTTP协议</p>
 </blockquote>
@@ -624,6 +639,33 @@
 <h4 id="SQL注入攻击"><a href="#SQL注入攻击" class="headerlink" title="SQL注入攻击"></a>SQL注入攻击</h4><p><strong>通过把SQL命令插入Web表单、输入域名或页面请求的查询字符串中，最终达到欺骗服务器执行恶意的SQL命令</strong></p>
 <p><strong>策略：</strong></p>
 <p>从安全技术手段上来说，可以通过<a href="https://baike.baidu.com/item/数据库防火墙" target="_blank" rel="noopener">数据库防火墙</a>实现对SQL注入攻击的防范，因为SQL注入攻击往往是通过应用程序来进攻，可以使用<a href="https://baike.baidu.com/item/虚拟补丁" target="_blank" rel="noopener">虚拟补丁</a>技术实现对注入攻击的SQL特征识别，实现实时攻击阻断。</p>
+<h3 id="token"><a href="#token" class="headerlink" title="token"></a>token</h3><p>token主要有两个作用：①：防止表单重复提交(防止表单重复提交一般还是使用前后端都限制的方式，比如：在前端点击提交之后，将按钮置为灰色，不可再次点击，然后客户端和服务端的token各自独立存储，客户端存储在Cookie或者Form的隐藏域（放在Form隐藏域中的时候，需要每个表单）中，服务端存储在Session（单机系统中可以使用）或者其他缓存系统（分布式系统可以使用）中。②：用来作身份验证</p>
+<p>HTTP 是一个无状态的协议，一次请求结束后，下次在发送服务器就不知道这个请求是谁发来的了（同一个 IP 不代表同一个用户），在 Web 应用中，用户的认证和鉴权是非常重要的一环，实践中有多种可用方案，并且各有千秋。</p>
+<p><img src="/2020/06/09/前端知识点总结——网络/token.jpg" alt></p>
+<p>使用基于 Token 的身份验证方法，在服务端不需要存储用户的登录记录。大概的流程是这样的：</p>
+<ul>
+<li>客户端使用用户名跟密码请求登录</li>
+<li>服务端收到请求，去验证用户名与密码</li>
+<li>验证成功后，服务端会签发一个 Token，再把这个 Token 发送给客户端</li>
+<li>客户端收到 Token 以后可以把它存储起来，比如放在 Cookie 里或者 Local Storage 里</li>
+<li>客户端每次向服务端请求资源的时候需要带着服务端签发的 Token</li>
+<li>服务端收到请求，然后去验证客户端请求里面带着的 Token，如果验证成功，就向客户端返回请求的数据</li>
+</ul>
+<h3 id="token和session的区别"><a href="#token和session的区别" class="headerlink" title="token和session的区别"></a>token和session的区别</h3><p>为什么要用<strong>token</strong>，好好的用<strong>sessionID</strong>不好吗？（其实就是<strong>新技术</strong>与<strong>老技术</strong>，但是还是想弄懂）<br>这个问题之前一直疑惑，今天搞懂了，整合了一下学习过程，先对比一下sessionID与token</p>
+<h4 id="sessionID的生成方式"><a href="#sessionID的生成方式" class="headerlink" title="sessionID的生成方式"></a>sessionID的生成方式</h4><p>浏览器第一次访问服务器时，服务器创建一个session，同时生成一个唯一的会话key，即sessionID。接着sessionID及session分别作为key和value保存到缓存中，也可以保存到数据库中，然后服务器把sessionID以cookie的形式发送给浏览器，浏览器下次访问服务器时直接携带上cookie中的sessionID，服务器再根据sessionID找到对应的session进行匹配<br>这里我们注意到两点：1.sessionID会<strong>自动由浏览器带上</strong> 2.session是<strong>需要存储空间的</strong></p>
+<h4 id="token的生成方式"><a href="#token的生成方式" class="headerlink" title="token的生成方式"></a>token的生成方式</h4><p>浏览器第一次访问服务器时，服务器根据传过来的唯一标识<strong>userId</strong>，通过一些算法，加一个密钥，生成一个token，接着通过base64编码将token返回给客户端。客户端将token保存起来，下次请求时需要<strong>带着token</strong>，服务器收到请求后，用相同的算法和密钥去验证token<br>这里我们注意到两点：1.token<strong>需要代码</strong>才能带上 2.token<strong>可以不需要存储空间（JWT）</strong>（当然也有存入缓存的处理，特别是要进行revoke操作时），通过算法和密钥验证</p>
+<h4 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h4><p>以上我们提出来的注意点就可以看出两点区别了：1.浏览器方面，<strong>是否直接带上</strong> 2.服务器方面，<strong>是否需要存储空间</strong>。</p>
+<p>共同点：都是保存了用户身份信息，都有过期时间。</p>
+<p>不同点：</p>
+<ol>
+<li>session翻译为会话，token翻译为令牌。</li>
+<li>session是<strong>空间换时间</strong>，token是<strong>时间换空间</strong>。</li>
+<li>session和sessionid：服务器会保存一份，可能保存到缓存/数据库/文件。</li>
+<li>token：服务器不需要记录任何东西，每次都是一个<strong>无状态的请求</strong>，每次都是通过<strong>解密来验证是否合法。</strong> token 只是一个 key，不存放实际的数据，与这个 token 相关的数据还是存放在服务器上，例如 Session，Redis 等分布式缓存里，用 token 去请求对应的数据。</li>
+<li>sessionid：一般是随机字符串，要到<strong>服务器检索id的有效性</strong>。出现请求：服务器重启饿内存中的session没了，数据库服务器挂了。</li>
+<li>token 和 cookie 本质上没啥区别，只不过 token 只是一个字符串，访问的时候可以放在 url 的参数，header 里等，不像 cookie 那么重量级，而且移动端访问的时候 token 更方便，仅此而已。</li>
+</ol>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>广义上来说一切维护用户状态的技术都是session，然后sessionid与token就是老技术与技术</p>
 <h3 id="TCP-协议如何保证可靠传输"><a href="#TCP-协议如何保证可靠传输" class="headerlink" title="TCP 协议如何保证可靠传输"></a>TCP 协议如何保证可靠传输</h3><blockquote>
 <p>保证可靠性的重点就是滑动窗口机制，ACK &amp; 超时重传等机制都在滑动窗口的工作过程中体现。</p>
 <p>TCP主要提供了检验和、序列号/确认应答、超时重传、最大消息长度、滑动窗口控制等方法实现了可靠性传输。</p>
@@ -646,7 +688,164 @@
 <p><strong>5.TCP拥塞控制</strong></p>
 <p>是全局性的考虑，考虑的是整个网络</p>
 <p>报文超时这被认为是拥塞</p>
-<h3 id="你知道哪些请求头字段"><a href="#你知道哪些请求头字段" class="headerlink" title="你知道哪些请求头字段"></a>你知道哪些请求头字段</h3><p><strong>Accept</strong>    这个头信息指定浏览器或其他客户端可以处理的 MIME 类型。有text/html,image/，/等几种常用类型。/*可以简单的概括为告诉服务器，客户端什么数据类型都支持<br><strong>Accept-Charset</strong>    这个头信息指定浏览器可以用来显示信息的字符集。例如 ISO-8859-1<br><strong>Accept-Encoding</strong>    这个头信息指定浏览器知道如何处理的编码类型。值 gzip 或 compress 是最常见的两种可能值<br><strong>Accept-Language</strong>    这个头信息指定客户端的首选语言，在这种情况下，Servlet 会产生多种语言的结果。例如，en、en-us、ru 等。<br><strong>Authorization</strong>    这个头信息用于客户端在访问受密码保护的网页时识别自己的身份。<br><strong>Connection</strong>    这个头信息指示客户端是否可以处理持久 HTTP 连接。持久连接允许客户端或其他浏览器通过单个请求来检索多个文件。值 Keep-Alive 意味着使用了持续连接。<br><strong>Content-Length</strong>    这个头信息只适用于 POST 请求，并给出 POST 数据的大小（以字节为单位）。<br><strong>Cookie</strong>    这个头信息把之前发送到浏览器的 cookies 返回到服务器。<br><strong>Host</strong>    这个头信息指定原始的 URL 中的主机和端口。<br><strong>If-Modified-Since</strong>    这个头信息表示只有当页面在指定的日期后已更改时，客户端想要的页面。如果没有新的结果可以使用，服务器会发送一个 304 代码，表示 Not Modified 头信息。 Last-Modified 与If-Modified-Since都是用来记录页面的最后修改时间。当客户端访问页面时，服务器会将页面最后修改时间通过 Last-Modified 标识由服务器发往客户端，客户端记录修改时间，再次请求本地存在的cache页面时，客户端会通过 If-Modified-Since 头将先前服务器端发过来的最后修改时间戳发送回去，服务器端通过这个时间戳判断客户端的页面是否是最新的，如果不是最新的，则返回新的内容，如果是最新的，则 返回 304 告诉客户端其本地 cache 的页面是最新的，于是客户端就可以直接从本地加载页面了，这样在网络上传输的数据就会大大减少，同时也减轻了服务器的负担<br><strong>If-Unmodified-Since</strong>    这个头信息是 If-Modified-Since 的对立面，它指定只有当文档早于指定日期时，操作才会成功。<br><strong>Referer</strong>    这个头信息指示所指向的 Web 页的 URL。例如，如果您在网页 1，点击一个链接到网页 2，当浏览器请求网页 2 时，网页 1 的 URL 就会包含在 Referer 头信息中。<br><strong>User-Agent</strong>    这个头信息识别发出请求的浏览器或其他客户端，并可以向不同类型的浏览器返回不同的内容。</p>
+<h3 id="HTTP的首部字段包含哪些类型？你知道哪些请求头字段-spades-spades"><a href="#HTTP的首部字段包含哪些类型？你知道哪些请求头字段-spades-spades" class="headerlink" title="HTTP的首部字段包含哪些类型？你知道哪些请求头字段 &spades;&spades;"></a>HTTP的首部字段包含哪些类型？你知道哪些请求头字段 &spades;&spades;</h3><h4 id="通用首部字段"><a href="#通用首部字段" class="headerlink" title="通用首部字段"></a>通用首部字段</h4><p>请求报文和响应报文都会使用的字段</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>创建报文的时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Connection</td>
+<td>连接的管理</td>
+</tr>
+<tr>
+<td>Cache-Control</td>
+<td>缓存的控制</td>
+</tr>
+<tr>
+<td>Transfer-Encoding</td>
+<td>报文主体的传输编码方式</td>
+</tr>
+</tbody>
+</table>
+<h4 id="请求首部字段"><a href="#请求首部字段" class="headerlink" title="请求首部字段"></a>请求首部字段</h4><p>请求报文会使用的字段</p>
+<table>
+<thead>
+<tr>
+<th>Host</th>
+<th>请求资源所在服务器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accept</td>
+<td>可处理的媒体类型</td>
+</tr>
+<tr>
+<td>Accept-Charset</td>
+<td>可接受的字符集</td>
+</tr>
+<tr>
+<td>Accept-Enoding</td>
+<td>可接受的内容编码</td>
+</tr>
+<tr>
+<td>Accept-Language</td>
+<td>可接受的自然语言</td>
+</tr>
+</tbody>
+</table>
+<h4 id="响应的首部字段"><a href="#响应的首部字段" class="headerlink" title="响应的首部字段"></a>响应的首部字段</h4><p>响应报文时使用的字段</p>
+<table>
+<thead>
+<tr>
+<th>Accept-Ranges</th>
+<th>可接受的字节范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>令客户端重新定向到的URL</td>
+</tr>
+<tr>
+<td>Server</td>
+<td>HTTP服务器的安装信息</td>
+</tr>
+</tbody>
+</table>
+<h4 id="实体首部的字段"><a href="#实体首部的字段" class="headerlink" title="实体首部的字段"></a>实体首部的字段</h4><p>请求报文与响应报文的实体部分使用的首部字段</p>
+<table>
+<thead>
+<tr>
+<th>Allow</th>
+<th>资源可支持的HTTP方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>实体主图的类型</td>
+</tr>
+<tr>
+<td>Content-Encoding</td>
+<td>实体主体使用的自然语言</td>
+</tr>
+<tr>
+<td>Content-Language</td>
+<td>实体主体使用的编码方式</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>实体主体的字节数</td>
+</tr>
+<tr>
+<td>Content-Range</td>
+<td>实体主体的位置范围，一般用于发出部分请求时使用</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Accept</strong>    这个头信息指定浏览器或其他客户端可以处理的 MIME 类型。有text/html,image/，/等几种常用类型。/*可以简单的概括为告诉服务器，客户端什么数据类型都支持<br><strong>Accept-Charset</strong>    这个头信息指定浏览器可以用来显示信息的字符集。例如 ISO-8859-1<br><strong>Accept-Encoding</strong>    这个头信息指定浏览器知道如何处理的编码类型。值 gzip 或 compress 是最常见的两种可能值<br><strong>Accept-Language</strong>    这个头信息指定客户端的首选语言，在这种情况下，Servlet 会产生多种语言的结果。例如，en、en-us、ru 等。<br><strong>Authorization</strong>    这个头信息用于客户端在访问受密码保护的网页时识别自己的身份。<br><strong>Connection</strong>    这个头信息指示客户端是否可以处理持久 HTTP 连接。持久连接允许客户端或其他浏览器通过单个请求来检索多个文件。值 Keep-Alive 意味着使用了持续连接。<br><strong>Content-Length</strong>    这个头信息只适用于 POST 请求，并给出 POST 数据的大小（以字节为单位）。<br><strong>Cookie</strong>    这个头信息把之前发送到浏览器的 cookies 返回到服务器。<br><strong>Host</strong>    这个头信息指定原始的 URL 中的主机和端口。<br><strong>If-Modified-Since</strong>    这个头信息表示只有当页面在指定的日期后已更改时，客户端想要的页面。如果没有新的结果可以使用，服务器会发送一个 304 代码，表示 Not Modified 头信息。 Last-Modified 与If-Modified-Since都是用来记录页面的最后修改时间。当客户端访问页面时，服务器会将页面最后修改时间通过 Last-Modified 标识由服务器发往客户端，客户端记录修改时间，再次请求本地存在的cache页面时，客户端会通过 If-Modified-Since 头将先前服务器端发过来的最后修改时间戳发送回去，服务器端通过这个时间戳判断客户端的页面是否是最新的，如果不是最新的，则返回新的内容，如果是最新的，则 返回 304 告诉客户端其本地 cache 的页面是最新的，于是客户端就可以直接从本地加载页面了，这样在网络上传输的数据就会大大减少，同时也减轻了服务器的负担<br><strong>If-Unmodified-Since</strong>    这个头信息是 If-Modified-Since 的对立面，它指定只有当文档早于指定日期时，操作才会成功。<br><strong>Referer</strong>    这个头信息指示所指向的 Web 页的 URL。例如，如果您在网页 1，点击一个链接到网页 2，当浏览器请求网页 2 时，网页 1 的 URL 就会包含在 Referer 头信息中。<br><strong>User-Agent</strong>    这个头信息识别发出请求的浏览器或其他客户端，并可以向不同类型的浏览器返回不同的内容。</p>
+<h3 id="登录注册怎么与后台交互"><a href="#登录注册怎么与后台交互" class="headerlink" title="登录注册怎么与后台交互"></a>登录注册怎么与后台交互</h3><p><img src="/2020/06/09/前端知识点总结——网络/session和cookie.png" alt="session和cookie关系"></p>
+<p>请求登录接口，成功则设置cookie, 如user=zhangsan</p>
+<p>前端再请求其他接口，就会带着上述的cookie</p>
+<p>服务端判断cookie有无user=zhangsan ,即可验证</p>
+<h4 id="cookie和session"><a href="#cookie和session" class="headerlink" title="cookie和session"></a>cookie和session</h4><p>由于HTTP协议是无状态的协议，所以服务端需要记录用户的状态时，就需要用某种机制来识具体的用户，这个机制就是Session。用唯一的一个标识session来标记用户，这个session是保存在服务端的。保存的方法通常有：内存、数据库、文件等。<br>那么有了这个session，如何识别呢？就需要保sessionId保存在cookie中。<br>因此可以看出：<br>session：用来跟踪会话状态，保存在服务端，安全性更高。因为 session id 的存在，通常要借助 cookie 实现。<br>cookie：是客户端保存用户信息的一种机制，用来记录用户的一些信息，也是实现Session的一种方式。</p>
+<h4 id="cookie在跨域时是如何携带cookie的"><a href="#cookie在跨域时是如何携带cookie的" class="headerlink" title="cookie在跨域时是如何携带cookie的"></a>cookie在跨域时是如何携带cookie的</h4><p>在解决跨域时，我们会采用很多解决跨域的方法。此处以cors为例。<br>cors默认不发cookie。如果要发cookie，客户端需要设置withCredentials 属性为 true（withCredentials属性会包含来自远程域的请求的任何cookie，但这些cookie依然遵循同源策略），需要服务端使用Access-Control-Allow-Credentials: true 字段来允许携带cookie。</p>
+<h3 id="缓存有哪些"><a href="#缓存有哪些" class="headerlink" title="缓存有哪些"></a>缓存有哪些</h3><p>浏览器的缓存规则是在 http 协议头和 html 页面的 meta 标签中定义的。主要分为两部分：强缓存和协商缓存。</p>
+<h4 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h4><p><u>从缓存中取资源，但是如果有缓存的话就不经过服务器（即不发请求），直接从缓存中取。状态码200</u></p>
+<p>强缓存是指缓存的副本在有效期内，浏览器直接获取这个副本并渲染。<br>强缓存主要涉及的 http 协议报头有：Expires，cache-control。</p>
+<p>强缓存的过程：浏览器发起 http 请求，浏览器缓存中查找该请求的结果以及缓存标识，缓存副本在有效期内，该请求返回状态码 200，从 disk cache 或 memory cache （size 中显示 from disk cache 或 from memory cache）中返回。如果缓存副本并不在有效期内，浏览器将发起 http 请求到服务端，服务端返回请求结果和缓存规则，并将请求结果和缓存标识存在浏览器缓存中。</p>
+<p>Expires：是HTTP/1的产物，是一个绝对的时间，如果浏览器时间还没有超过这个expires时间，代表缓存还有效。直接从缓存中读取资源。<br>cache-control：是HTTP/1.1提出的。</p>
+<h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><p><u>从缓存中取资源，但是需要给服务器发请求来由服务器告知缓存是否可用，然后从缓存中取，状态码是304</u></p>
+<p>协商缓存是在强缓存失效后，浏览器携带缓存标识向服务器发起请求，由服务器根据缓存标识决定是否使用缓存的过程。</p>
+<p>协商缓存的过程：浏览器发起 http 请求，浏览器缓存返回缓存标识（请求的缓存结果失效），浏览器携带该资源的缓存标识，向服务器发起 http 请求，如果服务器返回 304 和 not modified，浏览器向浏览器缓存获取该请求的缓存结果，浏览器环迅返回该请求结果。如果服务器返回 200 和请求结果（该资源更新了，重新返回请求结果），浏览器将该请求结果和缓存标识存入浏览器缓存中。</p>
+<p>协商缓存主要涉及的 http 协议报头有：Last-Modified 和 ETag。</p>
+<h3 id="cookie、localStorage、sessionStorage有什么区别"><a href="#cookie、localStorage、sessionStorage有什么区别" class="headerlink" title="cookie、localStorage、sessionStorage有什么区别"></a>cookie、localStorage、sessionStorage有什么区别</h3><p>Web Storage分为两种： sessionStorage 和localStorage ，即这两个是Storage的一个实例。</p>
+<p>Web Storage的两个主要目标是：</p>
+<ul>
+<li>提供一种在cookie之外存储会话数据的途径。</li>
+<li>提供一种存储大量可以跨会话存在的数据的机制。</li>
+</ul>
+<p>Web Storage带来的好处： </p>
+<ol>
+<li>减少网络流量：一旦数据保存在本地之后，就可以避免再向服务器请求数据，因此减少不必要的数据请求，减少数据在浏览器和服务器间不必要的来回传递 </li>
+<li>快速显示数据：性能好，从本地读数据比通过网络从服务器上获得数据快得多，本地数据可以及时获得，再加上网页本身也可以有缓存，因此整个页面和数据都在本地的话，可以立即显示 </li>
+<li>临时存储：很多时候数据只需要在用户浏览一组页面期间使用，关闭窗口后数据就可以丢弃了，这种情况使用sessionStorage非常方便</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>cookie</th>
+<th>4k容量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>localStorage</td>
+<td>没有储存时间限制，2-5MB左右</td>
+</tr>
+<tr>
+<td>sessionStorage</td>
+<td>网页会话结束时失效（刷新没问题，关闭失效）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="共同点"><a href="#共同点" class="headerlink" title="共同点"></a>共同点</h4><p>都是保存在浏览器端、且同源的 </p>
+<h4 id="区别-1"><a href="#区别-1" class="headerlink" title="区别"></a>区别</h4><ol>
+<li>cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递，而sessionStorage和localStorage不会自动把数据发送给服务器，仅在本地保存。cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下 </li>
+<li><strong>存储大小限制也不同</strong>，cookie数据不能超过4K，同时因为每次http请求都会携带cookie、所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大 </li>
+<li><strong>数据有效期不同</strong>，sessionStorage：仅在当前浏览器窗口关闭之前有效；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie：只在设置的cookie过期时间之前有效，即使窗口关闭或浏览器关闭 </li>
+<li><strong>作用域不同</strong>，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localstorage在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的 </li>
+<li>web Storage支持事件通知机制，可以将数据更新的通知发送给监听者 </li>
+<li>web Storage的api接口使用更方便，web storage拥有setItem,getItem,removeItem,clear等方法，不像cookie需要前端开发者自己封装setCookie，getCookie。</li>
+</ol>
+<blockquote>
+<p>这篇博客写的不错：<a href="https://www.cnblogs.com/jing-tian/p/10991431.html" target="_blank" rel="noopener">https://www.cnblogs.com/jing-tian/p/10991431.html</a></p>
+</blockquote>
 
       
     </div>
@@ -842,7 +1041,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -954,7 +1153,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">33</span>
+                      
+                    
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1074,7 +1275,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密和非对称加密"><span class="nav-number">1.</span> <span class="nav-text">对称加密和非对称加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP和HTTPS的区别"><span class="nav-number">2.</span> <span class="nav-text">HTTP和HTTPS的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器页面渲染的流程"><span class="nav-number">3.</span> <span class="nav-text">浏览器页面渲染的流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）解析文档构建DOM树"><span class="nav-number">3.1.</span> <span class="nav-text">1）解析文档构建DOM树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2）构建渲染树"><span class="nav-number">3.2.</span> <span class="nav-text">2）构建渲染树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3）布局与绘制渲染树"><span class="nav-number">3.3.</span> <span class="nav-text">3）布局与绘制渲染树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css会阻塞页面渲染吗？会的话该怎么解决呢？"><span class="nav-number">4.</span> <span class="nav-text">css会阻塞页面渲染吗？会的话该怎么解决呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器缓存机制"><span class="nav-number">5.</span> <span class="nav-text">浏览器缓存机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见http状态码"><span class="nav-number">6.</span> <span class="nav-text">常见http状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器地址栏键入URL后会发生什么"><span class="nav-number">7.</span> <span class="nav-text">浏览器地址栏键入URL后会发生什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP连接、断开为什么三次握手和4次挥手"><span class="nav-number">8.</span> <span class="nav-text">TCP连接、断开为什么三次握手和4次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http协议不安全的原因，https是如何解决的"><span class="nav-number">9.</span> <span class="nav-text">http协议不安全的原因，https是如何解决的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#http不足之处："><span class="nav-number">9.1.</span> <span class="nav-text">http不足之处：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#https"><span class="nav-number">9.2.</span> <span class="nav-text">https:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端中比较常见的攻击手段"><span class="nav-number">10.</span> <span class="nav-text">前端中比较常见的攻击手段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XSS攻击"><span class="nav-number">10.1.</span> <span class="nav-text">XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSRF-攻击"><span class="nav-number">10.2.</span> <span class="nav-text">CSRF 攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL注入攻击"><span class="nav-number">10.3.</span> <span class="nav-text">SQL注入攻击</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-协议如何保证可靠传输"><span class="nav-number">11.</span> <span class="nav-text">TCP 协议如何保证可靠传输</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你知道哪些请求头字段"><span class="nav-number">12.</span> <span class="nav-text">你知道哪些请求头字段</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密和非对称加密"><span class="nav-number">1.</span> <span class="nav-text">对称加密和非对称加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP和UDP的区别"><span class="nav-number">2.</span> <span class="nav-text">TCP和UDP的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UDP"><span class="nav-number">2.1.</span> <span class="nav-text">UDP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP"><span class="nav-number">2.2.</span> <span class="nav-text">TCP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP和HTTPS的区别"><span class="nav-number">3.</span> <span class="nav-text">HTTP和HTTPS的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器页面渲染的流程"><span class="nav-number">4.</span> <span class="nav-text">浏览器页面渲染的流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）解析文档构建DOM树"><span class="nav-number">4.1.</span> <span class="nav-text">1）解析文档构建DOM树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2）构建渲染树"><span class="nav-number">4.2.</span> <span class="nav-text">2）构建渲染树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3）布局与绘制渲染树"><span class="nav-number">4.3.</span> <span class="nav-text">3）布局与绘制渲染树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css会阻塞页面渲染吗？会的话该怎么解决呢？"><span class="nav-number">5.</span> <span class="nav-text">css会阻塞页面渲染吗？会的话该怎么解决呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器缓存机制"><span class="nav-number">6.</span> <span class="nav-text">浏览器缓存机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见http状态码"><span class="nav-number">7.</span> <span class="nav-text">常见http状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器地址栏键入URL后会发生什么"><span class="nav-number">8.</span> <span class="nav-text">浏览器地址栏键入URL后会发生什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP连接、断开为什么三次握手和4次挥手"><span class="nav-number">9.</span> <span class="nav-text">TCP连接、断开为什么三次握手和4次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http协议不安全的原因，https是如何解决的"><span class="nav-number">10.</span> <span class="nav-text">http协议不安全的原因，https是如何解决的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#http不足之处："><span class="nav-number">10.1.</span> <span class="nav-text">http不足之处：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#https"><span class="nav-number">10.2.</span> <span class="nav-text">https:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端中比较常见的攻击手段"><span class="nav-number">11.</span> <span class="nav-text">前端中比较常见的攻击手段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XSS攻击"><span class="nav-number">11.1.</span> <span class="nav-text">XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSRF-攻击"><span class="nav-number">11.2.</span> <span class="nav-text">CSRF 攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL注入攻击"><span class="nav-number">11.3.</span> <span class="nav-text">SQL注入攻击</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#token"><span class="nav-number">12.</span> <span class="nav-text">token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#token和session的区别"><span class="nav-number">13.</span> <span class="nav-text">token和session的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sessionID的生成方式"><span class="nav-number">13.1.</span> <span class="nav-text">sessionID的生成方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#token的生成方式"><span class="nav-number">13.2.</span> <span class="nav-text">token的生成方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#区别"><span class="nav-number">13.3.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">13.4.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-协议如何保证可靠传输"><span class="nav-number">14.</span> <span class="nav-text">TCP 协议如何保证可靠传输</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP的首部字段包含哪些类型？你知道哪些请求头字段-spades-spades"><span class="nav-number">15.</span> <span class="nav-text">HTTP的首部字段包含哪些类型？你知道哪些请求头字段 ♠♠</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通用首部字段"><span class="nav-number">15.1.</span> <span class="nav-text">通用首部字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求首部字段"><span class="nav-number">15.2.</span> <span class="nav-text">请求首部字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应的首部字段"><span class="nav-number">15.3.</span> <span class="nav-text">响应的首部字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实体首部的字段"><span class="nav-number">15.4.</span> <span class="nav-text">实体首部的字段</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#登录注册怎么与后台交互"><span class="nav-number">16.</span> <span class="nav-text">登录注册怎么与后台交互</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie和session"><span class="nav-number">16.1.</span> <span class="nav-text">cookie和session</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie在跨域时是如何携带cookie的"><span class="nav-number">16.2.</span> <span class="nav-text">cookie在跨域时是如何携带cookie的</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存有哪些"><span class="nav-number">17.</span> <span class="nav-text">缓存有哪些</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#强缓存"><span class="nav-number">17.1.</span> <span class="nav-text">强缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#协商缓存"><span class="nav-number">17.2.</span> <span class="nav-text">协商缓存</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie、localStorage、sessionStorage有什么区别"><span class="nav-number">18.</span> <span class="nav-text">cookie、localStorage、sessionStorage有什么区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#共同点"><span class="nav-number">18.1.</span> <span class="nav-text">共同点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#区别-1"><span class="nav-number">18.2.</span> <span class="nav-text">区别</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1116,7 +1317,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">116k</span>
+    <span title="站点总字数">159k</span>
   
 
   
@@ -1127,7 +1328,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:13</span>
+    <span title="站点阅读时长">4:26</span>
   
 </div>
 

@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="进程和线程的区别 参考作者：阮一峰，链接地址：http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html  计算机的核心是CPU，它承担了所有的计算任务。它就像一座工厂，时刻在运行。 假定工厂的电力有限，一次只能供给一个车间使用。也就是说，一个车间开工的时候，其他车间都必须停工。背后的含义就是，单个CPU一次只能运行一个任务。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-10T14:15:14.009Z">
+<meta property="og:updated_time" content="2020-06-22T08:11:03.294Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——操作系统">
 <meta name="twitter:description" content="进程和线程的区别 参考作者：阮一峰，链接地址：http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html  计算机的核心是CPU，它承担了所有的计算任务。它就像一座工厂，时刻在运行。 假定工厂的电力有限，一次只能供给一个车间使用。也就是说，一个车间开工的时候，其他车间都必须停工。背后的含义就是，单个CPU一次只能运行一个任务。">
@@ -248,7 +248,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">34</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">36</span></a>
 
   </li>
 
@@ -410,12 +410,24 @@
                 
               
 
-              <time title="创建时间：2020-06-10 20:46:22 / 修改时间：22:15:14" itemprop="dateCreated datePublished" datetime="2020-06-10T20:46:22+08:00">2020-06-10</time>
+              <time title="创建时间：2020-06-10 20:46:22" itemprop="dateCreated datePublished" datetime="2020-06-10T20:46:22+08:00">2020-06-10</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-22 16:11:03" itemprop="dateModified" datetime="2020-06-22T16:11:03+08:00">2020-06-22</time>
               
             
           </span>
@@ -481,7 +493,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">972</span>
+                <span title="本文字数">3.2k</span>
               
 
               
@@ -495,7 +507,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">5 分钟</span>
               
             </div>
           
@@ -534,6 +546,65 @@
 <p>（1）以多进程形式，允许多个任务同时运行；</p>
 <p>（2）以多线程形式，允许单个任务分成不同的部分运行；</p>
 <p>（3）提供协调机制，一方面防止进程之间和线程之间产生冲突，另一方面允许进程之间和线程之间共享资源。</p>
+<h3 id="进程间的通信方式有哪些"><a href="#进程间的通信方式有哪些" class="headerlink" title="进程间的通信方式有哪些"></a>进程间的通信方式有哪些</h3><p>1、无名管道：半双工的通信方式，数据只能单向流动且只能在具有亲缘关系的进程间使用</p>
+<p>2、高级管道：将另一个程序当作一个新的进程在当前程序进程中启动，则这个进程算是当前程序的子进程，</p>
+<p>3、有名管道，：也是半双工的通信方式，但是允许没有亲缘进程之间的通信</p>
+<p>4、消息队列：消息队列是有消息的链表，存放在内核中，并由消息队列标识符标识，消息队列克服了信号传递信息少，管道只能承载无格式字节流以及缓冲区大小受限的缺点</p>
+<p>5、信号量：信号量是一个计数器，可以用来控制多个进程对共享资源的访问，它常作为一种锁机制，防止某进程正在访问共享资源时，其他进程也访问该资源，</p>
+<p>6、信号：用于通知接受进程某个事件已经发生</p>
+<p>7、共享内存：共享内存就是映射一段能被其他进程所访问的内存。这段共享内存由一个进程创建，但是多个进程可以访问，共享内存是最快的IPC 方式，往往与其他通信机制配合使用</p>
+<p>8、套接字：可用于不同机器之间的进程通信</p>
+<h3 id="Linux查询进程指令，查询端口，杀进程，"><a href="#Linux查询进程指令，查询端口，杀进程，" class="headerlink" title="Linux查询进程指令，查询端口，杀进程，"></a>Linux查询进程指令，查询端口，杀进程，</h3><h4 id="查看安装的软件"><a href="#查看安装的软件" class="headerlink" title="查看安装的软件"></a>查看安装的软件</h4><p><code>sudo dpkg -L 软件名</code><br><code>sudo apt-cache search all</code><br>把输出结果保存到 <em>.txt 文件里边   sudo dpkg -l &gt; </em>.txt</p>
+<p>安装软件<br><code>sudo apt-get install nginx</code></p>
+<h4 id="查询进程"><a href="#查询进程" class="headerlink" title="查询进程"></a>查询进程</h4><p>ps 命令用于查看当前正在运行的进程。</p>
+<p>grep 是搜索</p>
+<p>例如： <code>ps -ef | grep java</code></p>
+<p>表示查看所有进程里CMD是java的进程信息</p>
+<p><code>ps -aux | grep java</code></p>
+<p>-aux 显示所有状态</p>
+<p>ps</p>
+<p>杀死进程：</p>
+<p>kill -9[PID]</p>
+<p>查看非root启动的程序</p>
+<p><code>ps -U root -u root -N</code></p>
+<p>系统中的每个进程</p>
+<p>ps -A # ps -e</p>
+<p>top命令提供了运行中系统的动态</p>
+<h4 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h4><p>命令格式： cat &lt;文件&gt;</p>
+<p>意义：cat是concatenate 的缩写。表示读取文件内容及拼接文件。</p>
+<h4 id="rm命令"><a href="#rm命令" class="headerlink" title="rm命令"></a>rm命令</h4><p>命令格式： rm &lt;文件&gt; 或 rm -r &lt;文件夹&gt;</p>
+<p>意义：rm是remove 的缩写。用于删除文件或文件夹，常用参数-r -f，-r表示删除目录，也可以用于删除文件，-f表示强制删除，不需要确认。同样的，删除文件前需保证当前用户对当前路径有修改的权限。</p>
+<p>示例：</p>
+<p><code>rm -rf path</code> 删除path。</p>
+<p><code>rm test.txt</code> 删除test.txt。</p>
+<h4 id="mkdir命令"><a href="#mkdir命令" class="headerlink" title="mkdir命令"></a>mkdir命令</h4><p>命令格式： mkdir 文件夹</p>
+<p>意义：mkdir是make directory 的缩写。用于创建文件夹。创建文件夹前需保证当前用户对当前路径有修改的权限。</p>
+<p>示例：</p>
+<p><code>mkdir /data/path</code> 在/data路径下创建path文件夹。</p>
+<p><code>mkdir -p a/b/c</code> 参数 -p用于创建多级文件夹，这句命令表示在当前路径下创建文件夹a， 而a文件夹包含子文件夹b，b文件夹下又包含子文件夹c。</p>
+<h4 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a>cp命令</h4><p>命令格式： cp &lt;文件&gt;&lt;目标文件&gt;或者cp -r&lt;文件夹&gt;&lt;目标文件夹&gt;</p>
+<p>意义：cp是copy 的缩写。用于复制文件或文件夹。</p>
+<p>示例：</p>
+<p><code>cp /data/logs  /data/local/tmp/logs</code> 复制/data路径下的logs到/data/local/tmp路径下。</p>
+<p><code>cp 1.sh  /sdcard/</code> 复制当前路径下的1.sh到/sdcard下。</p>
+<h4 id="kill命令"><a href="#kill命令" class="headerlink" title="kill命令"></a>kill命令</h4><p>命令格式：kill PID码</p>
+<p>意义：结束当前进程</p>
+<p>示例：</p>
+<p>先通过输入命令 ps au查看进程，找到需要终止进程的PID再通过kill PID即可，如我这里想要终止的进程是vim test.py，查到的PID是3163，我们可以输入kill 3163结束这个程序，如果结束不了，可以通过kill -9 PID码强制结束，即kii -9 3163</p>
+<p>除了这七个命令，还有许多常见的命令，如<code>pwd命令</code>，这个可以查看当前路径，这个在移动数据集或者整理文件list的时候很有用；<code>tar命令</code>，这个可以文件压缩；<code>unzip命令</code>，这个可以用于文件解压，这样的命令其实还有很多，需要我们在使用的过程中不断熟练，需要我们不停的查阅学习。</p>
+<h3 id="线程的那些资源共享，那些资源不共享"><a href="#线程的那些资源共享，那些资源不共享" class="headerlink" title="线程的那些资源共享，那些资源不共享"></a>线程的那些资源共享，那些资源不共享</h3><h4 id="共享的资源"><a href="#共享的资源" class="headerlink" title="共享的资源"></a>共享的资源</h4><p>a. 堆  由于堆是在进程空间中开辟出来的，所以它是理所当然地被共享的；因此new出来的都是共享的（16位平台上分全局堆和局部堆，局部堆是独享的）</p>
+<p>b. 全局变量 它是与具体某一函数无关的，所以也与特定线程无关；因此也是共享的</p>
+<p>c. 静态变量虽然对于局部变量来说，它在代码中是“放”在某一函数中的，但是其存放位置和全局变量一样，存于堆中开辟的.bss和.data段，是共享的</p>
+<p>d. 文件等公用资源  这个是共享的，使用这些公共资源的线程必须同步。Win32 提供了几种同步资源的方式，包括信号、临界区、事件和互斥体。</p>
+<h4 id="独享的资源"><a href="#独享的资源" class="headerlink" title="独享的资源"></a>独享的资源</h4><p>a. 栈 栈是独享的</p>
+<p>b. 寄存器  这个可能会误解，因为电脑的寄存器是物理的，每个线程去取值难道不一样吗？其实线程里存放的是副本，包括程序计数器PC</p>
+<h2 id="Redis和-mysql"><a href="#Redis和-mysql" class="headerlink" title="Redis和 mysql"></a>Redis和 mysql</h2><p>（1）类型上</p>
+<p>从类型上来说，mysql是关系型数据库，redis是缓存数据库</p>
+<p>（2）作用上</p>
+<p>mysql用于持久化的存储数据到硬盘，功能强大，但是速度较慢</p>
+<p>redis用于存储使用较为频繁的数据到缓存中，读取速度快</p>
+<p>（3）需求上</p>
+<p>mysql和redis因为需求的不同，一般都是配合使用。</p>
 
       
     </div>
@@ -727,7 +798,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -839,7 +910,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">33</span>
+                      
+                    
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -959,7 +1032,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程和线程的区别"><span class="nav-number">1.</span> <span class="nav-text">进程和线程的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">1.1.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程和线程的区别"><span class="nav-number">1.</span> <span class="nav-text">进程和线程的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程间的通信方式有哪些"><span class="nav-number">2.</span> <span class="nav-text">进程间的通信方式有哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux查询进程指令，查询端口，杀进程，"><span class="nav-number">3.</span> <span class="nav-text">Linux查询进程指令，查询端口，杀进程，</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看安装的软件"><span class="nav-number">3.1.</span> <span class="nav-text">查看安装的软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询进程"><span class="nav-number">3.2.</span> <span class="nav-text">查询进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat命令"><span class="nav-number">3.3.</span> <span class="nav-text">cat命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm命令"><span class="nav-number">3.4.</span> <span class="nav-text">rm命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mkdir命令"><span class="nav-number">3.5.</span> <span class="nav-text">mkdir命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp命令"><span class="nav-number">3.6.</span> <span class="nav-text">cp命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#kill命令"><span class="nav-number">3.7.</span> <span class="nav-text">kill命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程的那些资源共享，那些资源不共享"><span class="nav-number">4.</span> <span class="nav-text">线程的那些资源共享，那些资源不共享</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#共享的资源"><span class="nav-number">4.1.</span> <span class="nav-text">共享的资源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#独享的资源"><span class="nav-number">4.2.</span> <span class="nav-text">独享的资源</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis和-mysql"><span class="nav-number"></span> <span class="nav-text">Redis和 mysql</span></a></li></div>
             
 
           </div>
@@ -1001,7 +1074,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">116k</span>
+    <span title="站点总字数">159k</span>
   
 
   
@@ -1012,7 +1085,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:13</span>
+    <span title="站点阅读时长">4:26</span>
   
 </div>
 

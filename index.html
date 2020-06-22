@@ -248,7 +248,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">34</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">36</span></a>
 
   </li>
 
@@ -367,6 +367,465 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/18/前端知识点总结——JavaScript-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄流川">
+      <meta itemprop="description" content="从零到一，跨过就是成功">
+      <meta itemprop="image" content="/images/westbrook.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黄同学的笔记小屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/06/18/前端知识点总结——JavaScript-2/" class="post-title-link" itemprop="url">前端知识点总结——JavaScript(2)</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-18 14:16:41 / 修改时间：20:04:12" itemprop="dateCreated datePublished" datetime="2020-06-18T14:16:41+08:00">2020-06-18</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端知识点总结/" itemprop="url" rel="index"><span itemprop="name">前端知识点总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2020/06/18/前端知识点总结——JavaScript-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/18/前端知识点总结——JavaScript-2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">6 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="原型链-spades-spades-spades"><a href="#原型链-spades-spades-spades" class="headerlink" title="原型链    &spades;&spades;&spades;"></a>原型链    &spades;&spades;&spades;</h3><p>见纸质版笔记</p>
+<h3 id="this-spades-spades-spades"><a href="#this-spades-spades-spades" class="headerlink" title="this  &spades;&spades;&spades;"></a>this  &spades;&spades;&spades;</h3><p>this是JavaScript的一个关键字，随着函数使用场合的不同，this的值会发生变化。但是有一个原则，即this指向的是调用函数的那个对象。this是全局对象Global，可以作为方法调用</p>
+<h4 id="this作为构造函数执行"><a href="#this作为构造函数执行" class="headerlink" title="this作为构造函数执行"></a>this作为构造函数执行</h4><p>this 指代全局对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> test();</span><br><span class="line">test();</span><br><span class="line"><span class="comment">//可以看出o代表的不是全局对象</span></span><br></pre></td></tr></table></figure>
+<h4 id="this作为对象方法（属性）执行"><a href="#this作为对象方法（属性）执行" class="headerlink" title="this作为对象方法（属性）执行"></a>this作为对象方法（属性）执行</h4><p>this 指代上级对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x =<span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">　　alert(<span class="keyword">this</span>.x);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> o = &#123;</span><br><span class="line">  x:<span class="number">1</span>,</span><br><span class="line">  m:test </span><br><span class="line">&#125;;</span><br><span class="line">o.m(); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<h4 id="作为普通函数执行"><a href="#作为普通函数执行" class="headerlink" title="作为普通函数执行"></a>作为普通函数执行</h4><p>this 指代全局对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.x = <span class="number">1</span>;  <span class="comment">//这里this就是window</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.x);</span><br><span class="line">&#125;</span><br><span class="line">test(); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<h4 id="call、apply、bind"><a href="#call、apply、bind" class="headerlink" title="call、apply、bind"></a>call、apply、bind</h4><p>this指代上下文对象</p>
+<h4 id="JS多位数字每隔三位加一个逗号-千分位格式化"><a href="#JS多位数字每隔三位加一个逗号-千分位格式化" class="headerlink" title="JS多位数字每隔三位加一个逗号(千分位格式化)"></a>JS多位数字每隔三位加一个逗号(千分位格式化)</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toThousands</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> num = (num || <span class="number">0</span>).toString(), result = <span class="string">''</span>;</span><br><span class="line">     <span class="keyword">while</span> (num.length &gt; <span class="number">3</span>) &#123;</span><br><span class="line">         result = <span class="string">','</span> + num.slice(<span class="number">-3</span>) + result;</span><br><span class="line">         num = num.slice(<span class="number">0</span>, num.length - <span class="number">3</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span> (num) &#123; result = num + result; &#125;</span><br><span class="line">     <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="TypeScript有了解吗"><a href="#TypeScript有了解吗" class="headerlink" title="TypeScript有了解吗"></a>TypeScript有了解吗</h4><blockquote>
+<p>TypeScript是一种由微软开发的<a href="https://baike.baidu.com/item/开源/246339" target="_blank" rel="noopener">开源</a>、跨平台的编程语言。它是<a href="https://baike.baidu.com/item/JavaScript" target="_blank" rel="noopener">JavaScript</a>的超集，最终会被编译为JavaScript代码。TypeScript添加了可选的静态类型系统、很多尚未正式发布的ECMAScript新特性（如装饰器  ）。2012年10月，微软发布了首个公开版本的TypeScript，2013年6月19日，在经历了一个预览版之后微软正式发布了正式版TypeScript。当前最新版本为TypeScript3.8。 </p>
+</blockquote>
+<h4 id="JavaScript-与-TypeScript-的区别"><a href="#JavaScript-与-TypeScript-的区别" class="headerlink" title="JavaScript 与 TypeScript 的区别"></a>JavaScript 与 TypeScript 的区别</h4><p>TypeScript 是 JavaScript 的超集，扩展了 JavaScript 的语法，因此现有的 JavaScript 代码可与 TypeScript 一起工作无需任何修改，TypeScript 通过类型注解提供编译时的静态类型检查。</p>
+<p>TypeScript 可处理已有的 JavaScript 代码，并只对其中的 TypeScript 代码进行编译。</p>
+<p>TypeScript 可以使用 JavaScript 中的所有代码和编码概念，TypeScript 是为了使 JavaScript 的开发变得更加容易而创建的。例如，TypeScript 使用类型和接口等概念来描述正在使用的数据，这使开发人员能够快速检测错误并调试应用程序</p>
+<p>TypeScript 从核心语言方面和类概念的模塑方面对 JavaScript 对象模型进行扩展。<br>JavaScript 代码可以在无需任何修改的情况下与 TypeScript 一同工作，同时可以使用编译器将 TypeScript 代码转换为 JavaScript。<br>TypeScript 通过类型注解提供编译时的静态类型检查。<br>TypeScript 中的数据要求带有明确的类型，JavaScript不要求。<br>TypeScript 为函数提供了缺省参数值。<br>TypeScript 引入了 JavaScript 中没有的“类”概念。<br>TypeScript 中引入了模块的概念，可以把声明、数据、函数和类封装在模块中。</p>
+<h3 id="闭包是什么？有什么用处"><a href="#闭包是什么？有什么用处" class="headerlink" title="闭包是什么？有什么用处"></a>闭包是什么？有什么用处</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> num = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(num)</span><br><span class="line">        num++</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f = hello()</span><br><span class="line">f() <span class="comment">// 执行结果 打印101</span></span><br><span class="line">f() <span class="comment">// 执行结果 打印102</span></span><br></pre></td></tr></table></figure>
+<p>闭包内部的的变量会存在，而闭包内部函数的内部变量不会存在，使得JavaScript的垃圾回收机制不会收回hello()占用的资源，因为hello()内部中函数执行需要依赖hello()中的变量</p>
+<h4 id="闭包的两个作用"><a href="#闭包的两个作用" class="headerlink" title="闭包的两个作用"></a>闭包的两个作用</h4><ol>
+<li>闭包不仅可以取到外层函数中的局部变量</li>
+<li>还可以将值保存在内存中</li>
+</ol>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><p>有利于封装；可访问局部变量</p>
+<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><p>内存占用浪费严重，容易产生内存泄漏</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>谨慎使用</p>
+<h3 id="创建对象的方式-优缺点-spades"><a href="#创建对象的方式-优缺点-spades" class="headerlink" title="创建对象的方式 优缺点    &spades;"></a>创建对象的方式 优缺点    &spades;</h3><h4 id="字面式声明"><a href="#字面式声明" class="headerlink" title="字面式声明"></a>字面式声明</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125; <span class="comment">//字面式声明</span></span><br><span class="line">obj.name = xxxx;</span><br><span class="line">obj.age = xxxx;</span><br></pre></td></tr></table></figure>
+<p>缺点:只能创建一次对象，复用性较差，如果要创建多个对象，代码冗余度太高</p>
+<h4 id="new操作符-object声明"><a href="#new操作符-object声明" class="headerlink" title="new操作符+object声明"></a>new操作符+object声明</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>() <span class="comment">//new操作符+object声明</span></span><br><span class="line">obj.name = xxxx;</span><br><span class="line">obj.age = xxxx;</span><br></pre></td></tr></table></figure>
+<p>缺点:只能创建一次对象，复用性较差，如果要创建多个对象，代码冗余度太高</p>
+<p>完全没有必要用new Object(),而应该采用对象字面量{}的方式进行声明</p>
+<h4 id="构造函数声明"><a href="#构造函数声明" class="headerlink" title="构造函数声明"></a>构造函数声明</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span> (<span class="params">age, name</span>) </span>&#123; <span class="comment">//构造函数声明</span></span><br><span class="line">    <span class="keyword">this</span>.age = age</span><br><span class="line">    <span class="keyword">this</span>.name = name</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> test()</span><br></pre></td></tr></table></figure>
+<p>优点：实例可以识别为一个特定的类型</p>
+<p>缺点：每次创建实例时，每个方法都要被创建一次。构造函数中定义函数，那么每次创建对象，都会重新创建该函数，这样会导致全局变量增多，造成污染,代码结构会混乱,不易维护</p>
+<h4 id="工厂方式声明对象"><a href="#工厂方式声明对象" class="headerlink" title="工厂方式声明对象"></a>工厂方式声明对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createObject</span> (<span class="params">name, age</span>) </span>&#123;<span class="comment">//工厂方式声明对象</span></span><br><span class="line">    <span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    obj.name  = name;</span><br><span class="line">    obj.age = age;</span><br><span class="line">    obj.run = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.name + <span class="keyword">this</span>.age</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> obj</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj1 = createObj(<span class="string">'zhangsan'</span>, <span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+<p>缺点：对象无法识别，因为所有的实例都指向一个原型</p>
+<h4 id="原型模式声明"><a href="#原型模式声明" class="headerlink" title="原型模式声明"></a>原型模式声明</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//原型模式声明</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">   test.prototype.属性名称 = 属性值;</span><br><span class="line">   test.prototype.方法名称 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="comment">//函数执行体</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> test()</span><br></pre></td></tr></table></figure>
+<p>优点：方法不会重新创建。构造函数的原型对象中的成员，可以被该构造函数创建出来的所有对象访问,而且，所有的对象共享该对象,所以，我们可以将构造函数中需要创建的函数，放到原型对象中存储,这样就解决 全局变量污染的问题 以及 代码结构混乱的问题</p>
+<p>缺点：1. 所有的属性和方法都共享 2. 不能初始化参数</p>
+<h4 id="混合式声明对象"><a href="#混合式声明对象" class="headerlink" title="混合式声明对象"></a>混合式声明对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//混合式声明对象</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span> (<span class="params">参数<span class="number">1</span>, 参数<span class="number">2</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.属性名称 = 参数<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">this</span>.属性名称 = 参数<span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">test.prototype.方法名称 = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//执行代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> test()</span><br></pre></td></tr></table></figure>
+<p>优点：该共享的共享，该私有的私有，使用最广泛的方式</p>
+<p>缺点：有的人就是希望全部都写在一起，即更好的封装性</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/14/小程序开发/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄流川">
+      <meta itemprop="description" content="从零到一，跨过就是成功">
+      <meta itemprop="image" content="/images/westbrook.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黄同学的笔记小屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/06/14/小程序开发/" class="post-title-link" itemprop="url">小程序开发</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-14 09:47:56 / 修改时间：10:39:25" itemprop="dateCreated datePublished" datetime="2020-06-14T09:47:56+08:00">2020-06-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web前端技术学习/" itemprop="url" rel="index"><span itemprop="name">web前端技术学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2020/06/14/小程序开发/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/14/小程序开发/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">585</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>开发文档<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/framework/</a></p>
+</blockquote>
+<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><p>小程序根目录下的 <code>app.json</code> 文件用来对微信小程序进行全局配置。文件内容为一个 JSON 对象，</p>
+<p>每一个小程序页面也可以使用 <code>.json</code> 文件来对本页面的窗口表现进行配置。页面中配置项在当前页面会覆盖 <code>app.json</code> 的 <code>window</code> 中相同的配置项。文件内容为一个 JSON 对象，有以下属性：</p>
+<h3 id="页面配置"><a href="#页面配置" class="headerlink" title="页面配置"></a>页面配置</h3><p>微信现已开放小程序内搜索，开发者可以通过 <code>sitemap.json</code> 配置，或者管理后台页面收录开关来配置其小程序页面是否允许微信索引。当开发者允许微信索引时，微信会通过爬虫的形式，为小程序的页面内容建立索引。当用户的搜索词条触发该索引时，小程序的页面将可能展示在搜索结果中。 爬虫访问小程序内页面时，会携带特定的 user-agent：<code>mpcrawler</code> 及<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html" target="_blank" rel="noopener">场景值</a>：<code>1129</code>。需要注意的是，若小程序爬虫发现的页面数据和真实用户的呈现不一致，那么该页面将不会进入索引中。</p>
+<h3 id="setmap配置"><a href="#setmap配置" class="headerlink" title="setmap配置"></a>setmap配置</h3><p>小程序根目录下的 <code>sitemap.json</code> 文件用于配置小程序及其页面是否允许被微信索引，文件内容为一个 JSON 对象，如果没有 <code>sitemap.json</code> ，则默认为所有页面都允许被索引；<code>sitemap.json</code> 有以下属性：</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/13/前端知识点总结——webapp和小程序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -412,12 +871,24 @@
                 
               
 
-              <time title="创建时间：2020-06-13 21:22:40 / 修改时间：22:26:03" itemprop="dateCreated datePublished" datetime="2020-06-13T21:22:40+08:00">2020-06-13</time>
+              <time title="创建时间：2020-06-13 21:22:40" itemprop="dateCreated datePublished" datetime="2020-06-13T21:22:40+08:00">2020-06-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-14 10:41:24" itemprop="dateModified" datetime="2020-06-14T10:41:24+08:00">2020-06-14</time>
               
             
           </span>
@@ -476,7 +947,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.6k</span>
+                <span title="本文字数">4.9k</span>
               
 
               
@@ -626,12 +1097,24 @@
                 
               
 
-              <time title="创建时间：2020-06-13 20:32:57 / 修改时间：22:26:56" itemprop="dateCreated datePublished" datetime="2020-06-13T20:32:57+08:00">2020-06-13</time>
+              <time title="创建时间：2020-06-13 20:32:57" itemprop="dateCreated datePublished" datetime="2020-06-13T20:32:57+08:00">2020-06-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-18 14:36:01" itemprop="dateModified" datetime="2020-06-18T14:36:01+08:00">2020-06-18</time>
               
             
           </span>
@@ -998,436 +1481,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/13/前端知识点总结——CSS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="黄流川">
-      <meta itemprop="description" content="从零到一，跨过就是成功">
-      <meta itemprop="image" content="/images/westbrook.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黄同学的笔记小屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/06/13/前端知识点总结——CSS/" class="post-title-link" itemprop="url">前端知识点总结——CSS</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-13 16:33:00 / 修改时间：22:26:43" itemprop="dateCreated datePublished" datetime="2020-06-13T16:33:00+08:00">2020-06-13</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端知识点总结/" itemprop="url" rel="index"><span itemprop="name">前端知识点总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2020/06/13/前端知识点总结——CSS/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/13/前端知识点总结——CSS/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">1.2k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">2 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="CSS的盒模型-怎么切换"><a href="#CSS的盒模型-怎么切换" class="headerlink" title="CSS的盒模型 怎么切换"></a>CSS的盒模型 怎么切换</h3><p><code>box-sizing:content-box</code>这是W3C盒模型， width = content</p>
-<p><code>box-sizing:border-box</code>这是width = border + padding + content</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2020/06/13/前端知识点总结——CSS/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/13/前端知识点总结——HTML/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="黄流川">
-      <meta itemprop="description" content="从零到一，跨过就是成功">
-      <meta itemprop="image" content="/images/westbrook.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黄同学的笔记小屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/06/13/前端知识点总结——HTML/" class="post-title-link" itemprop="url">前端知识点总结——HTML</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-13 15:27:55 / 修改时间：22:26:27" itemprop="dateCreated datePublished" datetime="2020-06-13T15:27:55+08:00">2020-06-13</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端知识点总结/" itemprop="url" rel="index"><span itemprop="name">前端知识点总结</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2020/06/13/前端知识点总结——HTML/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/13/前端知识点总结——HTML/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">1.2k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">2 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="canvas的一些方法"><a href="#canvas的一些方法" class="headerlink" title="canvas的一些方法"></a>canvas的一些方法</h3><h3 id="requestAnimationFrame有用过吗？知道是干什么的吗？"><a href="#requestAnimationFrame有用过吗？知道是干什么的吗？" class="headerlink" title="requestAnimationFrame有用过吗？知道是干什么的吗？"></a>requestAnimationFrame有用过吗？知道是干什么的吗？</h3><p><u>实现动画效果的方法比较多</u>，Javascript 中可以通过定时器 setTimeout 来实现，css3 可以使用 transition 和 animation 来实现，html5 中的 canvas 也可以实现。除此之外，html5 还提供一个专门用于请求动画的API，那就是 requestAnimationFrame，顾名思义就是<strong>请求动画帧。</strong></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2020/06/13/前端知识点总结——HTML/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1473,7 +1531,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1585,7 +1643,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">33</span>
+                      
+                    
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1730,7 +1790,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">116k</span>
+    <span title="站点总字数">159k</span>
   
 
   
@@ -1741,7 +1801,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:13</span>
+    <span title="站点阅读时长">4:26</span>
   
 </div>
 

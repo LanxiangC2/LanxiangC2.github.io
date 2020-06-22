@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="排序算法了解哪些冒泡排序 插入排序 选择排序 快速排序 归并排序">
+  <meta name="description" content="排序算法了解哪些   &amp;spades;冒泡排序 插入排序 选择排序 快速排序 归并排序">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端知识点总结——算法与数据结构">
 <meta property="og:url" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——算法与数据结构/index.html">
 <meta property="og:site_name" content="黄同学的笔记小屋">
-<meta property="og:description" content="排序算法了解哪些冒泡排序 插入排序 选择排序 快速排序 归并排序">
+<meta property="og:description" content="排序算法了解哪些   &amp;spades;冒泡排序 插入排序 选择排序 快速排序 归并排序">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-09T13:07:55.310Z">
+<meta property="og:updated_time" content="2020-06-18T08:21:32.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——算法与数据结构">
-<meta name="twitter:description" content="排序算法了解哪些冒泡排序 插入排序 选择排序 快速排序 归并排序">
+<meta name="twitter:description" content="排序算法了解哪些   &amp;spades;冒泡排序 插入排序 选择排序 快速排序 归并排序">
 
 
 
@@ -248,7 +248,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">33</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">34</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">34</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">36</span></a>
 
   </li>
 
@@ -410,12 +410,24 @@
                 
               
 
-              <time title="创建时间：2020-06-09 20:21:23 / 修改时间：21:07:55" itemprop="dateCreated datePublished" datetime="2020-06-09T20:21:23+08:00">2020-06-09</time>
+              <time title="创建时间：2020-06-09 20:21:23" itemprop="dateCreated datePublished" datetime="2020-06-09T20:21:23+08:00">2020-06-09</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-18 16:21:32" itemprop="dateModified" datetime="2020-06-18T16:21:32+08:00">2020-06-18</time>
               
             
           </span>
@@ -481,7 +493,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.5k</span>
+                <span title="本文字数">1.7k</span>
               
 
               
@@ -515,7 +527,7 @@
       
 
       
-        <h3 id="排序算法了解哪些"><a href="#排序算法了解哪些" class="headerlink" title="排序算法了解哪些"></a>排序算法了解哪些</h3><p>冒泡排序</p>
+        <h3 id="排序算法了解哪些-spades"><a href="#排序算法了解哪些-spades" class="headerlink" title="排序算法了解哪些   &spades;"></a>排序算法了解哪些   &spades;</h3><p>冒泡排序</p>
 <p>插入排序</p>
 <p>选择排序</p>
 <p>快速排序</p>
@@ -530,6 +542,10 @@
 <h4 id="什么时候最快"><a href="#什么时候最快" class="headerlink" title="什么时候最快"></a>什么时候最快</h4><p>当输入的数据可以均匀的分配到每一个桶中。</p>
 <h4 id="什么时候最慢"><a href="#什么时候最慢" class="headerlink" title="什么时候最慢"></a>什么时候最慢</h4><p>当输入的数据被分配到了同一个桶中。</p>
 <h4 id="JavaScript-代码实现"><a href="#JavaScript-代码实现" class="headerlink" title="JavaScript 代码实现"></a>JavaScript 代码实现</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bucketSort</span>(<span class="params">arr, bucketSize</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (arr.length === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> i;</span><br><span class="line">    <span class="keyword">var</span> minValue = arr[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> maxValue = arr[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] &gt; maxValue) &#123;</span><br><span class="line">          <span class="comment">// 输入数据的最大值</span></span><br><span class="line">          maxValue = arr[i];                </span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] &lt; minValue) &#123;</span><br><span class="line">          <span class="comment">// 输入数据的最小值</span></span><br><span class="line">          minValue = arr[i]                 </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//桶的初始化</span></span><br><span class="line">    <span class="keyword">var</span> DEFAULT_BUCKET_SIZE = <span class="number">5</span>; <span class="comment">// 设置桶的默认数量为5</span></span><br><span class="line">    bucketSize = bucketSize || DEFAULT_BUCKET_SIZE;</span><br><span class="line">    <span class="keyword">var</span> bucketCount = <span class="built_in">Math</span>.floor((maxValue - minValue) / bucketSize) + <span class="number">1</span>;   </span><br><span class="line">    <span class="keyword">var</span> buckets = <span class="keyword">new</span> <span class="built_in">Array</span>(bucketCount);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buckets.length; i++) &#123;</span><br><span class="line">        buckets[i] = []; <span class="comment">// 二维数组</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//利用映射函数将数据分配到各个桶中</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        buckets[<span class="built_in">Math</span>.floor((arr[i] - minValue) / bucketSize)].push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    arr.length = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buckets.length; i++) &#123;</span><br><span class="line">         <span class="comment">// 对每个桶进行排序，这里的排序方法自己选择哦铁汁</span></span><br><span class="line">        insertionSort(buckets[i]);                     </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; buckets[i].length; j++) &#123;</span><br><span class="line">            arr.push(buckets[i][j]);                      </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sortArr</span> (<span class="params"></span>) </span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="数组和链表的区别"><a href="#数组和链表的区别" class="headerlink" title="数组和链表的区别"></a>数组和链表的区别</h3><p>链表通过<strong>指针</strong>来连接元素与元素，数组则是把所有元素<strong>按次序依次存储</strong>。</p>
+<p>链表的插入删除元素相对数组较为简单，不需要移动元素，且较为容易实现长度扩充，但是寻找某个元素较为困难；</p>
+<p>数组寻找某个元素较为简单，但插入与删除比较复杂，由于最大长度需要再编程一开始时指定，故当达到最大长度时，扩充长度不如链表方便。<br>相同：两种结构均可实现数据的顺序存储，构造出来的模型呈线性结构。</p>
+
       
     </div>
 
@@ -722,7 +738,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -834,7 +850,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">33</span>
+                      
+                    
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -954,7 +972,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序算法了解哪些"><span class="nav-number">1.</span> <span class="nav-text">排序算法了解哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手写桶排序"><span class="nav-number">2.</span> <span class="nav-text">手写桶排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么时候最快"><span class="nav-number">2.1.</span> <span class="nav-text">什么时候最快</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么时候最慢"><span class="nav-number">2.2.</span> <span class="nav-text">什么时候最慢</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript-代码实现"><span class="nav-number">2.3.</span> <span class="nav-text">JavaScript 代码实现</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序算法了解哪些-spades"><span class="nav-number">1.</span> <span class="nav-text">排序算法了解哪些   ♠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手写桶排序"><span class="nav-number">2.</span> <span class="nav-text">手写桶排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么时候最快"><span class="nav-number">2.1.</span> <span class="nav-text">什么时候最快</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么时候最慢"><span class="nav-number">2.2.</span> <span class="nav-text">什么时候最慢</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript-代码实现"><span class="nav-number">2.3.</span> <span class="nav-text">JavaScript 代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组和链表的区别"><span class="nav-number">3.</span> <span class="nav-text">数组和链表的区别</span></a></li></ol></div>
             
 
           </div>
@@ -996,7 +1014,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">116k</span>
+    <span title="站点总字数">159k</span>
   
 
   
@@ -1007,7 +1025,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:13</span>
+    <span title="站点阅读时长">4:26</span>
   
 </div>
 
