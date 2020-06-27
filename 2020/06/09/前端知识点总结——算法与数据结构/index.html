@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="排序算法了解哪些   &amp;spades;冒泡排序 插入排序 选择排序 快速排序 归并排序">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-18T08:21:32.859Z">
+<meta property="og:updated_time" content="2020-06-27T03:03:48.136Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——算法与数据结构">
 <meta name="twitter:description" content="排序算法了解哪些   &amp;spades;冒泡排序 插入排序 选择排序 快速排序 归并排序">
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">36</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">37</span></a>
 
   </li>
 
@@ -427,7 +427,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-18 16:21:32" itemprop="dateModified" datetime="2020-06-18T16:21:32+08:00">2020-06-18</time>
+                <time title="修改时间：2020-06-27 11:03:48" itemprop="dateModified" datetime="2020-06-27T11:03:48+08:00">2020-06-27</time>
               
             
           </span>
@@ -493,7 +493,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.7k</span>
+                <span title="本文字数">3k</span>
               
 
               
@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">5 分钟</span>
               
             </div>
           
@@ -545,6 +545,7 @@
 <h3 id="数组和链表的区别"><a href="#数组和链表的区别" class="headerlink" title="数组和链表的区别"></a>数组和链表的区别</h3><p>链表通过<strong>指针</strong>来连接元素与元素，数组则是把所有元素<strong>按次序依次存储</strong>。</p>
 <p>链表的插入删除元素相对数组较为简单，不需要移动元素，且较为容易实现长度扩充，但是寻找某个元素较为困难；</p>
 <p>数组寻找某个元素较为简单，但插入与删除比较复杂，由于最大长度需要再编程一开始时指定，故当达到最大长度时，扩充长度不如链表方便。<br>相同：两种结构均可实现数据的顺序存储，构造出来的模型呈线性结构。</p>
+<h3 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> minWindow = <span class="function">(<span class="params">s, t</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> minLen = <span class="literal">Infinity</span>, resL <span class="comment">// minLen初始尽量大，第一次就能被改写</span></span><br><span class="line">    <span class="keyword">let</span> map = &#123;&#125; <span class="comment">// 存储目标字符，和对应的缺失个数</span></span><br><span class="line">    <span class="keyword">let</span> missingType = <span class="number">0</span> <span class="comment">// 当前缺失的字符种类数</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> char <span class="keyword">of</span> t) &#123; <span class="comment">// t为baac的话，map为&#123;a:2,b:1,c:1&#125;</span></span><br><span class="line">        <span class="keyword">if</span> (!map[char]) &#123;</span><br><span class="line">            missingType++ <span class="comment">// 需要找齐的种类数 +1</span></span><br><span class="line">            map[char] = <span class="number">1</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123; map[char]++ &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> left = <span class="number">0</span>, right = <span class="number">0</span> <span class="comment">// 左右指针</span></span><br><span class="line">    <span class="keyword">for</span> (; right &lt; s.length; right++) &#123; <span class="comment">// right++ 扩张窗口，超出s串就结束循环</span></span><br><span class="line">        <span class="keyword">let</span> rightChar = s[right] <span class="comment">// 获取right指向的新字符</span></span><br><span class="line">        <span class="keyword">if</span> (map[rightChar] !== <span class="literal">undefined</span>) map[rightChar]-- <span class="comment">// 是目标字符，它的缺失个数-1</span></span><br><span class="line">        <span class="keyword">if</span> (map[rightChar] === <span class="number">0</span>) missingType-- <span class="comment">// 它的缺失个数变0，缺失的种类就-1</span></span><br><span class="line">        <span class="keyword">while</span> (missingType === <span class="number">0</span>) &#123; <span class="comment">//只要满足当前窗口包含所有字符，就一直收缩窗口</span></span><br><span class="line">            <span class="keyword">if</span> (right - left + <span class="number">1</span> &lt; minLen) &#123; <span class="comment">// 计算长度，和minLen比较</span></span><br><span class="line">                minLen = right - left + <span class="number">1</span> <span class="comment">// 更新minLen</span></span><br><span class="line">                resL = left <span class="comment">// 更新最小子串的起点</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">let</span> leftChar = s[left] <span class="comment">// 获取左指针指向的字符</span></span><br><span class="line">            <span class="keyword">if</span> (map[leftChar] !== <span class="literal">undefined</span>) map[leftChar]++ <span class="comment">//目标字符被舍弃，缺失个数+1</span></span><br><span class="line">            <span class="keyword">if</span> (map[leftChar] &gt; <span class="number">0</span>) missingType++ <span class="comment">// 缺失个数变&gt;0，缺失的种类+1</span></span><br><span class="line">            left++ <span class="comment">// 左指针步进，收缩窗口</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s.substring(resL, resL + minLen) <span class="comment">// 根据起点和minLen截取子串</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -738,7 +739,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -972,7 +973,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序算法了解哪些-spades"><span class="nav-number">1.</span> <span class="nav-text">排序算法了解哪些   ♠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手写桶排序"><span class="nav-number">2.</span> <span class="nav-text">手写桶排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么时候最快"><span class="nav-number">2.1.</span> <span class="nav-text">什么时候最快</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么时候最慢"><span class="nav-number">2.2.</span> <span class="nav-text">什么时候最慢</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript-代码实现"><span class="nav-number">2.3.</span> <span class="nav-text">JavaScript 代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组和链表的区别"><span class="nav-number">3.</span> <span class="nav-text">数组和链表的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序算法了解哪些-spades"><span class="nav-number">1.</span> <span class="nav-text">排序算法了解哪些   ♠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手写桶排序"><span class="nav-number">2.</span> <span class="nav-text">手写桶排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么时候最快"><span class="nav-number">2.1.</span> <span class="nav-text">什么时候最快</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么时候最慢"><span class="nav-number">2.2.</span> <span class="nav-text">什么时候最慢</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript-代码实现"><span class="nav-number">2.3.</span> <span class="nav-text">JavaScript 代码实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组和链表的区别"><span class="nav-number">3.</span> <span class="nav-text">数组和链表的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#滑动窗口"><span class="nav-number">4.</span> <span class="nav-text">滑动窗口</span></a></li></ol></div>
             
 
           </div>
@@ -1014,7 +1015,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">159k</span>
+    <span title="站点总字数">206k</span>
   
 
   
@@ -1025,7 +1026,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">4:26</span>
+    <span title="站点阅读时长">5:44</span>
   
 </div>
 

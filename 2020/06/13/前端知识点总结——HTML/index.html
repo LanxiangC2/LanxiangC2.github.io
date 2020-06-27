@@ -104,10 +104,12 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="canvas的一些方法requestAnimationFrame有用过吗？知道是干什么的吗？实现动画效果的方法比较多，Javascript 中可以通过定时器 setTimeout 来实现，css3 可以使用 transition 和 animation 来实现，html5 中的 canvas 也可以实现。除此之外，html5 还提供一个专门用于请求动画的API，那就是 requestAnimati">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-13T14:26:27.317Z">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/13/前端知识点总结——HTML/offsetX.png">
+<meta property="og:updated_time" content="2020-06-23T13:43:51.069Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——HTML">
 <meta name="twitter:description" content="canvas的一些方法requestAnimationFrame有用过吗？知道是干什么的吗？实现动画效果的方法比较多，Javascript 中可以通过定时器 setTimeout 来实现，css3 可以使用 transition 和 animation 来实现，html5 中的 canvas 也可以实现。除此之外，html5 还提供一个专门用于请求动画的API，那就是 requestAnimati">
+<meta name="twitter:image" content="http://lanxiangc2.github.io/2020/06/13/前端知识点总结——HTML/offsetX.png">
 
 
 
@@ -286,7 +288,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">36</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">37</span></a>
 
   </li>
 
@@ -410,12 +412,24 @@
                 
               
 
-              <time title="创建时间：2020-06-13 15:27:55 / 修改时间：22:26:27" itemprop="dateCreated datePublished" datetime="2020-06-13T15:27:55+08:00">2020-06-13</time>
+              <time title="创建时间：2020-06-13 15:27:55" itemprop="dateCreated datePublished" datetime="2020-06-13T15:27:55+08:00">2020-06-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-23 21:43:51" itemprop="dateModified" datetime="2020-06-23T21:43:51+08:00">2020-06-23</time>
               
             
           </span>
@@ -481,7 +495,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">3.1k</span>
               
 
               
@@ -495,7 +509,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">5 分钟</span>
               
             </div>
           
@@ -533,6 +547,45 @@
 <ol start="5">
 <li><strong>优雅降级：</strong>由于兼容性问题，需要降级对接口进行封装，优先使用高级特性，再根据浏览器不同情况进行回退，直到只能使用settimeout。参考<a href="[https://github.com/darius/requestAnimationFrame](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fdarius%2FrequestAnimationFrame">GitHub</a>）</li>
 </ol>
+<h3 id="iframe是什么？有什么缺点？"><a href="#iframe是什么？有什么缺点？" class="headerlink" title="iframe是什么？有什么缺点？"></a>iframe是什么？有什么缺点？</h3><p><strong>定义</strong>：iframe元素会创建包含另一个文档的内联框架</p>
+<p>提示：可以将提示文字放在<code>&lt;iframe&gt;&lt;/iframe&gt;</code>之间，来提示某些不支持iframe的浏览器</p>
+<p><strong>缺点</strong>：</p>
+<p>会阻塞主页面的onload事件</p>
+<p>搜索引擎无法解读这种页面，不利于SEO</p>
+<p>iframe和主页面共享连接池，而浏览器对相同区域有限制所以会影响性能。</p>
+<h3 id="Doctype作用-严格模式与混杂模式如何区分？它们有何意义"><a href="#Doctype作用-严格模式与混杂模式如何区分？它们有何意义" class="headerlink" title="Doctype作用?严格模式与混杂模式如何区分？它们有何意义?"></a>Doctype作用?严格模式与混杂模式如何区分？它们有何意义?</h3><p>Doctype声明于文档最前面，告诉浏览器以何种方式来渲染页面，这里有两种模式，严格模式和混杂模式。</p>
+<p>严格模式的排版和JS 运作模式是 以<strong>该浏览器支持的最高标准</strong>运行。    </p>
+<p>混杂模式，向后兼容，模拟老式浏览器，防止浏览器无法兼容页面。</p>
+<h3 id="响应式布局的常用解决方案对比-媒体查询、百分比、rem和vw-vh）"><a href="#响应式布局的常用解决方案对比-媒体查询、百分比、rem和vw-vh）" class="headerlink" title="响应式布局的常用解决方案对比(媒体查询、百分比、rem和vw/vh）"></a>响应式布局的常用解决方案对比(媒体查询、百分比、rem和vw/vh）</h3><p>前端开发中，静态网页通常需要适应不同分辨率的设备，常用的自适应解决方案包括媒体查询、百分比、rem和vw/vh等。本文从px单位出发，分析了px在移动端布局中的不足，接着介绍了几种不同的自适应解决方案。</p>
+<ul>
+<li>px和视口</li>
+<li>媒体查询</li>
+<li>百分比</li>
+<li>自适应场景下的rem解决方案</li>
+<li>通过vw/vh来实现自适应</li>
+</ul>
+<h3 id="iframe通信，同源和不同源两种情况，多少种方法"><a href="#iframe通信，同源和不同源两种情况，多少种方法" class="headerlink" title="iframe通信，同源和不同源两种情况，多少种方法"></a>iframe通信，同源和不同源两种情况，多少种方法</h3><p>同源，根据父页面以及cookie，不同源设置子域的方法</p>
+<h3 id="HTML5新增的元素"><a href="#HTML5新增的元素" class="headerlink" title="HTML5新增的元素"></a>HTML5新增的元素</h3><p>首先html5为了更好的实践web语义化，增加了header，footer，nav,aside,section等语义化标签</p>
+<p>在表单方面，为了增强表单，为input增加了color，emial,data ,range等类型</p>
+<p>在存储方面，提供了sessionStorage，localStorage,和离线存储，通过这些存储方式方便数据在客户端的存储和获取，在多媒体方面规定了音频和视频元素audio和vedio</p>
+<p>另外还有地理定位，canvas画布，拖放，多线程编程的web worker和websocket协议</p>
+<h3 id="pageX-clienXt-screenX-offsetX"><a href="#pageX-clienXt-screenX-offsetX" class="headerlink" title="pageX clienXt screenX offsetX"></a>pageX clienXt screenX offsetX</h3><p><img src="/2020/06/13/前端知识点总结——HTML/offsetX.png" alt="前端知识点总结——HTML"></p>
+<h4 id="pageX-pageY"><a href="#pageX-pageY" class="headerlink" title="pageX/pageY"></a>pageX/pageY</h4><p>鼠标相对于整个页面的X/Y坐标。<br>注意，整个页面的意思就是你整个网页的全部，比如说网页很宽很长，宽2000px，高3000px，那pageX,pageY的最大值就是它们了。<br>特别说明：IE不支持！</p>
+<h4 id="clientX-clientY"><a href="#clientX-clientY" class="headerlink" title="clientX/clientY"></a>clientX/clientY</h4><p>事件发生时鼠标在浏览器内容区域的X/Y坐标（不包含滚动条）。<br>浏览器内容区域即浏览器窗口中用来显示网页的可视区域，注意这个可视，也就是说需要拖动滚动条才能看到的区域不算。<br>当你将浏览器窗口缩小时，clientX/clientY的最大值也会缩小，但始终，它们的最大值不会超过你浏览器可视区域。<br>特别说明：IE下此属性不规范，它们的最小值不是0而是2，也就是说IE下的clientX/clientY比火狐下始终大2px。</p>
+<h4 id="screenX-screenY"><a href="#screenX-screenY" class="headerlink" title="screenX/screenY"></a>screenX/screenY</h4><p>鼠标在屏幕上的坐标。screenX,screenY的最大值不会超过屏幕分辨率。</p>
+<h4 id="offsetX-offsetY"><a href="#offsetX-offsetY" class="headerlink" title="offsetX/offsetY"></a>offsetX/offsetY</h4><p>相对于带有定位的父盒子的x，y坐标</p>
+<h4 id="x、y"><a href="#x、y" class="headerlink" title="x、y"></a>x、y</h4><p>和screenX、screenY一样</p>
+<h3 id="HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？"><a href="#HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？" class="headerlink" title="HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？"></a>HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？</h3><h4 id="html5"><a href="#html5" class="headerlink" title="html5"></a>html5</h4><p>1）标签增删</p>
+<p>8个语义元素 header section footer aside nav main article figure</p>
+<p>内容元素mark高亮 progress进度</p>
+<p>新的表单控件calander date time email url search</p>
+<p>新的input类型 color date datetime datetime-local email</p>
+<p>移除过时标签big font frame frameset</p>
+<p>2）canvas绘图，支持内联SVG。支持MathML</p>
+<p>3）多媒体audio video source embed track</p>
+<p>4）本地离线存储，把需要离线存储在本地的文件列在一个manifest配置文件</p>
+<p>5）web存储。localStorage、SessionStorage</p>
+<h4 id="css3"><a href="#css3" class="headerlink" title="css3"></a>css3</h4><p>CSS3边框如border-radius，box-shadow等；CSS3背景如background-size，background-origin等；CSS3 2D，3D转换如transform等；CSS3动画如animation等</p>
 
       
     </div>
@@ -726,7 +779,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -960,7 +1013,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#canvas的一些方法"><span class="nav-number">1.</span> <span class="nav-text">canvas的一些方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#requestAnimationFrame有用过吗？知道是干什么的吗？"><span class="nav-number">2.</span> <span class="nav-text">requestAnimationFrame有用过吗？知道是干什么的吗？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#canvas的一些方法"><span class="nav-number">1.</span> <span class="nav-text">canvas的一些方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#requestAnimationFrame有用过吗？知道是干什么的吗？"><span class="nav-number">2.</span> <span class="nav-text">requestAnimationFrame有用过吗？知道是干什么的吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe是什么？有什么缺点？"><span class="nav-number">3.</span> <span class="nav-text">iframe是什么？有什么缺点？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Doctype作用-严格模式与混杂模式如何区分？它们有何意义"><span class="nav-number">4.</span> <span class="nav-text">Doctype作用?严格模式与混杂模式如何区分？它们有何意义?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式布局的常用解决方案对比-媒体查询、百分比、rem和vw-vh）"><span class="nav-number">5.</span> <span class="nav-text">响应式布局的常用解决方案对比(媒体查询、百分比、rem和vw/vh）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe通信，同源和不同源两种情况，多少种方法"><span class="nav-number">6.</span> <span class="nav-text">iframe通信，同源和不同源两种情况，多少种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5新增的元素"><span class="nav-number">7.</span> <span class="nav-text">HTML5新增的元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pageX-clienXt-screenX-offsetX"><span class="nav-number">8.</span> <span class="nav-text">pageX clienXt screenX offsetX</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pageX-pageY"><span class="nav-number">8.1.</span> <span class="nav-text">pageX/pageY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clientX-clientY"><span class="nav-number">8.2.</span> <span class="nav-text">clientX/clientY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#screenX-screenY"><span class="nav-number">8.3.</span> <span class="nav-text">screenX/screenY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#offsetX-offsetY"><span class="nav-number">8.4.</span> <span class="nav-text">offsetX/offsetY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#x、y"><span class="nav-number">8.5.</span> <span class="nav-text">x、y</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？"><span class="nav-number">9.</span> <span class="nav-text">HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#html5"><span class="nav-number">9.1.</span> <span class="nav-text">html5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css3"><span class="nav-number">9.2.</span> <span class="nav-text">css3</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1002,7 +1055,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">159k</span>
+    <span title="站点总字数">206k</span>
   
 
   
@@ -1013,7 +1066,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">4:26</span>
+    <span title="站点阅读时长">5:44</span>
   
 </div>
 

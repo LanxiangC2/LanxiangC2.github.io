@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-06-18T12:04:12.310Z</updated>
+  <updated>2020-06-27T08:55:36.270Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>前端知识点总结——JavaScript(3)</title>
+    <link href="http://lanxiangc2.github.io/2020/06/25/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-3/"/>
+    <id>http://lanxiangc2.github.io/2020/06/25/前端知识点总结——JavaScript-3/</id>
+    <published>2020-06-25T09:01:36.000Z</published>
+    <updated>2020-06-27T08:55:36.270Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;js判断类型&quot;&gt;&lt;a href=&quot;#js判断类型&quot; class=&quot;headerlink&quot; title=&quot;js判断类型&quot;&gt;&lt;/a&gt;js判断类型&lt;/h3&gt;&lt;p&gt;判断方法：typeof()，instanceof，Object.prototype.toString.call()等。&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;JavaScript&lt;/code&gt;里使用&lt;code&gt;typeof&lt;/code&gt;判断数据类型，只能区分&lt;strong&gt;基本类型&lt;/strong&gt;，即：&lt;code&gt;number&lt;/code&gt;、&lt;code&gt;string&lt;/code&gt;、&lt;code&gt;undefined&lt;/code&gt;、&lt;code&gt;boolean&lt;/code&gt;、&lt;code&gt;object&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;对于&lt;code&gt;null&lt;/code&gt;、&lt;code&gt;array&lt;/code&gt;、&lt;code&gt;function&lt;/code&gt;、&lt;code&gt;object&lt;/code&gt;来说，使用&lt;code&gt;typeof&lt;/code&gt;都会统一返回&lt;code&gt;object&lt;/code&gt;字符串。&lt;/p&gt;
+&lt;p&gt;要想区分对象、数组、函数、单纯使用&lt;code&gt;typeof&lt;/code&gt;是不行的。在JS中，可以通过&lt;code&gt;Object.prototype.toString&lt;/code&gt;方法，判断某个对象之属于哪种内置类型。&lt;br&gt;分为&lt;code&gt;null&lt;/code&gt;、&lt;code&gt;string&lt;/code&gt;、&lt;code&gt;boolean&lt;/code&gt;、&lt;code&gt;number&lt;/code&gt;、&lt;code&gt;undefined&lt;/code&gt;、&lt;code&gt;array&lt;/code&gt;、&lt;code&gt;function&lt;/code&gt;、&lt;code&gt;object&lt;/code&gt;、&lt;code&gt;date&lt;/code&gt;、&lt;code&gt;math&lt;/code&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="JavaScript" scheme="http://lanxiangc2.github.io/tags/JavaScript/"/>
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端知识点总结——JavaScript(2)</title>
     <link href="http://lanxiangc2.github.io/2020/06/18/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-2/"/>
     <id>http://lanxiangc2.github.io/2020/06/18/前端知识点总结——JavaScript-2/</id>
     <published>2020-06-18T06:16:41.000Z</published>
-    <updated>2020-06-18T12:04:12.310Z</updated>
+    <updated>2020-06-25T12:47:15.379Z</updated>
     
     <summary type="html">
     
@@ -150,7 +175,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94CSS/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——CSS/</id>
     <published>2020-06-13T08:33:00.000Z</published>
-    <updated>2020-06-18T08:33:32.843Z</updated>
+    <updated>2020-06-25T12:14:51.603Z</updated>
     
     <summary type="html">
     
@@ -171,7 +196,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94HTML/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——HTML/</id>
     <published>2020-06-13T07:27:55.000Z</published>
-    <updated>2020-06-13T14:26:27.317Z</updated>
+    <updated>2020-06-23T13:43:51.069Z</updated>
     
     <summary type="html">
     
@@ -191,7 +216,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——前端工程化/</id>
     <published>2020-06-13T05:36:24.000Z</published>
-    <updated>2020-06-15T08:43:02.770Z</updated>
+    <updated>2020-06-25T12:57:09.822Z</updated>
     
     <summary type="html">
     
@@ -240,7 +265,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/11/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6-2/"/>
     <id>http://lanxiangc2.github.io/2020/06/11/前端知识点总结——ES6-2/</id>
     <published>2020-06-11T01:53:59.000Z</published>
-    <updated>2020-06-18T07:36:30.355Z</updated>
+    <updated>2020-06-27T08:52:54.352Z</updated>
     
     <summary type="html">
     
@@ -294,7 +319,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/10/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     <id>http://lanxiangc2.github.io/2020/06/10/前端知识点总结——性能优化/</id>
     <published>2020-06-10T13:48:26.000Z</published>
-    <updated>2020-06-13T07:51:54.954Z</updated>
+    <updated>2020-06-25T09:48:52.536Z</updated>
     
     <summary type="html">
     
@@ -346,7 +371,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——算法与数据结构/</id>
     <published>2020-06-09T12:21:23.000Z</published>
-    <updated>2020-06-18T08:21:32.859Z</updated>
+    <updated>2020-06-27T03:03:48.136Z</updated>
     
     <summary type="html">
     
@@ -370,7 +395,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——JavaScript/</id>
     <published>2020-06-09T08:04:14.000Z</published>
-    <updated>2020-06-18T12:06:32.886Z</updated>
+    <updated>2020-06-25T12:00:47.035Z</updated>
     
     <summary type="html">
     
@@ -400,7 +425,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/</id>
     <published>2020-06-09T04:56:34.000Z</published>
-    <updated>2020-06-18T07:29:56.417Z</updated>
+    <updated>2020-06-25T13:02:42.692Z</updated>
     
     <summary type="html">
     
@@ -435,7 +460,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%BD%91%E7%BB%9C/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/</id>
     <published>2020-06-09T04:40:27.000Z</published>
-    <updated>2020-06-18T12:25:10.420Z</updated>
+    <updated>2020-06-25T06:13:17.150Z</updated>
     
     <summary type="html">
     
@@ -468,7 +493,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94Vue/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/</id>
     <published>2020-06-09T02:53:53.000Z</published>
-    <updated>2020-06-18T11:21:38.566Z</updated>
+    <updated>2020-06-25T13:13:29.970Z</updated>
     
     <summary type="html">
     
@@ -511,34 +536,6 @@
       <category term="node.js框架" scheme="http://lanxiangc2.github.io/tags/node-js%E6%A1%86%E6%9E%B6/"/>
     
       <category term="后端" scheme="http://lanxiangc2.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端知识点总结——React</title>
-    <link href="http://lanxiangc2.github.io/2020/06/08/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94React/"/>
-    <id>http://lanxiangc2.github.io/2020/06/08/前端知识点总结——React/</id>
-    <published>2020-06-08T12:41:59.000Z</published>
-    <updated>2020-06-15T11:47:54.026Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;虚拟DOM-amp-amp-Diff算法&quot;&gt;&lt;a href=&quot;#虚拟DOM-amp-amp-Diff算法&quot; class=&quot;headerlink&quot; title=&quot;虚拟DOM &amp;amp;&amp;amp; Diff算法&quot;&gt;&lt;/a&gt;虚拟DOM &amp;amp;&amp;amp;
-        
-      
-    
-    </summary>
-    
-      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="前端框架" scheme="http://lanxiangc2.github.io/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
     
   </entry>
   

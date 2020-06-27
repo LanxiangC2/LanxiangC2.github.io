@@ -105,12 +105,16 @@
 <meta property="og:description" content="对称加密和非对称加密 对称加密  对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。  非对称加密  非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）  区别  对称加密算法相比非对称加密算法来说，加解密的效率要">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic1.png">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/三次握手.jpeg">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/四次挥手.jpeg">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/xss攻击.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/token.jpg">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic2.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic3.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic4.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/session和cookie.png">
-<meta property="og:updated_time" content="2020-06-18T12:25:10.420Z">
+<meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/缓存.png">
+<meta property="og:updated_time" content="2020-06-25T06:13:17.150Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——网络">
 <meta name="twitter:description" content="对称加密和非对称加密 对称加密  对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。  非对称加密  非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）  区别  对称加密算法相比非对称加密算法来说，加解密的效率要">
@@ -293,7 +297,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">36</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">37</span></a>
 
   </li>
 
@@ -434,7 +438,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-18 20:25:10" itemprop="dateModified" datetime="2020-06-18T20:25:10+08:00">2020-06-18</time>
+                <time title="修改时间：2020-06-25 14:13:17" itemprop="dateModified" datetime="2020-06-25T14:13:17+08:00">2020-06-25</time>
               
             
           </span>
@@ -500,7 +504,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">13k</span>
+                <span title="本文字数">20k</span>
               
 
               
@@ -514,7 +518,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">21 分钟</span>
+                <span title="阅读时长">33 分钟</span>
               
             </div>
           
@@ -612,33 +616,136 @@
 <p>Last-Modified的时间单位是秒，如果某个文件在1秒内改变了多次，那么他们的Last-Modified其实并没有体现出来修改，但是Etag每次都会改变确保了精度；如果是负载均衡的服务器，各个服务器生成的Last-Modified也有可能不一致。</p>
 <p>第二在性能上，Etag要逊于Last-Modified，毕竟Last-Modified只需要记录时间，而Etag需要服务器通过算法来计算出一个hash值。</p>
 <p>第三在优先级上，服务器校验优先考虑Etag</p>
-<h3 id="常见http状态码"><a href="#常见http状态码" class="headerlink" title="常见http状态码"></a>常见http状态码</h3><p>2xx表示成功的请求</p>
-<p>200表示OK，正常返回信息<br>204 成功处理，没有内容。<br>206 范围请求响应</p>
-<p>3xx表示重定向</p>
-<p>301表示永久重定向，请求的网页已经永久移动到新位置<br>302表示临时重定向<br>304表示自从上一次请求以来，页面的内容没有改变过</p>
-<p>4xx表示客户端错误</p>
-<p>400请求报文存在语法错误<br>401表示认证失败（发送的请求需要通过HTTP认证）<br>403表示没有权限，服务器拒绝访问<br>404表示请求的资源不存在，一般是路径写错了<br>405表示请求方法不允许，一般是请求方法用错了</p>
-<p>5xx表示服务器错误</p>
-<p>500表示服务器执行请求时发生错误<br>503表示服务器暂时无法处理请求（超负载或正在停机维护）</p>
-<h3 id="浏览器地址栏键入URL后会发生什么"><a href="#浏览器地址栏键入URL后会发生什么" class="headerlink" title="浏览器地址栏键入URL后会发生什么"></a>浏览器地址栏键入URL后会发生什么</h3><p>1）查找 disk cache 中是否有匹配，如有直接显示缓存内容<br>2）DNS域名解析<br>3）三次握手,建立连接，发送请求<br>4）服务器收到请求，处理请求，返回响应<br>5）4次挥手，断开TCP连接<br>6）浏览器根据返回数据进行页面渲染</p>
-<h3 id="TCP连接、断开为什么三次握手和4次挥手"><a href="#TCP连接、断开为什么三次握手和4次挥手" class="headerlink" title="TCP连接、断开为什么三次握手和4次挥手"></a>TCP连接、断开为什么三次握手和4次挥手</h3><p><strong>三次握手：</strong></p>
+<h3 id="常见http状态码-spades-spades-spades"><a href="#常见http状态码-spades-spades-spades" class="headerlink" title="常见http状态码 &spades;&spades;&spades;"></a>常见http状态码 &spades;&spades;&spades;</h3><h4 id="2xx表示成功的请求"><a href="#2xx表示成功的请求" class="headerlink" title="2xx表示成功的请求"></a>2xx表示成功的请求</h4><p><u>200    OK    请求成功。一般用于GET与POST请求</u></p>
+<p>201    Created    已创建。成功请求并创建了新的资源</p>
+<p>202    Accepted    已接受。已经接受请求，但未处理完成</p>
+<p>203    Non-Authoritative Information    非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本</p>
+<p>204    No Content    无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档</p>
+<p>205    Reset Content    重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域</p>
+<p>206    Partial Content    部分内容。服务器成功处理了部分GET请求</p>
+<h4 id="3xx表示重定向"><a href="#3xx表示重定向" class="headerlink" title="3xx表示重定向"></a>3xx表示重定向</h4><p>300    Multiple Choices    多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择</p>
+<p>301    Moved Permanently    永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替</p>
+<p>302    Found    临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI</p>
+<p>303    See Other    查看其它地址。与301类似。使用GET和POST请求查看</p>
+<p><u>304    Not Modified    未修改。</u>所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源</p>
+<p>305    Use Proxy    使用代理。所请求的资源必须通过代理访问</p>
+<p>306    Unused    已经被废弃的HTTP状态码</p>
+<p>307    Temporary Redirect    临时重定向。与302类似。使用GET请求重定向</p>
+<h4 id="4xx表示客户端错误"><a href="#4xx表示客户端错误" class="headerlink" title="4xx表示客户端错误"></a>4xx表示客户端错误</h4><p><u>400    Bad Request    客户端请求的语法错误，服务器无法理解</u></p>
+<p><u>401    Unauthorized    请求要求用户的身份认证</u></p>
+<p>402    Payment Required    保留，将来使用</p>
+<p><u>403    Forbidden    服务器理解请求客户端的请求，但是拒绝执行此请求</u></p>
+<p><u>404    Not Found    服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置”您所请求的资源无法找到”的个性页面</u></p>
+<h4 id="5xx表示服务器错误"><a href="#5xx表示服务器错误" class="headerlink" title="5xx表示服务器错误"></a>5xx表示服务器错误</h4><p>500    Internal Server Error    服务器内部错误，无法完成请求</p>
+<p>501    Not Implemented    服务器不支持请求的功能，无法完成请求</p>
+<p><u>502    Bad Gateway    作为网关或者代理工作的服务器尝试执行请求时，从远程服务器接收到了一个无效的响应</u></p>
+<p>503    Service Unavailable    由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的Retry-After头信息中</p>
+<p>504    Gateway Time-out    充当网关或代理的服务器，未及时从远端服务器获取请求</p>
+<p>505    HTTP Version not supported    服务器不支持请求的HTTP协议的版本，无法完成处理</p>
+<h3 id="浏览器地址栏键入URL后会发生什么"><a href="#浏览器地址栏键入URL后会发生什么" class="headerlink" title="浏览器地址栏键入URL后会发生什么"></a>浏览器地址栏键入URL后会发生什么</h3><p>服务器处理请求并返回HTTP报文</p>
+<p>浏览器解析渲染页面</p>
+<p>连接结束</p>
+<blockquote>
+<p>在地址栏里输入一个URL,到这个页面呈现出来，中间会发生什么？</p>
+</blockquote>
+<ul>
+<li>查找 disk cache 中是否有匹配，如有直接显示缓存内容</li>
+<li>DNS域名解析</li>
+<li>TCP连接 ，三次握手，建立连接，发送请求</li>
+<li>发送HTTP请求</li>
+<li>服务器收到请求，处理请求，返回响应</li>
+<li>断开TCP连接，4次挥手</li>
+<li>浏览器根据返回数据进行页面渲染</li>
+</ul>
+<p>这是一个必考的面试问题，</p>
+<p>输入url后，首先需要找到这个url域名的服务器ip,为了寻找这个ip，浏览器首先会寻找缓存，查看缓存中是否有记录，缓存的查找记录为：浏览器缓存-》系统缓存-》路由器缓存，缓存中没有则查找系统的hosts文件中是否有记录，如果没有则查询DNS服务器，得到服务器的ip地址后，浏览器根据这个ip以及相应的端口号，构造一个http请求，这个请求报文会包括这次请求的信息，主要是请求方法，请求说明和请求附带的数据，并将这个http请求封装在一个tcp包中，这个tcp包会依次经过传输层，网络层，数据链路层，物理层到达服务器，服务器解析这个请求来作出响应，返回相应的html给浏览器，因为html是一个树形结构，浏览器根据这个html来构建DOM树，在dom树的构建过程中如果遇到JS脚本和外部JS连接，则会停止构建DOM树来执行和下载相应的代码，这会造成阻塞，这就是为什么推荐JS代码应该放在html代码的后面，之后根据外部样式，内部样式，内联样式构建一个CSS对象模型树CSSOM树，构建完成后和DOM树合并为渲染树，这里主要做的是排除非视觉节点，比如script，meta标签和排除display为none的节点，之后进行布局，布局主要是确定各个元素的位置和尺寸，之后是渲染页面，因为html文件中会含有图片，视频，音频等资源，在解析DOM的过程中，遇到这些都会进行并行下载，浏览器对每个域的并行下载数量有一定的限制，一般是4-6个，当然在这些所有的请求中我们还需要关注的就是缓存，缓存一般通过Cache-Control、Last-Modify、Expires等首部字段控制。 Cache-Control和Expires的区别在于Cache-Control使用相对时间，Expires使用的是基于服务器 端的绝对时间，因为存在时差问题，一般采用Cache-Control，在请求这些有设置了缓存的数据时，会先 查看是否过期，如果没有过期则直接使用本地缓存，过期则请求并在服务器校验文件是否修改，如果上一次 响应设置了ETag值会在这次请求的时候作为If-None-Match的值交给服务器校验，如果一致，继续校验 Last-Modified，没有设置ETag则直接验证Last-Modified，再决定是否返回304</p>
+<p>## </p>
+<h3 id="TCP连接、断开为什么三次握手和4次挥手-spades-spades-spades-spades"><a href="#TCP连接、断开为什么三次握手和4次挥手-spades-spades-spades-spades" class="headerlink" title="TCP连接、断开为什么三次握手和4次挥手 &spades;&spades;&spades;&spades;"></a>TCP连接、断开为什么三次握手和4次挥手 &spades;&spades;&spades;&spades;</h3><p><strong>三次握手：</strong></p>
+<p><img src="/2020/06/09/前端知识点总结——网络/三次握手.jpeg" alt="网络"></p>
 <p>目的：为了准确无误地将数据送达目标处，TCP协议采用了三次握手策略。</p>
 <p>发送端首先发送一个带SYN标志的数据包给对方。接收端收到后，回传一个带SYN/ACK标志的数据包以示传达确认信息。最后，发送端再回传一个带ACK标志的数据包，代表握手结束，建立连接。</p>
+<p><u>“三次握手”的目的是“为了防止已失效的连接请求报文段突然又传送到了服务端，因而产生错误”;解决“网络中存在延迟的重复分组”的问题</u></p>
+<blockquote>
+<p>例如以下情况如果使用两次握手：</p>
+<p>如果客户端向服务器发送第一次连接请求在网络节点上滞留了，没有收到服务器的确认，于是又重新发送了一次连接请求<br>服务器收到客户端的第二次请求发送确认，则连接建立完成<br>服务器客户端进行数据传输，传输完成断开连接。<br>此时，在网络上滞留的客户端第一次连接请求到达服务器，服务器发送确认连接但是客户端实际上并没有发送请求，因此不会理睬服务器发送的请求。但是服务器认为连接已完成，并等待客户端进行数据传输。这样会造成资源的浪费<br>如果采用三次握手的话：</p>
+<p>滞留在网络上的客户端第一次请求到达服务器之后，服务器发送确认，但实际上客户端器并没有发送请求，因此不会理睬服务器的确认，故不会发送确认，服务器等不到客户端的确认则连接建立失败。这样就防止了客户端失效的连接请求报文段突然又传到服务器</p>
+</blockquote>
 <p><strong>四次挥手：</strong></p>
+<p><img src="/2020/06/09/前端知识点总结——网络/四次挥手.jpeg" alt="网络"></p>
 <p>为了持久连接，其特点是只要任意一端没有明确提出断开连接，则保持TCP连接状态；其好处是在于减少了TCP连接的重复建立和断开所造成的额外开销，减轻了服务器端的负载。另外，减少开销的时间，使HTTP请求和响应能更早结束，从而提高web页面的显示速度。</p>
-<p>服务器端发送一个带FIN标记的数据包给客户端；客服端分两次发送带ACK、FIN标志数据包给服务端；服务端发送带ACK标志的数据包给客户端并断开连接</p>
-<h3 id="http协议不安全的原因，https是如何解决的"><a href="#http协议不安全的原因，https是如何解决的" class="headerlink" title="http协议不安全的原因，https是如何解决的"></a>http协议不安全的原因，https是如何解决的</h3><h4 id="http不足之处："><a href="#http不足之处：" class="headerlink" title="http不足之处："></a><strong>http不足之处</strong>：</h4><p>1）通信使用明文，不加密，内容可能被窃听。<br>2）不验证通信方的身份，因此可能会遭遇伪装。<br>3）无法证明报文的完整性，所以有可能已遭篡改。</p>
+<p>服务器端发送一个带FIN标记的数据包给客户端；客服端分两次发送带ACK、FIN标志数据包给服务端；服务端发送带ACK标志的数据包给客户端并断开连接；</p>
+<p>为什么要等待2MSL:</p>
+<ol>
+<li>最后一个报文没有确认，确保发送方的ACK可以到达接收方，2MSL时间内没有收到，则接收方会重发</li>
+<li>确保当前的连接的所有报文都已经过期</li>
+</ol>
+<h3 id="http协议不安全的原因，https是如何解决的"><a href="#http协议不安全的原因，https是如何解决的" class="headerlink" title="http协议不安全的原因，https是如何解决的"></a>http协议不安全的原因，https是如何解决的</h3><h4 id="http"><a href="#http" class="headerlink" title="http"></a><strong>http</strong></h4><h5 id="介绍下"><a href="#介绍下" class="headerlink" title="介绍下"></a>介绍下</h5><p>HTTP是一个基于TCP/IP通信协议来传递数据（HTML 文件, 图片文件, 查询结果等）HTTP是一个属于应用层的面向对象的协议，由于其简捷、快速的方式，适用于分布式超媒体信息系统。它于1990年提出，经过几年的使用与发展，得到不断地完善和扩展。目前在WWW中使用的是HTTP/1.0的第六版，HTTP/1.1的规范化工作正在进行之中，而且HTTP-NG(Next Generation of HTTP)的建议已经提出。HTTP协议工作于客户端-服务端架构为上。浏览器作为HTTP客户端通过URL向HTTP服务端即WEB服务器发送所有请求。Web服务器根据接收到的请求后，向客户端发送响应信息。</p>
+<h5 id="缺点呢"><a href="#缺点呢" class="headerlink" title="缺点呢"></a>缺点呢</h5><p>1）通信使用明文，不加密，内容可能被窃听。<br>2）不验证通信方的身份，因此可能会遭遇伪装。<br>3）无法证明报文的完整性，所以有可能已遭篡改。</p>
 <h4 id="https"><a href="#https" class="headerlink" title="https:"></a><strong>https:</strong></h4><p>1)用SSL（安全套接层）对通信线路进行加密<br>2）SSL有一种称为证书的手段，用于确定通信双方。通过使用证书，以证明通信方就是意料中的服务器，客户端持有证书即可完成个人身份的确认。<br>3）通过校验数字签名，将一段文本先用Hash函数生成消息摘要，然后用发送者的私钥加密生成数字签名，与原文文一起传送给接收者。接收者通过校验数字签名来确定完成性。</p>
 <p><strong>https的缺点</strong>：<br>1）https与http相比通信速度会更慢，SSL必须进行加密处理，服务器和客户端在加密解密的过程中会消耗更多的硬件资源导致处理速度变慢。<br>2）https通信，证书是必不可少的，而证书是需要花钱的。</p>
-<h3 id="前端中比较常见的攻击手段"><a href="#前端中比较常见的攻击手段" class="headerlink" title="前端中比较常见的攻击手段"></a>前端中比较常见的攻击手段</h3><h4 id="XSS攻击"><a href="#XSS攻击" class="headerlink" title="XSS攻击"></a><strong>XSS攻击</strong></h4><p>xss：全称跨站脚本攻击（Cross-Site Scripting），简单的说就是攻击者通过在目标网站上注入恶意脚本并运行，获取用户的敏感信息如 Cookie、SessionID 等，影响网站与用户数据安全。<strong>通过存在安全漏洞的web网站，注册到用户的浏览器内，渲染非法的HTML标签或者运行非法的JavaScript进行攻击的一种行为。</strong></p>
-<p><strong>原因</strong>：当攻击者通过某种方式向浏览器页面注入了恶意代码，并且浏览器执行了这些代码。</p>
-<p><strong>解决措施：</strong>渲染页面前都要先做 HTML 过滤，然后再渲染，对输入数据中的html标签&lt; &gt;进行转义 &lt; &gt; httpOnly</p>
+<h3 id="前端中比较常见的攻击手段"><a href="#前端中比较常见的攻击手段" class="headerlink" title="前端中比较常见的攻击手段"></a>前端中比较常见的攻击手段</h3><h4 id="XSS攻击"><a href="#XSS攻击" class="headerlink" title="XSS攻击"></a><strong>XSS攻击</strong></h4><p>xss：全称跨站脚本攻击（Cross-Site Scripting），<u>简单的说就是攻击者通过在目标网站上注入恶意脚本并运行，获取用户的敏感信息如 Cookie、SessionID 等到攻击者自己的网站去。极大影响网站与用户数据安全</u>。<strong>通过存在安全漏洞的web网站，注册到用户的浏览器内，渲染非法的HTML标签或者运行非法的JavaScript进行攻击的一种行为。</strong></p>
+<blockquote>
+<p>比如，攻击者在论坛中放一个看似安全的链接，骗取用户单击并窃取cookie中的用户隐私信息；或者攻击者在论坛中加一个恶意的表单，当用户提交表单的时候，却把信息传送到攻击者的服务器中，而不是用户原本以为的信任站点</p>
+</blockquote>
+<p>重点不在于跨站点，而在于脚本的执行</p>
+<p><img src="/2020/06/09/前端知识点总结——网络/xss攻击.png" alt="网络"></p>
+<p><strong>原因</strong>：当攻击者通过某种方式向浏览器页面注入了恶意代码，并且浏览器执行了这些代码。我们对url参数（或者说用户提交输入的地方）没有做充分的过滤，所以导致不合法的参数或者输入内容到了web服务器，最后当用户访问前端页面的时候呢，就可能将恶意代码拉过来重新执行了一遍。</p>
+<p><strong>危害</strong>：</p>
+<ul>
+<li>挂马（木马病毒）</li>
+<li>盗取用户Cookie</li>
+<li>DDOS（拒绝服务）客户端浏览器</li>
+<li>钓鱼技巧，高级的钓鱼技巧</li>
+<li>删除目标文章、恶意篡改数据、嫁祸</li>
+<li>劫持用户web行为，甚至进一步渗透内网</li>
+<li>渗透web2.0蠕虫（病毒）</li>
+<li>蠕虫式的DDoS攻击</li>
+<li>蠕虫式挂马攻击、刷广告、刷流量、破坏上网数据</li>
+</ul>
+<p><strong>解决措施：</strong></p>
+<blockquote>
+<p>总体思路 </p>
+<p>对输入做过滤；对输出进行编码；cookie设置http-only</p>
+</blockquote>
+<p>渲染页面前都要先做 HTML 过滤，然后再渲染，对输入数据(如html标签&lt; &gt;进行转义 &lt; &gt; ），最后设置httpOnly。</p>
+<ul>
+<li>在代码里对用户输入的地方和变量都需要仔细检查长度和对 <code>&lt;</code>，<code>&gt;</code>，<code>;</code>，<code>&#39;</code>，<code>&quot;</code>等字符做过滤。</li>
+<li>其次，再把任何内容写到页面之前都必须进行编码，避免泄露html tag（比如把<code>&lt;</code>转义成<code>&amp;lt;</code>，如果是json的话，把<code>\</code>转义为<code>\\</code>，把<code>/</code>转义为<code>\/</code>）。在这一个层面做好，至少可以防止超过一半的XSS攻击。</li>
+<li>cookie设置http-only</li>
+</ul>
+<p>后台开发一定不要信任前端的任何代码</p>
 <h4 id="CSRF-攻击"><a href="#CSRF-攻击" class="headerlink" title="CSRF 攻击"></a><strong>CSRF 攻击</strong></h4><p>CSRF 攻击全称跨站请求伪造（Cross-site Request Forgery），简单的说就是攻击者盗用了你的身份，以你的名义发送恶意请求。CSRF的另一个特征是，攻击者无法直接窃取到用户的信息（Cookie，Header，网站内容等），仅仅是冒用Cookie中的信息。<strong>攻击者通过设置陷阱，强制对已经完成的认证用户进行非预期的个人信息或者设定信息等状态的更新。</strong></p>
+<p>CSRF能够做的事情包括：以你名义发送邮件，发消息，盗取你的账号，甚至于购买商品，虚拟货币转账。造成的问题包括：个人隐私泄露以及财产安全</p>
+<blockquote>
+<p>比如用户登录了一个网站后，立刻在另一个tab页面访问了攻击者用来制造攻击的网站，这个网站要求访问刚刚登陆的网站，并发送了一个恶意请求，这时候CSRF就产生了，比如这个制造攻击的网站使用一张图片，但是这种图片的链接却是可以修改数据库的，这时候攻击者就可以以用户的名义操作这个数据库</p>
+<p>防御方式的话：使用验证码，检查https头部的refer，使用token</p>
+<p>防御CSRF 攻击主要有三种策略：验证 HTTP Referer 字段；在请求地址中添加 token 并验证；在 HTTP 头中自定义属性并验证。</p>
+</blockquote>
 <p><strong>策略：</strong></p>
 <p>CSRF自动防御策略：同源检测（Origin 和 Referer 验证）。<br>CSRF主动防御措施：Token验证 或者 双重Cookie验证 以及配合Samesite Cookie。<br>保证页面的幂等性，后端接口不要在GET页面中做用户操作。</p>
+<ul>
+<li>登录受信任网站，并在本地生成cookie</li>
+<li>在不登出A的情况下，访问危险网站B</li>
+</ul>
+<p>防范服务器端的CSRF攻击有很多种方法，但总的思想都是一致的，就是在客户端页面中增加伪随机数。</p>
+<p>up主魔王不造反：</p>
+<ul>
+<li>尽量使用POST （因为GET太容易被别人攻击），但攻击者使用form表单你还是会被攻击</li>
+<li>加入验证码，验证是用户行为（滑动或者输入验证码）</li>
+<li>验证http头字段Referer，判断域名是否是同一个（但并不是万无一失的，发送请求的时候是可以篡改这个referer的）</li>
+<li>Anti CSRF Token<ul>
+<li>在form表单中或者头信息中传递token</li>
+<li>token存储在服务端</li>
+<li>服务端通过拦截器验证有效性</li>
+<li>校验失败的拒绝请求</li>
+</ul>
+</li>
+<li>加入自定义Header</li>
+</ul>
 <h4 id="SQL注入攻击"><a href="#SQL注入攻击" class="headerlink" title="SQL注入攻击"></a>SQL注入攻击</h4><p><strong>通过把SQL命令插入Web表单、输入域名或页面请求的查询字符串中，最终达到欺骗服务器执行恶意的SQL命令</strong></p>
 <p><strong>策略：</strong></p>
 <p>从安全技术手段上来说，可以通过<a href="https://baike.baidu.com/item/数据库防火墙" target="_blank" rel="noopener">数据库防火墙</a>实现对SQL注入攻击的防范，因为SQL注入攻击往往是通过应用程序来进攻，可以使用<a href="https://baike.baidu.com/item/虚拟补丁" target="_blank" rel="noopener">虚拟补丁</a>技术实现对注入攻击的SQL特征识别，实现实时攻击阻断。</p>
+<h3 id="CSRF攻击和XSS攻击有啥区别"><a href="#CSRF攻击和XSS攻击有啥区别" class="headerlink" title="CSRF攻击和XSS攻击有啥区别"></a>CSRF攻击和XSS攻击有啥区别</h3><p>XSS攻击用于获取信息，不需要提前知道其他用户页面的代码和数据包。CSRF攻击用于代替用户完成指定的动作，需要知道其他用户页面的代码和数据包。</p>
 <h3 id="token"><a href="#token" class="headerlink" title="token"></a>token</h3><p>token主要有两个作用：①：防止表单重复提交(防止表单重复提交一般还是使用前后端都限制的方式，比如：在前端点击提交之后，将按钮置为灰色，不可再次点击，然后客户端和服务端的token各自独立存储，客户端存储在Cookie或者Form的隐藏域（放在Form隐藏域中的时候，需要每个表单）中，服务端存储在Session（单机系统中可以使用）或者其他缓存系统（分布式系统可以使用）中。②：用来作身份验证</p>
 <p>HTTP 是一个无状态的协议，一次请求结束后，下次在发送服务器就不知道这个请求是谁发来的了（同一个 IP 不代表同一个用户），在 Web 应用中，用户的认证和鉴权是非常重要的一环，实践中有多种可用方案，并且各有千秋。</p>
 <p><img src="/2020/06/09/前端知识点总结——网络/token.jpg" alt></p>
@@ -688,22 +795,22 @@
 <p><strong>5.TCP拥塞控制</strong></p>
 <p>是全局性的考虑，考虑的是整个网络</p>
 <p>报文超时这被认为是拥塞</p>
-<h3 id="HTTP的首部字段包含哪些类型？你知道哪些请求头字段-spades-spades"><a href="#HTTP的首部字段包含哪些类型？你知道哪些请求头字段-spades-spades" class="headerlink" title="HTTP的首部字段包含哪些类型？你知道哪些请求头字段 &spades;&spades;"></a>HTTP的首部字段包含哪些类型？你知道哪些请求头字段 &spades;&spades;</h3><h4 id="通用首部字段"><a href="#通用首部字段" class="headerlink" title="通用首部字段"></a>通用首部字段</h4><p>请求报文和响应报文都会使用的字段</p>
+<h3 id="HTTP的首部字段包含哪些类型？你知道哪些请求头字段-spades-spades-spades"><a href="#HTTP的首部字段包含哪些类型？你知道哪些请求头字段-spades-spades-spades" class="headerlink" title="HTTP的首部字段包含哪些类型？你知道哪些请求头字段   &spades;&spades;&spades;"></a>HTTP的首部字段包含哪些类型？你知道哪些请求头字段   &spades;&spades;&spades;</h3><h4 id="通用首部字段"><a href="#通用首部字段" class="headerlink" title="通用首部字段"></a>通用首部字段</h4><p>请求报文和响应报文都会使用的字段</p>
 <table>
 <thead>
 <tr>
 <th>Date</th>
-<th>创建报文的时间</th>
+<th>创建报文的时间 / 发送该消息的日期和时间</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Connection</td>
-<td>连接的管理</td>
+<td>连接的管理 / 客户端（浏览器）想要优先使用的连接类型</td>
 </tr>
 <tr>
 <td>Cache-Control</td>
-<td>缓存的控制</td>
+<td>缓存的控制 / 用来指定当前的请求/回复中的，是否使用缓存机制</td>
 </tr>
 <tr>
 <td>Transfer-Encoding</td>
@@ -722,19 +829,27 @@
 <tbody>
 <tr>
 <td>Accept</td>
-<td>可处理的媒体类型</td>
+<td>可处理的媒体类型 / 可接受的响应内容类型（Content-Types）</td>
 </tr>
 <tr>
 <td>Accept-Charset</td>
 <td>可接受的字符集</td>
 </tr>
 <tr>
-<td>Accept-Enoding</td>
+<td>Accept-Encoding</td>
 <td>可接受的内容编码</td>
 </tr>
 <tr>
 <td>Accept-Language</td>
-<td>可接受的自然语言</td>
+<td>可接受的自然语言 / 可接受的响应内容语言列表</td>
+</tr>
+<tr>
+<td>Athorization</td>
+<td><strong>用户的认证信息</strong></td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>这个头信息识别发出请求的浏览器或其他客户端，并可以向不同类型的浏览器返回不同的内容</td>
 </tr>
 </tbody>
 </table>
@@ -788,23 +903,35 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Accept</strong>    这个头信息指定浏览器或其他客户端可以处理的 MIME 类型。有text/html,image/，/等几种常用类型。/*可以简单的概括为告诉服务器，客户端什么数据类型都支持<br><strong>Accept-Charset</strong>    这个头信息指定浏览器可以用来显示信息的字符集。例如 ISO-8859-1<br><strong>Accept-Encoding</strong>    这个头信息指定浏览器知道如何处理的编码类型。值 gzip 或 compress 是最常见的两种可能值<br><strong>Accept-Language</strong>    这个头信息指定客户端的首选语言，在这种情况下，Servlet 会产生多种语言的结果。例如，en、en-us、ru 等。<br><strong>Authorization</strong>    这个头信息用于客户端在访问受密码保护的网页时识别自己的身份。<br><strong>Connection</strong>    这个头信息指示客户端是否可以处理持久 HTTP 连接。持久连接允许客户端或其他浏览器通过单个请求来检索多个文件。值 Keep-Alive 意味着使用了持续连接。<br><strong>Content-Length</strong>    这个头信息只适用于 POST 请求，并给出 POST 数据的大小（以字节为单位）。<br><strong>Cookie</strong>    这个头信息把之前发送到浏览器的 cookies 返回到服务器。<br><strong>Host</strong>    这个头信息指定原始的 URL 中的主机和端口。<br><strong>If-Modified-Since</strong>    这个头信息表示只有当页面在指定的日期后已更改时，客户端想要的页面。如果没有新的结果可以使用，服务器会发送一个 304 代码，表示 Not Modified 头信息。 Last-Modified 与If-Modified-Since都是用来记录页面的最后修改时间。当客户端访问页面时，服务器会将页面最后修改时间通过 Last-Modified 标识由服务器发往客户端，客户端记录修改时间，再次请求本地存在的cache页面时，客户端会通过 If-Modified-Since 头将先前服务器端发过来的最后修改时间戳发送回去，服务器端通过这个时间戳判断客户端的页面是否是最新的，如果不是最新的，则返回新的内容，如果是最新的，则 返回 304 告诉客户端其本地 cache 的页面是最新的，于是客户端就可以直接从本地加载页面了，这样在网络上传输的数据就会大大减少，同时也减轻了服务器的负担<br><strong>If-Unmodified-Since</strong>    这个头信息是 If-Modified-Since 的对立面，它指定只有当文档早于指定日期时，操作才会成功。<br><strong>Referer</strong>    这个头信息指示所指向的 Web 页的 URL。例如，如果您在网页 1，点击一个链接到网页 2，当浏览器请求网页 2 时，网页 1 的 URL 就会包含在 Referer 头信息中。<br><strong>User-Agent</strong>    这个头信息识别发出请求的浏览器或其他客户端，并可以向不同类型的浏览器返回不同的内容。</p>
+<p><strong>Accept</strong>    这个头信息指定浏览器或其他客户端可以处理的 MIME 类型。有text/html,image/，/等几种常用类型。/*可以简单的概括为告诉服务器，客户端什么数据类型都支持<br><strong>Accept-Charset</strong>    这个头信息指定浏览器可以用来显示信息的字符集。例如 ISO-8859-1<br><strong>Accept-Encoding</strong>    这个头信息指定浏览器知道如何处理的编码类型。值 gzip 或 compress 是最常见的两种可能值<br><strong>Accept-Language</strong>    这个头信息指定客户端的首选语言，在这种情况下，Servlet 会产生多种语言的结果。例如，en、en-us、ru 等。<br><strong>Authorization</strong>    这个头信息用于客户端在访问受密码保护的网页时识别自己的身份。<br><strong>Connection</strong>    这个头信息指示客户端是否可以处理持久 HTTP 连接。持久连接允许客户端或其他浏览器通过单个请求来检索多个文件。值 Keep-Alive 意味着使用了持续连接。<br><strong>Content-Length</strong>    这个头信息只适用于 POST 请求，并给出 POST 数据的大小（以字节为单位）。<br><strong>Cookie</strong>    这    个头信息把之前发送到浏览器的 cookies 返回到服务器 / 由之前服务器通过Set-Cookie设置的一个HTTP协议Cookie。<br><strong>Host</strong>    这个头信息指定原始的 URL 中的主机和端口。</p>
+<p><strong>Origin</strong>  发起一个针对<a href="http://itbilu.com/javascript/js/VkiXuUcC.html" target="_blank" rel="noopener">跨域资源共享</a>的请求（该请求要求服务器在响应中加入一个Access-Control-Allow-Origin的消息头，表示访问控制所允许的来源）</p>
+<p><strong>Upgrade</strong>  要求服务器升级到一个高版本协议</p>
+<p><strong>If-Modified-Since</strong>    这个头信息表示只有当页面在指定的日期后已更改时，客户端想要的页面。如果没有新的结果可以使用，服务器会发送一个 304 代码，表示 Not Modified 头信息。 <u>Last-Modified 与If-Modified-Since都是用来记录页面的最后修改时间</u>。当客户端访问页面时，服务器会将页面最后修改时间通过 Last-Modified 标识由服务器发往客户端，客户端记录修改时间，再次请求本地存在的cache页面时，客户端会通过 If-Modified-Since 头将先前服务器端发过来的最后修改时间戳发送回去，服务器端通过这个时间戳判断客户端的页面是否是最新的，如果不是最新的，则返回新的内容，如果是最新的，则 返回 304 告诉客户端其本地 cache 的页面是最新的，于是客户端就可以直接从本地加载页面了，这样在网络上传输的数据就会大大减少，同时也减轻了服务器的负担</p>
+<p><strong>If-None-Match</strong>  允许在对应的内容未被修改的情况下返回304未修改（ 304 Not Modified ），参考 超文本传输协议 的实体标记</p>
+<p><strong>If-Unmodified-Since</strong>    这个头信息是 If-Modified-Since 的对立面，它指定只有当文档早于指定日期时，操作才会成功。<br><strong>Referer</strong>    这个头信息指示所指向的 Web 页的 URL。例如，如果您在网页 1，点击一个链接到网页 2，当浏览器请求网页 2 时，网页 1 的 URL 就会包含在 Referer 头信息中。<br><strong>User-Agent</strong>    这个头信息识别发出请求的浏览器或其他客户端，并可以向不同类型的浏览器返回不同的内容。</p>
 <h3 id="登录注册怎么与后台交互"><a href="#登录注册怎么与后台交互" class="headerlink" title="登录注册怎么与后台交互"></a>登录注册怎么与后台交互</h3><p><img src="/2020/06/09/前端知识点总结——网络/session和cookie.png" alt="session和cookie关系"></p>
 <p>请求登录接口，成功则设置cookie, 如user=zhangsan</p>
 <p>前端再请求其他接口，就会带着上述的cookie</p>
 <p>服务端判断cookie有无user=zhangsan ,即可验证</p>
 <h4 id="cookie和session"><a href="#cookie和session" class="headerlink" title="cookie和session"></a>cookie和session</h4><p>由于HTTP协议是无状态的协议，所以服务端需要记录用户的状态时，就需要用某种机制来识具体的用户，这个机制就是Session。用唯一的一个标识session来标记用户，这个session是保存在服务端的。保存的方法通常有：内存、数据库、文件等。<br>那么有了这个session，如何识别呢？就需要保sessionId保存在cookie中。<br>因此可以看出：<br>session：用来跟踪会话状态，保存在服务端，安全性更高。因为 session id 的存在，通常要借助 cookie 实现。<br>cookie：是客户端保存用户信息的一种机制，用来记录用户的一些信息，也是实现Session的一种方式。</p>
 <h4 id="cookie在跨域时是如何携带cookie的"><a href="#cookie在跨域时是如何携带cookie的" class="headerlink" title="cookie在跨域时是如何携带cookie的"></a>cookie在跨域时是如何携带cookie的</h4><p>在解决跨域时，我们会采用很多解决跨域的方法。此处以cors为例。<br>cors默认不发cookie。如果要发cookie，客户端需要设置withCredentials 属性为 true（withCredentials属性会包含来自远程域的请求的任何cookie，但这些cookie依然遵循同源策略），需要服务端使用Access-Control-Allow-Credentials: true 字段来允许携带cookie。</p>
-<h3 id="缓存有哪些"><a href="#缓存有哪些" class="headerlink" title="缓存有哪些"></a>缓存有哪些</h3><p>浏览器的缓存规则是在 http 协议头和 html 页面的 meta 标签中定义的。主要分为两部分：强缓存和协商缓存。</p>
+<h3 id="缓存有哪些-spades-spades-spades"><a href="#缓存有哪些-spades-spades-spades" class="headerlink" title="缓存有哪些   &spades;&spades;&spades;"></a>缓存有哪些   &spades;&spades;&spades;</h3><p>因为服务器上的资源不是一直固定不变的，大多数情况下它会更新，这个时候如果我们还访问本地缓存，那么对用户来说，那就相当于资源没有更新，用户看到的还是旧的资源；所以我们希望服务器上的资源更新了浏览器就请求新的资源，没有更新就使用本地的缓存，以最大程度的减少因网络请求而产生的资源浪费。</p>
+<p>浏览器的缓存规则是在 http 协议头和 html 页面的 meta 标签中定义的。</p>
+<p>缓存分为两种：强缓存和协商缓存，根据响应的header内容来决定</p>
+<p><img src="/2020/06/09/前端知识点总结——网络/缓存.png" alt="session和cookie关系"></p>
 <h4 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h4><p><u>从缓存中取资源，但是如果有缓存的话就不经过服务器（即不发请求），直接从缓存中取。状态码200</u></p>
+<p><u>强缓存相关字段有expires，cache-control。如果cache-control与expires同时存在的话，cache-control的优先级高于expires。</u></p>
 <p>强缓存是指缓存的副本在有效期内，浏览器直接获取这个副本并渲染。<br>强缓存主要涉及的 http 协议报头有：Expires，cache-control。</p>
 <p>强缓存的过程：浏览器发起 http 请求，浏览器缓存中查找该请求的结果以及缓存标识，缓存副本在有效期内，该请求返回状态码 200，从 disk cache 或 memory cache （size 中显示 from disk cache 或 from memory cache）中返回。如果缓存副本并不在有效期内，浏览器将发起 http 请求到服务端，服务端返回请求结果和缓存规则，并将请求结果和缓存标识存在浏览器缓存中。</p>
 <p>Expires：是HTTP/1的产物，是一个绝对的时间，如果浏览器时间还没有超过这个expires时间，代表缓存还有效。直接从缓存中读取资源。<br>cache-control：是HTTP/1.1提出的。</p>
 <h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><p><u>从缓存中取资源，但是需要给服务器发请求来由服务器告知缓存是否可用，然后从缓存中取，状态码是304</u></p>
+<p><u>协商缓存相关字段有Last-Modified/If-Modified-Since，Etag/If-None-Match</u></p>
 <p>协商缓存是在强缓存失效后，浏览器携带缓存标识向服务器发起请求，由服务器根据缓存标识决定是否使用缓存的过程。</p>
-<p>协商缓存的过程：浏览器发起 http 请求，浏览器缓存返回缓存标识（请求的缓存结果失效），浏览器携带该资源的缓存标识，向服务器发起 http 请求，如果服务器返回 304 和 not modified，浏览器向浏览器缓存获取该请求的缓存结果，浏览器环迅返回该请求结果。如果服务器返回 200 和请求结果（该资源更新了，重新返回请求结果），浏览器将该请求结果和缓存标识存入浏览器缓存中。</p>
-<p>协商缓存主要涉及的 http 协议报头有：Last-Modified 和 ETag。</p>
-<h3 id="cookie、localStorage、sessionStorage有什么区别"><a href="#cookie、localStorage、sessionStorage有什么区别" class="headerlink" title="cookie、localStorage、sessionStorage有什么区别"></a>cookie、localStorage、sessionStorage有什么区别</h3><p>Web Storage分为两种： sessionStorage 和localStorage ，即这两个是Storage的一个实例。</p>
+<p>协商缓存的过程：</p>
+<p>条件1：浏览器进行缓存过期判断 ；条件2：服务器判断文件时候被修改。如果两种条件的判断结果都是文件未修改过，服务器就会直接告诉浏览器，文件没有被修改过，可以继续使用缓存——304 Not Modified。此时，浏览器就会从本地缓存中获取请求资源的内容。</p>
+<p>协商缓存主要涉及的 http 协议报头有：Last-Modified/If-Modified-Since，Etag/If-None-Match</p>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>只有get请求会被缓存，post请求不会</p>
+<h3 id="cookie、localStorage、sessionStorage有什么区别-spades-spades-spades"><a href="#cookie、localStorage、sessionStorage有什么区别-spades-spades-spades" class="headerlink" title="cookie、localStorage、sessionStorage有什么区别 &spades; &spades; &spades;"></a>cookie、localStorage、sessionStorage有什么区别 &spades; &spades; &spades;</h3><p>Web Storage分为两种： sessionStorage 和localStorage ，即这两个是Storage的一个实例。</p>
 <p>Web Storage的两个主要目标是：</p>
 <ul>
 <li>提供一种在cookie之外存储会话数据的途径。</li>
@@ -846,6 +973,42 @@
 <blockquote>
 <p>这篇博客写的不错：<a href="https://www.cnblogs.com/jing-tian/p/10991431.html" target="_blank" rel="noopener">https://www.cnblogs.com/jing-tian/p/10991431.html</a></p>
 </blockquote>
+<h3 id="indexDB与web-Storage比较"><a href="#indexDB与web-Storage比较" class="headerlink" title="indexDB与web Storage比较"></a>indexDB与web Storage比较</h3><blockquote>
+<p> indexDB是H5 数据库</p>
+</blockquote>
+<p><strong>优点</strong>：存储类型丰富 / 条件搜索优势明显 / 可以再work中使用 / 存储容量大</p>
+<p><strong>缺点</strong>：学习曲线陡峭 / 兼容性略严重 / 跨域问题有限制 </p>
+<h3 id="一句话概括RESTFUL"><a href="#一句话概括RESTFUL" class="headerlink" title="一句话概括RESTFUL"></a>一句话概括RESTFUL</h3><p>就是用URL定位资源，用HTTP描述操作</p>
+<h3 id="Cookie如何防范XSS攻击"><a href="#Cookie如何防范XSS攻击" class="headerlink" title="Cookie如何防范XSS攻击"></a>Cookie如何防范XSS攻击</h3><p>XSS（跨站脚本攻击）是指攻击者在返回的HTML中嵌入javascript脚本，为了减轻这些攻击，需要在HTTP头部配上，set-cookie：</p>
+<p><code>httponly</code>-这个属性可以防止XSS,它会禁止javascript脚本来访问cookie。</p>
+<p><code>secure</code> - 这个属性告诉浏览器仅在请求为https的时候发送cookie。</p>
+<p>结果应该是这样的：Set-Cookie=<cookie-value>…..</cookie-value></p>
+<h3 id="GET和POST的区别"><a href="#GET和POST的区别" class="headerlink" title="GET和POST的区别"></a>GET和POST的区别</h3><p>get参数通过url传递，post放在request body中。</p>
+<p>get请求在url中传递的参数是有长度限制的，而post没有。</p>
+<p>get比post更不安全，因为参数直接暴露在url中，所以不能用来传递敏感信息。</p>
+<p>get请求只能进行url编码，而post支持多种编码方式</p>
+<p>get请求会浏览器主动cache，而post支持多种编码方式。</p>
+<p>get请求参数会被完整保留在浏览历史记录里，而post中的参数不会被保留。</p>
+<p>GET和POST本质上就是TCP链接，并无差别。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。</p>
+<p>GET产生一个TCP数据包；POST产生两个TCP数据包。</p>
+<h3 id="301和302的区别"><a href="#301和302的区别" class="headerlink" title="301和302的区别"></a>301和302的区别</h3><p>301 Moved Permanently 被请求的资源已永久移动到新位置，并且将来任何对此资源的引用都应该使用本响应返回的若干个URI之一。如果可能，拥有链接编辑功能的客户端应当自动把请求的地址修改为从服务器反馈回来的地址。除非额外指定，否则这个响应也是可缓存的。</p>
+<p>302 Found 请求的资源现在临时从不同的URI响应请求。由于这样的重定向是临时的，客户端应当继续向原有地址发送以后的请求。只有在Cache-Control或Expires中进行了指定的情况下，这个响应才是可缓存的。</p>
+<p>字面上的区别就是301是永久重定向，而302是临时重定向。</p>
+<p>301比较常用的场景是使用域名跳转。302用来做临时跳转 比如未登陆的用户访问用户中心重定向到登录页面。</p>
+<h3 id="HTTP支持的方法"><a href="#HTTP支持的方法" class="headerlink" title="HTTP支持的方法"></a>HTTP支持的方法</h3><p><code>GET, POST, HEAD, OPTIONS, PUT, DELETE, TRACE, CONNECT</code></p>
+<h3 id="HTTP2-0-的特性"><a href="#HTTP2-0-的特性" class="headerlink" title="HTTP2.0 的特性"></a>HTTP2.0 的特性</h3><p>http2.0的特性如下：</p>
+<p>1、内容安全，应为http2.0是基于https的，天然具有安全特性，通过http2.0的特性可以避免单纯使用https的性能下降</p>
+<p>2、二进制格式，http1.X的解析是基于文本的，http2.0将所有的传输信息分割为更小的消息和帧，并对他们采用二进制格式编码，基于二进制可以让协议有更多的扩展性，比如引入了帧来传输数据和指令</p>
+<p>3、多路复用，这个功能相当于是长连接的增强，每个request请求可以随机的混杂在一起，接收方可以根据request的id将request再归属到各自不同的服务端请求里面，另外多路复用中也支持了流的优先级，允许客户端告诉服务器那些内容是更优先级的资源，可以优先传输，</p>
+<h3 id="cache-control的值有哪些"><a href="#cache-control的值有哪些" class="headerlink" title="cache-control的值有哪些"></a>cache-control的值有哪些</h3><p>cache-control是一个通用消息头字段被用于HTTP请求和响应中，通过指定指令来实现缓存机制，这个缓存指令是单向的，常见的取值有private、no-cache、max-age、must-revalidate等，默认为private。</p>
+<h3 id="怎么看网站的性能如何"><a href="#怎么看网站的性能如何" class="headerlink" title="怎么看网站的性能如何"></a>怎么看网站的性能如何</h3><p>检测页面加载时间一般有两种方式，一种是被动去测：就是在被检测的页面置入脚本或探针，当用户访问网页时，探针自动采集数据并传回数据库进行分析，另一种主动监测的方式，即主动的搭建分布式受控环境，模拟用户发起页面访问请求，主动采集性能数据并分析，在检测的精准度上，专业的第三方工具效果更佳，比如说性能极客</p>
+<h3 id="cookie安全策略"><a href="#cookie安全策略" class="headerlink" title="cookie安全策略"></a>cookie安全策略</h3><p>在服务端设置cookie的时候设置http-only,这样就可以防止用户通过JS获取到cookie。对cookie的读写或发送一般有如下字段进行设置：</p>
+<p>http-only: 只允许http请求读取cookie，JS代码是无法读取cookie的（document.cookie会显示http-only的cookie项被自动过滤）。发送请求时自动发送cookie。</p>
+<p>secure-cookie：只允许https请求读取，发送请求时自动发送cookie。</p>
+<p>host-only：只允许主机域名与domain设置完成一致的网站才能访问改cookie。</p>
+<h3 id="cookie有哪些编码方式"><a href="#cookie有哪些编码方式" class="headerlink" title="cookie有哪些编码方式"></a>cookie有哪些编码方式</h3><p>encodeURI（）</p>
+<h2 id="补充get和post请求在缓存方面的区别"><a href="#补充get和post请求在缓存方面的区别" class="headerlink" title="补充get和post请求在缓存方面的区别"></a>补充get和post请求在缓存方面的区别</h2><p>get请求类似于查找的过程，用户获取数据，可以不用每次都与数据库连接，所以可以使用缓存。</p>
+<p>post不同，post做的一般是修改和删除的工作，所以必须与数据库交互，所以不能使用缓存。因此get请求适合于请求缓存。</p>
 
       
     </div>
@@ -1041,7 +1204,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1275,7 +1438,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密和非对称加密"><span class="nav-number">1.</span> <span class="nav-text">对称加密和非对称加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP和UDP的区别"><span class="nav-number">2.</span> <span class="nav-text">TCP和UDP的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UDP"><span class="nav-number">2.1.</span> <span class="nav-text">UDP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP"><span class="nav-number">2.2.</span> <span class="nav-text">TCP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP和HTTPS的区别"><span class="nav-number">3.</span> <span class="nav-text">HTTP和HTTPS的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器页面渲染的流程"><span class="nav-number">4.</span> <span class="nav-text">浏览器页面渲染的流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）解析文档构建DOM树"><span class="nav-number">4.1.</span> <span class="nav-text">1）解析文档构建DOM树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2）构建渲染树"><span class="nav-number">4.2.</span> <span class="nav-text">2）构建渲染树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3）布局与绘制渲染树"><span class="nav-number">4.3.</span> <span class="nav-text">3）布局与绘制渲染树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css会阻塞页面渲染吗？会的话该怎么解决呢？"><span class="nav-number">5.</span> <span class="nav-text">css会阻塞页面渲染吗？会的话该怎么解决呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器缓存机制"><span class="nav-number">6.</span> <span class="nav-text">浏览器缓存机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见http状态码"><span class="nav-number">7.</span> <span class="nav-text">常见http状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器地址栏键入URL后会发生什么"><span class="nav-number">8.</span> <span class="nav-text">浏览器地址栏键入URL后会发生什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP连接、断开为什么三次握手和4次挥手"><span class="nav-number">9.</span> <span class="nav-text">TCP连接、断开为什么三次握手和4次挥手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http协议不安全的原因，https是如何解决的"><span class="nav-number">10.</span> <span class="nav-text">http协议不安全的原因，https是如何解决的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#http不足之处："><span class="nav-number">10.1.</span> <span class="nav-text">http不足之处：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#https"><span class="nav-number">10.2.</span> <span class="nav-text">https:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端中比较常见的攻击手段"><span class="nav-number">11.</span> <span class="nav-text">前端中比较常见的攻击手段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XSS攻击"><span class="nav-number">11.1.</span> <span class="nav-text">XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSRF-攻击"><span class="nav-number">11.2.</span> <span class="nav-text">CSRF 攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL注入攻击"><span class="nav-number">11.3.</span> <span class="nav-text">SQL注入攻击</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#token"><span class="nav-number">12.</span> <span class="nav-text">token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#token和session的区别"><span class="nav-number">13.</span> <span class="nav-text">token和session的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sessionID的生成方式"><span class="nav-number">13.1.</span> <span class="nav-text">sessionID的生成方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#token的生成方式"><span class="nav-number">13.2.</span> <span class="nav-text">token的生成方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#区别"><span class="nav-number">13.3.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">13.4.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-协议如何保证可靠传输"><span class="nav-number">14.</span> <span class="nav-text">TCP 协议如何保证可靠传输</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP的首部字段包含哪些类型？你知道哪些请求头字段-spades-spades"><span class="nav-number">15.</span> <span class="nav-text">HTTP的首部字段包含哪些类型？你知道哪些请求头字段 ♠♠</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通用首部字段"><span class="nav-number">15.1.</span> <span class="nav-text">通用首部字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求首部字段"><span class="nav-number">15.2.</span> <span class="nav-text">请求首部字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应的首部字段"><span class="nav-number">15.3.</span> <span class="nav-text">响应的首部字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实体首部的字段"><span class="nav-number">15.4.</span> <span class="nav-text">实体首部的字段</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#登录注册怎么与后台交互"><span class="nav-number">16.</span> <span class="nav-text">登录注册怎么与后台交互</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie和session"><span class="nav-number">16.1.</span> <span class="nav-text">cookie和session</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie在跨域时是如何携带cookie的"><span class="nav-number">16.2.</span> <span class="nav-text">cookie在跨域时是如何携带cookie的</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存有哪些"><span class="nav-number">17.</span> <span class="nav-text">缓存有哪些</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#强缓存"><span class="nav-number">17.1.</span> <span class="nav-text">强缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#协商缓存"><span class="nav-number">17.2.</span> <span class="nav-text">协商缓存</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie、localStorage、sessionStorage有什么区别"><span class="nav-number">18.</span> <span class="nav-text">cookie、localStorage、sessionStorage有什么区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#共同点"><span class="nav-number">18.1.</span> <span class="nav-text">共同点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#区别-1"><span class="nav-number">18.2.</span> <span class="nav-text">区别</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#对称加密和非对称加密"><span class="nav-number">1.</span> <span class="nav-text">对称加密和非对称加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP和UDP的区别"><span class="nav-number">2.</span> <span class="nav-text">TCP和UDP的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UDP"><span class="nav-number">2.1.</span> <span class="nav-text">UDP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP"><span class="nav-number">2.2.</span> <span class="nav-text">TCP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP和HTTPS的区别"><span class="nav-number">3.</span> <span class="nav-text">HTTP和HTTPS的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器页面渲染的流程"><span class="nav-number">4.</span> <span class="nav-text">浏览器页面渲染的流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）解析文档构建DOM树"><span class="nav-number">4.1.</span> <span class="nav-text">1）解析文档构建DOM树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2）构建渲染树"><span class="nav-number">4.2.</span> <span class="nav-text">2）构建渲染树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3）布局与绘制渲染树"><span class="nav-number">4.3.</span> <span class="nav-text">3）布局与绘制渲染树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css会阻塞页面渲染吗？会的话该怎么解决呢？"><span class="nav-number">5.</span> <span class="nav-text">css会阻塞页面渲染吗？会的话该怎么解决呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器缓存机制"><span class="nav-number">6.</span> <span class="nav-text">浏览器缓存机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见http状态码-spades-spades-spades"><span class="nav-number">7.</span> <span class="nav-text">常见http状态码 ♠♠♠</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2xx表示成功的请求"><span class="nav-number">7.1.</span> <span class="nav-text">2xx表示成功的请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3xx表示重定向"><span class="nav-number">7.2.</span> <span class="nav-text">3xx表示重定向</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4xx表示客户端错误"><span class="nav-number">7.3.</span> <span class="nav-text">4xx表示客户端错误</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5xx表示服务器错误"><span class="nav-number">7.4.</span> <span class="nav-text">5xx表示服务器错误</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器地址栏键入URL后会发生什么"><span class="nav-number">8.</span> <span class="nav-text">浏览器地址栏键入URL后会发生什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP连接、断开为什么三次握手和4次挥手-spades-spades-spades-spades"><span class="nav-number">9.</span> <span class="nav-text">TCP连接、断开为什么三次握手和4次挥手 ♠♠♠♠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http协议不安全的原因，https是如何解决的"><span class="nav-number">10.</span> <span class="nav-text">http协议不安全的原因，https是如何解决的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#http"><span class="nav-number">10.1.</span> <span class="nav-text">http</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#介绍下"><span class="nav-number">10.1.1.</span> <span class="nav-text">介绍下</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺点呢"><span class="nav-number">10.1.2.</span> <span class="nav-text">缺点呢</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#https"><span class="nav-number">10.2.</span> <span class="nav-text">https:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端中比较常见的攻击手段"><span class="nav-number">11.</span> <span class="nav-text">前端中比较常见的攻击手段</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XSS攻击"><span class="nav-number">11.1.</span> <span class="nav-text">XSS攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSRF-攻击"><span class="nav-number">11.2.</span> <span class="nav-text">CSRF 攻击</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL注入攻击"><span class="nav-number">11.3.</span> <span class="nav-text">SQL注入攻击</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF攻击和XSS攻击有啥区别"><span class="nav-number">12.</span> <span class="nav-text">CSRF攻击和XSS攻击有啥区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#token"><span class="nav-number">13.</span> <span class="nav-text">token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#token和session的区别"><span class="nav-number">14.</span> <span class="nav-text">token和session的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sessionID的生成方式"><span class="nav-number">14.1.</span> <span class="nav-text">sessionID的生成方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#token的生成方式"><span class="nav-number">14.2.</span> <span class="nav-text">token的生成方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#区别"><span class="nav-number">14.3.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">14.4.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-协议如何保证可靠传输"><span class="nav-number">15.</span> <span class="nav-text">TCP 协议如何保证可靠传输</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP的首部字段包含哪些类型？你知道哪些请求头字段-spades-spades-spades"><span class="nav-number">16.</span> <span class="nav-text">HTTP的首部字段包含哪些类型？你知道哪些请求头字段   ♠♠♠</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通用首部字段"><span class="nav-number">16.1.</span> <span class="nav-text">通用首部字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求首部字段"><span class="nav-number">16.2.</span> <span class="nav-text">请求首部字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应的首部字段"><span class="nav-number">16.3.</span> <span class="nav-text">响应的首部字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实体首部的字段"><span class="nav-number">16.4.</span> <span class="nav-text">实体首部的字段</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#登录注册怎么与后台交互"><span class="nav-number">17.</span> <span class="nav-text">登录注册怎么与后台交互</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie和session"><span class="nav-number">17.1.</span> <span class="nav-text">cookie和session</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie在跨域时是如何携带cookie的"><span class="nav-number">17.2.</span> <span class="nav-text">cookie在跨域时是如何携带cookie的</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存有哪些-spades-spades-spades"><span class="nav-number">18.</span> <span class="nav-text">缓存有哪些   ♠♠♠</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#强缓存"><span class="nav-number">18.1.</span> <span class="nav-text">强缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#协商缓存"><span class="nav-number">18.2.</span> <span class="nav-text">协商缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意"><span class="nav-number">18.3.</span> <span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie、localStorage、sessionStorage有什么区别-spades-spades-spades"><span class="nav-number">19.</span> <span class="nav-text">cookie、localStorage、sessionStorage有什么区别 ♠ ♠ ♠</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#共同点"><span class="nav-number">19.1.</span> <span class="nav-text">共同点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#区别-1"><span class="nav-number">19.2.</span> <span class="nav-text">区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#indexDB与web-Storage比较"><span class="nav-number">20.</span> <span class="nav-text">indexDB与web Storage比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一句话概括RESTFUL"><span class="nav-number">21.</span> <span class="nav-text">一句话概括RESTFUL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie如何防范XSS攻击"><span class="nav-number">22.</span> <span class="nav-text">Cookie如何防范XSS攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GET和POST的区别"><span class="nav-number">23.</span> <span class="nav-text">GET和POST的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#301和302的区别"><span class="nav-number">24.</span> <span class="nav-text">301和302的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP支持的方法"><span class="nav-number">25.</span> <span class="nav-text">HTTP支持的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP2-0-的特性"><span class="nav-number">26.</span> <span class="nav-text">HTTP2.0 的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cache-control的值有哪些"><span class="nav-number">27.</span> <span class="nav-text">cache-control的值有哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么看网站的性能如何"><span class="nav-number">28.</span> <span class="nav-text">怎么看网站的性能如何</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie安全策略"><span class="nav-number">29.</span> <span class="nav-text">cookie安全策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cookie有哪些编码方式"><span class="nav-number">30.</span> <span class="nav-text">cookie有哪些编码方式</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#补充get和post请求在缓存方面的区别"><span class="nav-number"></span> <span class="nav-text">补充get和post请求在缓存方面的区别</span></a></li></div>
             
 
           </div>
@@ -1317,7 +1480,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">159k</span>
+    <span title="站点总字数">206k</span>
   
 
   
@@ -1328,7 +1491,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">4:26</span>
+    <span title="站点阅读时长">5:44</span>
   
 </div>
 

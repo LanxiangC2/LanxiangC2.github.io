@@ -109,7 +109,7 @@
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/vuex.jpg">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/pic2.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/pic3.png">
-<meta property="og:updated_time" content="2020-06-18T11:21:38.566Z">
+<meta property="og:updated_time" content="2020-06-25T13:13:29.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——Vue">
 <meta name="twitter:description" content="vue和react   &amp;spades; 相似之处  Virtual DOMVue.js(2.0版本)与React的其中最大一个相似之处，就是他们都使用了一种叫’Virtual DOM’的东西。所谓的Virtual DOM基本上说就是它名字的意思：虚拟DOM，DOM树的虚拟表现。它的诞生是基于这么一个概念：改变真实的DOM状态远比改变一个JavaScript对象的花销要大得多。 Virtual D">
@@ -292,7 +292,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">36</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">37</span></a>
 
   </li>
 
@@ -433,7 +433,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-18 19:21:38" itemprop="dateModified" datetime="2020-06-18T19:21:38+08:00">2020-06-18</time>
+                <time title="修改时间：2020-06-25 21:13:29" itemprop="dateModified" datetime="2020-06-25T21:13:29+08:00">2020-06-25</time>
               
             
           </span>
@@ -499,7 +499,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">16k</span>
+                <span title="本文字数">17k</span>
               
 
               
@@ -513,7 +513,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">26 分钟</span>
+                <span title="阅读时长">28 分钟</span>
               
             </div>
           
@@ -580,6 +580,16 @@
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4></blockquote>
 <p>都是响应式框架，开发业务都没有任何问题。Vue适合于响应式框架的初学者，因为API很完全，不会的东西可以很快搜到答案，React适合对设计有所追求的开发者，因为React的API很少，对开发没有过多的约束，可以更大程度发挥前端创造性。另外RN相对于Weex也更加成熟一些。</p>
 <h3 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h3><p><img src="/2020/06/09/前端知识点总结——Vue/lifecycle.png" alt="vue生命周期"></p>
+<p>Vue实例有一个完整的生命周期，也就是从开始创建、初始化数据、编译模板、挂载Dom、渲染→更新→渲染、销毁等一系列过程，我们称这是Vue的生命周期。通俗说就是Vue实例从创建到销毁的过程，就是生命周期。</p>
+<p>每一个组件或者实例都会经历一个完整的生命周期，总共分为三个阶段：初始化、运行中、销毁。</p>
+<p>实例、组件通过new Vue() 创建出来之后会初始化事件和生命周期，然后就会执行<strong>beforeCreate钩子函数</strong>，这个时候，数据还没有挂载呢，只是一个空壳，无法访问到数据和真实的dom，一般不做操作</p>
+<p>挂载数据，绑定事件等等，然后<strong>执行created函数</strong>，<u>这个时候已经可以使用到数据，也可以更改数据,</u>在这里更改数据不会触发updated函数，在这里可以在渲染前倒数第二次更改数据的机会，不会触发其他的钩子函数，一般可以在这里做<u>初始数据的获取</u></p>
+<p>接下来开始找实例或者组件对应的模板，编译模板为虚拟dom放入到render函数中准备渲染，然后<strong>执行beforeMount钩子函数</strong>，在这个函数中虚拟dom已经创建完成，马上就要渲染,在这里也可以更改数据，不会触发updated，在这里可以在渲染前最后一次更改数据的机会，不会触发其他的钩子函数，<u>一般可以在这里做初始数据的获取</u></p>
+<p>接下来开始render，渲染出真实dom，然后<strong>执行mounted钩子函数</strong>，此时，组件已经出现在页面中，数据、真实dom都已经处理好了,事件都已经挂载好了，<u>可以在这里操作真实dom等事情</u>…</p>
+<p>当组件或实例的数据更改之后，会<strong>立即执行beforeUpdate</strong>，然后vue的虚拟dom机制会重新构建虚拟dom与上一次的虚拟dom树利用diff算法进行对比之后重新渲染，一般不做什么事儿</p>
+<p>当更新完成后，<strong>执行updated</strong>，数据已经更改完成，dom也重新render完成，可以操作更新后的虚拟dom</p>
+<p>当经过某种途径调用$destroy方法后，<strong>立即执行beforeDestroy</strong>，一般在这里做一些善后工作，例如清除计时器、清除非指令绑定的事件等等</p>
+<p>组件的数据绑定、监听…去掉后只剩下dom空壳，这个时候，<strong>执行destroyed</strong>，在这里做善后工作也可以</p>
 <h3 id="vue中created和mounted的区别"><a href="#vue中created和mounted的区别" class="headerlink" title="vue中created和mounted的区别"></a>vue中created和mounted的区别</h3><h4 id="官方解释"><a href="#官方解释" class="headerlink" title="官方解释"></a>官方解释</h4><blockquote>
 <p><strong>created</strong>：在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，property 和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，<code>$el</code> property 目前尚不可用。</p>
 </blockquote>
@@ -910,7 +920,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1186,7 +1196,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">159k</span>
+    <span title="站点总字数">206k</span>
   
 
   
@@ -1197,7 +1207,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">4:26</span>
+    <span title="站点阅读时长">5:44</span>
   
 </div>
 
