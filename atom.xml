@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-06-27T08:55:36.270Z</updated>
+  <updated>2020-06-28T02:50:57.757Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/25/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-3/"/>
     <id>http://lanxiangc2.github.io/2020/06/25/前端知识点总结——JavaScript-3/</id>
     <published>2020-06-25T09:01:36.000Z</published>
-    <updated>2020-06-27T08:55:36.270Z</updated>
+    <updated>2020-06-28T02:50:57.757Z</updated>
     
     <summary type="html">
     
@@ -46,17 +46,30 @@
     <link href="http://lanxiangc2.github.io/2020/06/18/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-2/"/>
     <id>http://lanxiangc2.github.io/2020/06/18/前端知识点总结——JavaScript-2/</id>
     <published>2020-06-18T06:16:41.000Z</published>
-    <updated>2020-06-25T12:47:15.379Z</updated>
+    <updated>2020-06-28T12:14:58.027Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;原型链-spades-spades-spades&quot;&gt;&lt;a href=&quot;#原型链-spades-spades-spades&quot; class=&quot;headerlink&quot; title=&quot;原型链    &amp;spades;&amp;spades;&amp;spades;&quot;&gt;&lt;/a&gt;原型链   
-        
-      
+      &lt;h3 id=&quot;原型链-spades-spades-spades&quot;&gt;&lt;a href=&quot;#原型链-spades-spades-spades&quot; class=&quot;headerlink&quot; title=&quot;原型链    &amp;spades;&amp;spades;&amp;spades;&quot;&gt;&lt;/a&gt;原型链    &amp;spades;&amp;spades;&amp;spades;&lt;/h3&gt;&lt;p&gt;见纸质版笔记&lt;/p&gt;
+&lt;h3 id=&quot;this-spades-spades-spades&quot;&gt;&lt;a href=&quot;#this-spades-spades-spades&quot; class=&quot;headerlink&quot; title=&quot;this  &amp;spades;&amp;spades;&amp;spades;&quot;&gt;&lt;/a&gt;this  &amp;spades;&amp;spades;&amp;spades;&lt;/h3&gt;&lt;p&gt;this是JavaScript的一个关键字，随着函数使用场合的不同，this的值会发生变化。但是有一个原则，即this指向的是调用函数的那个对象。this是全局对象Global，可以作为方法调用&lt;/p&gt;
+&lt;h4 id=&quot;this作为构造函数执行&quot;&gt;&lt;a href=&quot;#this作为构造函数执行&quot; class=&quot;headerlink&quot; title=&quot;this作为构造函数执行&quot;&gt;&lt;/a&gt;this作为构造函数执行&lt;/h4&gt;&lt;p&gt;this 指向创建出来的实例&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; name = &lt;span class=&quot;string&quot;&gt;&#39;zl&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;test&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name = &lt;span class=&quot;string&quot;&gt;&#39;hlc&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; o = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; test();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//可以看出o代表的不是全局对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;this作为对象方法（属性）执行&quot;&gt;&lt;a href=&quot;#this作为对象方法（属性）执行&quot; class=&quot;headerlink&quot; title=&quot;this作为对象方法（属性）执行&quot;&gt;&lt;/a&gt;this作为对象方法（属性）执行&lt;/h4&gt;&lt;p&gt;this 指代上级对象 / 指向调用该方法的对象&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; x =&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;test&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;　　alert(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.x);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; o = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  x:&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  m:test &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;o.m(); &lt;span class=&quot;comment&quot;&gt;// 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;作为普通函数执行&quot;&gt;&lt;a href=&quot;#作为普通函数执行&quot; class=&quot;headerlink&quot; title=&quot;作为普通函数执行&quot;&gt;&lt;/a&gt;作为普通函数执行&lt;/h4&gt;&lt;p&gt;this 指代全局对象&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;test&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.x = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;  &lt;span class=&quot;comment&quot;&gt;//这里this就是window&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.x);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;test(); &lt;span class=&quot;comment&quot;&gt;// 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;call、apply、bind&quot;&gt;&lt;a href=&quot;#call、apply、bind&quot; class=&quot;headerlink&quot; title=&quot;call、apply、bind&quot;&gt;&lt;/a&gt;call、apply、bind&lt;/h4&gt;&lt;p&gt;this指代上下文对象  / 同时也是改变this指向的方法&lt;/p&gt;
+&lt;p&gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;/p&gt;
+&lt;p&gt;在JavaScript中，this指针是在创建时，由系统默认生成的两个隐式参数之一（另一个是arguments）。&lt;/p&gt;
+&lt;p&gt;this指针指向与该函数调用进行隐式关联的一个对象，该对象被称为“函数上下文”。&lt;/p&gt;
+&lt;p&gt;this的几种指向：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过事件调用，this-&amp;gt;事件&lt;/li&gt;
+&lt;li&gt;自调用函数，this-&amp;gt;window&lt;/li&gt;
+&lt;li&gt;构造函数中，this-&amp;gt;new出来的对象&lt;/li&gt;
+&lt;li&gt;箭头函数，this-&amp;gt;创建函数时指向的对象&lt;/li&gt;
+&lt;li&gt;call和apply，this-&amp;gt;call和apply第一个参数&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
