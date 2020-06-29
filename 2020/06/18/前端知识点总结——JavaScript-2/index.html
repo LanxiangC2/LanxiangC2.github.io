@@ -106,7 +106,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/18/前端知识点总结——JavaScript-2/mouseover.webp">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/18/前端知识点总结——JavaScript-2/mouseout.webp">
-<meta property="og:updated_time" content="2020-06-28T12:53:57.667Z">
+<meta property="og:updated_time" content="2020-06-29T01:36:25.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——JavaScript(2)">
 <meta name="twitter:description" content="原型链    &amp;spades;&amp;spades;&amp;spades;见纸质版笔记 this  &amp;spades;&amp;spades;&amp;spades;this是JavaScript的一个关键字，随着函数使用场合的不同，this的值会发生变化。但是有一个原则，即this指向的是调用函数的那个对象。this是全局对象Global，可以作为方法调用 this作为构造函数执行this 指向创建出来的实例 1234567">
@@ -270,7 +270,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
 
   </li>
         
@@ -289,7 +289,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">37</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">38</span></a>
 
   </li>
 
@@ -430,7 +430,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-28 20:53:57" itemprop="dateModified" datetime="2020-06-28T20:53:57+08:00">2020-06-28</time>
+                <time title="修改时间：2020-06-29 09:36:25" itemprop="dateModified" datetime="2020-06-29T09:36:25+08:00">2020-06-29</time>
               
             
           </span>
@@ -496,7 +496,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">17k</span>
+                <span title="本文字数">18k</span>
               
 
               
@@ -726,6 +726,11 @@
 <p>特点：<br>（1）requestAnimationFrame会把每一帧中的所有DOM操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率。</p>
 <p>（2）在隐藏或不可见的元素中，requestAnimationFrame将不会进行重绘或回流，这当然就意味着更少的CPU、GPU和内存使用量</p>
 <p>（3）requestAnimationFrame是由浏览器专门为动画提供的API，在运行时浏览器会自动优化方法的调用，并且如果页面不是激活状态下的话，动画会自动暂停，有效节省了CPU开销。</p>
+<blockquote>
+<p><strong>window.requestAnimationFrame()</strong> 告诉浏览器——你希望执行一个动画，并且要求浏览器在下次重绘之前调用指定的回调函数更新动画。该方法需要传入一个回调函数作为参数，该回调函数会在浏览器下一次重绘之前执行</p>
+<p><strong>注意：若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用window.requestAnimationFrame()</strong></p>
+<p>当你准备更新动画时你应该调用此方法。这将使浏览器在下一次重绘之前调用你传入给该方法的动画函数(即你的回调函数)。回调函数执行次数通常是每秒60次，但在大多数遵循W3C建议的浏览器中，回调函数执行次数通常与浏览器屏幕刷新次数相匹配。为了提高性能和电池寿命，因此在大多数浏览器里，当<code>requestAnimationFrame()</code> 运行在后台标签页或者隐藏的<code>&lt;iframe&gt;</code>里时，<code>requestAnimationFrame()</code> 会被暂停调用以提升性能和电池寿命。</p>
+</blockquote>
 <h3 id="自己构造一个bind函数"><a href="#自己构造一个bind函数" class="headerlink" title="自己构造一个bind函数"></a>自己构造一个bind函数</h3><p>原理：通过apply或者call方法来实现。</p>
 <p>(1)初始版本</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.bind=<span class="function"><span class="keyword">function</span>(<span class="params">obj,arg</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> arg=<span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">var</span> context=<span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">newArg</span>)</span>&#123;</span><br><span class="line">        arg=arg.concat(<span class="built_in">Array</span>.prototype.slice.call(newArg));</span><br><span class="line">        <span class="keyword">return</span> context.apply(obj,arg);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -736,8 +741,9 @@
 <p>为什么要考虑？因为在new 一个bind过生成的新函数的时候，必须的条件是要继承原函数的原型</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.bind=<span class="function"><span class="keyword">function</span>(<span class="params">obj,arg</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> arg=<span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">var</span> context=<span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">var</span> bound=<span class="function"><span class="keyword">function</span>(<span class="params">newArg</span>)</span>&#123;</span><br><span class="line">    arg=arg.concat(<span class="built_in">Array</span>.prototype.slice.call(newArg));</span><br><span class="line">    <span class="keyword">return</span> context.apply(obj,arg);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> F=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
 <p>//这里需要一个寄生组合继承</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`F.prototype=context.prototype;`</span><span class="string">`bound.prototype=`</span><span class="string">`new`</span> <span class="string">`F();`</span><span class="string">`return`</span> <span class="string">`bound;`</span><span class="string">`&#125;`</span></span><br></pre></td></tr></table></figure>
-<h3 id="用setTimeout来实现setInterval"><a href="#用setTimeout来实现setInterval" class="headerlink" title="用setTimeout来实现setInterval"></a>用setTimeout来实现setInterval</h3><p>重复定时器的规则有两个问题：1.某些间隔会被跳过 2.多个定时器的代码执行时间可能会比预期小。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">F.prototype=context.prototype;</span><br><span class="line">bound.prototype=<span class="keyword">new</span> F();</span><br><span class="line"><span class="keyword">return</span> bound</span><br></pre></td></tr></table></figure>
+<h3 id="用setTimeout来实现setInterval"><a href="#用setTimeout来实现setInterval" class="headerlink" title="用setTimeout来实现setInterval"></a>用setTimeout来实现setInterval</h3><p>但是通常情况下，很少真正使用间歇调用，因为后一个间歇调用可能在前一个间歇调用结束之前调用</p>
+<p>重复定时器的规则有两个问题：1.某些间隔会被跳过 2.多个定时器的代码执行时间可能会比预期小。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">say</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="comment">//something</span></span><br><span class="line">setTimeout(say,<span class="number">200</span>);</span><br><span class="line">&#125;</span><br><span class="line">setTimeout(say,<span class="number">200</span>)</span><br></pre></td></tr></table></figure>
 <p>或者</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="comment">//do something</span></span><br><span class="line">setTimeout(<span class="built_in">arguments</span>.callee,<span class="number">200</span>);</span><br><span class="line">&#125;,<span class="number">200</span>);</span><br></pre></td></tr></table></figure>
@@ -750,10 +756,10 @@
 <p><strong><em>script(主程序代码)——&gt;process.nextTick——&gt;promise——&gt;setTimeout</em></strong></p>
 <p>为什么呢？具体请参考我的文章：<a href="https://github.com/forthealllight/blog/issues/5" target="_blank" rel="noopener"><br>从promise、process.nextTick、setTimeout出发，谈谈Event Loop中的Job queue</a></p>
 <h3 id="如何实现sleep的效果（es5或者es6）"><a href="#如何实现sleep的效果（es5或者es6）" class="headerlink" title="如何实现sleep的效果（es5或者es6）"></a>如何实现sleep的效果（es5或者es6）</h3><p>(1)while循环的方式</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sleep</span>(<span class="params">ms</span>)</span>&#123;</span><br><span class="line"><span class="keyword">var</span> start=<span class="built_in">Date</span>.now(),expire=start+ms;</span><br><span class="line"><span class="keyword">while</span>(<span class="built_in">Date</span>.now()&lt;expire);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'1111'</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sleep</span>(<span class="params">ms</span>)</span>&#123;</span><br><span class="line"><span class="keyword">var</span> start=<span class="built_in">Date</span>.now(),expire=start+ms;</span><br><span class="line"><span class="keyword">while</span>(<span class="built_in">Date</span>.now() &gt; expire);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'1111'</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>执行sleep(1000)之后，休眠了1000ms之后输出了1111。上述循环的方式缺点很明显，容易造成死循环。</p>
 <p>(2)通过promise来实现</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sleep</span>(<span class="params">ms</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> temple=<span class="keyword">new</span> <span class="built_in">Promise</span>(resolve)=&gt;&#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="number">111</span>);setTimeout(resolve,ms)</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> temple</span><br><span class="line">&#125;</span><br><span class="line">sleep(<span class="number">500</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="comment">//console.log(222)</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sleep</span>(<span class="params">ms</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> temple=<span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span>=&gt;</span>&#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="number">111</span>);setTimeout(resolve,ms)</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> temple</span><br><span class="line">&#125;</span><br><span class="line">sleep(<span class="number">500</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="comment">//console.log(222)</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>//先输出了111，延迟500ms后输出222</p>
 <p>(3)通过async封装</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sleep</span>(<span class="params">ms</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>)=&gt;</span>setTimeout(resolve,ms));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> temple=<span class="keyword">await</span> sleep(<span class="number">1000</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1111</span>)</span><br><span class="line">    <span class="keyword">return</span> temple</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
@@ -973,7 +979,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">37</span>
+                    <span class="site-state-item-count">38</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1002,7 +1008,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1249,7 +1257,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">207k</span>
+    <span title="站点总字数">209k</span>
   
 
   
@@ -1260,7 +1268,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">5:45</span>
+    <span title="站点阅读时长">5:48</span>
   
 </div>
 

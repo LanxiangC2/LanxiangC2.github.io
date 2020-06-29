@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-06-28T02:50:57.757Z</updated>
+  <updated>2020-06-29T14:09:13.946Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>腾讯暑期实习一面面经</title>
+    <link href="http://lanxiangc2.github.io/2020/06/29/%E8%85%BE%E8%AE%AF%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E4%B8%80%E9%9D%A2%E9%9D%A2%E7%BB%8F/"/>
+    <id>http://lanxiangc2.github.io/2020/06/29/腾讯暑期实习一面面经/</id>
+    <published>2020-06-29T12:46:04.000Z</published>
+    <updated>2020-06-29T14:09:13.946Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;小引&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;面试官问了我问什么网站和博客这些都是用的lanxiangc2，我说这是我的网名&lt;code&gt;兰香川川&lt;/code&gt;，他以为我和那个蓝翔有啥关系，O(∩_∩)O哈哈~，被面试官关注到了我的个人网站和作品 真的超开心，努力没白费，继续加油哦~&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/categories/%E9%9D%A2%E7%BB%8F/"/>
+    
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端知识点总结——JavaScript(3)</title>
     <link href="http://lanxiangc2.github.io/2020/06/25/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-3/"/>
     <id>http://lanxiangc2.github.io/2020/06/25/前端知识点总结——JavaScript-3/</id>
     <published>2020-06-25T09:01:36.000Z</published>
-    <updated>2020-06-28T02:50:57.757Z</updated>
+    <updated>2020-06-29T02:12:02.461Z</updated>
     
     <summary type="html">
     
@@ -46,7 +69,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/18/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-2/"/>
     <id>http://lanxiangc2.github.io/2020/06/18/前端知识点总结——JavaScript-2/</id>
     <published>2020-06-18T06:16:41.000Z</published>
-    <updated>2020-06-28T12:53:57.667Z</updated>
+    <updated>2020-06-29T01:36:25.894Z</updated>
     
     <summary type="html">
     
@@ -188,7 +211,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94CSS/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——CSS/</id>
     <published>2020-06-13T08:33:00.000Z</published>
-    <updated>2020-06-25T12:14:51.603Z</updated>
+    <updated>2020-06-29T06:46:33.673Z</updated>
     
     <summary type="html">
     
@@ -209,7 +232,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94HTML/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——HTML/</id>
     <published>2020-06-13T07:27:55.000Z</published>
-    <updated>2020-06-23T13:43:51.069Z</updated>
+    <updated>2020-06-29T04:22:35.591Z</updated>
     
     <summary type="html">
     
@@ -278,7 +301,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/11/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6-2/"/>
     <id>http://lanxiangc2.github.io/2020/06/11/前端知识点总结——ES6-2/</id>
     <published>2020-06-11T01:53:59.000Z</published>
-    <updated>2020-06-27T08:52:54.352Z</updated>
+    <updated>2020-06-29T07:19:33.649Z</updated>
     
     <summary type="html">
     
@@ -408,7 +431,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——JavaScript/</id>
     <published>2020-06-09T08:04:14.000Z</published>
-    <updated>2020-06-25T12:00:47.035Z</updated>
+    <updated>2020-06-29T12:44:12.001Z</updated>
     
     <summary type="html">
     
@@ -506,7 +529,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94Vue/"/>
     <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/</id>
     <published>2020-06-09T02:53:53.000Z</published>
-    <updated>2020-06-25T13:13:29.970Z</updated>
+    <updated>2020-06-29T08:10:33.839Z</updated>
     
     <summary type="html">
     
@@ -524,31 +547,6 @@
       <category term="前端框架" scheme="http://lanxiangc2.github.io/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
     
       <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端知识点总结——nodes.js</title>
-    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94nodejs/"/>
-    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodejs/</id>
-    <published>2020-06-09T01:36:57.000Z</published>
-    <updated>2020-06-10T14:20:57.022Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;koa洋葱圈运行机制&quot;&gt;&lt;a href=&quot;#koa洋葱圈运行机制&quot; class=&quot;headerlink&quot; title=&quot;koa洋葱圈运行机制&quot;&gt;&lt;/a&gt;koa洋葱圈运行机制&lt;/h3&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; Koa = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;koa&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; app = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Koa();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;app.use(&lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; (ctx, next) =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; next();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;app.use(&lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; (ctx, next) =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; next();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;app.use(&lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; (ctx, next) =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ctx.body = &lt;span class=&quot;string&quot;&gt;&quot;hello world&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;app.listen(&lt;span class=&quot;number&quot;&gt;3000&lt;/span&gt;, () =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;string&quot;&gt;&#39;listenning on 3000&#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;上面的代码执行后会输出&lt;code&gt;123456&lt;/code&gt;，就像一个洋葱一样，从外层进去，然后碰到&lt;code&gt;next()&lt;/code&gt;就执行下一个中间件，执行完成后再返回回来。先假设我们已经实现了&lt;code&gt;next&lt;/code&gt;为下个中间件这段代码，上面的执行逻辑就很清楚了，先输出&lt;code&gt;1&lt;/code&gt;，然后进入下一个中间件，去处理&lt;code&gt;2&lt;/code&gt;，同理最后后面都处理完成后处理&lt;code&gt;5&lt;/code&gt;，&lt;code&gt;5&lt;/code&gt;处理完成后第二个中间件结束，然后第一个中间件再处理&lt;code&gt;6&lt;/code&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
-    
-      <category term="node.js框架" scheme="http://lanxiangc2.github.io/tags/node-js%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="后端" scheme="http://lanxiangc2.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   

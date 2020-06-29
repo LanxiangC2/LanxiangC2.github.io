@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="CSS的盒模型 怎么切换box-sizing:content-box这是W3C盒模型， width = content box-sizing:border-box这是width = border + padding + content">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-25T12:14:51.603Z">
+<meta property="og:updated_time" content="2020-06-29T06:46:33.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——CSS">
 <meta name="twitter:description" content="CSS的盒模型 怎么切换box-sizing:content-box这是W3C盒模型， width = content box-sizing:border-box这是width = border + padding + content">
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">37</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">38</span></a>
 
   </li>
 
@@ -427,7 +427,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-25 20:14:51" itemprop="dateModified" datetime="2020-06-25T20:14:51+08:00">2020-06-25</time>
+                <time title="修改时间：2020-06-29 14:46:33" itemprop="dateModified" datetime="2020-06-29T14:46:33+08:00">2020-06-29</time>
               
             
           </span>
@@ -493,7 +493,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">7.4k</span>
+                <span title="本文字数">7.5k</span>
               
 
               
@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">12 分钟</span>
+                <span title="阅读时长">13 分钟</span>
               
             </div>
           
@@ -596,6 +596,7 @@
 <p><strong>1.DNS查询    2.TCP连接    3.HTTP请求即响应    4.服务器响应    5.客户端渲染</strong><br>这里讨论第五部分即浏览器对内容的渲染，这一部分(渲染树构建，布局及绘制)，又可以分为下面5个步骤</p>
 <p>1.处理HTML标记并构建DOM树<br>2.处理CSS标记并创建CSSOM树<br>3.将DOM与CSSOM合并成一个渲染树<br>4.根据渲染树来布局，以计算每个节点的几何信息<br>5.将各个节点渲染到屏幕上<br>需要明白，这五个步骤并不一定一次性顺序完成。如果 DOM 或 CSSOM 被修改，以上过程需要重复执行，这样才能计算出哪些像素需要在屏幕上进行重新渲染。实际页面中，CSS 与 JavaScript 往往会多次修改 DOM 和 CSSOM，下面就来看看它们的影响方式。</p>
 <h3 id="CSS和JavaScript阻塞"><a href="#CSS和JavaScript阻塞" class="headerlink" title="CSS和JavaScript阻塞"></a>CSS和JavaScript阻塞</h3><p>谈论资源的阻塞时，我们要清楚，现在浏览器总是并行加载资源。例如当HTML解析器(HTML Parser)被脚本阻塞时，解析器虽然会停止构建DOM，但是仍会执行该脚本后面的资源，并进行预加载。</p>
+<p>CSS 是阻塞渲染的资源。需要将它尽早、尽快地下载到客户端，以便缩短首次渲染的时间。</p>
 <p>默认情况下，CSS 被视为阻塞渲染的资源，这意味着浏览器将不会渲染任何已处理的内容，直至 CSSOM 构建完毕。JavaScript 不仅可以读取和修改 DOM 属性，还可以读取和修改 CSSOM 属性。</p>
 <p>存在阻塞的 CSS 资源时，浏览器会延迟 JavaScript 的执行和 DOM 构建。当浏览器遇到一个 script 标记时，DOM 构建将暂停，直至脚本完成执行。JavaScript 可以查询和修改 DOM 与 CSSOM。CSSOM 构建时，JavaScript 执行将暂停，直至 CSSOM 就绪。</p>
 <p>所以，script 标签的位置很重要。实际使用时，可以<strong>遵循下面两个原则：CSS 优先：引入顺序上，CSS 资源先于 JavaScript 资源。JavaScript 应尽量少影响 DOM 的构建。</strong></p>
@@ -609,9 +610,9 @@
 <p>link是html标签，因此没有兼容性，而@import只有IE5以上才能识别。</p>
 <p>link方式样式的权重高于@import的</p>
 <h3 id="transition和animation的区别"><a href="#transition和animation的区别" class="headerlink" title="transition和animation的区别"></a>transition和animation的区别</h3><p>Animation和transition大部分属性是相同的，他们都是随时间改变元素的属性值，他们的主要区别是transition需要触发一个事件才能改变属性，而animation不需要触发任何事件的情况下才会随时间改变属性值，并且transition为2帧，从from …. to，而animation可以一帧一帧的。</p>
-<h3 id="了解重绘和重排吗，知道怎么去减少重绘和重排吗，让文档脱离文档流有哪些方法"><a href="#了解重绘和重排吗，知道怎么去减少重绘和重排吗，让文档脱离文档流有哪些方法" class="headerlink" title="了解重绘和重排吗，知道怎么去减少重绘和重排吗，让文档脱离文档流有哪些方法"></a>了解重绘和重排吗，知道怎么去减少重绘和重排吗，让文档脱离文档流有哪些方法</h3><p><strong>重绘</strong>（repaint或redraw）：当盒子的位置、大小以及其他属性，例如颜色、字体大小等都确定下来之后，浏览器便把这些原色都按照各自的特性绘制一遍，将内容呈现在页面上。重绘是指一个元素外观的改变所触发的浏览器行为，浏览器会根据元素的新属性重新绘制，使元素呈现新的外观。</p>
+<h3 id="了解重绘和重排吗，知道怎么去减少重绘和重排吗，让文档脱离文档流有哪些方法"><a href="#了解重绘和重排吗，知道怎么去减少重绘和重排吗，让文档脱离文档流有哪些方法" class="headerlink" title="了解重绘和重排吗，知道怎么去减少重绘和重排吗，让文档脱离文档流有哪些方法"></a>了解重绘和重排吗，知道怎么去减少重绘和重排吗，让文档脱离文档流有哪些方法</h3><p><strong>重绘</strong>（repaint或redraw）：当盒子的位置、大小以及其他属性，例如颜色、字体大小等都确定下来之后，浏览器便把这些原色都按照各自的特性绘制一遍，将内容呈现在页面上。<u>重绘是指一个元素外观的改变所触发的浏览器行为，浏览器会根据元素的新属性重新绘制，使元素呈现新的外观。</u></p>
 <p>触发重绘的条件：改变元素外观属性。如：color，background-color等。</p>
-<p><strong>重排</strong>（重构/回流/reflow）：当渲染树中的一部分(或全部)因为元素的规模尺寸，布局，隐藏等改变而需要重新构建, 这就称为回流(reflow)。每个页面至少需要一次回流，就是在页面第一次加载的时候。</p>
+<p><strong>重排</strong>（重构/回流/reflow）：当渲染树中的一部分(或全部)因为元素的规模尺寸，布局，隐藏等改变而需要重新构建, 这就称为回流(reflow)。<u>每个页面至少需要一次回流，就是在页面第一次加载的时候。</u></p>
 <p>注意：table及其内部元素可能需要多次计算才能确定好其在渲染树中节点的属性值，比同等元素要多花两倍时间，这就是我们尽量避免使用table布局页面的原因之一。</p>
 <p><strong>重绘和重排的关系</strong>：在回流的时候，浏览器会使渲染树中受到影响的部分失效，并重新构造这部分渲染树，完成回流后，浏览器会重新绘制受影响的部分到屏幕中，该过程称为重绘。所以，<u>重排必定会引发重绘，但重绘不一定会引发重排。</u></p>
 <blockquote>
@@ -630,7 +631,7 @@
 <h4 id="减少重绘重排的方法有"><a href="#减少重绘重排的方法有" class="headerlink" title="减少重绘重排的方法有"></a>减少重绘重排的方法有</h4><ul>
 <li>不在布局信息改变时做DOM查询，批量修改DOM</li>
 <li>使用csstext,className一次性改变属性</li>
-<li>使用fragment</li>
+<li>使用fragment。重点就在于<strong>DocumentFragment 节点不属于文档树</strong>。因此当把创建的节点添加到该对象时，并不会导致页面的回流，因此性能就自然上去了</li>
 <li>对于多次重排的元素，比如说动画。使用绝对定位脱离文档流，使其不影响其他元素</li>
 </ul>
 <h4 id="怎么脱离文档流"><a href="#怎么脱离文档流" class="headerlink" title="怎么脱离文档流"></a>怎么脱离文档流</h4><ul>
@@ -864,7 +865,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">37</span>
+                    <span class="site-state-item-count">38</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -893,7 +894,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1140,7 +1143,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">207k</span>
+    <span title="站点总字数">209k</span>
   
 
   
@@ -1151,7 +1154,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">5:45</span>
+    <span title="站点阅读时长">5:48</span>
   
 </div>
 
