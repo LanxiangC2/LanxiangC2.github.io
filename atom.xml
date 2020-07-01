@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-06-29T14:11:34.928Z</updated>
+  <updated>2020-07-01T14:20:33.158Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -17,11 +17,65 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>前端知识点总结——JavaScript(4)</title>
+    <link href="http://lanxiangc2.github.io/2020/07/01/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-4/"/>
+    <id>http://lanxiangc2.github.io/2020/07/01/前端知识点总结——JavaScript-4/</id>
+    <published>2020-07-01T13:58:23.000Z</published>
+    <updated>2020-07-01T14:20:33.158Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;ajax和axios、fetch的区别&quot;&gt;&lt;a href=&quot;#ajax和axios、fetch的区别&quot; class=&quot;headerlink&quot; title=&quot;ajax和axios、fetch的区别&quot;&gt;&lt;/a&gt;ajax和axios、fetch的区别&lt;/h3&gt;&lt;h4
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="JavaScript" scheme="http://lanxiangc2.github.io/tags/JavaScript/"/>
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中移物联网一面面经</title>
+    <link href="http://lanxiangc2.github.io/2020/06/30/%E4%B8%AD%E7%A7%BB%E7%89%A9%E8%81%94%E7%BD%91%E4%B8%80%E9%9D%A2%E9%9D%A2%E7%BB%8F/"/>
+    <id>http://lanxiangc2.github.io/2020/06/30/中移物联网一面面经/</id>
+    <published>2020-06-30T09:08:13.000Z</published>
+    <updated>2020-07-01T12:36:55.453Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;js闭包&quot;&gt;&lt;a href=&quot;#js闭包&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/categories/%E9%9D%A2%E7%BB%8F/"/>
+    
+    
+      <category term="中移物联网面试" scheme="http://lanxiangc2.github.io/tags/%E4%B8%AD%E7%A7%BB%E7%89%A9%E8%81%94%E7%BD%91%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>腾讯暑期实习一面面经</title>
     <link href="http://lanxiangc2.github.io/2020/06/29/%E8%85%BE%E8%AE%AF%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E4%B8%80%E9%9D%A2%E9%9D%A2%E7%BB%8F/"/>
     <id>http://lanxiangc2.github.io/2020/06/29/腾讯暑期实习一面面经/</id>
     <published>2020-06-29T12:46:04.000Z</published>
-    <updated>2020-06-29T14:11:34.928Z</updated>
+    <updated>2020-06-30T01:37:21.025Z</updated>
     
     <summary type="html">
     
@@ -44,7 +98,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/25/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-3/"/>
     <id>http://lanxiangc2.github.io/2020/06/25/前端知识点总结——JavaScript-3/</id>
     <published>2020-06-25T09:01:36.000Z</published>
-    <updated>2020-06-29T02:12:02.461Z</updated>
+    <updated>2020-07-01T12:32:54.485Z</updated>
     
     <summary type="html">
     
@@ -163,7 +217,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94AJAX%E5%92%8CJSON/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——AJAX和JSON/</id>
     <published>2020-06-13T12:32:57.000Z</published>
-    <updated>2020-06-18T06:36:01.140Z</updated>
+    <updated>2020-06-30T02:14:23.140Z</updated>
     
     <summary type="html">
     
@@ -211,7 +265,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94CSS/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——CSS/</id>
     <published>2020-06-13T08:33:00.000Z</published>
-    <updated>2020-06-29T06:46:33.673Z</updated>
+    <updated>2020-06-30T07:08:57.906Z</updated>
     
     <summary type="html">
     
@@ -252,7 +306,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——前端工程化/</id>
     <published>2020-06-13T05:36:24.000Z</published>
-    <updated>2020-06-25T12:57:09.822Z</updated>
+    <updated>2020-07-01T14:27:51.081Z</updated>
     
     <summary type="html">
     
@@ -355,7 +409,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/10/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     <id>http://lanxiangc2.github.io/2020/06/10/前端知识点总结——性能优化/</id>
     <published>2020-06-10T13:48:26.000Z</published>
-    <updated>2020-06-25T09:48:52.536Z</updated>
+    <updated>2020-07-01T14:34:16.857Z</updated>
     
     <summary type="html">
     
@@ -488,65 +542,6 @@
     
     
       <category term="ES6" scheme="http://lanxiangc2.github.io/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端知识点总结——网络</title>
-    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%BD%91%E7%BB%9C/"/>
-    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/</id>
-    <published>2020-06-09T04:40:27.000Z</published>
-    <updated>2020-06-25T06:13:17.150Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;对称加密和非对称加密&quot;&gt;&lt;a href=&quot;#对称加密和非对称加密&quot; class=&quot;headerlink&quot; title=&quot;对称加密和非对称加密&quot;&gt;&lt;/a&gt;对称加密和非对称加密&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;对称加密&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;非对称加密&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;区别&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;对称加密算法相比非对称加密算法来说，加解密的效率要高得多。但是缺陷在于对于秘钥的管理上，以及在非安全信道中通讯时，密钥交换的安全性不能保障。所以在实际的网络环境中，会将两者混合使用。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
-    
-      <category term="计算机网络" scheme="http://lanxiangc2.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端知识点总结——Vue</title>
-    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94Vue/"/>
-    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/</id>
-    <published>2020-06-09T02:53:53.000Z</published>
-    <updated>2020-06-29T08:10:33.839Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;vue和react-spades&quot;&gt;&lt;a href=&quot;#vue和react-spades&quot; class=&quot;headerlink&quot; title=&quot;vue和react   &amp;spades;&quot;&gt;&lt;/a&gt;vue和react   &amp;spades;&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;相似之处&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;Virtual-DOM&quot;&gt;&lt;a href=&quot;#Virtual-DOM&quot; class=&quot;headerlink&quot; title=&quot;Virtual DOM&quot;&gt;&lt;/a&gt;Virtual DOM&lt;/h4&gt;&lt;p&gt;Vue.js(2.0版本)与React的其中最大一个相似之处，就是他们都使用了一种叫’Virtual DOM’的东西。所谓的Virtual DOM基本上说就是它名字的意思：虚拟DOM，DOM树的虚拟表现。它的诞生是基于这么一个概念：改变真实的DOM状态远比改变一个JavaScript对象的花销要大得多。&lt;/p&gt;
-&lt;p&gt;Virtual DOM是一个映射真实DOM的JavaScript对象，如果需要改变任何元素的状态，那么是先在Virtual DOM上进行改变，而不是直接改变真实的DOM。当有变化产生时，一个新的Virtual DOM对象会被创建并计算新旧Virtual DOM之间的差别。之后这些差别会应用在真实的DOM上。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="前端框架" scheme="http://lanxiangc2.github.io/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
     
   </entry>
   

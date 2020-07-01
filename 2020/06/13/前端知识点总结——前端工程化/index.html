@@ -105,7 +105,7 @@
 <meta property="og:description" content="loader的运行原理和作用具体作用如下： 实现对不同格式文件的处理，比如将Scss转化为CSS，或将TypeScript转化为JavaScript。 可以编译文件，从而使其能够添加到依赖关系中。loader是WebPack最重要的部分之一。通过使用不同的loader,我们能够调用外部的脚本或者工具，实现对不同格式文件的处理。loader需要在webpack.config.js文件里单独用modu">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/13/前端知识点总结——前端工程化/git-process.png">
-<meta property="og:updated_time" content="2020-06-25T12:57:09.822Z">
+<meta property="og:updated_time" content="2020-07-01T14:27:51.081Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——前端工程化">
 <meta name="twitter:description" content="loader的运行原理和作用具体作用如下： 实现对不同格式文件的处理，比如将Scss转化为CSS，或将TypeScript转化为JavaScript。 可以编译文件，从而使其能够添加到依赖关系中。loader是WebPack最重要的部分之一。通过使用不同的loader,我们能够调用外部的脚本或者工具，实现对不同格式文件的处理。loader需要在webpack.config.js文件里单独用modu">
@@ -250,7 +250,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">36</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">38</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">40</span></a>
 
   </li>
 
@@ -429,7 +429,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-25 20:57:09" itemprop="dateModified" datetime="2020-06-25T20:57:09+08:00">2020-06-25</time>
+                <time title="修改时间：2020-07-01 22:27:51" itemprop="dateModified" datetime="2020-07-01T22:27:51+08:00">2020-07-01</time>
               
             
           </span>
@@ -495,7 +495,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">5.5k</span>
+                <span title="本文字数">5.6k</span>
               
 
               
@@ -582,13 +582,13 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="comment">// const HtmlWebpackPlugin = require('html-webpack-plugin')</span></span><br><span class="line"><span class="keyword">const</span> MyHtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'./src/plugins/MyHtmlWebpackPlugin'</span>)</span><br><span class="line"><span class="keyword">const</span> &#123; CleanWebpackPlugin &#125; = <span class="built_in">require</span>(<span class="string">'clean-webpack-plugin'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    mode: <span class="string">'development'</span>,</span><br><span class="line">    entry: &#123;</span><br><span class="line">        main: <span class="string">'./src/index.js'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: path.resolve(__dirname, <span class="string">'dist'</span>),</span><br><span class="line">        filename: <span class="string">'[name].js'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="comment">// new HtmlWebpackPlugin(),</span></span><br><span class="line">        <span class="keyword">new</span> MyHtmlWebpackPlugin(),</span><br><span class="line">        <span class="keyword">new</span> CleanWebpackPlugin(), <span class="comment">// 清除dist目录</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>5、npm run build 结果如下</p>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>plugin就是一个类,这个类里面有一个apply方法，我们在这个apply里面根据需求，在对应的钩子中注册我们的想要做的事件</p>
-<h3 id="webpack的loader和plugin的区别"><a href="#webpack的loader和plugin的区别" class="headerlink" title="webpack的loader和plugin的区别"></a>webpack的loader和plugin的区别</h3><h4 id="Loader"><a href="#Loader" class="headerlink" title="Loader"></a>Loader</h4><p>用于对模块源码的转换，loader描述了webpack如何处理非javascript模块，并且在buld中引入这些依赖。loader可以将文件从不同的语言（如TypeScript）转换为JavaScript，或者将内联图像转换为data URL。比如说：CSS-Loader，Style-Loader等。</p>
+<h3 id="webpack的loader和plugin的区别"><a href="#webpack的loader和plugin的区别" class="headerlink" title="webpack的loader和plugin的区别"></a>webpack的loader和plugin的区别</h3><h4 id="Loader"><a href="#Loader" class="headerlink" title="Loader"></a>Loader</h4><p><u>用于对模块源码的转换，loader描述了webpack如何处理非javascript模块，并且在buld中引入这些依赖。</u>loader可以将文件从不同的语言（如TypeScript）转换为JavaScript，或者将内联图像转换为data URL。比如说：CSS-Loader，Style-Loader等。</p>
 <p>loader的使用很简单：</p>
 <p>在webpack.config.js中指定loader。module.rules可以指定多个loader，对项目中的各个loader有个全局概览。</p>
 <p>loader是运行在NodeJS中，可以用options对象进行配置。plugin可以为loader带来更多特性。loader可以进行压缩，打包，语言翻译等等。</p>
 <p>loader从模板路径解析，npm install node_modules。也可以自定义loader，命名XXX-loader。</p>
 <p>语言类的处理器loader：CoffeeScript，TypeScript，ESNext（Bable）,Sass,Less,Stylus。任何开发技术栈都可以使用webpack。</p>
-<h4 id="Plugin"><a href="#Plugin" class="headerlink" title="Plugin"></a>Plugin</h4><p>目的在于解决loader无法实现的其他事，从打包优化和压缩，到重新定义环境变量，功能强大到可以用来处理各种各样的任务。webpack提供了很多开箱即用的插件：CommonChunkPlugin主要用于提取第三方库和公共模块，避免首屏加载的bundle文件，或者按需加载的bundle文件体积过大，导致加载时间过长，是一把优化的利器。而在多页面应用中，更是能够为每个页面间的应用程序共享代码创建bundle。</p>
+<h4 id="Plugin"><a href="#Plugin" class="headerlink" title="Plugin"></a>Plugin</h4><p><u>目的在于解决loader无法实现的其他事，从打包优化和压缩，到重新定义环境变量，功能强大到可以用来处理各种各样的任务。</u>webpack提供了很多开箱即用的插件：CommonChunkPlugin主要用于提取第三方库和公共模块，避免首屏加载的bundle文件，或者按需加载的bundle文件体积过大，导致加载时间过长，是一把优化的利器。而在多页面应用中，更是能够为每个页面间的应用程序共享代码创建bundle。</p>
 <p>webpack功能强大，难点在于它的配置文件，webpack4默认不需要配置文件，可以通过mode选项为webpack指定了一些默认的配置，mode分为：development/production，默认是production。</p>
 <p>插件可以携带参数，所以在plugins属性传入new实例。    </p>
 <h3 id="git流程"><a href="#git流程" class="headerlink" title="git流程"></a>git流程</h3><p><img src="/2020/06/13/前端知识点总结——前端工程化/git-process.png" alt="git-process"></p>
@@ -601,6 +601,7 @@
 <li>提交修改。</li>
 <li>在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。</li>
 </ul>
+<h3 id="前端工程化-Sass-Babel-Webpack"><a href="#前端工程化-Sass-Babel-Webpack" class="headerlink" title="前端工程化-Sass,Babel,Webpack"></a>前端工程化-Sass,Babel,Webpack</h3><p>参考：<a href="https://www.jianshu.com/p/4115de4152c9" target="_blank" rel="noopener">https://www.jianshu.com/p/4115de4152c9</a></p>
 
       
     </div>
@@ -794,7 +795,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">40</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -912,7 +913,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">35</span>
+                      
+                    
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1032,7 +1035,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#loader的运行原理和作用"><span class="nav-number">1.</span> <span class="nav-text">loader的运行原理和作用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#具体作用如下："><span class="nav-number">1.1.</span> <span class="nav-text">具体作用如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的loader如下："><span class="nav-number">1.2.</span> <span class="nav-text">常用的loader如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webPack的核心原理"><span class="nav-number">1.3.</span> <span class="nav-text">webPack的核心原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebPack打包一个项目的基本流程-spades"><span class="nav-number">2.</span> <span class="nav-text">WebPack打包一个项目的基本流程      ♠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack用来干什么的"><span class="nav-number">3.</span> <span class="nav-text">webpack用来干什么的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Plugin的原理"><span class="nav-number">4.</span> <span class="nav-text">Plugin的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">4.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack的loader和plugin的区别"><span class="nav-number">5.</span> <span class="nav-text">webpack的loader和plugin的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Loader"><span class="nav-number">5.1.</span> <span class="nav-text">Loader</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Plugin"><span class="nav-number">5.2.</span> <span class="nav-text">Plugin</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git流程"><span class="nav-number">6.</span> <span class="nav-text">git流程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#loader的运行原理和作用"><span class="nav-number">1.</span> <span class="nav-text">loader的运行原理和作用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#具体作用如下："><span class="nav-number">1.1.</span> <span class="nav-text">具体作用如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的loader如下："><span class="nav-number">1.2.</span> <span class="nav-text">常用的loader如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#webPack的核心原理"><span class="nav-number">1.3.</span> <span class="nav-text">webPack的核心原理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebPack打包一个项目的基本流程-spades"><span class="nav-number">2.</span> <span class="nav-text">WebPack打包一个项目的基本流程      ♠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack用来干什么的"><span class="nav-number">3.</span> <span class="nav-text">webpack用来干什么的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Plugin的原理"><span class="nav-number">4.</span> <span class="nav-text">Plugin的原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">4.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack的loader和plugin的区别"><span class="nav-number">5.</span> <span class="nav-text">webpack的loader和plugin的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Loader"><span class="nav-number">5.1.</span> <span class="nav-text">Loader</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Plugin"><span class="nav-number">5.2.</span> <span class="nav-text">Plugin</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git流程"><span class="nav-number">6.</span> <span class="nav-text">git流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端工程化-Sass-Babel-Webpack"><span class="nav-number">7.</span> <span class="nav-text">前端工程化-Sass,Babel,Webpack</span></a></li></ol></div>
             
 
           </div>
@@ -1074,7 +1077,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">209k</span>
+    <span title="站点总字数">216k</span>
   
 
   
@@ -1085,7 +1088,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">5:48</span>
+    <span title="站点阅读时长">6:01</span>
   
 </div>
 

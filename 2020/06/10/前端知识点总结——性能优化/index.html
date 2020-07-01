@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="谈谈性能优化的问题缓存利用缓存Ajax，使用CDN、外部JavaScript和CSS文件缓存，添加Expires头，在服务器端配置Etag，减少DNS查找等 请求数量合并样式和脚本，使用CSS图片精灵，初始首屏之外的图片资源按需加载，静态资源延迟加载 请求带宽压缩文件，开启GZIP JavaScript代码 用散列表来代替优化查找，少用全局变量，用innerHTML代替DOM操作，减少DOM操作次">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-25T09:48:52.536Z">
+<meta property="og:updated_time" content="2020-07-01T14:34:16.857Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——性能优化">
 <meta name="twitter:description" content="谈谈性能优化的问题缓存利用缓存Ajax，使用CDN、外部JavaScript和CSS文件缓存，添加Expires头，在服务器端配置Etag，减少DNS查找等 请求数量合并样式和脚本，使用CSS图片精灵，初始首屏之外的图片资源按需加载，静态资源延迟加载 请求带宽压缩文件，开启GZIP JavaScript代码 用散列表来代替优化查找，少用全局变量，用innerHTML代替DOM操作，减少DOM操作次">
@@ -248,7 +248,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">36</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">38</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">40</span></a>
 
   </li>
 
@@ -427,7 +427,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-25 17:48:52" itemprop="dateModified" datetime="2020-06-25T17:48:52+08:00">2020-06-25</time>
+                <time title="修改时间：2020-07-01 22:34:16" itemprop="dateModified" datetime="2020-07-01T22:34:16+08:00">2020-07-01</time>
               
             
           </span>
@@ -493,7 +493,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">5.6k</span>
+                <span title="本文字数">6.9k</span>
               
 
               
@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">9 分钟</span>
+                <span title="阅读时长">11 分钟</span>
               
             </div>
           
@@ -632,6 +632,13 @@
 <p>使用外部javascript和CSS</p>
 <p>避免重定向</p>
 <p>图片lazyLoad</p>
+<p>使用fagment减少dom的操作 <a href="https://www.cnblogs.com/blueSkys/p/3685740.html" target="_blank" rel="noopener">https://www.cnblogs.com/blueSkys/p/3685740.html</a></p>
+<p>也可参考文章：<a href="https://www.365jz.com/article/24506" target="_blank" rel="noopener">https://www.365jz.com/article/24506</a></p>
+<h3 id="前端的图片优化方案"><a href="#前端的图片优化方案" class="headerlink" title="前端的图片优化方案"></a>前端的图片优化方案</h3><p>1.使用base64编码代替图片 场景：适用于图片大小小于2KB，页面上引用图片总数不多的情况 原理：将图片转换为base64编码字符串inline到页面或css中 优势：减少http的请求次数，并可以放到后台数据库中，只传输字符串，有较多的构建工具可以直接实现 劣势：这种方法仅限于图片总数较少，而且图片大小小于2KB的情况。否则图片字符串会变得很长很长。</p>
+<p>2.合并图片sprite 场景：任何用到页面图片的场景 原理：将多个页面上用到的背景图片合并成一个大的图片在页面中引用 优势：可以有效的较少请求个数，而且，而不影响开发体验，使用构建插件可以做到对开发者透明。适用于页面图片多且丰富的场景。 劣势：生成的图片体积较大，减少请求个数同时也增加了图片大小，不合理拆分将不利于并行加载。</p>
+<p>3.使用css、svg、canvas或iconfont代替图片css代替图片 场景：适用于移动端或较高级的浏览器，而且绘制的图案较为简单。 原理：css方式可以用来绘制相对简单的团来代替图片，一般使用before或者after伪元素来丰富图案的复杂度。 优势：具有实现简单，图片体积小的特点，可以实现简单的动态效果 劣势：也受限于css的兼容性特点，绘制复杂图案困难svg的描述和适用场景上文已说明。canvas代替图片 场景：需要高性能的图片或动画 原理：适用html5的canvas元素绘制创建图片 优势：整个就是画2D图形时，页面渲染性能比较高，页面渲染性能受图形复杂度影响小，性能只受图形的分辨率的影响，画出来的图形可以直接保存为 .png 或者 .jpg的图形，适合于画光栅图像或者不规则图形 劣势：没有dom操作，必须依赖定时器，文字渲染性能差，不能添加描述(title属性什么的)，兼容性限制iconfont是一种web字体来代替图片的解决方案： 场景：代替页面上色彩单一的图片 优势：兼容性好，应用广，目前使用也很广泛 劣势：但是由于字体的颜色设置单一，只能用于代替颜色单一的图片，对于色彩复杂的图片，iconfont处理起来比较困难，</p>
+<p>4.响应式图片 场景：不同终端对同一个图片需求不一样，可以根据终端加载不同的图片来节省没必要的流量 原理：通过picture元素，picturefill或平台判断来为不同终端平台输出不同的图片 优势：减少没必要的图片加载，灵活控制，慢速用户加载小图片不至于加载失败，移动端没必要加载大尺寸图片等，可以通过不同方式兼容所有浏览器 劣势：无法避免图片的加载过程，图片本身没优化。</p>
+<p>5.压缩图片 场景：在不得不加载图片的前提下，要进一步提升优化效果，只能通过有损或无损压缩来减少图片的大小， 原理：对图片进行无损、有损压缩或格式转换，转为压缩后图片或压缩率更高的图片格式来实现 优势：减少图片加载流量，效果比较明显 劣势：服务器和浏览器压力增大，而且服务器需要额外的服务支持，格式转换要考虑浏览器的兼容性。</p>
 
       
     </div>
@@ -825,7 +832,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">40</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -943,7 +950,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">35</span>
+                      
+                    
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1063,7 +1072,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#谈谈性能优化的问题"><span class="nav-number">1.</span> <span class="nav-text">谈谈性能优化的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存利用"><span class="nav-number">1.1.</span> <span class="nav-text">缓存利用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求数量"><span class="nav-number">1.2.</span> <span class="nav-text">请求数量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求带宽"><span class="nav-number">1.3.</span> <span class="nav-text">请求带宽</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript代码"><span class="nav-number">1.4.</span> <span class="nav-text">JavaScript代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML代码"><span class="nav-number">1.5.</span> <span class="nav-text">HTML代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#img标签的src为什么不能为空-应该用什么"><span class="nav-number">2.</span> <span class="nav-text">img标签的src为什么不能为空 应该用什么</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#其他的标签中的空src会不会导致这样的问题？"><span class="nav-number">2.1.</span> <span class="nav-text">其他的标签中的空src会不会导致这样的问题？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何解决这个问题？"><span class="nav-number">2.2.</span> <span class="nav-text">如何解决这个问题？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#懒加载-预加载"><span class="nav-number">3.</span> <span class="nav-text">懒加载 预加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#白屏"><span class="nav-number">4.</span> <span class="nav-text">白屏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概念和重要性"><span class="nav-number">4.1.</span> <span class="nav-text">概念和重要性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从打开一个页面到展示经历的过程"><span class="nav-number">4.2.</span> <span class="nav-text">从打开一个页面到展示经历的过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#白屏-性能优化"><span class="nav-number">4.3.</span> <span class="nav-text">白屏-性能优化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制图片加载完成后调用回调函数的方法"><span class="nav-number">5.</span> <span class="nav-text">控制图片加载完成后调用回调函数的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端优化"><span class="nav-number">6.</span> <span class="nav-text">前端优化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#谈谈性能优化的问题"><span class="nav-number">1.</span> <span class="nav-text">谈谈性能优化的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存利用"><span class="nav-number">1.1.</span> <span class="nav-text">缓存利用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求数量"><span class="nav-number">1.2.</span> <span class="nav-text">请求数量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求带宽"><span class="nav-number">1.3.</span> <span class="nav-text">请求带宽</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript代码"><span class="nav-number">1.4.</span> <span class="nav-text">JavaScript代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML代码"><span class="nav-number">1.5.</span> <span class="nav-text">HTML代码</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#img标签的src为什么不能为空-应该用什么"><span class="nav-number">2.</span> <span class="nav-text">img标签的src为什么不能为空 应该用什么</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#其他的标签中的空src会不会导致这样的问题？"><span class="nav-number">2.1.</span> <span class="nav-text">其他的标签中的空src会不会导致这样的问题？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何解决这个问题？"><span class="nav-number">2.2.</span> <span class="nav-text">如何解决这个问题？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#懒加载-预加载"><span class="nav-number">3.</span> <span class="nav-text">懒加载 预加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#白屏"><span class="nav-number">4.</span> <span class="nav-text">白屏</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概念和重要性"><span class="nav-number">4.1.</span> <span class="nav-text">概念和重要性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从打开一个页面到展示经历的过程"><span class="nav-number">4.2.</span> <span class="nav-text">从打开一个页面到展示经历的过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#白屏-性能优化"><span class="nav-number">4.3.</span> <span class="nav-text">白屏-性能优化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制图片加载完成后调用回调函数的方法"><span class="nav-number">5.</span> <span class="nav-text">控制图片加载完成后调用回调函数的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端优化"><span class="nav-number">6.</span> <span class="nav-text">前端优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端的图片优化方案"><span class="nav-number">7.</span> <span class="nav-text">前端的图片优化方案</span></a></li></ol></div>
             
 
           </div>
@@ -1105,7 +1114,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">209k</span>
+    <span title="站点总字数">216k</span>
   
 
   
@@ -1116,7 +1125,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">5:48</span>
+    <span title="站点阅读时长">6:01</span>
   
 </div>
 

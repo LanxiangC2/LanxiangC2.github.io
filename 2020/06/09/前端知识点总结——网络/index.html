@@ -114,7 +114,7 @@
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/pic4.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/session和cookie.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/缓存.png">
-<meta property="og:updated_time" content="2020-06-25T06:13:17.150Z">
+<meta property="og:updated_time" content="2020-07-01T06:56:09.268Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——网络">
 <meta name="twitter:description" content="对称加密和非对称加密 对称加密  对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。  非对称加密  非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）  区别  对称加密算法相比非对称加密算法来说，加解密的效率要">
@@ -259,7 +259,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">36</span></a>
 
   </li>
         
@@ -297,7 +297,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">38</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">40</span></a>
 
   </li>
 
@@ -438,7 +438,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-25 14:13:17" itemprop="dateModified" datetime="2020-06-25T14:13:17+08:00">2020-06-25</time>
+                <time title="修改时间：2020-07-01 14:56:09" itemprop="dateModified" datetime="2020-07-01T14:56:09+08:00">2020-07-01</time>
               
             
           </span>
@@ -518,7 +518,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">33 分钟</span>
+                <span title="阅读时长">34 分钟</span>
               
             </div>
           
@@ -673,7 +673,7 @@
 <p><strong>四次挥手：</strong></p>
 <p><img src="/2020/06/09/前端知识点总结——网络/四次挥手.jpeg" alt="网络"></p>
 <p>为了持久连接，其特点是只要任意一端没有明确提出断开连接，则保持TCP连接状态；其好处是在于减少了TCP连接的重复建立和断开所造成的额外开销，减轻了服务器端的负载。另外，减少开销的时间，使HTTP请求和响应能更早结束，从而提高web页面的显示速度。</p>
-<p>服务器端发送一个带FIN标记的数据包给客户端；客服端分两次发送带ACK、FIN标志数据包给服务端；服务端发送带ACK标志的数据包给客户端并断开连接；</p>
+<p>客户端发送一个带FIN标记的数据包给服务端；服务端分两次发送带ACK、FIN标志数据包给客户端；客户端发送带ACK标志的数据包给服务端并断开连接；</p>
 <p>为什么要等待2MSL:</p>
 <ol>
 <li>最后一个报文没有确认，确保发送方的ACK可以到达接收方，2MSL时间内没有收到，则接收方会重发</li>
@@ -761,6 +761,9 @@
 <h3 id="token和session的区别"><a href="#token和session的区别" class="headerlink" title="token和session的区别"></a>token和session的区别</h3><p>为什么要用<strong>token</strong>，好好的用<strong>sessionID</strong>不好吗？（其实就是<strong>新技术</strong>与<strong>老技术</strong>，但是还是想弄懂）<br>这个问题之前一直疑惑，今天搞懂了，整合了一下学习过程，先对比一下sessionID与token</p>
 <h4 id="sessionID的生成方式"><a href="#sessionID的生成方式" class="headerlink" title="sessionID的生成方式"></a>sessionID的生成方式</h4><p>浏览器第一次访问服务器时，服务器创建一个session，同时生成一个唯一的会话key，即sessionID。接着sessionID及session分别作为key和value保存到缓存中，也可以保存到数据库中，然后服务器把sessionID以cookie的形式发送给浏览器，浏览器下次访问服务器时直接携带上cookie中的sessionID，服务器再根据sessionID找到对应的session进行匹配<br>这里我们注意到两点：1.sessionID会<strong>自动由浏览器带上</strong> 2.session是<strong>需要存储空间的</strong></p>
 <h4 id="token的生成方式"><a href="#token的生成方式" class="headerlink" title="token的生成方式"></a>token的生成方式</h4><p>浏览器第一次访问服务器时，服务器根据传过来的唯一标识<strong>userId</strong>，通过一些算法，加一个密钥，生成一个token，接着通过base64编码将token返回给客户端。客户端将token保存起来，下次请求时需要<strong>带着token</strong>，服务器收到请求后，用相同的算法和密钥去验证token<br>这里我们注意到两点：1.token<strong>需要代码</strong>才能带上 2.token<strong>可以不需要存储空间（JWT）</strong>（当然也有存入缓存的处理，特别是要进行revoke操作时），通过算法和密钥验证</p>
+<blockquote>
+<p>JSON Web Token (JWT) 是一种开放标准 (<a href="https://tools.ietf.org/html/rfc7519" target="_blank" rel="noopener">RFC 7519</a>) 定义了一种用于安全传输的紧凑、自包含（注：或自说明） 的Json结构， 被传输的信息可以通过JWT内容中的算法+密钥进行加密解密，来确保信息可信。JWT可以使用一个加密串 (使用<strong>HMAC</strong> 对称算法，或非对称算法<strong>RSA</strong> 与<strong>ECDSA</strong>)</p>
+</blockquote>
 <h4 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h4><p>以上我们提出来的注意点就可以看出两点区别了：1.浏览器方面，<strong>是否直接带上</strong> 2.服务器方面，<strong>是否需要存储空间</strong>。</p>
 <p>共同点：都是保存了用户身份信息，都有过期时间。</p>
 <p>不同点：</p>
@@ -1204,7 +1207,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">40</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1322,7 +1325,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">35</span>
+                      
+                    
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1484,7 +1489,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">209k</span>
+    <span title="站点总字数">216k</span>
   
 
   
@@ -1495,7 +1500,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">5:48</span>
+    <span title="站点阅读时长">6:01</span>
   
 </div>
 

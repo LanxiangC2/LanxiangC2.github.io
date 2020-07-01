@@ -248,7 +248,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">36</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">38</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">40</span></a>
 
   </li>
 
@@ -367,6 +367,469 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——网络/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄流川">
+      <meta itemprop="description" content="从零到一，跨过就是成功">
+      <meta itemprop="image" content="/images/westbrook.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黄同学的笔记小屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/06/09/前端知识点总结——网络/" class="post-title-link" itemprop="url">前端知识点总结——网络</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-09 12:40:27" itemprop="dateCreated datePublished" datetime="2020-06-09T12:40:27+08:00">2020-06-09</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-07-01 14:56:09" itemprop="dateModified" datetime="2020-07-01T14:56:09+08:00">2020-07-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端知识点总结/" itemprop="url" rel="index"><span itemprop="name">前端知识点总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2020/06/09/前端知识点总结——网络/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/09/前端知识点总结——网络/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">20k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">34 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="对称加密和非对称加密"><a href="#对称加密和非对称加密" class="headerlink" title="对称加密和非对称加密"></a>对称加密和非对称加密</h3><blockquote>
+<p>对称加密</p>
+</blockquote>
+<p>对称加密指的就是加密和解密使用同一个秘钥，所以叫做对称加密。对称加密只有一个秘钥，作为私钥。</p>
+<blockquote>
+<p>非对称加密</p>
+</blockquote>
+<p>非对称加密指的是：加密和解密使用不同的秘钥，一把作为公开的公钥，另一把作为私钥。公钥加密的信息，只有私钥才能解密。私钥加密的信息，只有公钥才能解密。（A、B两把钥匙是拥有一定数学关系的一组秘钥）</p>
+<blockquote>
+<p>区别</p>
+</blockquote>
+<p>对称加密算法相比非对称加密算法来说，加解密的效率要高得多。但是缺陷在于对于秘钥的管理上，以及在非安全信道中通讯时，密钥交换的安全性不能保障。所以在实际的网络环境中，会将两者混合使用。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/06/09/前端知识点总结——网络/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——Vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="黄流川">
+      <meta itemprop="description" content="从零到一，跨过就是成功">
+      <meta itemprop="image" content="/images/westbrook.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黄同学的笔记小屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/06/09/前端知识点总结——Vue/" class="post-title-link" itemprop="url">前端知识点总结——Vue</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-06-09 10:53:53" itemprop="dateCreated datePublished" datetime="2020-06-09T10:53:53+08:00">2020-06-09</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-07-01 21:53:30" itemprop="dateModified" datetime="2020-07-01T21:53:30+08:00">2020-07-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端知识点总结/" itemprop="url" rel="index"><span itemprop="name">前端知识点总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2020/06/09/前端知识点总结——Vue/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/09/前端知识点总结——Vue/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">17k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">29 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="vue和react-spades"><a href="#vue和react-spades" class="headerlink" title="vue和react   &spades;"></a>vue和react   &spades;</h3><blockquote>
+<p>相似之处</p>
+</blockquote>
+<h4 id="Virtual-DOM"><a href="#Virtual-DOM" class="headerlink" title="Virtual DOM"></a>Virtual DOM</h4><p>Vue.js(2.0版本)与React的其中最大一个相似之处，就是他们都使用了一种叫’Virtual DOM’的东西。所谓的Virtual DOM基本上说就是它名字的意思：虚拟DOM，DOM树的虚拟表现。它的诞生是基于这么一个概念：改变真实的DOM状态远比改变一个JavaScript对象的花销要大得多。</p>
+<p>Virtual DOM是一个映射真实DOM的JavaScript对象，如果需要改变任何元素的状态，那么是先在Virtual DOM上进行改变，而不是直接改变真实的DOM。当有变化产生时，一个新的Virtual DOM对象会被创建并计算新旧Virtual DOM之间的差别。之后这些差别会应用在真实的DOM上。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/06/09/前端知识点总结——Vue/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/09/前端知识点总结——nodejs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -429,7 +892,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-10 22:20:57" itemprop="dateModified" datetime="2020-06-10T22:20:57+08:00">2020-06-10</time>
+                <time title="修改时间：2020-07-01 20:02:07" itemprop="dateModified" datetime="2020-07-01T20:02:07+08:00">2020-07-01</time>
               
             
           </span>
@@ -488,7 +951,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.8k</span>
+                <span title="本文字数">6.6k</span>
               
 
               
@@ -502,7 +965,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">8 分钟</span>
+                <span title="阅读时长">11 分钟</span>
               
             </div>
           
@@ -523,7 +986,26 @@
 
       
         
-          <h3 id="koa洋葱圈运行机制"><a href="#koa洋葱圈运行机制" class="headerlink" title="koa洋葱圈运行机制"></a>koa洋葱圈运行机制</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">await</span> next();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">6</span>);</span><br><span class="line">&#125;);</span><br><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">await</span> next();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">5</span>);</span><br><span class="line">&#125;);</span><br><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">    ctx.body = <span class="string">"hello world"</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">4</span>);</span><br><span class="line">&#125;);</span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'listenning on 3000'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+          <h3 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h3><h4 id="node-js是什么"><a href="#node-js是什么" class="headerlink" title="node.js是什么"></a>node.js是什么</h4><blockquote>
+<p>单线程模型虽然对JavaScript构成了很大的限制，但也因此使它具备了其他语言不具备的优势。如果部署得好，JavaScript程序是不会出现堵塞的，这就是为什么node.js平台可以用很少的资源，应付大流量访问的原因。</p>
+</blockquote>
+<p>Node.js是一个Javascript运行环境(runtime)。Node.js与JavaScript的区别是什么？本质：     Javascript是一种web前端语言，主要用于web开发中，由浏览器解析执行     Node.js是一个可以快速构建网络服务及应用的平台，是用Javascript语言构建的服务平台，可用于后端建立服务器区别：Javascript 主要应用前端， 是编程语言  ，  客户端编程语言(需要浏览器的javascript解释器进行解释执行)  。node.js  主要应用后端 1个平台   运行环境(一个基于Chrome JavaScript运行时建立的平台，它是对Google V8引擎进行了封装的运行环境)简单的说node.js就是把浏览器的解释器封装起来作为服务器运行平台，用类似javascript的结构语法进行编程，在node.js上运行。</p>
+<h3 id="Node-js的优点、缺点"><a href="#Node-js的优点、缺点" class="headerlink" title="Node.js的优点、缺点"></a>Node.js的优点、缺点</h3><p><strong>优点</strong>：</p>
+<p>1.事件驱动</p>
+<p>2.异步编程</p>
+<p>3.非阻塞模式的IO</p>
+<p>4.轻量高效</p>
+<p><strong>缺点</strong>：</p>
+<p>1.可靠性低 </p>
+<p>2.单进程，单线程，只支持单核cpu，不能充分的利用多核cpu服务器。一旦这个进程崩掉，那么整个web服务就崩掉了。</p>
+<h4 id="Node-js适用场景？Node-js不适用的场景？"><a href="#Node-js适用场景？Node-js不适用的场景？" class="headerlink" title="Node.js适用场景？Node.js不适用的场景？"></a>Node.js适用场景？Node.js不适用的场景？</h4><p>适用场景：</p>
+<p>1.JSON APIL ——构建一个Rest/JSON API服务，node.js可以充分发挥其非堵塞IO模型以及javascript对JSON的功能支持</p>
+<p>2.单页面、多Ajax请求应用——前端有大量的异步请求，需要服务器后端有极高的响应速度</p>
+<p>3.基于node.js开发Unix命令行工具——node.js可以大量产生子进程，并以流的方式输出</p>
+<p>4.流式数据——传统的web应用，通常会将HTTP 请求喝响应看成是原子事件。而node.js会充分利用流式数据这个特点，构建非常酷的应用</p>
+<p>不适用场景：cpu使用率较重、io使用率较轻的应用</p>
+<h4 id="Node-js的基本语法"><a href="#Node-js的基本语法" class="headerlink" title="Node.js的基本语法"></a>Node.js的基本语法</h4><p>基本语法与 javascript 一样这里我们使用exports导出一个函数,然后再另一文件中通过require导入入一个模块例如 ：在 a.js 中写一个函数var hello=function(){    console.log(‘hello’)}export.hello=hello;在 b.js 中 需要用hello这个函数var a=require(‘a’);a.hello()单线程<br>Node的设计中就是将耗时长的操作代理给操作系统或者多线程，这部分操作就是磁盘I/O和网络I/O。所以Node中异步非常常见，因为要将耗时的操作从主线程上脱离。但是这些I/O线程并不怎么耗费CPU。无法利用多核CPU是指Node的主线程无法利用上硬件上额外的CPU。这就需要用到cluster来在机器上启动多个Node实例，将额外的CPU也使用上。异步 IO<br>事件驱动REPLREPL（Read-Eval-Print Loop） 中文的话有翻译成“交互式解释器”或“交互式编程环境”的。</p>
+<h3 id="koa洋葱圈运行机制"><a href="#koa洋葱圈运行机制" class="headerlink" title="koa洋葱圈运行机制"></a>koa洋葱圈运行机制</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">await</span> next();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">6</span>);</span><br><span class="line">&#125;);</span><br><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">await</span> next();</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">5</span>);</span><br><span class="line">&#125;);</span><br><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">3</span>);</span><br><span class="line">    ctx.body = <span class="string">"hello world"</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">4</span>);</span><br><span class="line">&#125;);</span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'listenning on 3000'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>上面的代码执行后会输出<code>123456</code>，就像一个洋葱一样，从外层进去，然后碰到<code>next()</code>就执行下一个中间件，执行完成后再返回回来。先假设我们已经实现了<code>next</code>为下个中间件这段代码，上面的执行逻辑就很清楚了，先输出<code>1</code>，然后进入下一个中间件，去处理<code>2</code>，同理最后后面都处理完成后处理<code>5</code>，<code>5</code>处理完成后第二个中间件结束，然后第一个中间件再处理<code>6</code>。</p>
           <!--noindex-->
           
@@ -1056,417 +1538,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/07/使用openpyxl处理excel表格/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="黄流川">
-      <meta itemprop="description" content="从零到一，跨过就是成功">
-      <meta itemprop="image" content="/images/westbrook.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黄同学的笔记小屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/06/07/使用openpyxl处理excel表格/" class="post-title-link" itemprop="url">使用openpyxl处理excel表格</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-07 09:26:27 / 修改时间：10:43:09" itemprop="dateCreated datePublished" datetime="2020-06-07T09:26:27+08:00">2020-06-07</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python学习之旅/" itemprop="url" rel="index"><span itemprop="name">python学习之旅</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2020/06/07/使用openpyxl处理excel表格/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/07/使用openpyxl处理excel表格/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">9.6k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">16 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>邹同学是国贸专业的，听她说其他同学处理数据都是手动，真实骇人听闻啊，遂昨晚花了点时间研究了下，跑了个小demo，这里分享给大家，也随便记录下自己的python学习之旅</p>
-</blockquote>
-<p>首先申明笔者并不了解python，代码不规范的地方还请多多理解</p>
-<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><blockquote>
-<p>给定一个文件夹finance_export，下边的有很多个excel表格，现在需要将excel表格不重要的信息过滤出去，然后合并到一张新表中</p>
-</blockquote>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2020/06/07/使用openpyxl处理excel表格/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lanxiangc2.github.io/2020/06/05/数组中的逆序对/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="黄流川">
-      <meta itemprop="description" content="从零到一，跨过就是成功">
-      <meta itemprop="image" content="/images/westbrook.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="黄同学的笔记小屋">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/06/05/数组中的逆序对/" class="post-title-link" itemprop="url">数组中的逆序对</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-05 15:14:35 / 修改时间：19:14:20" itemprop="dateCreated datePublished" datetime="2020-06-05T15:14:35+08:00">2020-06-05</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2020/06/05/数组中的逆序对/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/06/05/数组中的逆序对/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">1.6k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">3 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p><strong>题目描述：</strong>在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组,求出这个数组中的逆序对的总数P。并将P对1000000007取模的结果输出。 即输出P%1000000007</p>
-</blockquote>
-<p>参考博客：<a href="https://cuijiahua.com/blog/2018/01/basis_35.html" target="_blank" rel="noopener">https://cuijiahua.com/blog/2018/01/basis_35.html</a></p>
-<p>javascript实现代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">InversePairs</span>(<span class="params">data</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// write code here</span></span><br><span class="line">    <span class="keyword">if</span> (data.length === <span class="number">0</span> ) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> copy = [].concat(data)</span><br><span class="line">    <span class="comment">//归并排序</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">mergeCount</span> (<span class="params">data, copy , left, right</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (left === right) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> mid = (left + right) &gt;&gt; <span class="number">1</span></span><br><span class="line">        <span class="keyword">let</span> leftCount = mergeCount(data, copy, left, mid)</span><br><span class="line">        <span class="keyword">let</span> rightCount = mergeCount(data, copy, mid+<span class="number">1</span>, right)</span><br><span class="line">        <span class="comment">//定义左右数组的指针 从左往右</span></span><br><span class="line">        <span class="keyword">let</span> pl = left</span><br><span class="line">        <span class="keyword">let</span> pr = mid + <span class="number">1</span></span><br><span class="line">        <span class="comment">//定义辅助数组的指针</span></span><br><span class="line">        <span class="keyword">let</span> idx = left</span><br><span class="line">        <span class="comment">// 定义左右之间的的逆序对</span></span><br><span class="line">        <span class="keyword">let</span> betweenCount = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> (pl &lt;= mid &amp;&amp; pr &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">if</span> (data[pl] &gt; data[pr]) &#123;</span><br><span class="line">                <span class="comment">// 计算就在这一步哦  核心关键点</span></span><br><span class="line">                betweenCount += mid - pl + <span class="number">1</span>    </span><br><span class="line">                copy[idx++] = data[pr++]</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;    </span><br><span class="line">                copy[idx++] = data[pl++]  </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 把没填入辅助队列的填入</span></span><br><span class="line">		<span class="keyword">while</span> (pl &lt;= mid) &#123;</span><br><span class="line">            copy[idx++] = data[pl++] </span><br><span class="line">		&#125;</span><br><span class="line">        </span><br><span class="line">		<span class="keyword">while</span> (pr &lt;= right) &#123;</span><br><span class="line">            copy[idx++] = data[pr++] </span><br><span class="line">        &#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">let</span> i = left; i &lt;= right; i++) &#123;</span><br><span class="line">			data[i] = copy[i]</span><br><span class="line">		&#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> (rightCount + leftCount + betweenCount)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">let</span> count = mergeCount(data, copy , <span class="number">0</span>, data.length <span class="number">-1</span>)</span><br><span class="line">    <span class="keyword">return</span> count % <span class="number">1000000007</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    InversePairs : InversePairs</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1517,7 +1588,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">38</span>
+                    <span class="site-state-item-count">40</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1635,7 +1706,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">35</span>
+                      
+                    
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1780,7 +1853,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">209k</span>
+    <span title="站点总字数">216k</span>
   
 
   
@@ -1791,7 +1864,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">5:48</span>
+    <span title="站点阅读时长">6:01</span>
   
 </div>
 
