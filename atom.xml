@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-07-02T11:52:34.524Z</updated>
+  <updated>2020-07-03T01:35:21.387Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -21,20 +21,17 @@
     <link href="http://lanxiangc2.github.io/2020/07/02/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/"/>
     <id>http://lanxiangc2.github.io/2020/07/02/字节跳动提前批面经/</id>
     <published>2020-07-02T07:02:41.000Z</published>
-    <updated>2020-07-02T11:52:34.524Z</updated>
+    <updated>2020-07-03T01:35:21.387Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;一面&quot;&gt;&lt;a href=&quot;#一面&quot; class=&quot;headerlink&quot; title=&quot;一面&quot;&gt;&lt;/a&gt;一面&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;感觉凉凉，和腾讯公司很大的不同，也可能是秋招提前批的原因&lt;/p&gt;
+      &lt;h2 id=&quot;一面&quot;&gt;&lt;a href=&quot;#一面&quot; class=&quot;headerlink&quot; title=&quot;一面&quot;&gt;&lt;/a&gt;一面&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;和腾讯公司出题很大的不同，也可能是秋招提前批的原因&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3
-        
-      
+&lt;h3 id=&quot;手写ES6的class继承&quot;&gt;&lt;a href=&quot;#手写ES6的class继承&quot; class=&quot;headerlink&quot; title=&quot;手写ES6的class继承&quot;&gt;&lt;/a&gt;手写ES6的class继承&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;继承在前端逻辑操作中是比较常见的，今天我们就从零开始写一个js的继承方式&lt;/p&gt;
+&lt;p&gt;在&lt;strong&gt;es5&lt;/strong&gt;中继承实质上是先创建子类的实例对象，然后再将父类的方法添加到this上&lt;strong&gt;Parent.call(this)&lt;/strong&gt;，在&lt;strong&gt;es6&lt;/strong&gt;中则是先创建父类的实例对象this调用父类的&lt;strong&gt;super()&lt;/strong&gt;，然后再用子类的构造函数修改this&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     

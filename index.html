@@ -412,12 +412,24 @@
                 
               
 
-              <time title="创建时间：2020-07-02 15:02:41 / 修改时间：19:52:34" itemprop="dateCreated datePublished" datetime="2020-07-02T15:02:41+08:00">2020-07-02</time>
+              <time title="创建时间：2020-07-02 15:02:41" itemprop="dateCreated datePublished" datetime="2020-07-02T15:02:41+08:00">2020-07-02</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-07-03 09:35:21" itemprop="dateModified" datetime="2020-07-03T09:35:21+08:00">2020-07-03</time>
               
             
           </span>
@@ -511,21 +523,22 @@
 
       
         
-          
-            <h2 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h2><blockquote>
-<p>感觉凉凉，和腾讯公司很大的不同，也可能是秋招提前批的原因</p>
+          <h2 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h2><blockquote>
+<p>和腾讯公司出题很大的不同，也可能是秋招提前批的原因</p>
 </blockquote>
 <h3 id="手写ES6的class继承"><a href="#手写ES6的class继承" class="headerlink" title="手写ES6的class继承"></a>手写ES6的class继承</h3><blockquote>
 <p>继承在前端逻辑操作中是比较常见的，今天我们就从零开始写一个js的继承方式</p>
-<p>在<strong>es5</strong>中继承实质上是先创建子类的实例对象，然后再将父类的方法添加到this上<strong>Parent.call(this)</strong>，在<strong>es6</strong>中则是先创建父类的实例对象this调用父类的<strong>super()</strong>，然后再用子类的构造函数修改this，所以无论是哪种方法必然牵扯到的操作是</p>
+<p>在<strong>es5</strong>中继承实质上是先创建子类的实例对象，然后再将父类的方法添加到this上<strong>Parent.call(this)</strong>，在<strong>es6</strong>中则是先创建父类的实例对象this调用父类的<strong>super()</strong>，然后再用子类的构造函数修改this</p>
 </blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 手写继承 自己封装函数</span></span><br><span class="line"><span class="comment">// 如childClass = extends(parentClass)</span></span><br><span class="line"><span class="comment">// 这个方式创建的子类会互相影响</span></span><br><span class="line"><span class="keyword">var</span> extendsFun = <span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> child = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">	child.prototype = <span class="keyword">new</span> obj</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> child()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//这个就很完美 newPros为自定义的属性</span></span><br><span class="line"><span class="keyword">var</span> extendsFun = <span class="function"><span class="keyword">function</span> (<span class="params">obj, newPros = &#123;&#125;</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> child = <span class="built_in">Object</span>.create(obj, newPros)</span><br><span class="line">	<span class="keyword">return</span> child</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 构造函数的方式</span></span><br><span class="line"><span class="keyword">var</span> extendsFun = <span class="function"><span class="keyword">function</span> (<span class="params">parentClass</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> child = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		parentClass(<span class="keyword">this</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> child()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>二、创建实例对象的new方法</p>
-<h3 id="手写promise封装回调函数"><a href="#手写promise封装回调函数" class="headerlink" title="手写promise封装回调函数"></a>手写promise封装回调函数</h3><h3 id="手写数组去重，根据过滤参数实现"><a href="#手写数组去重，根据过滤参数实现" class="headerlink" title="手写数组去重，根据过滤参数实现"></a>手写数组去重，根据过滤参数实现</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//要去重的数组是第一个参数，第二个参数是过滤信息</span></span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        id: <span class="number">1</span>,</span><br><span class="line">        name: <span class="string">'zhangsan'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        id: <span class="number">1</span>,</span><br><span class="line">        name: <span class="string">'wangwu'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        id: <span class="number">2</span>,</span><br><span class="line">        name: <span class="string">'zhangsan'</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p>请封装一个方法，实现对数组的去重</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myfun = <span class="function">(<span class="params">arr, arg</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 把重复的index序列记下来</span></span><br><span class="line">    <span class="keyword">let</span> result = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>, len = arr.length; j &lt;len; j++) &#123;</span><br><span class="line">        <span class="comment">//遍历每一项 记为objItem </span></span><br><span class="line">        <span class="keyword">let</span> objItem = arr[j]</span><br><span class="line">        <span class="comment">//初始化 为没有重复</span></span><br><span class="line">        <span class="keyword">let</span> repeated = <span class="literal">false</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len2 = arg.length; i &lt; len2; i++)) &#123;</span><br><span class="line">            <span class="keyword">var</span> obj = &#123;&#125;</span><br><span class="line">            <span class="keyword">let</span> filterKey = arg[i]</span><br><span class="line">            <span class="keyword">if</span> (obj[objItem[filterKey]])&#123;</span><br><span class="line">                <span class="comment">// 一旦发现有重复就吧repeated置为true</span></span><br><span class="line">                repeated = <span class="literal">true</span></span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                obj[objItem[filterKey]] = <span class="number">1</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//根据查找结果输出结果</span></span><br><span class="line">        <span class="keyword">if</span> (repeated === <span class="literal">false</span>) &#123;</span><br><span class="line">           result.push(objItem)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/07/02/字节跳动提前批面经/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
