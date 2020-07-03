@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-07-01T14:20:33.158Z</updated>
+  <updated>2020-07-02T11:52:34.524Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>前端知识点总结——JavaScript(4)</title>
-    <link href="http://lanxiangc2.github.io/2020/07/01/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-4/"/>
-    <id>http://lanxiangc2.github.io/2020/07/01/前端知识点总结——JavaScript-4/</id>
-    <published>2020-07-01T13:58:23.000Z</published>
-    <updated>2020-07-01T14:20:33.158Z</updated>
+    <title>字节跳动提前批面经</title>
+    <link href="http://lanxiangc2.github.io/2020/07/02/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/"/>
+    <id>http://lanxiangc2.github.io/2020/07/02/字节跳动提前批面经/</id>
+    <published>2020-07-02T07:02:41.000Z</published>
+    <updated>2020-07-02T11:52:34.524Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,34 @@
       
         
         
-          &lt;h3 id=&quot;ajax和axios、fetch的区别&quot;&gt;&lt;a href=&quot;#ajax和axios、fetch的区别&quot; class=&quot;headerlink&quot; title=&quot;ajax和axios、fetch的区别&quot;&gt;&lt;/a&gt;ajax和axios、fetch的区别&lt;/h3&gt;&lt;h4
+          &lt;h2 id=&quot;一面&quot;&gt;&lt;a href=&quot;#一面&quot; class=&quot;headerlink&quot; title=&quot;一面&quot;&gt;&lt;/a&gt;一面&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;感觉凉凉，和腾讯公司很大的不同，也可能是秋招提前批的原因&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3
         
       
+    
+    </summary>
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/categories/%E9%9D%A2%E7%BB%8F/"/>
+    
+    
+      <category term="字节跳动" scheme="http://lanxiangc2.github.io/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——JavaScript(4)</title>
+    <link href="http://lanxiangc2.github.io/2020/07/01/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-4/"/>
+    <id>http://lanxiangc2.github.io/2020/07/01/前端知识点总结——JavaScript-4/</id>
+    <published>2020-07-01T13:58:23.000Z</published>
+    <updated>2020-07-02T01:39:07.280Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;ajax和axios、fetch的区别&quot;&gt;&lt;a href=&quot;#ajax和axios、fetch的区别&quot; class=&quot;headerlink&quot; title=&quot;ajax和axios、fetch的区别&quot;&gt;&lt;/a&gt;ajax和axios、fetch的区别&lt;/h3&gt;&lt;h4 id=&quot;ajax&quot;&gt;&lt;a href=&quot;#ajax&quot; class=&quot;headerlink&quot; title=&quot;ajax&quot;&gt;&lt;/a&gt;ajax&lt;/h4&gt;&lt;p&gt;传统 Ajax 指的是 XMLHttpRequest（XHR）， 最早出现的发送后端请求技术，隶属于原始js中，核心使用XMLHttpRequest对象，多个请求之间如果有先后关系的话，就会出现&lt;strong&gt;回调地狱&lt;/strong&gt;。&lt;/p&gt;
+&lt;h4 id=&quot;fetch&quot;&gt;&lt;a href=&quot;#fetch&quot; class=&quot;headerlink&quot; title=&quot;fetch&quot;&gt;&lt;/a&gt;fetch&lt;/h4&gt;&lt;p&gt;fetch是一个低层次的API，你可以把它考虑成原生的XHR，所以使用起来并不是那么舒服，需要进行封装。&lt;/p&gt;
+&lt;p&gt;fetch号称是AJAX的替代品，是在ES6出现的，使用了ES6中的promise对象。Fetch是基于promise设计的。Fetch的代码结构比起ajax简单多了，参数有点像jQuery ajax。但是，一定记住&lt;strong&gt;fetch不是ajax的进一步封装，而是原生js，没有使用XMLHttpRequest对象&lt;/strong&gt;。&lt;/p&gt;
     
     </summary>
     
@@ -49,7 +74,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/30/%E4%B8%AD%E7%A7%BB%E7%89%A9%E8%81%94%E7%BD%91%E4%B8%80%E9%9D%A2%E9%9D%A2%E7%BB%8F/"/>
     <id>http://lanxiangc2.github.io/2020/06/30/中移物联网一面面经/</id>
     <published>2020-06-30T09:08:13.000Z</published>
-    <updated>2020-07-01T12:36:55.453Z</updated>
+    <updated>2020-07-02T12:29:36.951Z</updated>
     
     <summary type="html">
     
@@ -71,15 +96,15 @@
   </entry>
   
   <entry>
-    <title>腾讯暑期实习一面面经</title>
-    <link href="http://lanxiangc2.github.io/2020/06/29/%E8%85%BE%E8%AE%AF%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E4%B8%80%E9%9D%A2%E9%9D%A2%E7%BB%8F/"/>
-    <id>http://lanxiangc2.github.io/2020/06/29/腾讯暑期实习一面面经/</id>
+    <title>腾讯暑期实习面经</title>
+    <link href="http://lanxiangc2.github.io/2020/06/29/%E8%85%BE%E8%AE%AF%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E7%BB%8F/"/>
+    <id>http://lanxiangc2.github.io/2020/06/29/腾讯暑期实习面经/</id>
     <published>2020-06-29T12:46:04.000Z</published>
-    <updated>2020-06-30T01:37:21.025Z</updated>
+    <updated>2020-07-02T12:04:25.211Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
+      &lt;h2 id=&quot;一面&quot;&gt;&lt;a href=&quot;#一面&quot; class=&quot;headerlink&quot; title=&quot;一面&quot;&gt;&lt;/a&gt;一面&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;小引&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;面试官问了我问什么网站和博客这些都是用的lanxiangc2，我说这是我的网名&lt;code&gt;兰香川川&lt;/code&gt;，他以为我和那个蓝翔有啥关系，O(∩_∩)O哈哈~，被面试官关注到了我的个人网站和作品 真的超开心，努力没白费，继续加油哦~&lt;/p&gt;
@@ -433,13 +458,14 @@
     <link href="http://lanxiangc2.github.io/2020/06/10/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     <id>http://lanxiangc2.github.io/2020/06/10/前端知识点总结——操作系统/</id>
     <published>2020-06-10T12:46:22.000Z</published>
-    <updated>2020-06-22T08:11:03.294Z</updated>
+    <updated>2020-07-02T13:00:33.133Z</updated>
     
     <summary type="html">
     
       &lt;h3 id=&quot;进程和线程的区别&quot;&gt;&lt;a href=&quot;#进程和线程的区别&quot; class=&quot;headerlink&quot; title=&quot;进程和线程的区别&quot;&gt;&lt;/a&gt;进程和线程的区别&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;参考作者：&lt;a href=&quot;http://www.ruanyifeng.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;阮一峰&lt;/a&gt;，链接地址：&lt;a href=&quot;http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;进程是资源分配的最小单位，线程是CPU调度的最小单位&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;计算机的核心是CPU&lt;/strong&gt;，它承担了所有的计算任务。它就&lt;strong&gt;像一座工厂&lt;/strong&gt;，时刻在运行。&lt;/p&gt;
 &lt;p&gt;假定工厂的电力有限，一次只能供给一个车间使用。也就是说，一个车间开工的时候，其他车间都必须停工。背后的含义就是，&lt;u&gt;单个CPU一次只能运行一个任务&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;进程就好比工厂的车间&lt;/strong&gt;，它代表CPU所能处理的单个任务。任一时刻，CPU总是运行一个进程，其他进程处于非运行状态。&lt;/p&gt;
@@ -507,41 +533,6 @@
       <category term="JavaScript" scheme="http://lanxiangc2.github.io/tags/JavaScript/"/>
     
       <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端知识点总结——ES6</title>
-    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6/"/>
-    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——ES6/</id>
-    <published>2020-06-09T04:56:34.000Z</published>
-    <updated>2020-06-25T13:02:42.692Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;对ES6有什么了解&quot;&gt;&lt;a href=&quot;#对ES6有什么了解&quot; class=&quot;headerlink&quot; title=&quot;对ES6有什么了解&quot;&gt;&lt;/a&gt;对ES6有什么了解&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;从以下几个方面去聊&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;let和const&quot;&gt;&lt;a href=&quot;#let和const&quot; class=&quot;headerlink&quot; title=&quot;let和const&quot;&gt;&lt;/a&gt;let和const&lt;/h4&gt;&lt;p&gt;var声明的变量会挂载在window上，而let和const声明的变量不会；&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a,&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.a);    &lt;span class=&quot;comment&quot;&gt;// 100 100&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; b = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(b,&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.b);    &lt;span class=&quot;comment&quot;&gt;// 10 undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; c = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(c,&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.c);    &lt;span class=&quot;comment&quot;&gt;// 1 undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;var声明变量存在变量提升，let和const不存在变量提升；&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a); &lt;span class=&quot;comment&quot;&gt;// undefined  ===&amp;gt;  a已声明还没赋值，默认得到undefined值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(b); &lt;span class=&quot;comment&quot;&gt;// 报错：b is not defined  ===&amp;gt; 找不到b这个变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; b = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(c); &lt;span class=&quot;comment&quot;&gt;// 报错：c is not defined  ===&amp;gt; 找不到c这个变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; c = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;let和const声明形成块作用域；    &lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; b = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a); &lt;span class=&quot;comment&quot;&gt;// 100&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(b)  &lt;span class=&quot;comment&quot;&gt;// 报错：b is not defined  ===&amp;gt; 找不到b这个变量&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;同一作用域下let和const不能声明同名变量，而var可以；&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a); &lt;span class=&quot;comment&quot;&gt;// 100&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(a); &lt;span class=&quot;comment&quot;&gt;// 10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//  控制台报错：Identifier &#39;a&#39; has already been declared  ===&amp;gt; 标识符a已经被声明了。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;暂存死区&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&amp;#123;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//在当前块作用域中存在a使用let/const声明的情况下，给a赋值10时，只会在当前作用域找变量a， &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    a = &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// 而这时，还未到声明时候，所以控制台Error:a is not defined    &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; a = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;const&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1、一旦声明必须赋值,不能使用null占位。&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2、声明后不能再修改&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3、如果声明的是复合类型数据，可以修改其属性&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;解构赋值&quot;&gt;&lt;a href=&quot;#解构赋值&quot; class=&quot;headerlink&quot; title=&quot;解构赋值&quot;&gt;&lt;/a&gt;解构赋值&lt;/h4&gt;&lt;h4 id=&quot;ES6拓展&quot;&gt;&lt;a href=&quot;#ES6拓展&quot; class=&quot;headerlink&quot; title=&quot;ES6拓展&quot;&gt;&lt;/a&gt;ES6拓展&lt;/h4&gt;&lt;h4 id=&quot;Promise&quot;&gt;&lt;a href=&quot;#Promise&quot; class=&quot;headerlink&quot; title=&quot;Promise&quot;&gt;&lt;/a&gt;Promise&lt;/h4&gt;&lt;h4 id=&quot;Class&quot;&gt;&lt;a href=&quot;#Class&quot; class=&quot;headerlink&quot; title=&quot;Class&quot;&gt;&lt;/a&gt;Class&lt;/h4&gt;
-    
-    </summary>
-    
-      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="ES6" scheme="http://lanxiangc2.github.io/tags/ES6/"/>
     
   </entry>
   
