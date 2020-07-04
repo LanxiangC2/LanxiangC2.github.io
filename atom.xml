@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-07-03T01:35:21.387Z</updated>
+  <updated>2020-07-04T02:15:56.312Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端知识点总结——HR篇</title>
+    <link href="http://lanxiangc2.github.io/2020/07/04/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94HR%E7%AF%87/"/>
+    <id>http://lanxiangc2.github.io/2020/07/04/前端知识点总结——HR篇/</id>
+    <published>2020-07-04T01:35:32.000Z</published>
+    <updated>2020-07-04T02:15:56.312Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;你最大的缺点&quot;&gt;&lt;a href=&quot;#你最大的缺点&quot; class=&quot;headerlink&quot; title=&quot;你最大的缺点&quot;&gt;&lt;/a&gt;&lt;strong&gt;你最大的缺点&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;问题分析：&lt;/strong&gt;考察候选人的自我认知能力，个人优点是否符合岗位要求。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考建议：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第一，不宜说自己没有缺点，只要是人就有缺点，这么说一定会令人反感。&lt;/p&gt;
+&lt;p&gt;第二，年轻经验不足、缺乏磨炼、有些着急、对待效率低下的人缺乏耐心等&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;根据以上的关键点，缺点参考回复：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先，我刚毕业，经验方面不足，我会在工作中积极完成工作，积累各方面经验&lt;/p&gt;
+&lt;p&gt;其次，性子急，对待效率低下的人缺乏耐心，但是我平时和别人聊天的时候会控制自己语速和讲话，慢慢培养自己耐心，避免浮躁。（&lt;strong&gt;遵循一个原则避重就轻&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tips：&lt;/strong&gt;利用你的优点改正你的缺点，比如，工作追求细节极致，导致项目无法按时完成，通过时间管理，得以解决。一定不能说对应聘岗位的硬伤的缺点，以及无法弥补的缺点。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="hr面试" scheme="http://lanxiangc2.github.io/tags/hr%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue作者尤雨溪的采访</title>
+    <link href="http://lanxiangc2.github.io/2020/07/03/vue%E4%BD%9C%E8%80%85%E5%B0%A4%E9%9B%A8%E6%BA%AA%E7%9A%84%E9%87%87%E8%AE%BF/"/>
+    <id>http://lanxiangc2.github.io/2020/07/03/vue作者尤雨溪的采访/</id>
+    <published>2020-07-03T01:57:25.000Z</published>
+    <updated>2020-07-03T02:15:02.782Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;谈一谈你的第一次编程经历？&quot;&gt;&lt;a href=&quot;#谈一谈你的第一次编程经历？&quot; class=&quot;headerlink&quot; title=&quot;谈一谈你的第一次编程经历？&quot;&gt;&lt;/a&gt;谈一谈你的第一次编程经历？&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;「JavaScript
+        
+      
+    
+    </summary>
+    
+      <category term="web前端" scheme="http://lanxiangc2.github.io/categories/web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="Vue作者" scheme="http://lanxiangc2.github.io/tags/Vue%E4%BD%9C%E8%80%85/"/>
+    
+      <category term="尤雨溪" scheme="http://lanxiangc2.github.io/tags/%E5%B0%A4%E9%9B%A8%E6%BA%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>字节跳动提前批面经</title>
@@ -97,14 +153,23 @@
     <link href="http://lanxiangc2.github.io/2020/06/29/%E8%85%BE%E8%AE%AF%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E7%BB%8F/"/>
     <id>http://lanxiangc2.github.io/2020/06/29/腾讯暑期实习面经/</id>
     <published>2020-06-29T12:46:04.000Z</published>
-    <updated>2020-07-02T12:04:25.211Z</updated>
+    <updated>2020-07-04T01:42:56.296Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;一面&quot;&gt;&lt;a href=&quot;#一面&quot; class=&quot;headerlink&quot; title=&quot;一面&quot;&gt;&lt;/a&gt;一面&lt;/h2&gt;&lt;blockquote&gt;
+      &lt;p&gt;简单介绍下面试的部门吧&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt; 我们隶属腾讯PCG事业群研发部，负责部门内的研发效能提升，做内部自动化及持续交付的工具建设&lt;/p&gt;
+&lt;p&gt;岗位职责：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;负责架构、代码层面的专项分析及优化，包括但不限于自动化测试框架开发、可测性分析解决等；&lt;/li&gt;
+&lt;li&gt;参与研发部DevOps工具链和平台的建设工作，参与新工具/平台系统的需求分析、架构设计、核心框架及组件的编码等开发工作  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;一面&quot;&gt;&lt;a href=&quot;#一面&quot; class=&quot;headerlink&quot; title=&quot;一面&quot;&gt;&lt;/a&gt;一面&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;小引&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;面试官问了我问什么网站和博客这些都是用的lanxiangc2，我说这是我的网名&lt;code&gt;兰香川川&lt;/code&gt;，他以为我和那个蓝翔有啥关系，O(∩_∩)O哈哈~，被面试官关注到了我的个人网站和作品 真的超开心，努力没白费，继续加油哦~&lt;/p&gt;
+&lt;p&gt;面试官问了我问什么网站和博客这些都是用的&lt;code&gt;lanxiangc2&lt;/code&gt;，我说这是我的网名&lt;code&gt;兰香川川&lt;/code&gt;，他以为我和那个蓝翔有啥关系，O(∩_∩)O哈哈~，被面试官关注到了我的个人网站和作品 真的超开心，努力没白费，继续加油哦~&lt;/p&gt;
     
     </summary>
     
@@ -476,60 +541,6 @@
     
     
       <category term="操作系统" scheme="http://lanxiangc2.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端知识点总结——算法与数据结构</title>
-    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——算法与数据结构/</id>
-    <published>2020-06-09T12:21:23.000Z</published>
-    <updated>2020-06-27T03:03:48.136Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;排序算法了解哪些-spades&quot;&gt;&lt;a href=&quot;#排序算法了解哪些-spades&quot; class=&quot;headerlink&quot; title=&quot;排序算法了解哪些   &amp;spades;&quot;&gt;&lt;/a&gt;排序算法了解哪些   &amp;spades;&lt;/h3&gt;&lt;p&gt;冒泡排序&lt;/p&gt;
-&lt;p&gt;插入排序&lt;/p&gt;
-&lt;p&gt;选择排序&lt;/p&gt;
-&lt;p&gt;快速排序&lt;/p&gt;
-&lt;p&gt;归并排序&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="算法" scheme="http://lanxiangc2.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端知识点总结——JavaScript</title>
-    <link href="http://lanxiangc2.github.io/2020/06/09/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript/"/>
-    <id>http://lanxiangc2.github.io/2020/06/09/前端知识点总结——JavaScript/</id>
-    <published>2020-06-09T08:04:14.000Z</published>
-    <updated>2020-06-29T12:44:12.001Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;apply-bind-call的区别&quot;&gt;&lt;a href=&quot;#apply-bind-call的区别&quot; class=&quot;headerlink&quot; title=&quot;apply bind call的区别&quot;&gt;&lt;/a&gt;apply bind call的区别&lt;/h3&gt;&lt;p&gt;&lt;code&gt;call 、bind 、 apply&lt;/code&gt; 这三个函数的第一个参数都是 this 的指向对象&lt;/p&gt;
-&lt;p&gt;第二个参数差别来了&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;call的参数是直接放进去的，第二第三第n个参数全都用逗号分隔，直接放到后面  &lt;code&gt;obj.myFun.call(db,&amp;#39;成都&amp;#39;, ... ,&amp;#39;string&amp;#39; )；&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;apply的所有参数都必须放在一个数组里面传进去  &lt;code&gt;obj.myFun.apply(db,[&amp;#39;成都&amp;#39;, ..., &amp;#39;string&amp;#39; ]);&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;bind除了返回是函数以外，它 的参数和call 一样。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;/2020/06/09/前端知识点总结——JavaScript/pic1.png&quot; alt=&quot;pic1&quot;&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;obj.myFun.call(db,&lt;span class=&quot;string&quot;&gt;&#39;成都&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;上海&#39;&lt;/span&gt;)；　　　　 &lt;span class=&quot;comment&quot;&gt;// 德玛 年龄 99  来自 成都去往上海&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;obj.myFun.apply(db,[&lt;span class=&quot;string&quot;&gt;&#39;成都&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;上海&#39;&lt;/span&gt;]);      &lt;span class=&quot;comment&quot;&gt;// 德玛 年龄 99  来自 成都去往上海  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;obj.myFun.bind(db,&lt;span class=&quot;string&quot;&gt;&#39;成都&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;上海&#39;&lt;/span&gt;)();       &lt;span class=&quot;comment&quot;&gt;// 德玛 年龄 99  来自 成都去往上海&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="JavaScript" scheme="http://lanxiangc2.github.io/tags/JavaScript/"/>
-    
-      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
     
   </entry>
   
