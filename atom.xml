@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-07-04T02:15:56.312Z</updated>
+  <updated>2020-07-06T02:43:03.577Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端知识点总结——手撕代码篇</title>
+    <link href="http://lanxiangc2.github.io/2020/07/06/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E6%89%8B%E6%92%95%E4%BB%A3%E7%A0%81%E7%AF%87/"/>
+    <id>http://lanxiangc2.github.io/2020/07/06/前端知识点总结——手撕代码篇/</id>
+    <published>2020-07-06T01:59:14.000Z</published>
+    <updated>2020-07-06T02:43:03.577Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;前言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在面试中面试官会让你手写一些代码，有算法题，有设计到对概念的理解，对一些方法的封装，所以平时对这方面的积累也是很重要的哦&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="手写代码" scheme="http://lanxiangc2.github.io/tags/%E6%89%8B%E5%86%99%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>前端知识点总结——HR篇</title>
@@ -48,18 +71,17 @@
     <link href="http://lanxiangc2.github.io/2020/07/03/vue%E4%BD%9C%E8%80%85%E5%B0%A4%E9%9B%A8%E6%BA%AA%E7%9A%84%E9%87%87%E8%AE%BF/"/>
     <id>http://lanxiangc2.github.io/2020/07/03/vue作者尤雨溪的采访/</id>
     <published>2020-07-03T01:57:25.000Z</published>
-    <updated>2020-07-03T02:15:02.782Z</updated>
+    <updated>2020-07-06T01:28:21.050Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;谈一谈你的第一次编程经历？&quot;&gt;&lt;a href=&quot;#谈一谈你的第一次编程经历？&quot; class=&quot;headerlink&quot; title=&quot;谈一谈你的第一次编程经历？&quot;&gt;&lt;/a&gt;谈一谈你的第一次编程经历？&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;「JavaScript
-        
-      
+      &lt;h3 id=&quot;谈一谈你的第一次编程经历？&quot;&gt;&lt;a href=&quot;#谈一谈你的第一次编程经历？&quot; class=&quot;headerlink&quot; title=&quot;谈一谈你的第一次编程经历？&quot;&gt;&lt;/a&gt;谈一谈你的第一次编程经历？&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;「JavaScript 很吸引我，因为它能够快速构建一些东西并分享给别人。把它放在网上，通过一个网址，任何有浏览器的人都可以看到。这就是吸引我开始 Web 开发和 JavaScript 编程的原因。」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当我在美国上大学的时候，老实说，我不知道我想要做什么，而且我的专业是室内艺术和艺术史。当我快毕业时，我感觉很难找到和专业相关的工作。&lt;/p&gt;
+&lt;p&gt;我盘算着或许我可以去一个适合我的硕士课程，学习更多的技能。我去了 Parsons，读了一个美术设计和技术的硕士。这是一个非常好的专业，因为每个人都是既学习设计也学习编程。他们会教一些比如 openFrameworks，处理，动画算法之类的课程，而且你也必须写应用程序和交互界面。&lt;/p&gt;
+&lt;p&gt;Parsons 没有真正涉及很多的 JavaScript，但是 JavaScript 很吸引我，因为它能够快速构建一些东西并分享给别人。把它放在网上，通过一个网址，任何有浏览器的人都可以看到。这就是吸引我开始 Web 开发和 JavaScript 编程的原因。&lt;/p&gt;
+&lt;p&gt;当时 &lt;a href=&quot;https://www.chromeexperiments.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Chrome experiments&lt;/a&gt; 这个网站刚刚发布，我深深的被震撼了。我立即开始学习 JavaScript，并开始开发类似 Chrome experiments 的项目。我把这些项目放在我的简历上，然后被 Google 创意实验室的招聘人员注意到了。我加入了&lt;a href=&quot;https://www.creativelab5.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Five program&lt;/a&gt;。每年创意实验室会招五名应届毕业生，组成一个小组，一个人写文案，一个人搞技术，一个人做平面设计，一个人统筹安排和一个打杂的。&lt;/p&gt;
     
     </summary>
     
@@ -512,35 +534,6 @@
     
     
       <category term="性能优化" scheme="http://lanxiangc2.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端知识点总结——操作系统</title>
-    <link href="http://lanxiangc2.github.io/2020/06/10/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://lanxiangc2.github.io/2020/06/10/前端知识点总结——操作系统/</id>
-    <published>2020-06-10T12:46:22.000Z</published>
-    <updated>2020-07-02T13:00:33.133Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;进程和线程的区别&quot;&gt;&lt;a href=&quot;#进程和线程的区别&quot; class=&quot;headerlink&quot; title=&quot;进程和线程的区别&quot;&gt;&lt;/a&gt;进程和线程的区别&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;参考作者：&lt;a href=&quot;http://www.ruanyifeng.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;阮一峰&lt;/a&gt;，链接地址：&lt;a href=&quot;http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;进程是资源分配的最小单位，线程是CPU调度的最小单位&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;计算机的核心是CPU&lt;/strong&gt;，它承担了所有的计算任务。它就&lt;strong&gt;像一座工厂&lt;/strong&gt;，时刻在运行。&lt;/p&gt;
-&lt;p&gt;假定工厂的电力有限，一次只能供给一个车间使用。也就是说，一个车间开工的时候，其他车间都必须停工。背后的含义就是，&lt;u&gt;单个CPU一次只能运行一个任务&lt;/u&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;进程就好比工厂的车间&lt;/strong&gt;，它代表CPU所能处理的单个任务。任一时刻，CPU总是运行一个进程，其他进程处于非运行状态。&lt;/p&gt;
-&lt;p&gt;一个车间里，可以有很多工人。他们协同完成一个任务。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;线程就好比车间里的工人&lt;/strong&gt;。一个进程可以包括多个线程。&lt;/p&gt;
-&lt;p&gt;&lt;u&gt;车间的空间是工人们共享的，比如许多房间是每个工人都可以进出的。这象征一个进程的内存空间是共享的，每个线程都可以使用这些共享内存。&lt;/u&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="操作系统" scheme="http://lanxiangc2.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
