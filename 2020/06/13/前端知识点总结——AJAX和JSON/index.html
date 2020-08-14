@@ -107,7 +107,7 @@
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/926638/201705/926638-20170508181940082-2086052139.png">
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/926638/201705/926638-20170508182006191-1159123300.png">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/13/前端知识点总结——AJAX和JSON/pic.png">
-<meta property="og:updated_time" content="2020-06-30T02:14:23.140Z">
+<meta property="og:updated_time" content="2020-07-10T12:03:58.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——AJAX和JSON">
 <meta name="twitter:description" content="Ajax的流程Ajax通过XMLHttpRequest对象实现异步方式在后台发送发送请求。 主要有以下四个步骤： （1）初始化XMLHttpRequest对象。不同浏览器的差异，需要我们创建一个跨浏览器的对象，并判断XMLHttpRequest对象创建是否成功，如果不成功，则给予提示。 （2）为XMLHttpRequest对象指定一个回调函数，用于对后台返回结果进行处理。 （3）创建一个与服务器的">
@@ -271,7 +271,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
 
   </li>
         
@@ -290,7 +290,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">45</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">47</span></a>
 
   </li>
 
@@ -431,7 +431,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-30 10:14:23" itemprop="dateModified" datetime="2020-06-30T10:14:23+08:00">2020-06-30</time>
+                <time title="修改时间：2020-07-10 20:03:58" itemprop="dateModified" datetime="2020-07-10T20:03:58+08:00">2020-07-10</time>
               
             
           </span>
@@ -497,7 +497,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3k</span>
+                <span title="本文字数">3.5k</span>
               
 
               
@@ -511,7 +511,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">5 分钟</span>
+                <span title="阅读时长">6 分钟</span>
               
             </div>
           
@@ -595,6 +595,13 @@
 <h4 id="axios为什么既能在浏览器环境运行又能在服务器-node-环境运行？"><a href="#axios为什么既能在浏览器环境运行又能在服务器-node-环境运行？" class="headerlink" title="axios为什么既能在浏览器环境运行又能在服务器(node)环境运行？"></a>axios为什么既能在浏览器环境运行又能在服务器(node)环境运行？</h4><p>　　他在发送请求时会判断时如果XMLHttpRequest对象存在则使用客户端方式发送请求</p>
 <p>　　否则判断process对象是否存在，存在则使用服务端方式发送请求。</p>
 <p>参考：<a href="https://www.cnblogs.com/hrw3c/p/12965646.html" target="_blank" rel="noopener">前端知识扫盲VUE知识篇三（axios知识）</a></p>
+<h3 id="怎样理解JavaScript-的-Event-Loop，并且试用代码举例说明setTimeout和Promise差异"><a href="#怎样理解JavaScript-的-Event-Loop，并且试用代码举例说明setTimeout和Promise差异" class="headerlink" title="怎样理解JavaScript 的 Event Loop，并且试用代码举例说明setTimeout和Promise差异"></a>怎样理解JavaScript 的 Event Loop，并且试用代码举例说明setTimeout和Promise差异</h3><p>Event Loop:</p>
+<p>​    1.遇到sciprt之后开始第一个宏任务</p>
+<p>​    2.执行过程中遇到异步请求,会将其压入任务队列,交由异步事件引擎处理</p>
+<p>​    3.执行完宏任务后，检测是否存在微任务，有的话会先执行微任务</p>
+<p>​    4.执行第二个宏任务</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>)</span><br><span class="line">&#125;).then(<span class="function"><span class="params">_</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="params">_</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">3</span>)</span><br><span class="line">&#125;, <span class="number">300</span>)</span><br><span class="line"><span class="comment">//执行顺序: 1 -&gt; 2-&gt;3</span></span><br><span class="line"><span class="comment">//promise属于微任务, setTimeout属于宏任务</span></span><br></pre></td></tr></table></figure>
+<p>参考下这个：<a href="https://segmentfault.com/a/1190000012925872?utm_source=tag-newest" target="_blank" rel="noopener">https://segmentfault.com/a/1190000012925872?utm_source=tag-newest</a></p>
 
       
     </div>
@@ -788,7 +795,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">47</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -819,7 +826,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1040,7 +1049,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ajax的流程"><span class="nav-number">1.</span> <span class="nav-text">Ajax的流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端向客户端主动发送消息"><span class="nav-number">2.</span> <span class="nav-text">服务端向客户端主动发送消息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ajax轮询"><span class="nav-number">2.1.</span> <span class="nav-text">Ajax轮询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Comet"><span class="nav-number">2.2.</span> <span class="nav-text">Comet</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基于-AJAX-的长轮询（long-polling）方式"><span class="nav-number">2.2.1.</span> <span class="nav-text">基于 AJAX 的长轮询（long-polling）方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-HTTP-和JSONP方式的长轮询"><span class="nav-number">2.2.2.</span> <span class="nav-text">(1) HTTP 和JSONP方式的长轮询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-XHR长轮询"><span class="nav-number">2.2.3.</span> <span class="nav-text">(2) XHR长轮询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基于-Iframe-及-htmlfile-的流（streaming）方式"><span class="nav-number">2.2.4.</span> <span class="nav-text">基于 Iframe 及 htmlfile 的流（streaming）方式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#websocket方式"><span class="nav-number">2.3.</span> <span class="nav-text">websocket方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#axios"><span class="nav-number">3.</span> <span class="nav-text">axios</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#axios是什么？"><span class="nav-number">3.1.</span> <span class="nav-text">axios是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios的特点有哪些？"><span class="nav-number">3.2.</span> <span class="nav-text">axios的特点有哪些？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios有哪些常用方法"><span class="nav-number">3.3.</span> <span class="nav-text">axios有哪些常用方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios相关配置属性"><span class="nav-number">3.4.</span> <span class="nav-text">axios相关配置属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios的拦截器"><span class="nav-number">3.5.</span> <span class="nav-text">axios的拦截器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios为什么既能在浏览器环境运行又能在服务器-node-环境运行？"><span class="nav-number">3.6.</span> <span class="nav-text">axios为什么既能在浏览器环境运行又能在服务器(node)环境运行？</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ajax的流程"><span class="nav-number">1.</span> <span class="nav-text">Ajax的流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端向客户端主动发送消息"><span class="nav-number">2.</span> <span class="nav-text">服务端向客户端主动发送消息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Ajax轮询"><span class="nav-number">2.1.</span> <span class="nav-text">Ajax轮询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Comet"><span class="nav-number">2.2.</span> <span class="nav-text">Comet</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基于-AJAX-的长轮询（long-polling）方式"><span class="nav-number">2.2.1.</span> <span class="nav-text">基于 AJAX 的长轮询（long-polling）方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-HTTP-和JSONP方式的长轮询"><span class="nav-number">2.2.2.</span> <span class="nav-text">(1) HTTP 和JSONP方式的长轮询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-XHR长轮询"><span class="nav-number">2.2.3.</span> <span class="nav-text">(2) XHR长轮询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基于-Iframe-及-htmlfile-的流（streaming）方式"><span class="nav-number">2.2.4.</span> <span class="nav-text">基于 Iframe 及 htmlfile 的流（streaming）方式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#websocket方式"><span class="nav-number">2.3.</span> <span class="nav-text">websocket方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#axios"><span class="nav-number">3.</span> <span class="nav-text">axios</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#axios是什么？"><span class="nav-number">3.1.</span> <span class="nav-text">axios是什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios的特点有哪些？"><span class="nav-number">3.2.</span> <span class="nav-text">axios的特点有哪些？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios有哪些常用方法"><span class="nav-number">3.3.</span> <span class="nav-text">axios有哪些常用方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios相关配置属性"><span class="nav-number">3.4.</span> <span class="nav-text">axios相关配置属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios的拦截器"><span class="nav-number">3.5.</span> <span class="nav-text">axios的拦截器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#axios为什么既能在浏览器环境运行又能在服务器-node-环境运行？"><span class="nav-number">3.6.</span> <span class="nav-text">axios为什么既能在浏览器环境运行又能在服务器(node)环境运行？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#怎样理解JavaScript-的-Event-Loop，并且试用代码举例说明setTimeout和Promise差异"><span class="nav-number">4.</span> <span class="nav-text">怎样理解JavaScript 的 Event Loop，并且试用代码举例说明setTimeout和Promise差异</span></a></li></ol></div>
             
 
           </div>
@@ -1082,7 +1091,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">230k</span>
+    <span title="站点总字数">245k</span>
   
 
   
@@ -1093,7 +1102,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">6:23</span>
+    <span title="站点阅读时长">6:48</span>
   
 </div>
 

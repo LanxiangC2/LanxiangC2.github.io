@@ -105,7 +105,7 @@
 <meta property="og:description" content="canvas的一些方法requestAnimationFrame有用过吗？知道是干什么的吗？实现动画效果的方法比较多，Javascript 中可以通过定时器 setTimeout 来实现，css3 可以使用 transition 和 animation 来实现，html5 中的 canvas 也可以实现。除此之外，html5 还提供一个专门用于请求动画的API，那就是 requestAnimati">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://lanxiangc2.github.io/2020/06/13/前端知识点总结——HTML/offsetX.png">
-<meta property="og:updated_time" content="2020-06-29T04:22:35.591Z">
+<meta property="og:updated_time" content="2020-07-09T08:38:58.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——HTML">
 <meta name="twitter:description" content="canvas的一些方法requestAnimationFrame有用过吗？知道是干什么的吗？实现动画效果的方法比较多，Javascript 中可以通过定时器 setTimeout 来实现，css3 可以使用 transition 和 animation 来实现，html5 中的 canvas 也可以实现。除此之外，html5 还提供一个专门用于请求动画的API，那就是 requestAnimati">
@@ -269,7 +269,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
 
   </li>
         
@@ -288,7 +288,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">45</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">47</span></a>
 
   </li>
 
@@ -429,7 +429,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-29 12:22:35" itemprop="dateModified" datetime="2020-06-29T12:22:35+08:00">2020-06-29</time>
+                <time title="修改时间：2020-07-09 16:38:58" itemprop="dateModified" datetime="2020-07-09T16:38:58+08:00">2020-07-09</time>
               
             
           </span>
@@ -495,7 +495,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.1k</span>
+                <span title="本文字数">5.1k</span>
               
 
               
@@ -509,7 +509,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">5 分钟</span>
+                <span title="阅读时长">8 分钟</span>
               
             </div>
           
@@ -584,6 +584,14 @@
 <p>4）本地离线存储，把需要离线存储在本地的文件列在一个manifest配置文件</p>
 <p>5）web存储。localStorage、SessionStorage</p>
 <h4 id="css3"><a href="#css3" class="headerlink" title="css3"></a>css3</h4><p>CSS3边框如border-radius，box-shadow等；CSS3背景如background-size，background-origin等；CSS3 2D，3D转换如transform等；CSS3动画如animation等</p>
+<h3 id="Xpath"><a href="#Xpath" class="headerlink" title="Xpath"></a>Xpath</h3><p>用js实现一个用户行收集器，功能如下：</p>
+<p>1，收集用户在页面中的所有click行为，并使用log方法发送日志，包含触发事件的节点xpath信息</p>
+<p>2，xpath需包含tagName、id、class、同级同名节点索引(从1开始)，如</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">“container”</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>something<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">“link1”</span> <span class="attr">class</span>=<span class="string">“link-class”</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">“link2”</span> <span class="attr">class</span>=<span class="string">“link-class</span> <span class="attr">current</span>”&gt;</span>target link<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">点击target link时，xpath为 body[1]/div[1][@id=“container”]/a[2][@id=“link2”][contains(@class, “link-class")][contains(@class, “current")]</span><br></pre></td></tr></table></figure>
+<p>3，不侵入、不影响其他业务代码的执行</p>
+<p>解答：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 遍历深度树形结构</span></span><br><span class="line"><span class="keyword">var</span> obody = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>];</span><br><span class="line">obody.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(getXPath(e.target));</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getXPath</span>(<span class="params">target</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (target.nodeName == <span class="string">'BODY'</span>) <span class="keyword">return</span> <span class="string">'body[1]'</span>;</span><br><span class="line">    <span class="keyword">var</span> index = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> str = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">var</span> tempTarget = target;</span><br><span class="line">    <span class="keyword">var</span> nodeName = target.nodeName;</span><br><span class="line">    <span class="keyword">var</span> id = target.id;</span><br><span class="line">    <span class="keyword">var</span> classList = target.classList;</span><br><span class="line">    <span class="comment">// 这是在前面一个才可以，如果前面不是一样的标签，再前面有就不可以了</span></span><br><span class="line">    <span class="comment">// while (tempTarget.previousElementSilbling != null &amp;&amp; tempTarget.previousElementSilbling.nodeName == nodeName) &#123;</span></span><br><span class="line">    <span class="comment">//     index++;</span></span><br><span class="line">    <span class="comment">//     // 当前一个节点存在且和自己是同一个标签，index++</span></span><br><span class="line">    <span class="comment">//     // 然后把target转到前面的标签（即计算有多少个相同的标签）</span></span><br><span class="line">    <span class="comment">//     tempTarget = tempTarget.previousElementSilbling;</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 当前面有兄弟节点时，就可以往前</span></span><br><span class="line">    <span class="keyword">while</span>(tempTarget.previousElementSibling!=<span class="literal">null</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//如果前一个节点的node和要找的nodeName一样则index++，把target赋予前一个点</span></span><br><span class="line">        <span class="keyword">if</span>(tempTarget.previousElementSibling.nodeName == nodeName)</span><br><span class="line">        &#123;</span><br><span class="line">            index++;</span><br><span class="line">            <span class="built_in">console</span>.log(index);</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="comment">// 无论前面的标签是否和自身一样，但是一直往前，比较是否和自身的nodeName一样</span></span><br><span class="line">        tempTarget = tempTarget.previousElementSibling;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 然后就str就是所在的位置</span></span><br><span class="line">    str = <span class="string">'/'</span> + nodeName.toLowerCase() + <span class="string">'['</span> + index + <span class="string">'][@id="'</span> + id + <span class="string">'"]'</span>;</span><br><span class="line">    classList.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">ele, index, self</span>) </span>&#123;</span><br><span class="line">        str += <span class="string">'[contains(@class,"'</span> + ele + <span class="string">'")]'</span>;</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> getXPath(target.parentNode) + str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Web-Worker"><a href="#Web-Worker" class="headerlink" title="Web Worker"></a>Web Worker</h3><p>参考：<a href="https://blog.csdn.net/u012060033/article/details/90111985" target="_blank" rel="noopener">https://blog.csdn.net/u012060033/article/details/90111985</a>或者<a href="https://www.cnblogs.com/lyraLee/p/11854194.html" target="_blank" rel="noopener">https://www.cnblogs.com/lyraLee/p/11854194.html</a></p>
 
       
     </div>
@@ -777,7 +785,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">47</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -808,7 +816,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1029,7 +1039,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#canvas的一些方法"><span class="nav-number">1.</span> <span class="nav-text">canvas的一些方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#requestAnimationFrame有用过吗？知道是干什么的吗？"><span class="nav-number">2.</span> <span class="nav-text">requestAnimationFrame有用过吗？知道是干什么的吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe是什么？有什么缺点？"><span class="nav-number">3.</span> <span class="nav-text">iframe是什么？有什么缺点？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Doctype作用-严格模式与混杂模式如何区分？它们有何意义"><span class="nav-number">4.</span> <span class="nav-text">Doctype作用?严格模式与混杂模式如何区分？它们有何意义?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式布局的常用解决方案对比-媒体查询、百分比、rem和vw-vh）"><span class="nav-number">5.</span> <span class="nav-text">响应式布局的常用解决方案对比(媒体查询、百分比、rem和vw/vh）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe通信，同源和不同源两种情况，多少种方法"><span class="nav-number">6.</span> <span class="nav-text">iframe通信，同源和不同源两种情况，多少种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5新增的元素"><span class="nav-number">7.</span> <span class="nav-text">HTML5新增的元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pageX-clienXt-screenX-offsetX"><span class="nav-number">8.</span> <span class="nav-text">pageX clienXt screenX offsetX</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pageX-pageY"><span class="nav-number">8.1.</span> <span class="nav-text">pageX/pageY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clientX-clientY"><span class="nav-number">8.2.</span> <span class="nav-text">clientX/clientY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#screenX-screenY"><span class="nav-number">8.3.</span> <span class="nav-text">screenX/screenY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#offsetX-offsetY"><span class="nav-number">8.4.</span> <span class="nav-text">offsetX/offsetY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#x、y"><span class="nav-number">8.5.</span> <span class="nav-text">x、y</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？"><span class="nav-number">9.</span> <span class="nav-text">HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#html5"><span class="nav-number">9.1.</span> <span class="nav-text">html5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css3"><span class="nav-number">9.2.</span> <span class="nav-text">css3</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#canvas的一些方法"><span class="nav-number">1.</span> <span class="nav-text">canvas的一些方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#requestAnimationFrame有用过吗？知道是干什么的吗？"><span class="nav-number">2.</span> <span class="nav-text">requestAnimationFrame有用过吗？知道是干什么的吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe是什么？有什么缺点？"><span class="nav-number">3.</span> <span class="nav-text">iframe是什么？有什么缺点？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Doctype作用-严格模式与混杂模式如何区分？它们有何意义"><span class="nav-number">4.</span> <span class="nav-text">Doctype作用?严格模式与混杂模式如何区分？它们有何意义?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式布局的常用解决方案对比-媒体查询、百分比、rem和vw-vh）"><span class="nav-number">5.</span> <span class="nav-text">响应式布局的常用解决方案对比(媒体查询、百分比、rem和vw/vh）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe通信，同源和不同源两种情况，多少种方法"><span class="nav-number">6.</span> <span class="nav-text">iframe通信，同源和不同源两种情况，多少种方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5新增的元素"><span class="nav-number">7.</span> <span class="nav-text">HTML5新增的元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pageX-clienXt-screenX-offsetX"><span class="nav-number">8.</span> <span class="nav-text">pageX clienXt screenX offsetX</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pageX-pageY"><span class="nav-number">8.1.</span> <span class="nav-text">pageX/pageY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clientX-clientY"><span class="nav-number">8.2.</span> <span class="nav-text">clientX/clientY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#screenX-screenY"><span class="nav-number">8.3.</span> <span class="nav-text">screenX/screenY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#offsetX-offsetY"><span class="nav-number">8.4.</span> <span class="nav-text">offsetX/offsetY</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#x、y"><span class="nav-number">8.5.</span> <span class="nav-text">x、y</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？"><span class="nav-number">9.</span> <span class="nav-text">HTML5和CSS3用的多吗？你了解它们的新属性吗？有在项目中用过吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#html5"><span class="nav-number">9.1.</span> <span class="nav-text">html5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#css3"><span class="nav-number">9.2.</span> <span class="nav-text">css3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Xpath"><span class="nav-number">10.</span> <span class="nav-text">Xpath</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-Worker"><span class="nav-number">11.</span> <span class="nav-text">Web Worker</span></a></li></ol></div>
             
 
           </div>
@@ -1071,7 +1081,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">230k</span>
+    <span title="站点总字数">245k</span>
   
 
   
@@ -1082,7 +1092,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">6:23</span>
+    <span title="站点阅读时长">6:48</span>
   
 </div>
 

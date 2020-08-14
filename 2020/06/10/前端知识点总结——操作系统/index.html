@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="进程和线程的区别 参考作者：阮一峰，链接地址：http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html  进程是资源分配的最小单位，线程是CPU调度的最小单位 计算机的核心是CPU，它承担了所有的计算任务。它就像一座工厂，时刻在运行。 假定工厂的电力有限，一次只能供给一个车间使用。也就是说，一个车间开工的时候，其他车间都必须">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-02T13:00:33.133Z">
+<meta property="og:updated_time" content="2020-07-10T11:06:12.141Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——操作系统">
 <meta name="twitter:description" content="进程和线程的区别 参考作者：阮一峰，链接地址：http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html  进程是资源分配的最小单位，线程是CPU调度的最小单位 计算机的核心是CPU，它承担了所有的计算任务。它就像一座工厂，时刻在运行。 假定工厂的电力有限，一次只能供给一个车间使用。也就是说，一个车间开工的时候，其他车间都必须">
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">45</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">47</span></a>
 
   </li>
 
@@ -427,7 +427,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-07-02 21:00:33" itemprop="dateModified" datetime="2020-07-02T21:00:33+08:00">2020-07-02</time>
+                <time title="修改时间：2020-07-10 19:06:12" itemprop="dateModified" datetime="2020-07-10T19:06:12+08:00">2020-07-10</time>
               
             
           </span>
@@ -493,7 +493,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.3k</span>
+                <span title="本文字数">3.7k</span>
               
 
               
@@ -507,7 +507,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">5 分钟</span>
+                <span title="阅读时长">6 分钟</span>
               
             </div>
           
@@ -599,13 +599,23 @@
 <p>d. 文件等公用资源  这个是共享的，使用这些公共资源的线程必须同步。Win32 提供了几种同步资源的方式，包括信号、临界区、事件和互斥体。</p>
 <h4 id="独享的资源"><a href="#独享的资源" class="headerlink" title="独享的资源"></a>独享的资源</h4><p>a. 栈 栈是独享的</p>
 <p>b. 寄存器  这个可能会误解，因为电脑的寄存器是物理的，每个线程去取值难道不一样吗？其实线程里存放的是副本，包括程序计数器PC</p>
-<h2 id="Redis和-mysql"><a href="#Redis和-mysql" class="headerlink" title="Redis和 mysql"></a>Redis和 mysql</h2><p>（1）类型上</p>
+<h3 id="Redis和-mysql"><a href="#Redis和-mysql" class="headerlink" title="Redis和 mysql"></a>Redis和 mysql</h3><p>（1）类型上</p>
 <p>从类型上来说，mysql是关系型数据库，redis是缓存数据库</p>
 <p>（2）作用上</p>
 <p>mysql用于持久化的存储数据到硬盘，功能强大，但是速度较慢</p>
 <p>redis用于存储使用较为频繁的数据到缓存中，读取速度快</p>
 <p>（3）需求上</p>
 <p>mysql和redis因为需求的不同，一般都是配合使用。</p>
+<h3 id="os的说法"><a href="#os的说法" class="headerlink" title="os的说法"></a>os的说法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">多道批处理系统的特点：资源利用率高、系统吞吐量大、平均周转时间长、无交互能力</span><br><span class="line">分时系统具有多路性、独立性、及时性、交互性</span><br><span class="line">操作系统的基本特征：并发、共享、虚拟、异步</span><br><span class="line">在OS中通过时分复用和空分复用实现“虚拟”</span><br></pre></td></tr></table></figure>
+<h3 id="面向对象程序设计方法的优点"><a href="#面向对象程序设计方法的优点" class="headerlink" title="面向对象程序设计方法的优点"></a>面向对象程序设计方法的优点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">可重用性</span><br><span class="line">可扩展性</span><br><span class="line">易于管理和维护</span><br></pre></td></tr></table></figure>
+<p>面向对象的三个基本特征：封装、继承、多态。</p>
+<h3 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h3><p>nl 与cat相似，显示时标好行号</p>
+<p>od以八进制格式显示文件</p>
+<p>more一页一页显示文件，不能前翻。less可以前翻</p>
+<p>cat从第一行开始显示文件内容，并将所有内容输出</p>
+<h3 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h3><p>进程只作为资源分配的基本单位，线程则作为调度和分派的基本单位；</p>
+<p> 在引入线程的操作系统中，不仅进程之间可以并发执行，<u>一个进程之间的多个线程之间也可以并发执行</u>；</p>
+<p>传统的操作系统中，进程是拥有资源的独立单位，线程本身基本上不拥有资源，只拥有少量必不可少的资源。线程具有共享性，属于同一进程的线程共享进程的资源。</p>
 
       
     </div>
@@ -799,7 +809,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">47</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -830,7 +840,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1051,7 +1063,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程和线程的区别"><span class="nav-number">1.</span> <span class="nav-text">进程和线程的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程间的通信方式有哪些"><span class="nav-number">2.</span> <span class="nav-text">进程间的通信方式有哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux查询进程指令，查询端口，杀进程，"><span class="nav-number">3.</span> <span class="nav-text">Linux查询进程指令，查询端口，杀进程，</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看安装的软件"><span class="nav-number">3.1.</span> <span class="nav-text">查看安装的软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询进程"><span class="nav-number">3.2.</span> <span class="nav-text">查询进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat命令"><span class="nav-number">3.3.</span> <span class="nav-text">cat命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm命令"><span class="nav-number">3.4.</span> <span class="nav-text">rm命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mkdir命令"><span class="nav-number">3.5.</span> <span class="nav-text">mkdir命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp命令"><span class="nav-number">3.6.</span> <span class="nav-text">cp命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#kill命令"><span class="nav-number">3.7.</span> <span class="nav-text">kill命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程的那些资源共享，那些资源不共享"><span class="nav-number">4.</span> <span class="nav-text">线程的那些资源共享，那些资源不共享</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#共享的资源"><span class="nav-number">4.1.</span> <span class="nav-text">共享的资源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#独享的资源"><span class="nav-number">4.2.</span> <span class="nav-text">独享的资源</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis和-mysql"><span class="nav-number"></span> <span class="nav-text">Redis和 mysql</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程和线程的区别"><span class="nav-number">1.</span> <span class="nav-text">进程和线程的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">1.1.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程间的通信方式有哪些"><span class="nav-number">2.</span> <span class="nav-text">进程间的通信方式有哪些</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux查询进程指令，查询端口，杀进程，"><span class="nav-number">3.</span> <span class="nav-text">Linux查询进程指令，查询端口，杀进程，</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看安装的软件"><span class="nav-number">3.1.</span> <span class="nav-text">查看安装的软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询进程"><span class="nav-number">3.2.</span> <span class="nav-text">查询进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cat命令"><span class="nav-number">3.3.</span> <span class="nav-text">cat命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rm命令"><span class="nav-number">3.4.</span> <span class="nav-text">rm命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mkdir命令"><span class="nav-number">3.5.</span> <span class="nav-text">mkdir命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cp命令"><span class="nav-number">3.6.</span> <span class="nav-text">cp命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#kill命令"><span class="nav-number">3.7.</span> <span class="nav-text">kill命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程的那些资源共享，那些资源不共享"><span class="nav-number">4.</span> <span class="nav-text">线程的那些资源共享，那些资源不共享</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#共享的资源"><span class="nav-number">4.1.</span> <span class="nav-text">共享的资源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#独享的资源"><span class="nav-number">4.2.</span> <span class="nav-text">独享的资源</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis和-mysql"><span class="nav-number">5.</span> <span class="nav-text">Redis和 mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#os的说法"><span class="nav-number">6.</span> <span class="nav-text">os的说法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象程序设计方法的优点"><span class="nav-number">7.</span> <span class="nav-text">面向对象程序设计方法的优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux命令"><span class="nav-number">8.</span> <span class="nav-text">Linux命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程和线程"><span class="nav-number">9.</span> <span class="nav-text">进程和线程</span></a></li></ol></div>
             
 
           </div>
@@ -1093,7 +1105,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">230k</span>
+    <span title="站点总字数">245k</span>
   
 
   
@@ -1104,7 +1116,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">6:23</span>
+    <span title="站点阅读时长">6:48</span>
   
 </div>
 

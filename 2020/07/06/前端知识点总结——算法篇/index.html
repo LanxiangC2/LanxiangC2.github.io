@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="黄同学的笔记小屋">
 <meta property="og:description" content="前言  作为一名程序员，算法题肯定是必备的，但是前端而言的话，也不会太深入，笔者摘录了一些基本的题，作为平时的一些练习，避免面试过程中产生畏难心理，错失宝贵的面试机会。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-06T02:46:16.170Z">
+<meta property="og:updated_time" content="2020-07-10T12:24:18.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端知识点总结——算法篇">
 <meta name="twitter:description" content="前言  作为一名程序员，算法题肯定是必备的，但是前端而言的话，也不会太深入，笔者摘录了一些基本的题，作为平时的一些练习，避免面试过程中产生畏难心理，错失宝贵的面试机会。">
@@ -267,7 +267,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
 
   </li>
         
@@ -286,7 +286,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">45</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">47</span></a>
 
   </li>
 
@@ -410,12 +410,24 @@
                 
               
 
-              <time title="创建时间：2020-07-06 09:59:29 / 修改时间：10:46:16" itemprop="dateCreated datePublished" datetime="2020-07-06T09:59:29+08:00">2020-07-06</time>
+              <time title="创建时间：2020-07-06 09:59:29" itemprop="dateCreated datePublished" datetime="2020-07-06T09:59:29+08:00">2020-07-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-07-10 20:24:18" itemprop="dateModified" datetime="2020-07-10T20:24:18+08:00">2020-07-10</time>
               
             
           </span>
@@ -463,7 +475,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">155</span>
+                <span title="本文字数">3.7k</span>
               
 
               
@@ -477,7 +489,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">6 分钟</span>
               
             </div>
           
@@ -503,6 +515,48 @@
 <p>作为一名程序员，算法题肯定是必备的，但是前端而言的话，也不会太深入，笔者摘录了一些基本的题，作为平时的一些练习，避免面试过程中产生畏难心理，错失宝贵的面试机会。</p>
 <a id="more"></a>
 <p>参考文章：<a href="https://blog.csdn.net/weixin_38984353/article/details/80393412" target="_blank" rel="noopener">https://blog.csdn.net/weixin_38984353/article/details/80393412</a></p>
+<h2 id="判断一个单词是否是回文？"><a href="#判断一个单词是否是回文？" class="headerlink" title="判断一个单词是否是回文？"></a>判断一个单词是否是回文？</h2><blockquote>
+<p>回文是指把相同的词汇或句子，在下文中调换位置或颠倒过来，产生首尾回环的情趣，叫做回文，也叫回环。比如 mamam redivider .</p>
+</blockquote>
+<p>很多人拿到这样的题目非常容易想到用for 将字符串颠倒字母顺序然后匹配就行了。其实重要的考察的就是对于reverse的实现。其实我们可以利用现成的函数，将字符串转换成数组，这个思路很重要，我们可以拥有更多的自由度去进行字符串的一些操作。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkPalindrom</span>(<span class="params">str</span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> str == str.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="去掉一组整型数组重复的值"><a href="#去掉一组整型数组重复的值" class="headerlink" title="去掉一组整型数组重复的值"></a>去掉一组整型数组重复的值</h2><p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">比如输入: [1,13,24,11,11,14,1,2] </span><br><span class="line">输出: [1,13,24,11,14,2]</span><br><span class="line">需要去掉重复的11 和 1 这两个元素。</span><br></pre></td></tr></table></figure>
+<p>这道问题出现在诸多的前端面试题中，主要考察个人对Object的使用，方法有很多，<code>indexOf()</code>、利用key以及ES6 Set等都是可以来进行筛选的。</p>
+<h2 id="统计一个字符串出现最多的字母"><a href="#统计一个字符串出现最多的字母" class="headerlink" title="统计一个字符串出现最多的字母"></a>统计一个字符串出现最多的字母</h2><p>与上一题有区别，这里是在统计出现的次数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入 ： afjghdfraaaasdenas  </span><br><span class="line">输出 ： a</span><br></pre></td></tr></table></figure>
+<h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><p>如果抽到算法题目的话，应该大多都是比较开放的题目，不限定算法的实现，但是一定要求掌握其中的几种，所以冒泡排序，这种较为基础并且便于理解记忆的算法一定需要熟记于心。冒泡排序算法就是依次比较大小，小的的大的进行位置上的交换。</p>
+<p>除了冒泡排序外，其实还有很多诸如 <a href="https://zh.wikipedia.org/wiki/插入排序" target="_blank" rel="noopener">插入排序</a>,<a href="https://zh.wikipedia.org/wiki/快速排序" target="_blank" rel="noopener">快速排序</a>，<a href="https://zh.wikipedia.org/wiki/希尔排序" target="_blank" rel="noopener">希尔排序</a>等。每一种排序算法都有各自的特点。全部掌握也不需要，但是心底一定要熟悉几种算法。 比如快速排序，其效率很高，而其基本原理自己去看看吧。</p>
+<h2 id="不借助临时变量，进行两个整数的交换"><a href="#不借助临时变量，进行两个整数的交换" class="headerlink" title="不借助临时变量，进行两个整数的交换"></a>不借助临时变量，进行两个整数的交换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 a = 2, b = 4 输出 a = 4, b =2</span><br></pre></td></tr></table></figure>
+<p>这种问题非常巧妙，需要大家跳出惯有的思维，利用 a , b进行置换</p>
+<p>主要是利用 + - 去进行运算，类似 a = a + ( b - a) 实际上等同于最后 的 a = b</p>
+<h2 id="使用canvas-绘制一个有限度的斐波那契数列的曲线"><a href="#使用canvas-绘制一个有限度的斐波那契数列的曲线" class="headerlink" title="使用canvas 绘制一个有限度的斐波那契数列的曲线"></a>使用canvas 绘制一个有限度的斐波那契数列的曲线</h2><p>数列长度限定在9.</p>
+<p><code>斐波那契数列</code>，又称黄金分割数列，指的是这样一个数列：0、1、1、2、3、5、8、13、21、34、……在数学上，斐波纳契数列主要考察递归的调用。我们一般都知道定义：<code>fibo[i] = fibo[i-1]+fibo[i-2];</code></p>
+<p>生成斐波那契数列的方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFibonacci</span>(<span class="params">n</span>) </span>&#123;  </span><br><span class="line">  <span class="keyword">var</span> fibarr = [];</span><br><span class="line">  <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(i&lt;n) &#123;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;=<span class="number">1</span>) &#123;</span><br><span class="line">      fibarr.push(i);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      fibarr.push(fibarr[i<span class="number">-1</span>] + fibarr[i<span class="number">-2</span>])</span><br><span class="line">    &#125;</span><br><span class="line">    i++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> fibarr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="找出下列正数组的最大差值"><a href="#找出下列正数组的最大差值" class="headerlink" title="找出下列正数组的最大差值"></a>找出下列正数组的最大差值</h2><p>比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入 [10,5,11,7,8,9]</span><br><span class="line">输出 6</span><br></pre></td></tr></table></figure>
+<p>这是通过一道题目去测试对于基本的数组的最大值的查找，很明显我们知道，最大差值肯定是一个数组中最大值与最小值的差。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">maxRrofit</span> (<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (arr.length === <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">var</span> max = -<span class="literal">Infinity</span>, min = <span class="literal">Infinity</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, len = arr.length; i &lt; len; i++) &#123;</span><br><span class="line">        max = arr[i] &gt; max ? arr[i] : max;</span><br><span class="line">        min = arr[i] &lt; min ? arr[i] : min;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> max - min</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="随机生成指定长度的字符串"><a href="#随机生成指定长度的字符串" class="headerlink" title="随机生成指定长度的字符串"></a>随机生成指定长度的字符串</h2><p>实现一个算法，随机生成指制定长度的字符串。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">randomString</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> strList = <span class="string">'qwertyuiopasdfghjklzxcvbnm'</span></span><br><span class="line">	<span class="keyword">var</span> str = <span class="string">''</span></span><br><span class="line">    <span class="keyword">var</span> idx,tmp</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        idx = <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random()*<span class="number">25</span>)</span><br><span class="line">        tmp = strList[idx]</span><br><span class="line">        str += tmp</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> str</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="实现类似getElementsByClassName-的功能"><a href="#实现类似getElementsByClassName-的功能" class="headerlink" title="实现类似getElementsByClassName 的功能"></a>实现类似getElementsByClassName 的功能</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">queryClassName</span>(<span class="params">node, name</span>) </span>&#123;  </span><br><span class="line">  <span class="keyword">var</span> starts = <span class="string">'(^|[ \n\r\t\f])'</span>,</span><br><span class="line">       ends = <span class="string">'([ \n\r\t\f]|$)'</span>;</span><br><span class="line">  <span class="keyword">var</span> array = [],</span><br><span class="line">      regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(starts + name + ends),</span><br><span class="line">      elements = node.getElementsByTagName(<span class="string">"*"</span>),</span><br><span class="line">      length = elements.length,</span><br><span class="line">      i = <span class="number">0</span>,</span><br><span class="line">      element;</span><br><span class="line">    <span class="keyword">while</span> (i &lt; length) &#123;</span><br><span class="line">        element = elements[i];</span><br><span class="line">        <span class="keyword">if</span> (regex.test(element.className)) &#123;</span><br><span class="line">            array.push(element);</span><br><span class="line">        &#125;</span><br><span class="line">        i += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用JS-实现二叉查找树-Binary-Search-Tree"><a href="#使用JS-实现二叉查找树-Binary-Search-Tree" class="headerlink" title="使用JS 实现二叉查找树(Binary Search Tree)"></a>使用JS 实现二叉查找树(Binary Search Tree)</h2><p>一般叫全部写完的概率比较少，但是重点考察你对它的理解和一些基本特点的实现。 二叉查找树，也称二叉搜索树、有序二叉树（英语：ordered binary tree）是指一棵空树或者具有下列性质的二叉树：</p>
+<ul>
+<li>任意节点的左子树不空，则左子树上所有结点的值均小于它的根结点的值；</li>
+<li>任意节点的右子树不空，则右子树上所有结点的值均大于它的根结点的值；</li>
+<li>任意节点的左、右子树也分别为二叉查找树；</li>
+<li>没有键值相等的节点。二叉查找树相比于其他数据结构的优势在于查找、插入的时间复杂度较低。为O(log n)。二叉查找树是基础性数据结构，用于构建更为抽象的数据结构，如集合、multiset、关联数组等。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">verifyBinaryST</span> (<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!root.left &amp;&amp; !root.right) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> ((root.left&amp;&amp;root.value &lt; root.left.value) || (root.right &amp;&amp; root.value &gt; root.right.value)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> verifyBinaryST(root.left) &amp;&amp; verifyBinaryST(root.right)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="百度笔试题——浇花"><a href="#百度笔试题——浇花" class="headerlink" title="百度笔试题——浇花"></a>百度笔试题——浇花</h2><p>参考：<a href="https://blog.csdn.net/qq_43517189/article/details/105218768" target="_blank" rel="noopener">https://blog.csdn.net/qq_43517189/article/details/105218768</a></p>
+<blockquote>
+<p>喷泉可以浇到以自己为中心，半径为r的圆内的所有范围的花。 现在给出这些花的坐标和两个喷泉的坐标，要求你安排两个喷泉浇花的半径r1和r2， 使得所有的花都能被浇到的同时, r12 + r22 的值最小。</p>
+</blockquote>
+<p>输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一行5个整数n，x1，y1，x2，y2表示花的数量和两个喷泉的坐标。</span><br><span class="line">接下来n行，每行两个整数xi, yi表示第i朵花的坐标。</span><br><span class="line">满足1 &lt;= n &lt;= 2000，花和喷泉的坐标满足-107&lt;= x, y &lt;= 107。</span><br></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个整数，r1平方 + r2平方 的最小值。</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -619,6 +673,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2020/07/13/前端知识点总结——Vue-2/" rel="prev" title="前端知识点总结——Vue(2)">
+                前端知识点总结——Vue(2) <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -665,8 +723,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -685,7 +752,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">45</span>
+                    <span class="site-state-item-count">47</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -716,7 +783,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -927,6 +996,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#判断一个单词是否是回文？"><span class="nav-number">1.</span> <span class="nav-text">判断一个单词是否是回文？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去掉一组整型数组重复的值"><span class="nav-number">2.</span> <span class="nav-text">去掉一组整型数组重复的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#统计一个字符串出现最多的字母"><span class="nav-number">3.</span> <span class="nav-text">统计一个字符串出现最多的字母</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排序算法"><span class="nav-number">4.</span> <span class="nav-text">排序算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不借助临时变量，进行两个整数的交换"><span class="nav-number">5.</span> <span class="nav-text">不借助临时变量，进行两个整数的交换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用canvas-绘制一个有限度的斐波那契数列的曲线"><span class="nav-number">6.</span> <span class="nav-text">使用canvas 绘制一个有限度的斐波那契数列的曲线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#找出下列正数组的最大差值"><span class="nav-number">7.</span> <span class="nav-text">找出下列正数组的最大差值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机生成指定长度的字符串"><span class="nav-number">8.</span> <span class="nav-text">随机生成指定长度的字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现类似getElementsByClassName-的功能"><span class="nav-number">9.</span> <span class="nav-text">实现类似getElementsByClassName 的功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用JS-实现二叉查找树-Binary-Search-Tree"><span class="nav-number">10.</span> <span class="nav-text">使用JS 实现二叉查找树(Binary Search Tree)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#百度笔试题——浇花"><span class="nav-number">11.</span> <span class="nav-text">百度笔试题——浇花</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -962,7 +1048,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">230k</span>
+    <span title="站点总字数">245k</span>
   
 
   
@@ -973,7 +1059,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">6:23</span>
+    <span title="站点阅读时长">6:48</span>
   
 </div>
 

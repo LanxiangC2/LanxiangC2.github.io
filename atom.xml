@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lanxiangc2.github.io/"/>
-  <updated>2020-07-06T02:46:16.170Z</updated>
+  <updated>2020-08-09T09:04:31.886Z</updated>
   <id>http://lanxiangc2.github.io/</id>
   
   <author>
@@ -17,11 +17,66 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>字节跳动笔试题</title>
+    <link href="http://lanxiangc2.github.io/2020/08/09/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E7%AC%94%E8%AF%95%E9%A2%98/"/>
+    <id>http://lanxiangc2.github.io/2020/08/09/字节跳动笔试题/</id>
+    <published>2020-08-09T06:48:04.000Z</published>
+    <updated>2020-08-09T09:04:31.886Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;今日头条优化推荐&quot;&gt;&lt;a href=&quot;#今日头条优化推荐&quot; class=&quot;headerlink&quot; title=&quot;今日头条优化推荐&quot;&gt;&lt;/a&gt;今日头条优化推荐&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;输入： 第1行为n代表用户的个数
+        
+      
+    
+    </summary>
+    
+      <category term="笔试" scheme="http://lanxiangc2.github.io/categories/%E7%AC%94%E8%AF%95/"/>
+    
+    
+      <category term="字节跳动" scheme="http://lanxiangc2.github.io/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端知识点总结——Vue(2)</title>
+    <link href="http://lanxiangc2.github.io/2020/07/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94Vue-2/"/>
+    <id>http://lanxiangc2.github.io/2020/07/13/前端知识点总结——Vue-2/</id>
+    <published>2020-07-13T06:11:39.000Z</published>
+    <updated>2020-07-13T06:13:27.084Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Vue3-相比-vue2&quot;&gt;&lt;a href=&quot;#Vue3-相比-vue2&quot; class=&quot;headerlink&quot; title=&quot;Vue3 相比 vue2&quot;&gt;&lt;/a&gt;Vue3 相比 vue2&lt;/h2&gt;&lt;p&gt;Vue3
+        
+      
+    
+    </summary>
+    
+      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="面经" scheme="http://lanxiangc2.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+      <category term="前端框架" scheme="http://lanxiangc2.github.io/tags/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端知识点总结——算法篇</title>
     <link href="http://lanxiangc2.github.io/2020/07/06/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E7%AE%97%E6%B3%95%E7%AF%87/"/>
     <id>http://lanxiangc2.github.io/2020/07/06/前端知识点总结——算法篇/</id>
     <published>2020-07-06T01:59:29.000Z</published>
-    <updated>2020-07-06T02:46:16.170Z</updated>
+    <updated>2020-07-10T12:24:18.438Z</updated>
     
     <summary type="html">
     
@@ -44,7 +99,7 @@
     <link href="http://lanxiangc2.github.io/2020/07/06/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E6%89%8B%E6%92%95%E4%BB%A3%E7%A0%81%E7%AF%87/"/>
     <id>http://lanxiangc2.github.io/2020/07/06/前端知识点总结——手撕代码篇/</id>
     <published>2020-07-06T01:59:14.000Z</published>
-    <updated>2020-07-06T02:43:03.577Z</updated>
+    <updated>2020-08-14T16:55:15.115Z</updated>
     
     <summary type="html">
     
@@ -122,7 +177,7 @@
     <link href="http://lanxiangc2.github.io/2020/07/02/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/"/>
     <id>http://lanxiangc2.github.io/2020/07/02/字节跳动提前批面经/</id>
     <published>2020-07-02T07:02:41.000Z</published>
-    <updated>2020-07-03T01:35:21.387Z</updated>
+    <updated>2020-07-13T06:49:54.281Z</updated>
     
     <summary type="html">
     
@@ -148,7 +203,7 @@
     <link href="http://lanxiangc2.github.io/2020/07/01/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-4/"/>
     <id>http://lanxiangc2.github.io/2020/07/01/前端知识点总结——JavaScript-4/</id>
     <published>2020-07-01T13:58:23.000Z</published>
-    <updated>2020-07-02T01:39:07.280Z</updated>
+    <updated>2020-07-13T06:26:11.546Z</updated>
     
     <summary type="html">
     
@@ -255,7 +310,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/18/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94JavaScript-2/"/>
     <id>http://lanxiangc2.github.io/2020/06/18/前端知识点总结——JavaScript-2/</id>
     <published>2020-06-18T06:16:41.000Z</published>
-    <updated>2020-06-29T01:36:25.894Z</updated>
+    <updated>2020-07-10T11:05:01.536Z</updated>
     
     <summary type="html">
     
@@ -268,8 +323,9 @@
 &lt;h4 id=&quot;作为普通函数执行&quot;&gt;&lt;a href=&quot;#作为普通函数执行&quot; class=&quot;headerlink&quot; title=&quot;作为普通函数执行&quot;&gt;&lt;/a&gt;作为普通函数执行&lt;/h4&gt;&lt;p&gt;this 指代全局对象&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;test&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.x = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;  &lt;span class=&quot;comment&quot;&gt;//这里this就是window&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.x);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;test(); &lt;span class=&quot;comment&quot;&gt;// 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h4 id=&quot;call、apply、bind&quot;&gt;&lt;a href=&quot;#call、apply、bind&quot; class=&quot;headerlink&quot; title=&quot;call、apply、bind&quot;&gt;&lt;/a&gt;call、apply、bind&lt;/h4&gt;&lt;p&gt;this指代上下文对象  / 同时也是改变this指向的方法&lt;/p&gt;
-&lt;p&gt;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++&lt;/p&gt;
-&lt;p&gt;在JavaScript中，this指针是在创建时，由系统默认生成的两个隐式参数之一（另一个是arguments）。&lt;/p&gt;
+&lt;h4 id=&quot;关于this的理解&quot;&gt;&lt;a href=&quot;#关于this的理解&quot; class=&quot;headerlink&quot; title=&quot;关于this的理解&quot;&gt;&lt;/a&gt;关于this的理解&lt;/h4&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; account = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    phone: &lt;span class=&quot;string&quot;&gt;&quot;1234567&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    getPhone: &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.phone;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; mycount = account.getPhone;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(account.getPhone()); &lt;span class=&quot;comment&quot;&gt;// 1234567&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(mycount()); &lt;span class=&quot;comment&quot;&gt;// undefined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;解析&lt;/strong&gt;&lt;br&gt;this的指向是看调用时的对象，第一个是account调用，所以this指向account，account中有getPhone这个方法&lt;br&gt;第二个是mycount调用，它是account.getPhone的实例对象，继承了getPhone这个方法，mycount是挂载在window上的，所以this指向window&lt;/p&gt;
+&lt;h4 id=&quot;其他&quot;&gt;&lt;a href=&quot;#其他&quot; class=&quot;headerlink&quot; title=&quot;其他&quot;&gt;&lt;/a&gt;其他&lt;/h4&gt;&lt;p&gt;在JavaScript中，this指针是在创建时，由系统默认生成的两个隐式参数之一（另一个是arguments）。&lt;/p&gt;
 &lt;p&gt;this指针指向与该函数调用进行隐式关联的一个对象，该对象被称为“函数上下文”。&lt;/p&gt;
 &lt;p&gt;this的几种指向：&lt;/p&gt;
 &lt;ul&gt;
@@ -349,7 +405,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94AJAX%E5%92%8CJSON/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——AJAX和JSON/</id>
     <published>2020-06-13T12:32:57.000Z</published>
-    <updated>2020-06-30T02:14:23.140Z</updated>
+    <updated>2020-07-10T12:03:58.627Z</updated>
     
     <summary type="html">
     
@@ -397,7 +453,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94CSS/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——CSS/</id>
     <published>2020-06-13T08:33:00.000Z</published>
-    <updated>2020-06-30T07:08:57.906Z</updated>
+    <updated>2020-07-13T06:15:28.958Z</updated>
     
     <summary type="html">
     
@@ -418,7 +474,7 @@
     <link href="http://lanxiangc2.github.io/2020/06/13/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94HTML/"/>
     <id>http://lanxiangc2.github.io/2020/06/13/前端知识点总结——HTML/</id>
     <published>2020-06-13T07:27:55.000Z</published>
-    <updated>2020-06-29T04:22:35.591Z</updated>
+    <updated>2020-07-09T08:38:58.173Z</updated>
     
     <summary type="html">
     
@@ -479,60 +535,6 @@
     
     
       <category term="JavaScript" scheme="http://lanxiangc2.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端知识点总结——ES6(2)</title>
-    <link href="http://lanxiangc2.github.io/2020/06/11/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94ES6-2/"/>
-    <id>http://lanxiangc2.github.io/2020/06/11/前端知识点总结——ES6-2/</id>
-    <published>2020-06-11T01:53:59.000Z</published>
-    <updated>2020-06-29T07:19:33.649Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;普通函数和箭头函数的区别-spades&quot;&gt;&lt;a href=&quot;#普通函数和箭头函数的区别-spades&quot; class=&quot;headerlink&quot; title=&quot;普通函数和箭头函数的区别    &amp;spades;&quot;&gt;&lt;/a&gt;普通函数和箭头函数的区别   
-        
-      
-    
-    </summary>
-    
-      <category term="前端知识点总结" scheme="http://lanxiangc2.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="ES6" scheme="http://lanxiangc2.github.io/tags/ES6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是CI/CD</title>
-    <link href="http://lanxiangc2.github.io/2020/06/10/%E4%BB%80%E4%B9%88%E6%98%AFCI-CD/"/>
-    <id>http://lanxiangc2.github.io/2020/06/10/什么是CI-CD/</id>
-    <published>2020-06-10T14:09:48.000Z</published>
-    <updated>2020-06-10T14:11:03.729Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;参考博客：&lt;a href=&quot;https://www.jianshu.com/p/5643b1cf9e3f&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="运维" scheme="http://lanxiangc2.github.io/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-      <category term="部署" scheme="http://lanxiangc2.github.io/tags/%E9%83%A8%E7%BD%B2/"/>
-    
-      <category term="运维" scheme="http://lanxiangc2.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
